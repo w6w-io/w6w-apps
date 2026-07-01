@@ -16,7 +16,7 @@ await registry.registerPack("github:w6w-io/w6w-apps@main");
 ```
 
 Or install a single app by pointing at its subdirectory
-(`github:w6w-io/w6w-apps@main#slack`, `file:./apps/slack`, …).
+(`github:w6w-io/w6w-apps@main#apps/slack`, `file:./apps/slack`, …).
 
 Each app dir is a standalone w6w App: `package.json` (manifest under the `w6w`
 field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
@@ -52,16 +52,17 @@ apps built from scratch. See individual `assets/icon.*` for the exact source.
 ```
 w6w-apps/
 ├── w6w-pack.json           # top-level pack manifest — the registry entry point
-├── <app>/                  # one dir per App
-│   ├── package.json        # manifest (w6w field)
-│   ├── deno.json
-│   ├── tsconfig.json
-│   ├── index.ts
-│   ├── assets/icon.{svg,png}
-│   ├── auth/*.ts
-│   ├── actions/*.ts
-│   ├── lib/*.ts
-│   └── tests/
+├── apps/                   # every App lives here
+│   └── <app>/              # one dir per App
+│       ├── package.json    # manifest (w6w field)
+│       ├── deno.json
+│       ├── tsconfig.json
+│       ├── index.ts
+│       ├── assets/icon.{svg,png}
+│       ├── auth/*.ts
+│       ├── actions/*.ts
+│       ├── lib/*.ts
+│       └── tests/
 └── _tools/                 # scaffolding + porting helpers (not shipped)
 ```
 
@@ -70,7 +71,7 @@ w6w-apps/
 Each app has a `deno.json` with local tasks:
 
 ```sh
-cd <app>
+cd apps/<app>
 deno task test
 deno task check
 ```
