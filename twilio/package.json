@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/twilio",
+  "version": "0.1.0",
+  "description": "Send SMS/MMS/WhatsApp messages and make phone calls via Twilio.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.twilio",
+    "displayName": "Twilio",
+    "categories": ["communication"],
+    "appearance": { "icon": { "svg": "./assets/icon.svg", "alt": "Twilio" } },
+    "network": { "allow": ["api.twilio.com"] },
+    "entry": "./index.ts"
+  }
+}

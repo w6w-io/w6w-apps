@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/klaviyo",
+  "version": "0.1.0",
+  "description": "Klaviyo profiles, lists, events, segments, campaigns, and templates.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.klaviyo",
+    "displayName": "Klaviyo",
+    "categories": ["marketing", "email"],
+    "appearance": { "icon": { "url": "./assets/icon.png", "alt": "Klaviyo" } },
+    "network": { "allow": ["a.klaviyo.com"] },
+    "entry": "./index.ts"
+  }
+}

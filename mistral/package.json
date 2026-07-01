@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/mistral",
+  "version": "0.1.0",
+  "description": "Chat completions, embeddings, and OCR via the Mistral AI API.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.mistral",
+    "displayName": "Mistral AI",
+    "categories": ["ai"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Mistral AI" } },
+    "network": { "allow": ["api.mistral.ai"] },
+    "entry": "./index.ts"
+  }
+}

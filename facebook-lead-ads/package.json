@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/facebook-lead-ads",
+  "version": "0.1.0",
+  "description": "Read Facebook Lead Ads forms and their recent leads via the Facebook Graph API.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.facebook-lead-ads",
+    "displayName": "Facebook Lead Ads",
+    "categories": ["marketing", "advertising"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Facebook Lead Ads" } },
+    "network": { "allow": ["graph.facebook.com"] },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/slack",
+  "version": "0.1.0",
+  "description": "Post messages, manage channels, files, reactions, stars, users and user groups on Slack.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.slack",
+    "displayName": "Slack",
+    "categories": ["communication"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Slack" } },
+    "network": { "allow": ["slack.com"] },
+    "entry": "./index.ts"
+  }
+}

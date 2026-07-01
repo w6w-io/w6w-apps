@@ -1,0 +1,28 @@
+{
+  "manifestVersion": "1",
+  "kind": "pack",
+  "name": "w6w-official",
+  "displayName": "w6w Official Apps",
+  "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
+  "version": "0.1.0",
+  "apps": [
+    { "path": "./anthropic" },
+    { "path": "./eventbrite" },
+    { "path": "./facebook-lead-ads" },
+    { "path": "./gmail" },
+    { "path": "./google-calendar" },
+    { "path": "./google-docs" },
+    { "path": "./google-drive" },
+    { "path": "./google-sheets" },
+    { "path": "./hubspot" },
+    { "path": "./klaviyo" },
+    { "path": "./mailchimp" },
+    { "path": "./mistral" },
+    { "path": "./notion" },
+    { "path": "./openai" },
+    { "path": "./sendgrid" },
+    { "path": "./slack" },
+    { "path": "./twilio" },
+    { "path": "./wordpress" }
+  ]
+}

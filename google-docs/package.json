@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/google-docs",
+  "version": "0.1.0",
+  "description": "Create, read and structurally update Google Docs documents.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.google-docs",
+    "displayName": "Google Docs",
+    "categories": ["productivity", "documents"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Google Docs" } },
+    "network": { "allow": ["docs.googleapis.com", "www.googleapis.com"] },
+    "entry": "./index.ts"
+  }
+}

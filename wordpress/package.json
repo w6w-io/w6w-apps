@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/wordpress",
+  "version": "0.1.0",
+  "description": "Create, read, update and delete posts, pages and users on a WordPress site.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.wordpress",
+    "displayName": "WordPress",
+    "categories": ["content", "cms"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "WordPress" } },
+    "network": { "allow": ["*"] },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/anthropic",
+  "version": "0.1.0",
+  "description": "Call Anthropic's REST API — Claude messages, token counting, batches, files.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.anthropic",
+    "displayName": "Anthropic",
+    "categories": ["ai"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Anthropic" } },
+    "network": { "allow": ["api.anthropic.com"] },
+    "entry": "./index.ts"
+  }
+}

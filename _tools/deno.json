@@ -1,0 +1,6 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "convert": "deno run --allow-net --allow-read --allow-write --allow-env n8n-to-w6w.ts"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/google-sheets",
+  "version": "0.1.0",
+  "description": "Read and write Google Sheets: manage spreadsheets, sheets, rows and cells.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.google-sheets",
+    "displayName": "Google Sheets",
+    "categories": ["productivity", "data"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Google Sheets" } },
+    "network": { "allow": ["sheets.googleapis.com", "www.googleapis.com"] },
+    "entry": "./index.ts"
+  }
+}

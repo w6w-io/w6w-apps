@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/google-drive",
+  "version": "0.1.0",
+  "description": "Manage files, folders and shared drives on Google Drive.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.google-drive",
+    "displayName": "Google Drive",
+    "categories": ["storage", "productivity"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Google Drive" } },
+    "network": { "allow": ["www.googleapis.com"] },
+    "entry": "./index.ts"
+  }
+}
