@@ -9,7 +9,10 @@
     "id": "io.w6w.notion",
     "displayName": "Notion",
     "categories": ["productivity", "documents"],
-    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Notion" } },
+    "appearance": {
+      "icon": { "svg": "./assets/icon.svg", "alt": "Notion" },
+      "darkMode": { "icon": { "svg": "./assets/icon.dark.svg", "alt": "Notion" } }
+    },
     "network": { "allow": ["api.notion.com"] },
     "entry": "./index.ts"
   }
