@@ -9,7 +9,10 @@
     "id": "io.w6w.mailchimp",
     "displayName": "Mailchimp",
     "categories": ["marketing", "communication"],
-    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Mailchimp" } },
+    "appearance": {
+      "icon": { "svg": "./assets/icon.svg", "alt": "Mailchimp" },
+      "darkMode": { "icon": { "svg": "./assets/icon.dark.svg", "alt": "Mailchimp" } }
+    },
     "network": { "allow": ["*.api.mailchimp.com", "login.mailchimp.com"] },
     "entry": "./index.ts"
   }

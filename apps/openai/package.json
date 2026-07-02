@@ -9,7 +9,10 @@
     "id": "io.w6w.openai",
     "displayName": "OpenAI",
     "categories": ["ai", "developer-tools"],
-    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "OpenAI" } },
+    "appearance": {
+      "icon": { "svg": "./assets/icon.svg", "alt": "OpenAI" },
+      "darkMode": { "icon": { "svg": "./assets/icon.dark.svg", "alt": "OpenAI" } }
+    },
     "network": { "allow": ["api.openai.com"] },
     "entry": "./index.ts"
   }
