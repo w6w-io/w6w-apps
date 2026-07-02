@@ -24,7 +24,14 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 
 | App | Auth | Actions |
 |-----|------|--------:|
+| airtable | personal-access-token, oauth2, api-key (deprecated) | 10 |
 | anthropic | api-key | 14 |
+| asana | access-token, oauth2 | 22 |
+| bitbucket | basic, access-token | 12 |
+| brevo | api-key | 15 |
+| contentful | access-token | 10 |
+| discord | bot-token, oauth2 | 19 |
+| dropbox | access-token, oauth2 | 12 |
 | eventbrite | personal-token, oauth2 | 10 |
 | facebook-lead-ads | oauth2 | 2 |
 | gmail | oauth2, service-account | 25 |
