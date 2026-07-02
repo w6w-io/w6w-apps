@@ -1,0 +1,23 @@
+{
+  "name": "@w6w-apps/contentful",
+  "version": "0.1.0",
+  "description": "Read and manage Contentful spaces, content types, entries, assets and locales.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.contentful",
+    "displayName": "Contentful",
+    "categories": ["content", "cms"],
+    "appearance": { "icon": { "url": "./assets/icon.png", "alt": "Contentful" } },
+    "network": {
+      "allow": [
+        "cdn.contentful.com",
+        "preview.contentful.com",
+        "api.contentful.com",
+        "upload.contentful.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

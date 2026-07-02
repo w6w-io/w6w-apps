@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/airtable",
+  "version": "0.1.0",
+  "description": "Read, create, update, upsert and delete Airtable records; list bases and get base schema.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.airtable",
+    "displayName": "Airtable",
+    "categories": ["data", "productivity"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Airtable" } },
+    "network": { "allow": ["api.airtable.com"] },
+    "entry": "./index.ts"
+  }
+}

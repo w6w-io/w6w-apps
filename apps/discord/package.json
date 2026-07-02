@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/discord",
+  "version": "0.1.0",
+  "description": "Send messages, manage channels, members, and roles on Discord servers.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.discord",
+    "displayName": "Discord",
+    "categories": ["communication"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Discord" } },
+    "network": { "allow": ["discord.com"] },
+    "entry": "./index.ts"
+  }
+}

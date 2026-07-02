@@ -1,0 +1,16 @@
+{
+  "name": "@w6w-apps/asana",
+  "version": "0.1.0",
+  "description": "Manage Asana projects, tasks, subtasks, comments, tags, and users via the Asana REST API.",
+  "license": "MIT",
+  "author": { "name": "w6w" },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.asana",
+    "displayName": "Asana",
+    "categories": ["productivity", "project-management"],
+    "appearance": { "icon": { "url": "./assets/icon.svg", "alt": "Asana" } },
+    "network": { "allow": ["app.asana.com"] },
+    "entry": "./index.ts"
+  }
+}
