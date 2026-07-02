@@ -1,6 +1,17 @@
 import type { AuthDefinition } from "@w6w/types";
-import { encodeBase64 } from "@std/encoding";
 import { resolveBaseUrl } from "../lib/client.ts";
+
+/**
+ * Inlined base64 encoder — the app sandbox has `import: false`, so we can't
+ * pull from jsr:@std/encoding at runtime. Same output as @std/encoding's
+ * `encodeBase64`: standard base64 with `=` padding, no url-safe swaps.
+ */
+function encodeBase64(bytes: Uint8Array | string): string {
+  const b = typeof bytes === "string" ? new TextEncoder().encode(bytes) : bytes;
+  let s = "";
+  for (const x of b) s += String.fromCharCode(x);
+  return btoa(s);
+}
 
 /**
  * Basic Auth (`basic`) — the self-hosted path. WordPress lets each user mint

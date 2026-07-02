@@ -1,5 +1,15 @@
 import type { AuthDefinition } from "@w6w/types";
-import { encodeBase64Url } from "@std/encoding/base64url";
+
+/**
+ * Inlined base64url encoder — the app sandbox has `import: false`, so we
+ * can't pull from jsr:@std/encoding at runtime. Same output as
+ * @std/encoding's `encodeBase64Url`: url-safe, no `=` padding.
+ */
+function encodeBase64Url(bytes: Uint8Array): string {
+  let s = "";
+  for (const b of bytes) s += String.fromCharCode(b);
+  return btoa(s).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
+}
 import { API_URL, TOKEN_URL } from "../lib/client.ts";
 
 /**
