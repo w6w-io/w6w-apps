@@ -57,14 +57,15 @@ const action: ActionDefinition = {
       default: "text/plain",
       hint: "MIME type of the email to send",
       options: [
-        {"value":"text/plain","label":"Plain Text"},
-        {"value":"text/html","label":"HTML"},
+        { "value": "text/plain", "label": "Plain Text" },
+        { "value": "text/html", "label": "HTML" },
       ],
     },
     {
       key: "contentValue",
       label: "Message Body",
       type: "text",
+      config: { multiline: true },
       required: true,
       default: "",
       hint: "Message body of the email to send",
