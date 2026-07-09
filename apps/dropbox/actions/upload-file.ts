@@ -36,7 +36,7 @@ const uploadFile: ActionDefinition<Input> = {
     {
       key: "content",
       label: "File Content",
-      type: "string",
+      type: "text",
       required: true,
       hint: "UTF-8 text to write. Binary uploads are not supported by this action yet.",
     },

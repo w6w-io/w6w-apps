@@ -64,7 +64,7 @@ const action: ActionDefinition = {
     {
       key: "contentValue",
       label: "Message Body",
-      type: "string",
+      type: "text",
       required: true,
       default: "",
       hint: "Message body of the email to send",

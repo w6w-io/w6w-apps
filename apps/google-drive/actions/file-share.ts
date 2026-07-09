@@ -58,7 +58,7 @@ const shareFile: ActionDefinition<Input> = {
     { key: "domain", label: "Domain", type: "string" },
     { key: "allowFileDiscovery", label: "Allow file discovery", type: "boolean" },
     { key: "sendNotificationEmail", label: "Send notification email", type: "boolean" },
-    { key: "emailMessage", label: "Email message", type: "string" },
+    { key: "emailMessage", label: "Email message", type: "text" },
     { key: "transferOwnership", label: "Transfer ownership", type: "boolean" },
     { key: "moveToNewOwnersRoot", label: "Move to new owner's root", type: "boolean" },
   ],
