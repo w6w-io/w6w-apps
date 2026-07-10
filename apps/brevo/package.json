@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/brevo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Manage Brevo (formerly Sendinblue) contacts, senders, attributes, and send transactional emails.",
   "license": "MIT",
   "author": { "name": "w6w" },

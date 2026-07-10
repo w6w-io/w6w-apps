@@ -20,8 +20,8 @@ const documentReplaceText: ActionDefinition<Input> = {
   description: "Replace every occurrence of a search string with a new string.",
   params: [
     { key: "documentURL", label: "Document ID or URL", type: "string", required: true },
-    { key: "text", label: "Old Text", type: "string", required: true },
-    { key: "replaceText", label: "New Text", type: "string", required: true },
+    { key: "text", label: "Old Text", type: "text", required: true },
+    { key: "replaceText", label: "New Text", type: "text", required: true },
     { key: "matchCase", label: "Match case", type: "boolean", default: false },
   ],
 

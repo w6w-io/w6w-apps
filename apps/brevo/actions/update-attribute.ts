@@ -21,6 +21,7 @@ const updateAttribute: ActionDefinition<Input> = {
       key: "category",
       label: "Category",
       type: "select",
+      required: true,
       default: "calculated",
       options: [
         { value: "calculated", label: "Calculated" },
@@ -28,7 +29,7 @@ const updateAttribute: ActionDefinition<Input> = {
         { value: "global", label: "Global" },
       ],
     },
-    { key: "name", label: "Name", type: "string" },
+    { key: "name", label: "Name", type: "string", required: true },
     { key: "value", label: "Value", type: "string", hint: "Ignored when category is `category`." },
     {
       key: "enumeration",

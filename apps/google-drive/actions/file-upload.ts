@@ -35,7 +35,7 @@ const upload: ActionDefinition<Input> = {
     { key: "mimeType", label: "MIME type", type: "string", default: "application/octet-stream" },
     { key: "parentFolderId", label: "Parent Folder ID", type: "string" },
     { key: "parentDriveId", label: "Parent Drive ID", type: "string" },
-    { key: "description", label: "Description", type: "string" },
+    { key: "description", label: "Description", type: "text" },
   ],
 
   async execute(input, ctx) {

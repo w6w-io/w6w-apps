@@ -55,7 +55,7 @@ const shareFolder: ActionDefinition<Input> = {
     { key: "domain", label: "Domain", type: "string" },
     { key: "allowFileDiscovery", label: "Allow file discovery", type: "boolean" },
     { key: "sendNotificationEmail", label: "Send notification email", type: "boolean" },
-    { key: "emailMessage", label: "Email message", type: "string" },
+    { key: "emailMessage", label: "Email message", type: "text" },
   ],
 
   async execute(input, ctx) {

@@ -20,6 +20,7 @@ const deleteAttribute: ActionDefinition<Input> = {
       key: "category",
       label: "Category",
       type: "select",
+      required: true,
       default: "normal",
       options: [
         { value: "normal", label: "Normal" },
@@ -29,7 +30,7 @@ const deleteAttribute: ActionDefinition<Input> = {
         { value: "global", label: "Global" },
       ],
     },
-    { key: "name", label: "Name", type: "string" },
+    { key: "name", label: "Name", type: "string", required: true },
   ],
 
   async execute(input, ctx) {

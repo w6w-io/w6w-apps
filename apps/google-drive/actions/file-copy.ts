@@ -22,7 +22,7 @@ const copyFile: ActionDefinition<Input> = {
     { key: "name", label: "New File Name", type: "string" },
     { key: "parentFolderId", label: "Parent Folder ID", type: "string" },
     { key: "parentDriveId", label: "Parent Drive ID", type: "string" },
-    { key: "description", label: "Description", type: "string" },
+    { key: "description", label: "Description", type: "text" },
     {
       key: "copyRequiresWriterPermission",
       label: "Copy requires writer permission",

@@ -36,7 +36,7 @@ const makeCall: ActionDefinition<Input> = {
       required: true,
       hint: "Recipient phone number in E.164 format.",
     },
-    { key: "message", label: "Message", type: "string", required: true },
+    { key: "message", label: "Message", type: "text", required: true },
     {
       key: "twiml",
       label: "Use TwiML",

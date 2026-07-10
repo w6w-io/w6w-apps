@@ -33,7 +33,7 @@ const updateFile: ActionDefinition<Input> = {
   params: [
     { key: "fileId", label: "File ID", type: "string", required: true },
     { key: "name", label: "Name", type: "string" },
-    { key: "description", label: "Description", type: "string" },
+    { key: "description", label: "Description", type: "text" },
     { key: "starred", label: "Starred", type: "boolean" },
     { key: "trashed", label: "Trashed", type: "boolean" },
     { key: "mimeType", label: "MIME type", type: "string" },
