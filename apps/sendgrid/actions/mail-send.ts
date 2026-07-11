@@ -15,19 +15,28 @@ const action: ActionDefinition = {
   description: "Send an email",
   params: [
     {
-      key: "fromEmail",
-      label: "Sender Email",
-      type: "string",
-      required: true,
-      default: "",
-      hint: "Email address of the sender of the email",
-    },
-    {
-      key: "fromName",
-      label: "Sender Name",
-      type: "string",
-      default: "",
-      hint: "Name of the sender of the email",
+      key: "sender",
+      label: "Sender",
+      type: "section",
+      section: "group",
+      layout: "row",
+      children: [
+        {
+          key: "fromEmail",
+          label: "Sender Email",
+          type: "string",
+          required: true,
+          default: "",
+          hint: "Email address of the sender of the email",
+        },
+        {
+          key: "fromName",
+          label: "Sender Name",
+          type: "string",
+          default: "",
+          hint: "Name of the sender of the email",
+        },
+      ],
     },
     {
       key: "toEmail",
@@ -54,17 +63,6 @@ const action: ActionDefinition = {
       hint: "Whether this email will contain a dynamic template",
     },
     {
-      key: "contentType",
-      label: "MIME Type",
-      type: "select",
-      default: "text/plain",
-      hint: "MIME type of the email to send",
-      options: [
-        { "value": "text/plain", "label": "Plain Text" },
-        { "value": "text/html", "label": "HTML" },
-      ],
-    },
-    {
       key: "contentValue",
       label: "Message Body",
       type: "text",
@@ -74,11 +72,33 @@ const action: ActionDefinition = {
       hint: "Message body of the email to send",
     },
     {
-      key: "templateId",
-      label: "Template Name or ID",
-      type: "select",
-      default: [],
-      hint: "Choose from the list, or specify an ID using an <a href=\"https://docs.n8n.io/code/expressions/\">expression</a>",
+      key: "advancedContent",
+      label: "Advanced",
+      type: "section",
+      section: "collapsible",
+      title: "Advanced",
+      subtitle: "MIME type & template",
+      collapsed: true,
+      children: [
+        {
+          key: "contentType",
+          label: "MIME Type",
+          type: "select",
+          default: "text/plain",
+          hint: "MIME type of the email to send",
+          options: [
+            { "value": "text/plain", "label": "Plain Text" },
+            { "value": "text/html", "label": "HTML" },
+          ],
+        },
+        {
+          key: "templateId",
+          label: "Template Name or ID",
+          type: "select",
+          default: [],
+          hint: "Choose from the list, or specify an ID using an <a href=\"https://docs.n8n.io/code/expressions/\">expression</a>",
+        },
+      ],
     },
     {
       key: "dynamicTemplateFields",
