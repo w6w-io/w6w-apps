@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/send-grid",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "Consume SendGrid API",
   "license": "MIT",
   "author": {
@@ -18,7 +18,11 @@
         "svg": "./assets/send-grid.svg"
       }
     },
-    "network": { "allow": ["api.sendgrid.com"] },
+    "network": {
+      "allow": [
+        "api.sendgrid.com"
+      ]
+    },
     "entry": "./index.ts"
   }
 }
