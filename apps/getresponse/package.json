@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/getresponse",
+  "version": "0.1.0",
+  "description": "Manage GetResponse contacts, campaigns (lists), tags, custom fields and newsletters — on the retail platform and on GetResponse MAX.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.getresponse",
+    "displayName": "GetResponse",
+    "categories": [
+      "marketing",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "png": "./assets/icon.png",
+        "alt": "GetResponse"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.getresponse.com",
+        "api3.getresponse360.com",
+        "api3.getresponse360.pl"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

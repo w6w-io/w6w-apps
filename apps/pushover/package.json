@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/pushover",
+  "version": "0.1.0",
+  "description": "Send push notifications to phones, tablets and desktops through Pushover — including emergency-priority messages that retry until acknowledged.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pushover",
+    "displayName": "Pushover",
+    "categories": [
+      "communication",
+      "monitoring"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Pushover"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.pushover.net"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -71,6 +71,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | followupboss | crm | api-key | 26 |
 | freshdesk | support | api-key | 13 |
 | freshservice | support, devops | api-key | 23 |
+| getresponse | marketing, email | api-key | 14 |
 | ghost | cms, productivity | admin-api-key | 11 |
 | github | version-control, developer-tools | access-token, oauth2 | 24 |
 | gitlab | developer-tools, version-control | access-token, oauth2 | 16 |
@@ -130,6 +131,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | postbin | developer-tools | none | 5 |
 | posthog | analytics | personal-api-key | 8 |
 | postmark | email, communication | api-key | 13 |
+| pushover | communication, monitoring | app-token | 4 |
 | quickbase | databases, productivity, project-management | user-token | 20 |
 | quickbooks | finance | oauth2 | 20 |
 | reddit | social-media | oauth2 | 8 |
