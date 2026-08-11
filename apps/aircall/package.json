@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/aircall",
+  "version": "0.1.0",
+  "description": "Read and act on Aircall calls, contacts, users, teams, numbers, tags and webhooks over the Aircall Public API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.aircall",
+    "displayName": "Aircall",
+    "categories": [
+      "communication",
+      "support",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Aircall"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.aircall.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

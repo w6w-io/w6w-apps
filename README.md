@@ -26,6 +26,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 |-----|------------|------|--------:|
 | activecampaign | marketing, crm | api-key | 13 |
 | acuityscheduling | calendar | basic, oauth2 | 9 |
+| aircall | communication, support, crm | basic | 38 |
 | airtable | spreadsheets, databases, productivity | personal-access-token, oauth2, api-key | 10 |
 | anthropic | ai | api-key | 14 |
 | apify | developer-tools, storage, ai | api-token | 31 |
@@ -42,6 +43,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | buffer | social-media, marketing | oauth2, api-key | 14 |
 | cal | calendar | api-key | 8 |
 | calendly | calendar, productivity | personal-access-token, oauth2 | 12 |
+| campaignmonitor | email, marketing | api-key, oauth2 | 42 |
 | chargebee | commerce, finance | api-key | 17 |
 | circle | communication, social-media | api-token | 33 |
 | circleci | devops, developer-tools | api-token | 8 |
@@ -51,6 +53,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | clockify | productivity | api-key | 10 |
 | cloudflare | devops | api-token | 8 |
 | coda | productivity, documents | api-token | 11 |
+| companycam | project-management, documents, productivity | access-token, oauth2 | 62 |
 | constantcontact | marketing, email | oauth2 | 22 |
 | contentful | cms | access-token | 10 |
 | copper | crm | api-key | 24 |
@@ -64,6 +67,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | dropbox | storage | access-token, oauth2 | 12 |
 | elastic | search | api-key, basic | 9 |
 | elevenlabs | ai | api-key | 22 |
+| emailoctopus | marketing, email | api-key | 25 |
 | eventbrite | commerce, calendar | personal-token, oauth2 | 10 |
 | excel | spreadsheets, productivity | oauth2 | 16 |
 | facebook | social-media, marketing | oauth2, page-token | 14 |
@@ -124,6 +128,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | microsoft-todo | productivity, project-management | oauth2 | 19 |
 | mistral | ai | api-key | 4 |
 | monday | project-management, productivity | api-token, oauth2 | 14 |
+| motion | productivity, project-management, calendar | api-key | 27 |
 | netlify | devops | personal-access-token | 10 |
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
 | odoo | crm, commerce | api-key | 21 |

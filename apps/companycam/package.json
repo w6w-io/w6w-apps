@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/companycam",
+  "version": "0.1.0",
+  "description": "Read and write CompanyCam projects, photos, videos, documents, checklists, tags, users and webhooks over the Core API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.companycam",
+    "displayName": "CompanyCam",
+    "categories": [
+      "project-management",
+      "documents",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "CompanyCam"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.companycam.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

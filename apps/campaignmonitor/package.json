@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/campaignmonitor",
+  "version": "0.1.0",
+  "description": "Manage Campaign Monitor clients, subscriber lists, subscribers, campaigns and transactional email over the createsend.com API v3.3.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.campaignmonitor",
+    "displayName": "Campaign Monitor",
+    "categories": [
+      "email",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Campaign Monitor"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.createsend.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

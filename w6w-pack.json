@@ -4,13 +4,16 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
     },
     {
       "path": "./apps/acuityscheduling"
+    },
+    {
+      "path": "./apps/aircall"
     },
     {
       "path": "./apps/airtable"
@@ -61,6 +64,9 @@
       "path": "./apps/calendly"
     },
     {
+      "path": "./apps/campaignmonitor"
+    },
+    {
       "path": "./apps/chargebee"
     },
     {
@@ -86,6 +92,9 @@
     },
     {
       "path": "./apps/coda"
+    },
+    {
+      "path": "./apps/companycam"
     },
     {
       "path": "./apps/constantcontact"
@@ -125,6 +134,9 @@
     },
     {
       "path": "./apps/elevenlabs"
+    },
+    {
+      "path": "./apps/emailoctopus"
     },
     {
       "path": "./apps/eventbrite"
@@ -305,6 +317,9 @@
     },
     {
       "path": "./apps/monday"
+    },
+    {
+      "path": "./apps/motion"
     },
     {
       "path": "./apps/netlify"

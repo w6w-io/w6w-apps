@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/emailoctopus",
+  "version": "0.1.0",
+  "description": "Manage EmailOctopus lists, contacts, fields, tags, campaign reports and API-triggered automations via the EmailOctopus v2 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.emailoctopus",
+    "displayName": "EmailOctopus",
+    "categories": [
+      "marketing",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "EmailOctopus"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.emailoctopus.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

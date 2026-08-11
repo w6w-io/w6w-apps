@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/motion",
+  "version": "0.1.0",
+  "description": "Create, schedule and query Motion tasks, projects, recurring tasks, comments and custom fields.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.motion",
+    "displayName": "Motion",
+    "categories": [
+      "productivity",
+      "project-management",
+      "calendar"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Motion"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.usemotion.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
