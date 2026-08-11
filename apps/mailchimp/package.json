@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/mailchimp",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Manage Mailchimp audiences: create/update members, tag them, and send campaigns.",
   "license": "MIT",
   "author": {

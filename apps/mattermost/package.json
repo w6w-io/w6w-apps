@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/mattermost",
+  "version": "0.1.0",
+  "description": "Post, edit, search and thread messages in Mattermost channels, and manage channels and their members — on Mattermost Cloud and self-hosted servers alike.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.mattermost",
+    "displayName": "Mattermost",
+    "categories": [
+      "communication",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Mattermost"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

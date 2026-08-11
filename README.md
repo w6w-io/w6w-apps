@@ -110,6 +110,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mailjet | email, marketing | basic | 17 |
 | mandrill | email, marketing | api-key | 17 |
 | manychat | marketing, communication, social-media | api-token | 25 |
+| mattermost | communication, productivity | access-token | 13 |
 | metabase | analytics, databases | api-key | 17 |
 | microsoft-todo | productivity, project-management | oauth2 | 19 |
 | mistral | ai | api-key | 4 |
@@ -166,6 +167,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wix | cms, crm, commerce | api-key | 24 |
 | woocommerce | commerce | api-key | 13 |
 | wordpress | cms | basic, oauth2 | 15 |
+| wufoo | forms, productivity | api-key | 8 |
 | xero | finance | oauth2 | 13 |
 | youtube | video, social-media | api-key, oauth2 | 16 |
 | zendesk | support, crm | api-token, oauth2 | 17 |
