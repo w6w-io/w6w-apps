@@ -32,6 +32,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | asana | productivity, project-management | access-token, oauth2 | 22 |
 | attio | crm | api-key | 29 |
 | bamboohr | hr | api-key | 18 |
+| baserow | databases, spreadsheets, productivity | database-token | 12 |
 | bitbucket | developer-tools | basic, access-token | 12 |
 | bitly | marketing, analytics | access-token | 8 |
 | box | storage | oauth2 | 10 |
@@ -120,6 +121,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | onesimpleapi | developer-tools | api-key | 7 |
 | openai | ai, developer-tools | api-key | 13 |
 | outlook | communication, email, calendar | oauth2 | 18 |
+| paddle | commerce, finance | api-key | 21 |
 | pagerduty | monitoring, devops | api-token, oauth2 | 14 |
 | paypal | commerce, finance | client-credentials | 13 |
 | pandadoc | documents, legal, productivity | api-key | 16 |

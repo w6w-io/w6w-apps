@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/baserow",
+  "version": "0.1.0",
+  "description": "Read, create, update, move and delete Baserow rows — singly or in batches of up to 200 — and browse the tables and fields a database token can reach.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.baserow",
+    "displayName": "Baserow",
+    "categories": [
+      "databases",
+      "spreadsheets",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Baserow"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
