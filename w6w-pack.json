@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -17,6 +17,9 @@
     },
     {
       "path": "./apps/anthropic"
+    },
+    {
+      "path": "./apps/apify"
     },
     {
       "path": "./apps/apitemplateio"
@@ -137,6 +140,9 @@
     },
     {
       "path": "./apps/figma"
+    },
+    {
+      "path": "./apps/fireflies"
     },
     {
       "path": "./apps/flodesk"
@@ -431,6 +437,9 @@
     },
     {
       "path": "./apps/uptimerobot"
+    },
+    {
+      "path": "./apps/vimeo"
     },
     {
       "path": "./apps/webflow"

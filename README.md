@@ -28,6 +28,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | acuityscheduling | calendar | basic, oauth2 | 9 |
 | airtable | spreadsheets, databases, productivity | personal-access-token, oauth2, api-key | 10 |
 | anthropic | ai | api-key | 14 |
+| apify | developer-tools, storage, ai | api-token | 31 |
 | apitemplateio | developer-tools | api-key | 5 |
 | asana | productivity, project-management | access-token, oauth2 | 22 |
 | attio | crm | api-key | 29 |
@@ -68,6 +69,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | facebook-lead-ads | marketing, social-media | oauth2, page-token | 2 |
 | fathom | ai, productivity, video | api-key | 11 |
 | figma | productivity, developer-tools | personal-access-token, oauth2 | 10 |
+| fireflies | ai, productivity, video | api-key | 25 |
 | flodesk | marketing, email | api-key, oauth2 | 22 |
 | followupboss | crm | api-key | 26 |
 | formstack | forms, productivity | access-token | 9 |
@@ -166,6 +168,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | typeform | forms, productivity | personal-access-token, oauth2 | 10 |
 | upstash | databases | rest-token | 15 |
 | uptimerobot | monitoring | api-key | 8 |
+| vimeo | video, social-media | access-token | 36 |
 | webflow | cms | api-token, oauth2 | 14 |
 | whatsapp | communication | access-token | 9 |
 | wix | cms, crm, commerce | api-key | 24 |

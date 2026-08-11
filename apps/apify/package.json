@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/apify",
+  "version": "0.1.0",
+  "description": "Run Apify Actors and tasks, poll runs, and read or write the datasets and key-value stores they produce.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.apify",
+    "displayName": "Apify",
+    "categories": [
+      "developer-tools",
+      "storage",
+      "ai"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Apify"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.apify.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/fireflies",
+  "version": "0.1.0",
+  "description": "Read Fireflies.ai meeting transcripts, summaries, soundbites, contacts, channels and analytics, upload audio, drive the notetaker in live meetings, and ask AskFred — over the Fireflies GraphQL API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.fireflies",
+    "displayName": "Fireflies.ai",
+    "categories": [
+      "ai",
+      "productivity",
+      "video"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "url": "./assets/icon.png",
+        "alt": "Fireflies.ai"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.fireflies.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

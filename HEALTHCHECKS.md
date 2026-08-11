@@ -37,6 +37,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [acuityscheduling](apps/acuityscheduling/README.md) | [Statuspage](https://status.acuityscheduling.com/api/v2/summary.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 2 derived |
 | [airtable](apps/airtable/README.md) | [Statuspage](https://status.airtable.com/api/v2/status.json) | yes | `GET /v0/meta/whoami` | no | `service` · ~~quota~~ · 3 derived |
 | [anthropic](apps/anthropic/README.md) | [Statuspage](https://status.anthropic.com/api/v2/status.json) | yes | `GET /v1/models` | yes | `service` · `quota` · 1 derived |
+| [apify](apps/apify/README.md) | [Statuspage](https://status.apify.com/api/v2/summary.json) | yes | `GET /v2/users/me/limits` | yes | `service` · `quota` · ~~request-rate~~ · 1 derived |
 | [apitemplateio](apps/apitemplateio/README.md) | none published | no | `GET /v2/list-templates?limit=1` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [asana](apps/asana/README.md) | [Statuspage](https://status.asana.com/api/v2/status.json) | yes | `GET /api/1.0/users/me` | no | `service` · ~~quota~~ · 2 derived |
 | [attio](apps/attio/README.md) | [Statuspage](https://status.attio.com/api/v2/summary.json) | yes | `GET /v2/self` | no | `service` · ~~quota~~ · 1 derived |
@@ -77,6 +78,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [facebook-lead-ads](apps/facebook-lead-ads/README.md) | [page](https://metastatus.com) | no | _varies by method_ | yes | ~~service~~ · `quota` · 2 derived |
 | [fathom](apps/fathom/README.md) | [Statuspage](https://status.fathom.video/api/v2/summary.json) | yes | `GET /meetings` | yes | `service` · `quota` · 1 derived |
 | [figma](apps/figma/README.md) | [Statuspage](https://status.figma.com/api/v2/summary.json) | yes | `GET /v1/me` | no | `service` · ~~quota~~ · 2 derived |
+| [fireflies](apps/fireflies/README.md) | none reachable (dangling Freshstatus CNAME) | no | `POST /graphql` `{ user { user_id name email } }` | no | `api` · ~~service~~ · ~~quota~~ · 1 derived |
 | [flodesk](apps/flodesk/README.md) | none machine-readable | no | `GET /segments/colors` | yes | ~~service~~ · `quota` · 2 derived |
 | [followupboss](apps/followupboss/README.md) | [Statuspage](https://followupboss.statuspage.io/api/v2/summary.json) | yes | `GET /identity` | yes | `service` · `quota` · 1 derived |
 | [formstack](apps/formstack/README.md) | [Statuspage](https://www.intellistackstatus.com/api/v2/summary.json) | yes | `GET /forms?pageSize=1` | no | `service` · ~~quota~~ · 1 derived |
@@ -175,6 +177,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [typeform](apps/typeform/README.md) | [Statuspage](https://status.typeform.com/api/v2/status.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 2 derived |
 | [upstash](apps/upstash/README.md) | [Statuspage](https://status.upstash.com/api/v2/summary.json) | yes | `GET /ping` | no | `service` · `host` · 1 derived |
 | [uptimerobot](apps/uptimerobot/README.md) | none published | no | `POST /getAccountDetails` | yes | ~~service~~ · `quota` · 1 derived |
+| [vimeo](apps/vimeo/README.md) | [Statuspage](https://www.vimeostatus.com/api/v2/status.json) | yes | `GET /me?fields=uri,name` | yes | `service` · `quota` · 1 derived |
 | [webflow](apps/webflow/README.md) | [Statuspage](https://status.webflow.com/api/v2/status.json) | yes | `GET /v2/sites` | yes | `service` · `quota` · 2 derived |
 | [whatsapp](apps/whatsapp/README.md) | [RSS](https://metastatus.com/outage-events-feed-whatsapp-business-api.rss) | yes | `GET /{phone-number-id}?fields=verified_name` | no | `service` · ~~quota~~ · 1 derived |
 | [wix](apps/wix/README.md) | [Statuspage](https://status.wix.com/api/v2/status.json) | yes | `GET /contacts/v4/contacts` | no | `service` · ~~quota~~ · 1 derived |
