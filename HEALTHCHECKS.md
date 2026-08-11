@@ -71,6 +71,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [docusign](apps/docusign/README.md) | [Statuspage](https://status.docusign.com/api/v2/summary.json) | yes | `GET /accounts/{accountId}` | yes | `service` · `quota` · 2 derived |
 | [dropbox](apps/dropbox/README.md) | [Statuspage](https://status.dropbox.com/api/v2/status.json) | yes | `POST /2/users/get_current_account` | no | `service` · ~~quota~~ · 2 derived |
 | [elastic](apps/elastic/README.md) | none published | no | `GET /_security/_authenticate` | no | ~~service~~ · ~~quota~~ · `site` · 2 derived |
+| [elevenlabs](apps/elevenlabs/README.md) | [Statuspage](https://status.elevenlabs.io/api/v2/summary.json) | yes | `GET /v1/user/subscription` | yes | `service` · `quota` · ~~request-rate~~ · 1 derived |
 | [eventbrite](apps/eventbrite/README.md) | [page](https://status.eventbrite.com) | no | `GET /v3/users/me/` | yes | ~~service~~ · `quota` · 2 derived |
 | [excel](apps/excel/README.md) | none machine-readable | no | `GET /me/drive` | yes | ~~service~~ · `quota` · 1 derived |
 | [facebook](apps/facebook/README.md) | none published | no | _varies by method_ | yes | ~~service~~ · `quota` · 2 derived |
@@ -133,6 +134,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [notion](apps/notion/README.md) | [page](https://status.notion.so) | no | `GET /v1/users/me` | no | ~~service~~ · ~~quota~~ · 2 derived |
 | [odoo](apps/odoo/README.md) | none machine-readable | no | `common.authenticate` (JSON-RPC) | no | ~~service~~ · ~~quota~~ · `instance` · 1 derived |
 | [okta](apps/okta/README.md) | [page](https://status.okta.com) | no | `GET /api/v1/users?limit=1` | yes | ~~service~~ · `quota` · 1 derived |
+| [onedrive](apps/onedrive/README.md) | none machine-readable | no | `GET /me` | yes | ~~service~~ · `quota` · ~~request-rate~~ · 1 derived |
 | [onesimpleapi](apps/onesimpleapi/README.md) | none published | no | `GET /exchange_rate?to_currency=USD` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [openai](apps/openai/README.md) | [Statuspage](https://status.openai.com/api/v2/status.json) | yes | `GET /v1/models` | yes | `service` · `quota` · 1 derived |
 | [outlook](apps/outlook/README.md) | none machine-readable | no | `GET /me` | no | ~~service~~ · ~~quota~~ · 1 derived |
@@ -169,10 +171,12 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [teams](apps/teams/README.md) | none machine-readable | no | `GET /me` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [telegram](apps/telegram/README.md) | none published | no | `GET /bot{token}/getMe` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [ticktick](apps/ticktick/README.md) | none published | no | `GET /open/v1/project` | no | `service` · ~~quota~~ · 1 derived |
+| [tidycal](apps/tidycal/README.md) | none (statuspage host unclaimed) | no | `GET /api/me` | no | `api` · ~~service~~ · ~~quota~~ · 2 derived |
 | [todoist](apps/todoist/README.md) | [Instatus](https://status.todoist.net/summary.json) | yes | `GET /projects` | no | `service` · ~~quota~~ · 2 derived |
 | [toggl](apps/toggl/README.md) | [Statuspage](https://status.toggl.com/api/v2/summary.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 1 derived |
 | [trello](apps/trello/README.md) | [Statuspage](https://trello.status.atlassian.com/api/v2/status.json) | yes | `GET /1/members/me` | no | `service` · ~~quota~~ · 1 derived |
 | [twilio](apps/twilio/README.md) | [Statuspage](https://status.twilio.com/api/v2/status.json) | yes | `GET /2010-04-01/Accounts/{accountSid}.json` | no | `service` · ~~quota~~ · 1 derived |
+| [twitch](apps/twitch/README.md) | [Statuspage](https://status.twitch.com/api/v2/status.json) | yes | `GET id.twitch.tv/oauth2/validate` | yes | `service` · `api` · `quota` · ~~api-status~~ · 2 derived |
 | [twitter](apps/twitter/README.md) | [page](https://developer.x.com/status) | no | `GET /2/users/me` | yes | ~~service~~ · `quota` · 1 derived |
 | [typeform](apps/typeform/README.md) | [Statuspage](https://status.typeform.com/api/v2/status.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 2 derived |
 | [upstash](apps/upstash/README.md) | [Statuspage](https://status.upstash.com/api/v2/summary.json) | yes | `GET /ping` | no | `service` · `host` · 1 derived |

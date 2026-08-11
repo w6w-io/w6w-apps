@@ -62,6 +62,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | docusign | documents, legal, productivity | oauth2, oauth2-demo | 16 |
 | dropbox | storage | access-token, oauth2 | 12 |
 | elastic | search | api-key, basic | 9 |
+| elevenlabs | ai | api-key | 22 |
 | eventbrite | commerce, calendar | personal-token, oauth2 | 10 |
 | excel | spreadsheets, productivity | oauth2 | 16 |
 | facebook | social-media, marketing | oauth2, page-token | 14 |
@@ -124,6 +125,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
 | odoo | crm, commerce | api-key | 21 |
 | okta | security | api-token | 11 |
+| onedrive | documents, storage | oauth2 | 18 |
 | onesimpleapi | developer-tools | api-key | 7 |
 | openai | ai, developer-tools | api-key | 13 |
 | outlook | communication, email, calendar | oauth2 | 18 |
@@ -160,10 +162,12 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | teams | communication | oauth2 | 16 |
 | telegram | communication | bot-token | 21 |
 | ticktick | productivity, project-management | oauth2 | 23 |
+| tidycal | calendar, productivity | personal-token, oauth2 | 18 |
 | todoist | productivity | api-token, oauth2 | 14 |
 | toggl | productivity | api-token | 10 |
 | trello | project-management, productivity | api-key | 27 |
 | twilio | communication | api-key | 2 |
+| twitch | video, social-media, communication | app-access-token, user-access-token | 28 |
 | twitter | social-media | oauth2 | 8 |
 | typeform | forms, productivity | personal-access-token, oauth2 | 10 |
 | upstash | databases | rest-token | 15 |

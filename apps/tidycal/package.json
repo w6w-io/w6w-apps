@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/tidycal",
+  "version": "0.1.0",
+  "description": "Read and manage TidyCal scheduling: bookings, booking types, available timeslots, contacts and teams.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.tidycal",
+    "displayName": "TidyCal",
+    "categories": [
+      "calendar",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "TidyCal"
+      }
+    },
+    "network": {
+      "allow": [
+        "tidycal.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
