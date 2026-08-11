@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/formstack",
+  "version": "0.1.0",
+  "description": "Read Formstack forms, fields and folders, and list, search, create and delete submissions — on the V2025 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.formstack",
+    "displayName": "Formstack",
+    "categories": [
+      "forms",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Formstack"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.formstack.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

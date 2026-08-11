@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/basecamp",
+  "version": "0.1.0",
+  "description": "Read Basecamp projects and people, and create to-dos, messages, comments and Campfire lines — on the Basecamp 5 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.basecamp",
+    "displayName": "Basecamp",
+    "categories": [
+      "project-management",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Basecamp"
+      }
+    },
+    "network": {
+      "allow": [
+        "3.basecampapi.com",
+        "launchpad.37signals.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

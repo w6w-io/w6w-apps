@@ -25,7 +25,7 @@ methods. Twenty-three apps add a fourth question — **is this tenant's own host
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **518 checks**: 196 live probes, 122 declared absences, and 200
+Across the pack that comes to **524 checks**: 198 live probes, 124 declared absences, and 202
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -41,6 +41,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [asana](apps/asana/README.md) | [Statuspage](https://status.asana.com/api/v2/status.json) | yes | `GET /api/1.0/users/me` | no | `service` · ~~quota~~ · 2 derived |
 | [attio](apps/attio/README.md) | [Statuspage](https://status.attio.com/api/v2/summary.json) | yes | `GET /v2/self` | no | `service` · ~~quota~~ · 1 derived |
 | [bamboohr](apps/bamboohr/README.md) | [RSS](https://status.bamboohr.com/pages/54f0de009d6f51e7140002b7/rss) | yes | `GET /api/v1/employees/0` | no | `service` · ~~quota~~ · 1 derived |
+| [basecamp](apps/basecamp/README.md) | [Statuspage](https://37signals.statuspage.io/api/v2/summary.json) | yes | `GET launchpad/authorization.json` | no | `service` · ~~quota~~ · 1 derived |
 | [baserow](apps/baserow/README.md) | [Better Stack](https://status.baserow.org/index.json) | yes | `GET /api/database/tables/all-tables/` | no | `service` · ~~quota~~ · 1 derived |
 | [bitbucket](apps/bitbucket/README.md) | [Statuspage](https://bitbucket.status.atlassian.com/api/v2/status.json) | yes | `GET /2.0/user` | yes | `service` · `quota` · 2 derived |
 | [bitly](apps/bitly/README.md) | [Atom](https://status.bitly.com/history.atom) | yes | `GET /user` | no | `service` · ~~quota~~ · 1 derived |
@@ -78,6 +79,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [figma](apps/figma/README.md) | [Statuspage](https://status.figma.com/api/v2/summary.json) | yes | `GET /v1/me` | no | `service` · ~~quota~~ · 2 derived |
 | [flodesk](apps/flodesk/README.md) | none machine-readable | no | `GET /segments/colors` | yes | ~~service~~ · `quota` · 2 derived |
 | [followupboss](apps/followupboss/README.md) | [Statuspage](https://followupboss.statuspage.io/api/v2/summary.json) | yes | `GET /identity` | yes | `service` · `quota` · 1 derived |
+| [formstack](apps/formstack/README.md) | [Statuspage](https://www.intellistackstatus.com/api/v2/summary.json) | yes | `GET /forms?pageSize=1` | no | `service` · ~~quota~~ · 1 derived |
 | [freshdesk](apps/freshdesk/README.md) | none published | no | `GET /agents/me` | yes | ~~service~~ · `quota` · `domain` · 1 derived |
 | [freshservice](apps/freshservice/README.md) | [Freshstatus](https://public-api.freshstatus.io/v1/public-components/?account_id=3616) | yes | `GET /api/v2/tickets` | yes | `service` · `quota` · `domain` · 1 derived |
 | [getresponse](apps/getresponse/README.md) | [Statuspage](https://status.getresponse.com/api/v2/summary.json) | yes | `GET /accounts` | no | `service` · ~~quota~~ · 1 derived |

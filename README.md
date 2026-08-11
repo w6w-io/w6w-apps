@@ -32,6 +32,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | asana | productivity, project-management | access-token, oauth2 | 22 |
 | attio | crm | api-key | 29 |
 | bamboohr | hr | api-key | 18 |
+| basecamp | project-management, productivity | oauth | 11 |
 | baserow | databases, spreadsheets, productivity | database-token | 12 |
 | bitbucket | developer-tools | basic, access-token | 12 |
 | bitly | marketing, analytics | access-token | 8 |
@@ -69,6 +70,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | figma | productivity, developer-tools | personal-access-token, oauth2 | 10 |
 | flodesk | marketing, email | api-key, oauth2 | 22 |
 | followupboss | crm | api-key | 26 |
+| formstack | forms, productivity | access-token | 9 |
 | freshdesk | support | api-key | 13 |
 | freshservice | support, devops | api-key | 23 |
 | getresponse | marketing, email | api-key | 14 |
