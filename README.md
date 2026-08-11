@@ -56,6 +56,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | copper | crm | api-key | 24 |
 | customerio | marketing, email | basic | 7 |
 | databricks | data-warehousing | bearer-token | 8 |
+| datadog | monitoring, devops, developer-tools | api-key | 22 |
 | deepl | ai | api-key | 8 |
 | discord | communication | bot-token, oauth2 | 19 |
 | discourse | communication, social-media | api-key | 26 |
@@ -93,6 +94,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | google-tasks | productivity, project-management | oauth2 | 13 |
 | grafana | monitoring | service-account-token | 8 |
 | gravityforms | forms, productivity | basic | 12 |
+| greenhouse | hr | oauth-client-credentials, api-key | 24 |
 | grist | spreadsheets, databases, productivity | api-key, oauth2 | 15 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
 | helpscout | support | oauth2 | 13 |
@@ -104,6 +106,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | jobber | calendar, crm, finance | oauth2 | 28 |
 | jotform | forms, productivity | api-key | 14 |
 | kajabi | commerce, crm, marketing | client-credentials | 49 |
+| keap | crm, marketing, email | oauth2, access-key | 36 |
 | kit | marketing, email | api-key | 18 |
 | klaviyo | marketing, email | api-key | 23 |
 | lemlist | marketing, email | api-key | 18 |
@@ -134,12 +137,14 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | paypal | commerce, finance | client-credentials | 13 |
 | pandadoc | documents, legal, productivity | api-key | 16 |
 | pipedrive | crm | api-token, oauth2 | 14 |
+| podio | project-management, databases, productivity | app-auth, oauth2 | 29 |
 | postbin | developer-tools | none | 5 |
 | posthog | analytics | personal-api-key | 8 |
 | postmark | email, communication | api-key | 13 |
 | pushover | communication, monitoring | app-token | 4 |
 | quickbase | databases, productivity, project-management | user-token | 20 |
 | quickbooks | finance | oauth2 | 20 |
+| raindrop | productivity, search, storage | test-token, oauth2 | 39 |
 | reddit | social-media | oauth2 | 8 |
 | s3 | storage | aws-iam | 9 |
 | segment | analytics | write-key | 6 |

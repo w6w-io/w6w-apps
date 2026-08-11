@@ -1,0 +1,39 @@
+{
+  "name": "@w6w-apps/datadog",
+  "version": "0.1.0",
+  "description": "Submit metrics and events to Datadog, query timeseries, and read monitors, downtimes, dashboards, logs, hosts and users across every Datadog site.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.datadog",
+    "displayName": "Datadog",
+    "categories": [
+      "monitoring",
+      "devops",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Datadog"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.datadoghq.com",
+        "api.us3.datadoghq.com",
+        "api.us5.datadoghq.com",
+        "api.datadoghq.eu",
+        "api.ap1.datadoghq.com",
+        "api.ap2.datadoghq.com",
+        "api.uk1.datadoghq.com",
+        "api.ddog-gov.com",
+        "api.us2.ddog-gov.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

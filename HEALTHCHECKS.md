@@ -65,6 +65,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [copper](apps/copper/README.md) | [Statuspage](https://status.copper.com/api/v2/summary.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 1 derived |
 | [customerio](apps/customerio/README.md) | [Statuspage](https://status.customerio.com/api/v2/summary.json) | yes | `PUT /customers/:id` | no | `service` · ~~quota~~ · 1 derived |
 | [databricks](apps/databricks/README.md) | none published | no | _varies by method_ | no | ~~service~~ · `workspace` · 1 derived |
+| [datadog](apps/datadog/README.md) | [Statuspage](https://status.datadoghq.com/api/v2/status.json) (per site) | yes | `GET /api/v1/validate` | yes | `service` · `api` · ~~quota~~ · 1 derived |
 | [deepl](apps/deepl/README.md) | [JSON](https://api-status.deepl.com/api/status) | yes | `GET /v2/usage` | yes | `service` · `quota` · 1 derived |
 | [discord](apps/discord/README.md) | [Statuspage](https://discordstatus.com/api/v2/status.json) | yes | `GET /users/@me` | yes | `service` · `quota` · 2 derived |
 | [discourse](apps/discourse/README.md) | [status.io](https://api.status.io/1.0/status/5e2141ce30dc5c04b3ac32fc) | yes | `GET /u/{username}.json` | no | `service` · ~~quota~~ · `site` · 1 derived |
@@ -102,6 +103,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [google-tasks](apps/google-tasks/README.md) | [JSON](https://www.google.com/appsstatus/dashboard/incidents.json) | yes | `GET /users/@me/lists?maxResults=1` | no | `service` · ~~quota~~ · 1 derived |
 | [grafana](apps/grafana/README.md) | none published | no | `GET /api/org` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
 | [gravityforms](apps/gravityforms/README.md) | none published | no | `GET /gf/v2/forms` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
+| [greenhouse](apps/greenhouse/README.md) | [Statuspage](https://status.greenhouse.io/api/v2/summary.json) | yes | `GET /v3/candidates` | yes | `service` · `api` · `quota` · ~~silo~~ · 2 derived |
 | [grist](apps/grist/README.md) | none machine-readable | no | `GET /api/profile/user` | no | ~~service~~ · ~~quota~~ · `site` · 2 derived |
 | [harvest](apps/harvest/README.md) | [Statuspage](https://www.harveststatus.com/api/v2/summary.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 2 derived |
 | [helpscout](apps/helpscout/README.md) | [Statuspage](https://status.helpscout.com/api/v2/summary.json) | yes | `GET /users/me` | yes | `service` · `quota` · 1 derived |
@@ -113,6 +115,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [jobber](apps/jobber/README.md) | [Statuspage](https://www.jobberstatus.net/api/v2/summary.json) | yes | `query { account }` (GraphQL) | yes | `service` · `quota` · 1 derived |
 | [jotform](apps/jotform/README.md) | [Statuspage](https://status.jotform.com/api/v2/summary.json) | yes | `GET /user` | yes | `service` · `quota` · 1 derived |
 | [kajabi](apps/kajabi/README.md) | [Statuspage](https://status.kajabi.com/api/v2/summary.json) | yes | `GET /v1/me` | no | `service` · ~~quota~~ · 1 derived |
+| [keap](apps/keap/README.md) | [Statuspage](https://status.thryv.com/api/v2/summary.json) (Keap group only) | yes | `GET /crm/rest/v2/oauth/connect/userinfo` | yes | `service` · `quota` · ~~spike-rate~~ · 2 derived |
 | [kit](apps/kit/README.md) | [Statuspage](https://status.kit.com/api/v2/summary.json) | yes | `GET /v4/account` | no | `service` · ~~quota~~ · 1 derived |
 | [klaviyo](apps/klaviyo/README.md) | [Statuspage](https://status.klaviyo.com/api/v2/status.json) | yes | `GET /api/accounts/` | yes | `service` · `quota` · 1 derived |
 | [lemlist](apps/lemlist/README.md) | [Hyperping](https://status.lempire.com/status.json) | yes | `GET /team` | yes | `service` · `quota` · 1 derived |
@@ -143,12 +146,14 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [paypal](apps/paypal/README.md) | [Atom](https://www.paypal-status.com/feed/atom) | yes | `POST /v1/oauth2/token` | no | `service` · ~~quota~~ · 1 derived |
 | [pandadoc](apps/pandadoc/README.md) | [Statuspage](https://status.pandadoc.com/api/v2/summary.json) | yes | `GET /members/current` | no | `service` · ~~quota~~ · 1 derived |
 | [pipedrive](apps/pipedrive/README.md) | [page](https://status.pipedrive.com) | no | `GET /users/me` | yes | ~~service~~ · `quota` · 2 derived |
+| [podio](apps/podio/README.md) | [Statuspage](https://status.podio.com/api/v2/summary.json) | yes | `GET /oauth/scope` | yes | `service` · `api` · `quota` · 2 derived |
 | [postbin](apps/postbin/README.md) | [page](https://www.postb.in) | no | _no credential_ | no | `service` · ~~quota~~ · 0 derived |
 | [posthog](apps/posthog/README.md) | none published | no | `GET /api/users/@me/` | no | ~~service~~ · 1 derived |
 | [postmark](apps/postmark/README.md) | [JSON](https://status.postmarkapp.com/api/v1/status) | yes | `GET /server` | no | `service` · ~~quota~~ · 1 derived |
 | [pushover](apps/pushover/README.md) | [page](https://status.pushover.net) | no | `POST /1/users/validate.json` | yes | ~~service~~ · `quota` · 1 derived |
 | [quickbase](apps/quickbase/README.md) | [status.page](https://quickbasestatus.status.page/status.json) | yes | `GET /v1/apps/{appId}` | yes | `service` · `quota` · 1 derived |
 | [quickbooks](apps/quickbooks/README.md) | [Statuspage](https://status.developer.intuit.com/api/v2/summary.json) | yes | `GET /v3/company/{realmId}/companyinfo/{realmId}` | no | `service` · ~~quota~~ · 1 derived |
+| [raindrop](apps/raindrop/README.md) | [Better Stack](https://status.raindrop.io/index.json) | yes | `GET /rest/v1/user` | yes | `service` · `quota` · 2 derived |
 | [reddit](apps/reddit/README.md) | [Statuspage](https://www.redditstatus.com/api/v2/summary.json) | yes | `GET /api/v1/me` | yes | `service` · `quota` · 1 derived |
 | [s3](apps/s3/README.md) | [JSON](https://health.aws.amazon.com/public/currentevents) | yes | `GET /` (ListBuckets) | no | `service` · 1 derived |
 | [segment](apps/segment/README.md) | [Statuspage](https://status.segment.com/api/v2/summary.json) | yes | `POST /v1/identify` | no | `service` · ~~quota~~ · 1 derived |

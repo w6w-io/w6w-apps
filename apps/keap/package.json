@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/keap",
+  "version": "0.1.0",
+  "description": "Keap (formerly Infusionsoft) CRM: contacts, tags, companies, opportunities, tasks, notes, campaigns, orders and transactional email over the Keap REST v2 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.keap",
+    "displayName": "Keap",
+    "categories": [
+      "crm",
+      "marketing",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Keap"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.infusionsoft.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

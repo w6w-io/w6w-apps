@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/podio",
+  "version": "0.1.0",
+  "description": "Read and write Podio items, apps, workspaces, tasks, comments and webhooks over the Podio API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.podio",
+    "displayName": "Podio",
+    "categories": [
+      "project-management",
+      "databases",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Podio"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.podio.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

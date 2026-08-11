@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/raindrop",
+  "version": "0.1.0",
+  "description": "Manage Raindrop.io bookmarks: collections, raindrops, highlights, tags and the saved-link search behind them.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.raindrop",
+    "displayName": "Raindrop.io",
+    "categories": [
+      "productivity",
+      "search",
+      "storage"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Raindrop.io"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.raindrop.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
