@@ -12,7 +12,7 @@
  *     and is a good way to get rate-limited by a status page.
  *   - `credential: "none"` (also the default) — no Connection is supplied and
  *     `sign` never runs, so this reports even before anyone has connected.
- *   - `network.allow` — status.sendgrid.com is deliberately NOT on the app's
+ *   - `network.allow` — the status host is deliberately NOT on the app's
  *     egress allowlist; an action has no business calling it. The allowlist is
  *     widened for this one hook only, which the spec permits precisely because
  *     the posture is unsigned: a signed request must never reach a third-party
@@ -50,13 +50,24 @@ const COMPONENT: Record<string, HealthState> = {
 
 const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-const STATUS_HOST = "status.sendgrid.com";
+/**
+ * The Statuspage-hosted subdomain, NOT SendGrid's own `status.sendgrid.com`
+ * vanity domain. The vanity domain still resolves (a CNAME to
+ * `3tgl2vf85cht.stspg-customer.com`) but SendGrid no longer has it configured on
+ * the page: it serves a certificate valid only for `*.statuspage.io`, and
+ * ignoring TLS it 302s to statuspage.io's marketing site. Verified 2026-08-23.
+ *
+ * The lesson generalises past this app — a vendor vanity domain in front of a
+ * status page is a cert someone else has to remember to renew, so where the
+ * canonical `<vendor>.statuspage.io` exists it is the more durable target.
+ */
+const STATUS_HOST = "sendgrid.statuspage.io";
 
 const service: HealthCheckDefinition = {
   key: "service",
   title: "SendGrid platform status",
   description:
-    "Atlassian Statuspage rollup for status.sendgrid.com, with per-component detail. Unauthenticated and unsigned.",
+    "Atlassian Statuspage rollup for SendGrid, with per-component detail. Unauthenticated and unsigned.",
   kind: "service",
   covers: ["*"],
   network: { allow: [STATUS_HOST] },
@@ -65,8 +76,14 @@ const service: HealthCheckDefinition = {
   async check(_input, ctx) {
     const res = await ctx.fetch(`https://${STATUS_HOST}/api/v2/summary.json`);
     // `unknown`, never `down`: a status page that itself fails tells us nothing
-    // about the vendor, and reporting that as an outage would be a lie.
-    if (!res.ok) return { state: "unknown", message: `status API returned ${res.status}` };
+    // about the vendor, and reporting that as an outage would be a lie. The
+    // message says that in the reader's terms rather than echoing the vendor's
+    // status code — `message` is rendered verbatim (rfcs/healthcheck.md rule 9),
+    // and "status API returned 503" reads like our bug, not their outage.
+    if (!res.ok) {
+      ctx.log("warn", "SendGrid status page returned a non-2xx", { status: res.status });
+      return { state: "unknown", message: "The status page could not be read." };
+    }
 
     const body = await res.json().catch(() => ({})) as {
       status?: { indicator?: string; description?: string };
