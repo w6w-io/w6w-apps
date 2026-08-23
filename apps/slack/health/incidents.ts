@@ -32,8 +32,26 @@
  * (`/feed/rss`). Atom is the one declared because its `<updated>` says when an
  * incident last CHANGED, where RSS's `<pubDate>` conflates that with when it
  * was first posted — and "changed lately" is the question being asked.
+ *
+ * ## The timeline is the FULL history, not the 7-day window `message` narrates
+ *
+ * `message` above stays exactly as it was — a human-glance summary of what
+ * changed in the last week. `timeline` is a separate, wider surface: every
+ * entry in `feed.latest` (the feed's own successive-updates-folded-to-newest
+ * view), because a chart of incident history over months is the reason this
+ * project reads the feed's FULL history rather than only the recent window.
+ * Reusing `recent` here would silently cap that history at 7 days.
+ *
+ * Each entry's `state` comes from the same `Incident:` / `Notice:` title label
+ * `isIncident` already reads below — never from `entry.summary` or
+ * `entry.summaryHtml`. `resolvedAt` is never set: the Atom feed states
+ * resolution only in prose ("Resolved - …"), and this project forbids
+ * inferring it from prose, the same discipline `service.ts` follows for its
+ * own timeline. A feed that failed to fetch, or one with no entries at all,
+ * publishes no timeline (`undefined`) — that is different from a feed that
+ * legitimately says nothing has happened.
  */
-import type { HealthCheckDefinition } from "@w6w/types";
+import type { HealthCheckDefinition, HealthTimelineEntry } from "@w6w/types";
 
 /** How far back an entry still counts as "lately". */
 const WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
@@ -43,11 +61,16 @@ function isIncident(title: string): boolean {
   return /^\s*incident\b/i.test(title);
 }
 
+/** Strips the `Incident: ` / `Notice: ` label Slack prefixes every title with. */
+function stripTitlePrefix(title: string): string {
+  return title.replace(/^\s*(?:incident|notice):\s*/i, "");
+}
+
 const incidents: HealthCheckDefinition = {
   key: "incidents",
   title: "Recent incident history",
   description:
-    "Incidents Slack published in the last week, from its Atom feed. Context only — `service` is authoritative for current state, and this never affects a verdict.",
+    "Incidents Slack published in the last week, from its Atom feed. Context only — `service` is authoritative for current state, and this never affects a verdict. `timeline` carries the feed's full folded history.",
   kind: "service",
   covers: ["*"],
   credential: "none",
@@ -63,6 +86,19 @@ const incidents: HealthCheckDefinition = {
       return { state: "ok", message: "no entries in the status feed", ttlSeconds: 900 };
     }
 
+    // DC2: the full folded history, independent of the 7-day window `message`
+    // below still narrates — that window is a summary for a human glance, not
+    // a limit on what actually happened.
+    const timeline: HealthTimelineEntry[] = feed.latest.map((e) => ({
+      id: e.id,
+      title: stripTitlePrefix(e.title),
+      state: isIncident(e.title) ? "degraded" : "ok",
+      updatedAt: e.publishedAt,
+      link: e.link,
+      // resolvedAt intentionally never set — see the module docstring's
+      // ban on inferring resolution from entry.summary/entry.summaryHtml prose.
+    }));
+
     // `latest` folds successive updates to one incident down to its newest.
     // Slack's feed is history, so most entries are long closed.
     const cutoff = Date.now() - WINDOW_MS;
@@ -71,7 +107,12 @@ const incidents: HealthCheckDefinition = {
       .filter((e) => (e.publishedAt ? Date.parse(e.publishedAt) : 0) >= cutoff);
 
     if (recent.length === 0) {
-      return { state: "ok", message: "no incidents published in the last 7 days", ttlSeconds: 900 };
+      return {
+        state: "ok",
+        message: "no incidents published in the last 7 days",
+        ttlSeconds: 900,
+        timeline,
+      };
     }
 
     // `ok` with a message, not `degraded`: every one of these is history, and
@@ -82,6 +123,7 @@ const incidents: HealthCheckDefinition = {
         recent.map((e) => e.title.replace(/^\s*incident:\s*/i, "")).join("; ")
       }`,
       ttlSeconds: 900,
+      timeline,
     };
   },
 };
