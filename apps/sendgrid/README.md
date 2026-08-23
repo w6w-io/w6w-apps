@@ -17,10 +17,10 @@ the second is something the app itself performs.
 
 ### Is the vendor up?
 
-**Service status** — <https://status.sendgrid.com>
+**Service status** — <https://sendgrid.statuspage.io>
 
 ```
-GET https://status.sendgrid.com/api/v2/status.json
+GET https://sendgrid.statuspage.io/api/v2/status.json
 ```
 
 Atlassian Statuspage. `GET /api/v2/status.json` gives a one-line rollup
@@ -63,7 +63,7 @@ The three questions above map onto declared checks like this:
 | `quota` | quota | connection | signed | informational | 300s | `health/quota.ts` |
 | `auth:sendgrid-api` | credential | connection | signed | fatal | — | derived from the `sendgrid-api` auth method's `test` hook |
 
-The host `status.sendgrid.com` (for `service`) is reachable **only inside that hook's worker** — not from any action, and not from the other
+The host `sendgrid.statuspage.io` (for `service`) is reachable **only inside that hook's worker** — not from any action, and not from the other
 checks. The spec allows the widening precisely because the check is unsigned; pairing an
 extra host with `credential: "signed"` is rejected at load time, so a credential can never
 reach a status host.

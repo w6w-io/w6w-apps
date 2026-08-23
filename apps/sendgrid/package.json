@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/sendgrid",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Consume SendGrid API",
   "license": "MIT",
   "author": {

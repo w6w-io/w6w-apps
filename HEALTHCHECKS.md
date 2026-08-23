@@ -224,7 +224,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [salesforce](apps/salesforce/README.md) | [JSON](https://api.status.salesforce.com/v1/instances) | yes | _varies by method_ | yes | `service` · `quota` · 2 derived |
 | [sanity](apps/sanity/README.md) | [Statuspage](https://www.sanity-status.com/api/v2/components.json) (Content Lake, API, CDN and assets; Studio and the manage dashboard excluded) | yes | `GET /projects/{id}` (management API — no dataset, no GROQ) | no | `service` · `dataset` · 1 derived |
 | [segment](apps/segment/README.md) | [Statuspage](https://status.segment.com/api/v2/summary.json) | yes | `POST /v1/identify` | no | `service` · ~~quota~~ · 1 derived |
-| [sendgrid](apps/sendgrid/README.md) | [Statuspage](https://status.sendgrid.com/api/v2/status.json) | yes | `GET /v3/scopes` | yes | `service` · `quota` · 1 derived |
+| [sendgrid](apps/sendgrid/README.md) | [Statuspage](https://sendgrid.statuspage.io/api/v2/status.json) | yes | `GET /v3/scopes` | yes | `service` · `quota` · 1 derived |
 | [sentry](apps/sentry/README.md) | [Statuspage](https://status.sentry.io/api/v2/summary.json) | yes | `GET /organizations/{slug}/?detailed=0` | yes | `service` · `quota` · `site` · 2 derived |
 | [servicenow](apps/servicenow/README.md) | none published | no | `GET /api/now/table/sys_user_role?sysparm_limit=1` | no | ~~service~~ · ~~quota~~ · `instance` · 2 derived |
 | [shopify](apps/shopify/README.md) | [Statuspage](https://www.shopifystatus.com/api/v2/status.json) | yes | `GET /shop.json` | yes | `service` · `quota` · `store` · 1 derived |
