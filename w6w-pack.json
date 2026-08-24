@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.95.0",
+  "version": "0.96.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -86,6 +86,9 @@
     },
     {
       "path": "./apps/brevo"
+    },
+    {
+      "path": "./apps/browseai"
     },
     {
       "path": "./apps/buffer"
@@ -326,6 +329,9 @@
     },
     {
       "path": "./apps/grafana"
+    },
+    {
+      "path": "./apps/grain"
     },
     {
       "path": "./apps/gravityforms"

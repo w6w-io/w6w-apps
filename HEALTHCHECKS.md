@@ -60,6 +60,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [bluesky](apps/bluesky/README.md) | none usable — status.bsky.app is an UptimeRobot page whose only JSON route is keyed by a token scraped from its own `pspApiPath` script, and whose monitors are per-PDS-instance | no | `GET /xrpc/com.atproto.server.getSession` | yes (real `ratelimit-*` headers; the ~10/day createSession limit is documented rather than probed, because probing consumes it) | ~~service~~ · `pds` · `quota` · 1 derived |
 | [box](apps/box/README.md) | [Statuspage](https://status.box.com/api/v2/summary.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 1 derived |
 | [brevo](apps/brevo/README.md) | [Statuspage](https://status.brevo.com/api/v2/status.json) | yes | `GET /v3/account` | yes | `service` · `quota` · 1 derived |
+| [browseai](apps/browseai/README.md) | [Statuspage](https://browseai.statuspage.io/api/v2/summary.json) — page-level indicator, not worst-component | yes | `GET /v2/status` (signed) | no — only a `403 credits_limit_reached` refusal at the moment credits run out | `service` · `queue` · ~~quota~~ · 1 derived |
 | [buffer](apps/buffer/README.md) | [Statuspage](https://status.buffer.com/api/v2/summary.json) | yes | `{ account { id } }` (GraphQL) | yes | `service` · `quota` · 2 derived |
 | [cal](apps/cal/README.md) | [JSON](https://status.cal.com/api/status/summary.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 1 derived |
 | [calendly](apps/calendly/README.md) | [Statuspage](https://www.calendlystatus.com/api/v2/status.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 2 derived |
@@ -140,6 +141,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [google-tasks](apps/google-tasks/README.md) | [JSON](https://www.google.com/appsstatus/dashboard/incidents.json) | yes | `GET /users/@me/lists?maxResults=1` | no | `service` · ~~quota~~ · 1 derived |
 | [googlechat](apps/googlechat/README.md) | [JSON](https://www.google.com/appsstatus/dashboard/incidents.json) | yes | `GET /spaces` | no | `service` · ~~quota~~ · 1 derived |
 | [grafana](apps/grafana/README.md) | none published | no | `GET /api/org` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
+| [grain](apps/grain/README.md) | [Statuspage](https://www.grainstatus.com/api/v2/summary.json) — `status.grain.com` 301s here; no component named "API", capped at `degraded` | yes | `POST /_/public-api/v2/teams` | yes | `service` · `quota` · 1 derived |
 | [gravityforms](apps/gravityforms/README.md) | none published | no | `GET /gf/v2/forms` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
 | [greenhouse](apps/greenhouse/README.md) | [Statuspage](https://status.greenhouse.io/api/v2/summary.json) | yes | `GET /v3/candidates` | yes | `service` · `api` · `quota` · ~~silo~~ · 2 derived |
 | [grist](apps/grist/README.md) | none machine-readable | no | `GET /api/profile/user` | no | ~~service~~ · ~~quota~~ · `site` · 2 derived |
