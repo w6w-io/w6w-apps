@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/pdfco",
+  "version": "0.1.0",
+  "description": "Convert, generate, merge, split, and extract data from PDF and other documents via the PDF.co API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pdfco",
+    "displayName": "PDF.co",
+    "categories": [
+      "documents",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "PDF.co"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.pdf.co"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

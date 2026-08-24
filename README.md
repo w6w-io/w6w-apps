@@ -197,6 +197,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pandadoc | documents, legal, productivity | api-key | 16 |
 | particle | iot, devops | access-token | 13 |
 | paypal | commerce, finance | client-credentials | 13 |
+| pdfco | documents | api-key | 24 |
 | perplexity | ai | api-key | 5 |
 | pinecone | ai, databases, search | api-key | 24 |
 | pipedrive | crm | api-token, oauth2 | 14 |
@@ -261,6 +262,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | vanta | legal, security, monitoring | client-credentials | 25 |
 | vercel | devops, developer-tools | access-token, oauth2 | 28 |
 | vimeo | video, social-media | access-token | 36 |
+| wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
 | whatsapp | communication | access-token | 9 |
 | wix | cms, crm, commerce | api-key | 24 |
