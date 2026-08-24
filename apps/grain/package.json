@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/grain",
+  "version": "0.1.0",
+  "description": "List, read and manage Grain meeting recordings, transcripts, tags, shares and webhooks, plus a workspace's users, teams and meeting types, via the Grain Public API (v2).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.grain",
+    "displayName": "Grain",
+    "categories": [
+      "ai",
+      "productivity",
+      "video"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Grain"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.grain.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

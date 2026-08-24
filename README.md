@@ -51,6 +51,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | bluesky | social-media, communication | app-password | 21 |
 | box | storage | oauth2 | 10 |
 | brevo | marketing, email | api-key | 15 |
+| browseai | ai, developer-tools | api-key | 18 |
 | buffer | social-media, marketing | oauth2, api-key | 14 |
 | cal | calendar | api-key | 8 |
 | calendly | calendar, productivity | personal-access-token, oauth2 | 12 |
@@ -131,6 +132,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | google-tasks | productivity, project-management | oauth2 | 13 |
 | googlechat | communication | oauth2 | 18 |
 | grafana | monitoring | service-account-token | 8 |
+| grain | ai | api-key | 19 |
 | gravityforms | forms, productivity | basic | 12 |
 | greenhouse | hr | oauth-client-credentials, api-key | 24 |
 | grist | spreadsheets, databases, productivity | api-key, oauth2 | 15 |

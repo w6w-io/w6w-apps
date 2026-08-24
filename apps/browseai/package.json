@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/browseai",
+  "version": "0.1.0",
+  "description": "Run Browse AI robots, poll the tasks they create, manage monitors, bulk runs and webhooks, on the Browse AI API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.browseai",
+    "displayName": "Browse AI",
+    "categories": [
+      "developer-tools",
+      "ai",
+      "monitoring"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Browse AI"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.browse.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
