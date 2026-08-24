@@ -231,6 +231,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [segment](apps/segment/README.md) | [Statuspage](https://status.segment.com/api/v2/summary.json) | yes | `POST /v1/identify` | no | `service` · ~~quota~~ · 1 derived |
 | [sendgrid](apps/sendgrid/README.md) | [Statuspage](https://sendgrid.statuspage.io/api/v2/status.json) | yes | `GET /v3/scopes` | yes | `service` · `quota` · 1 derived |
 | [sentry](apps/sentry/README.md) | [Statuspage](https://status.sentry.io/api/v2/summary.json) | yes | `GET /organizations/{slug}/?detailed=0` | yes | `service` · `quota` · `site` · 2 derived |
+| [servicem8](apps/servicem8/README.md) | none published — `servicem8.statuspage.io` is unclaimed, `servicem8.freshstatus.io` is a generic 404 catch page | no | `GET /vendor.json` | no | ~~service~~ · `api` · 1 derived |
 | [servicenow](apps/servicenow/README.md) | none published | no | `GET /api/now/table/sys_user_role?sysparm_limit=1` | no | ~~service~~ · ~~quota~~ · `instance` · 2 derived |
 | [shopify](apps/shopify/README.md) | [Statuspage](https://www.shopifystatus.com/api/v2/status.json) | yes | `GET /shop.json` | yes | `service` · `quota` · `store` · 1 derived |
 | [slack](apps/slack/README.md) | [JSON](https://status.slack.com/api/v2.0.0/current) · [Atom/RSS](https://slack-status.com/feed/atom) | yes | `POST /api/auth.test` | no | `service` · `incidents` · ~~quota~~ · 2 derived |
@@ -283,6 +284,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [youtube](apps/youtube/README.md) | not on the Workspace dashboard | no | _varies by method_ | no | ~~service~~ · ~~quota~~ · 2 derived |
 | [zendesk](apps/zendesk/README.md) | [page](https://status.zendesk.com) | no | `GET /api/v2/users/me.json` | yes | ~~service~~ · `quota` · `account` · 2 derived |
 | [zoho](apps/zoho/README.md) | [RSS](https://us.zohostatus.com/rss) | yes | `GET /crm/v6/org` | yes | `service` · `quota` · 1 derived |
+| [zohobooks](apps/zohobooks/README.md) | [StatusIQ RSS](https://us.zohostatus.com/rss) — matched on the exact "Zoho Books" component | yes | `GET /organizations` (per-region, ×8 DCs) | no | `service` · ~~quota~~ · 8 derived |
 | [zohomail](apps/zohomail/README.md) | [StatusIQ RSS](https://us.zohostatus.com/rss) | yes | `GET /api/accounts` | no | `service` · ~~quota~~ · 8 derived |
 | [zoom](apps/zoom/README.md) | [Statuspage](https://status.zoom.us/api/v2/status.json) | yes | `GET /v2/users/me` | yes | `service` · `quota` · 2 derived |
 

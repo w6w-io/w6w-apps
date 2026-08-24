@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/servicem8",
+  "version": "0.1.0",
+  "description": "Manage jobs, clients, staff, scheduling and materials in ServiceM8, a field-service management platform for trades businesses.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.servicem8",
+    "displayName": "ServiceM8",
+    "categories": [
+      "crm",
+      "calendar",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "ServiceM8"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.servicem8.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
