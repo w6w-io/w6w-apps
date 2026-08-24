@@ -64,6 +64,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | clearbit | marketing, crm | api-key | 9 |
 | clicksend | communication | basic-auth | 16 |
 | clickup | project-management, productivity | api-token, oauth2 | 12 |
+| clio | crm | oauth2 (×4 regions) | 25 |
 | clickhouse | databases, data-warehousing | api-key, service | 15 |
 | clockify | productivity | api-key | 10 |
 | close | crm | api-key | 21 |
@@ -240,6 +241,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | stripe | commerce, finance | api-key | 23 |
 | supabase | databases | api-key | 7 |
 | surveymonkey | forms, productivity | oauth2 | 12 |
+| systemeio | marketing | api-key | 41 |
 | tailscale | security, devops | api-key, oauth-client | 16 |
 | tally | forms, productivity | api-key | 38 |
 | teams | communication | oauth2 | 16 |

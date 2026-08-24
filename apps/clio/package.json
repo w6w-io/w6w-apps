@@ -1,0 +1,34 @@
+{
+  "name": "@w6w-apps/clio",
+  "version": "0.1.0",
+  "description": "Manage matters, contacts, tasks, calendar entries, time/expense entries and documents in Clio Manage, the legal practice management platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.clio",
+    "displayName": "Clio",
+    "categories": [
+      "legal",
+      "crm",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Clio"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.clio.com",
+        "eu.app.clio.com",
+        "ca.app.clio.com",
+        "au.app.clio.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

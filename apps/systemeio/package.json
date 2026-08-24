@@ -1,0 +1,29 @@
+{
+  "name": "@w6w-apps/systemeio",
+  "version": "0.1.0",
+  "description": "Manage contacts, tags, funnels, email campaigns and newsletters, courses and communities, and webhooks on systeme.io.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.systemeio",
+    "displayName": "systeme.io",
+    "categories": [
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "systeme.io"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.systeme.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
