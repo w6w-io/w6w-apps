@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/slack",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "Post messages, manage channels, files, reactions, stars, users and user groups on Slack.",
   "license": "MIT",
   "author": {
