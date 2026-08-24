@@ -1,0 +1,29 @@
+{
+  "name": "@w6w-apps/wealthbox",
+  "version": "0.1.0",
+  "description": "Manage Wealthbox CRM contacts, tasks, events, opportunities and notes via the Wealthbox API v1.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.wealthbox",
+    "displayName": "Wealthbox",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Wealthbox"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.crmworkspace.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
