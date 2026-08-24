@@ -61,6 +61,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | circle | communication, social-media | api-token | 33 |
 | circleci | devops, developer-tools | api-token | 8 |
 | clearbit | marketing, crm | api-key | 9 |
+| clicksend | communication | basic-auth | 16 |
 | clickup | project-management, productivity | api-token, oauth2 | 12 |
 | clickhouse | databases, data-warehousing | api-key, service | 15 |
 | clockify | productivity | api-key | 10 |
@@ -210,6 +211,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | raindrop | productivity, search, storage | test-token, oauth2 | 39 |
 | reddit | social-media | oauth2 | 8 |
 | resend | email, communication | api-key | 24 |
+| retellai | ai, communication | api-key | 9 |
 | ringcentral | communication, productivity | oauth2, jwt-bearer | 13 |
 | s3 | storage | aws-iam | 9 |
 | salesforce | crm | access-token, oauth2 | 12 |

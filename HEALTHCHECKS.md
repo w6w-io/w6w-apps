@@ -70,6 +70,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [circle](apps/circle/README.md) | [Statuspage](https://status.circle.so/api/v2/summary.json) | yes | `GET /community` | no | `service` · ~~quota~~ · 1 derived |
 | [circleci](apps/circleci/README.md) | [Statuspage](https://status.circleci.com/api/v2/summary.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 1 derived |
 | [clearbit](apps/clearbit/README.md) | [Statuspage](https://status.clearbit.com/api/v2/summary.json) | yes | `GET /v1/domains/find?name=Clearbit` | yes | `service` · `quota` · 1 derived |
+| [clicksend](apps/clicksend/README.md) | [Statuspage](https://status.clicksend.com/api/v2/summary.json) | yes | `GET /account/usage/{year}/{month}/subaccount` | yes — undocumented `x-ratelimit-*` response headers | `service` · `quota` · 1 derived |
 | [clickup](apps/clickup/README.md) | [status.io](https://api.status.io/1.0/status/5b6e0963c662144d00913a09) | yes | `GET /user` | yes | `service` · `quota` · 2 derived |
 | [clickhouse](apps/clickhouse/README.md) | [Statuspage](https://status.clickhouse.com/api/v2/summary.json) — separates the CONTROL PLANE from the services (an API outage stops provisioning, not queries) and never claims a full outage, because incidents are regional and this check is app-scoped | yes | `GET /v1/organizations` · `SELECT version()` | no — neither plane publishes a rate-limit header, and the constraints are MEMORY, concurrency and part count rather than request rate | `service` · ~~quota~~ · 2 derived |
 | [clockify](apps/clockify/README.md) | none machine-readable | no | `GET /workspaces` | no | ~~service~~ · ~~quota~~ · 1 derived |
@@ -219,6 +220,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [raindrop](apps/raindrop/README.md) | [Better Stack](https://status.raindrop.io/index.json) | yes | `GET /rest/v1/user` | yes | `service` · `quota` · 2 derived |
 | [reddit](apps/reddit/README.md) | [Statuspage](https://www.redditstatus.com/api/v2/summary.json) | yes | `GET /api/v1/me` | yes | `service` · `quota` · 1 derived |
 | [resend](apps/resend/README.md) | status page is a catch-all HTML route | no | `GET /emails?limit=1` | no | ~~service~~ · ~~quota~~ · 1 derived |
+| [retellai](apps/retellai/README.md) | [Statuspage](https://status.retellai.com/api/v2/summary.json) — component named "API" | yes | `GET /get-api-key-info` | yes — `GET /get-concurrency` (no rate-limit response header at all) | `service` · `quota` · 1 derived |
 | [ringcentral](apps/ringcentral/README.md) | dashboard only, private feed host | no | `GET /restapi/v1.0/account/~/extension/~` | no | ~~service~~ · `api` · ~~quota~~ · 2 derived |
 | [s3](apps/s3/README.md) | [JSON](https://health.aws.amazon.com/public/currentevents) | yes | `GET /` (ListBuckets) | no | `service` · 1 derived |
 | [salesforce](apps/salesforce/README.md) | [JSON](https://api.status.salesforce.com/v1/instances) | yes | _varies by method_ | yes | `service` · `quota` · 2 derived |
