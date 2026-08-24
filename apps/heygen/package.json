@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/heygen",
+  "version": "0.1.0",
+  "description": "Generate AI avatar videos, translate videos into new languages, and manage voices, avatars, assets and templates on HeyGen.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.heygen",
+    "displayName": "HeyGen",
+    "categories": [
+      "ai",
+      "video",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "HeyGen"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.heygen.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
