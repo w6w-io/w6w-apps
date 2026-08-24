@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/base44",
+  "version": "0.1.0",
+  "description": "Read Base44 workspace analytics, users, apps, and Superagents, and stream Enterprise audit log events and app security-scan findings.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.base44",
+    "displayName": "Base44",
+    "categories": [
+      "developer-tools",
+      "ai",
+      "analytics"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Base44"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.base44.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

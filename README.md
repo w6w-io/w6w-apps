@@ -42,6 +42,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | azuredevops | version-control, devops, project-management | pat | 19 |
 | balena | iot, devops | api-key | 16 |
 | bamboohr | hr | api-key | 18 |
+| base44 | ai, developer-tools | api-key | 11 |
 | basecamp | project-management, productivity | oauth | 11 |
 | baserow | databases, spreadsheets, productivity | database-token | 12 |
 | bigcommerce | commerce, crm | access-token | 38 |
@@ -140,6 +141,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | gusto | hr, finance, productivity | oauth2, oauth2-demo | 23 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
 | helpscout | support | oauth2 | 13 |
+| heygen | ai | api-key | 18 |
 | highlevel | crm, marketing | oauth2 | 18 |
 | homeassistant | iot, productivity | token | 19 |
 | housecallpro | crm, calendar, finance | api-key, oauth2 | 39 |
