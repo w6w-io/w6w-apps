@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/clicksend",
+  "version": "0.1.0",
+  "description": "Send SMS, MMS, voice calls and transactional email, and manage contact lists, via ClickSend.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.clicksend",
+    "displayName": "ClickSend",
+    "categories": [
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": {
+          "48x48": "./assets/icon.png"
+        },
+        "alt": "ClickSend"
+      }
+    },
+    "network": {
+      "allow": [
+        "rest.clicksend.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
