@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/zohobooks",
+  "version": "0.1.0",
+  "description": "Create, send and manage contacts, items, invoices and estimates in Zoho Books, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zohobooks",
+    "displayName": "Zoho Books",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Books"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.zohoapis.com",
+        "www.zohoapis.eu",
+        "www.zohoapis.in",
+        "www.zohoapis.com.au",
+        "www.zohoapis.jp",
+        "www.zohoapis.ca",
+        "www.zohoapis.com.cn",
+        "www.zohoapis.sa"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
