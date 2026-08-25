@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/zohodesk",
+  "version": "0.1.0",
+  "description": "Create, read, update and comment on tickets, contacts and accounts in Zoho Desk, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zohodesk",
+    "displayName": "Zoho Desk",
+    "categories": [
+      "support"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Desk"
+      }
+    },
+    "network": {
+      "allow": [
+        "desk.zoho.com",
+        "desk.zoho.eu",
+        "desk.zoho.in",
+        "desk.zoho.com.au",
+        "desk.zoho.jp",
+        "desk.zohocloud.ca",
+        "desk.zoho.com.cn",
+        "desk.zoho.sa",
+        "desk.zoho.sg",
+        "desk.zoho.ae"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@w6w-apps/shipstation",
+  "version": "0.1.0",
+  "description": "Fulfill orders and buy shipping labels across every carrier connected to a ShipStation account.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.shipstation",
+    "displayName": "ShipStation",
+    "categories": [
+      "commerce",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": {
+          "32x32": "./assets/icon.png"
+        },
+        "alt": "ShipStation"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.shipstation.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
