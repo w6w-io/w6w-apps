@@ -1,0 +1,7 @@
+{
+  "name": "@w6w-apps/fixture-network-allow-wildcard-apex",
+  "exports": "./index.ts",
+  "imports": {
+    "@w6w/types": "../../../../core/packages/types/mod.ts"
+  }
+}
