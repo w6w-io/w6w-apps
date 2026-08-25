@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/signnow",
+  "version": "0.1.1",
+  "description": "Send existing documents out for signature, track and cancel invites, download signed PDFs, work from templates, and manage folders and webhooks on SignNow.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.signnow",
+    "displayName": "SignNow",
+    "categories": [
+      "legal",
+      "documents",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "SignNow"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "SignNow"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.signnow.com",
+        "api-eval.signnow.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

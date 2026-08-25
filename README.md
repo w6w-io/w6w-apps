@@ -224,12 +224,14 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | salesforce | crm | access-token, oauth2 | 12 |
 | sanity | cms, databases, developer-tools | token | 11 |
 | segment | analytics | write-key | 6 |
+| sendblue | communication | api-key | 47 |
 | sendgrid | email, communication | sendgrid-api | 10 |
 | sentry | monitoring, developer-tools | auth-token, oauth2 | 21 |
 | servicem8 | crm | api-key | 18 |
 | servicenow | support, devops | basic, oauth2 | 9 |
 | shipstation | ecommerce | api-key | 18 |
 | shopify | commerce | access-token | 18 |
+| signnow | documents | custom | 16 |
 | slack | communication | access-token, oauth2 | 47 |
 | smartsheet | spreadsheets, productivity | access-token | 16 |
 | snowflake | data-warehousing | key-pair | 5 |
