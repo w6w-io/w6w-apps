@@ -190,6 +190,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
 | odoo | crm, commerce | api-key | 21 |
 | okta | security | api-token | 11 |
+| oncehub | scheduling | api-key | 30 |
 | onedrive | documents, storage | oauth2 | 18 |
 | onepassword | security, developer-tools | connect-token, events-token | 14 |
 | onesimpleapi | developer-tools | api-key | 7 |
@@ -241,6 +242,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | storyblok | cms, marketing | delivery-token, management-token | 14 |
 | strapi | cms | api-token | 6 |
 | strava | productivity | oauth2 | 9 |
+| streak | crm | basic | 40 |
 | stripe | commerce, finance | api-key | 23 |
 | supabase | databases | api-key | 7 |
 | surveymonkey | forms, productivity | oauth2 | 12 |

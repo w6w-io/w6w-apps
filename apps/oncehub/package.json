@@ -1,0 +1,29 @@
+{
+  "name": "@w6w-apps/oncehub",
+  "version": "0.1.0",
+  "description": "Manage OnceHub bookings, booking calendars, contacts, users, teams and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.oncehub",
+    "displayName": "OnceHub",
+    "categories": [
+      "calendar"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "OnceHub"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.oncehub.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
