@@ -125,3 +125,89 @@ Deno.test("_tools/deno.json's `@w6w/types` mapping resolves to a real module", a
     }`,
   );
 });
+
+/**
+ * T1.2.1 — the auditor's `network/undeclared-host` check now calls
+ * `@w6w/runtime`'s `hostAllowed()` instead of a locally re-derived predicate.
+ * The fixture below (`_tools/_fixtures/network-allow-wildcard-apex/`) declares
+ * `network.allow: ["*.fixture-apex.test"]` and its one scanned source file
+ * (`lib/client.ts`) references three hosts in real code: a covered
+ * subdomain, the same subdomain mixed-case, and the bare apex — which a
+ * `"*.apex"` allow entry never covers (see `hostAllowed()`'s doc comment).
+ */
+const NETWORK_FIXTURE = "../_tools/_fixtures/network-allow-wildcard-apex";
+
+Deno.test("network/undeclared-host: a `*.apex` entry covers subdomains, in any case, but not the apex", async () => {
+  const { report } = await runAudit(NETWORK_FIXTURE);
+  const issues = issuesFor(report, NETWORK_FIXTURE);
+  const undeclared = issues.filter((i) =>
+    i.check === "network/undeclared-host"
+  );
+  assertEquals(
+    undeclared.length,
+    1,
+    `expected exactly one network/undeclared-host issue, got ${
+      JSON.stringify(issues)
+    }`,
+  );
+  assert(
+    /fixture-apex\.test/.test(undeclared[0].message) &&
+      !/sub\.fixture-apex\.test/i.test(undeclared[0].message),
+    `expected the issue to name the bare apex, got: ${undeclared[0].message}`,
+  );
+  assertEquals(
+    issues.length,
+    1,
+    `expected no other issue on the fixture, got ${JSON.stringify(issues)}`,
+  );
+});
+
+Deno.test("network/undeclared-host: a bare `*` entry still covers every host (grist)", async () => {
+  const { report } = await runAudit("grist");
+  const issues = issuesFor(report, "grist");
+  const undeclared = issues.filter((i) =>
+    i.check === "network/undeclared-host"
+  );
+  assertEquals(
+    undeclared.length,
+    0,
+    `expected zero network/undeclared-host issues, got ${
+      JSON.stringify(undeclared)
+    }`,
+  );
+});
+
+Deno.test("network/undeclared-host: still fires on a genuinely undeclared host (basecamp)", async () => {
+  const { report } = await runAudit("basecamp");
+  const issues = issuesFor(report, "basecamp");
+  const undeclared = issues.filter((i) =>
+    i.check === "network/undeclared-host"
+  );
+  assertEquals(
+    undeclared.length,
+    1,
+    `expected exactly one network/undeclared-host issue, got ${
+      JSON.stringify(issues)
+    }`,
+  );
+  assert(
+    /github\.com/.test(undeclared[0].message),
+    `expected the issue to name github.com, got: ${undeclared[0].message}`,
+  );
+});
+
+Deno.test("_tools/deno.json's `@w6w/runtime` mapping resolves to the real `hostAllowed`", async () => {
+  const config = JSON.parse(await Deno.readTextFile(DENO_JSON_URL));
+  assertEquals(
+    config.imports?.["@w6w/runtime"],
+    "../../core/packages/runtime/mod.ts",
+  );
+
+  // A wrong-depth target one directory too shallow/deep can still resolve if
+  // a stray sibling symlink rescues it — only calling the *behavior* pins the
+  // specifier actually reached the real `hostAllowed()` (T1.2.1 mutant M2).
+  const { hostAllowed } = await import("@w6w/runtime");
+  assertEquals(hostAllowed(["*.zendesk.com"], "acme.zendesk.com"), true);
+  assertEquals(hostAllowed(["*.zendesk.com"], "zendesk.com"), false);
+  assertEquals(hostAllowed(["*"], "anything.example"), true);
+});
