@@ -21,6 +21,7 @@ import {
   validateApp,
   validateAuth,
 } from "../../core/packages/validator/mod.ts";
+import { hostAllowed } from "@w6w/runtime";
 import { TILE, verdictFor } from "./icon-legibility.ts";
 
 const ROOT = new URL("../", import.meta.url).pathname.replace(/\/$/, "");
@@ -169,12 +170,13 @@ function scanSources(appDir: string, allow: string[], oauthHosts: string[]): Iss
   }
 
   for (const [host, file] of seenHosts) {
-    // A wildcard-ish allow entry (e.g. a bare apex) covers its subdomains, and
-    // a bare `*` covers everything — an app whose instance can be at any
-    // address (Mastodon, Terraform Enterprise) declares that and may still
-    // name its vendor's own host in code.
-    const covered = allowed.has("*") ||
-      [...allowed].some((a) => host === a || host.endsWith(`.${a}`));
+    // Same predicate the sandbox enforces at run time — a `"*.apex"` allow
+    // entry covers subdomains (never the bare apex) and a bare `*` covers
+    // everything. `hostAllowed()` lowercases each allow entry but assumes the
+    // host is already lowercase (true at run time, where it comes off
+    // `new URL().hostname`); the host here is scraped from source text and
+    // can be mixed case, so it is lowercased at this call site.
+    const covered = hostAllowed([...allowed], host.toLowerCase());
     if (!covered && !host.endsWith("example.com") && !host.endsWith("schema.org")) {
       issues.push({
         severity: "error",

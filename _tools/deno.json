@@ -2,6 +2,7 @@
   "nodeModulesDir": "auto",
   "imports": {
     "@w6w/types": "../../core/packages/types/mod.ts",
+    "@w6w/runtime": "../../core/packages/runtime/mod.ts",
     "@std/assert": "jsr:@std/assert@^1.0.0"
   },
   "tasks": {
@@ -12,6 +13,9 @@
     "test": "deno test -A audit.test.ts"
   },
   "fmt": {
-    "exclude": ["_fixtures/entry-import-broken/assets"]
+    "exclude": [
+      "_fixtures/entry-import-broken/assets",
+      "_fixtures/network-allow-wildcard-apex/assets"
+    ]
   }
 }
