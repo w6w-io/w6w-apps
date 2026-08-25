@@ -1,0 +1,24 @@
+{
+  "name": "@w6w-apps/fixture-entry-import-broken",
+  "version": "0.1.0",
+  "description": "Fixture app whose entry module has a broken relative import (T1.1.1).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.fixture-entry-import-broken",
+    "displayName": "Fixture: Entry Import Broken",
+    "categories": [
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Fixture: Entry Import Broken"
+      }
+    },
+    "entry": "./index.ts"
+  }
+}
