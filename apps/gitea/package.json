@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gitea",
     "displayName": "Gitea",
+    "longDescription": "Gitea is a self-hosted Git service, and this app puts the daily loop of running one — repositories, issues, pull requests, files and releases — behind a workflow, whichever instance an organisation happens to run.\n\nIssue and pull request management is the core of it: open issues with labels attached, edit and comment on them, and open and merge pull requests, with the same care a person would take — an unfiltered issue listing defaults to issues alone rather than Gitea's own mixed view that quietly includes every open pull request too. File actions read and write a repository's contents directly, handling the underlying concurrency check automatically so a workflow doesn't have to fetch a blob's current state by hand before every edit. Releases and tags round it out, including finding the newest *published* release rather than an unpublished draft that happens to sort first.\n\nDeleting a repository is here as well, deliberately made harder to trigger by accident than everything else, because unlike a bad commit it isn't something a local clone can undo. Administrative surfaces — mirrors, packages, wikis, webhooks and Gitea's own CI — stay out of scope in favor of the actions a workflow touches day to day.",
     "categories": [
       "version-control",
       "developer-tools",

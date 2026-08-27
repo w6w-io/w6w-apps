@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-business-profile",
     "displayName": "Google Business Profile",
+    "longDescription": "Google Business Profile is how a business's storefront appears in Google Search and Maps, and this app manages that listing from a workflow: accounts and the locations under them, the attributes that describe a location, the questions and answers customers post on it, and the booking, ordering and reservation links shown alongside it.\n\nBecause Google split what used to be one API into several services, each covering a different slice of a listing, this app resolves which one an action needs automatically, so a workflow calling it sees a single consistent surface rather than juggling hostnames itself. Updating a location's details or its attributes only sends the fields a workflow actually changed, leaving everything else on the listing untouched.\n\nClaiming or removing a location, and asking a question on someone else's listing, are deliberately left out — those are one-time or consumer-facing actions rather than the recurring management work this app is built for. Reviews aren't covered either, since Google runs them on a separate, older service outside this app's current scope.",
     "categories": [
       "marketing",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mixpanel",
     "displayName": "Mixpanel",
+    "longDescription": "Mixpanel is where product usage gets tracked and reported on, and this app lets a workflow do both sides of that: pull the numbers a saved report or ad-hoc query already shows, and write new events and user-profile changes back into the same project.\n\nFor writing, it deliberately skips Mixpanel's best-known ingestion endpoint — that one accepts anything, including a completely wrong project token, and answers success either way, so a workflow using it could never learn its data wasn't arriving. Instead, events go in through Mixpanel's validating import endpoint, each carrying the identifier Mixpanel uses to avoid double-counting when a workflow retries. Profile updates support all of Mixpanel's actual update semantics — overwrite, set-once, increment, list union and append — rather than only the common case, because those aren't interchangeable and picking the wrong one either loses history or silently duplicates it.\n\nFor reading, running an existing saved report is favoured over rebuilding its logic from raw segmentation calls, since the saved report already encodes whatever definition of \"active user\" the rest of the company already agreed on. Retention, cohorts and raw event export round out the read side, alongside the property and event-name lookups that make writing an ad-hoc query possible in the first place.",
     "categories": [
       "analytics",
       "marketing"

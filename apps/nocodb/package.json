@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.nocodb",
     "displayName": "NocoDB",
+    "longDescription": "NocoDB turns an existing database into something that reads and writes like a spreadsheet, and this app is built around exactly that: reading and writing records in its bases and tables, following the links between them, and inspecting the schema and saved views that shape what a table actually looks like.\n\nBecause NocoDB enforces a modest request budget per account, this app is shaped around using it efficiently rather than working around it after the fact — writes accept many rows in a single request instead of one at a time, reads default to a larger page than the API itself defaults to, and a dedicated counting action answers \"how many rows match\" without paging through them all. Linked records — the equivalent of a lookup between two tables — get their own actions, since NocoDB returns them from a separate endpoint rather than alongside the row that references them.\n\nNocoDB is open source and just as often self-hosted as it is used through its cloud offering, and this app works the same way against either. A base built on top of an existing production database is flagged as such, since writing to one of those reaches further than an ordinary NocoDB-native table would.",
     "categories": [
       "spreadsheets",
       "databases"
