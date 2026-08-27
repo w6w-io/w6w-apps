@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.circle",
     "displayName": "Circle",
+    "longDescription": "Circle is a community platform — spaces, courses, events, and paywalled memberships — and this app manages it through Circle's own Admin API v2, the surface Circle itself recommends over its older v1.\n\nIt covers the operational core of running a community: members (list, get, search, invite, update, deactivate, ban), spaces and space membership, posts and comments, and events with attendee management. Tags let a workflow segment members, message-create sends a direct message or starts a group chat, and a general search reaches across spaces and posts at once.\n\nGood for automating member onboarding — inviting someone and assigning them to spaces, groups and tags in one call — keeping community membership in sync with a CRM, publishing content or announcements from another system, and managing event attendees fed by an external registration form.",
     "categories": [
       "communication",
       "social-media"

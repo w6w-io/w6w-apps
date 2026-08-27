@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.clio",
     "displayName": "Clio",
+    "longDescription": "Clio Manage is legal practice management software for law firms, and this app covers the operational surface a workflow drives from outside the practice: matters, contacts, tasks, calendar entries, time and expense activities, documents and notes, over Clio's own API.\n\nIt reads and writes matters (cases) and contacts (clients and counsel), lists and creates tasks and calendar entries, tracks time and expense entries against a matter, lists and downloads documents, and files notes against a contact or matter. This app works the same way across Clio's US, EU, Canadian and Australian regional deployments, so a firm on any of the four connects without extra configuration.\n\nGood for firms that want to create a matter or a client record automatically from an intake form, log time or calendar entries from another system, keep case status in sync with a project tracker, or pull documents and notes into a downstream workflow without leaving Clio as the system of record.",
     "categories": [
       "legal",
       "crm",

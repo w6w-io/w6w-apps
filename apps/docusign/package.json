@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.docusign",
     "displayName": "DocuSign",
+    "longDescription": "Docusign eSignature is how a document gets signed — send it, track who has opened or signed it, read back what a recipient filled in, and download the finished PDF — and this app covers that lifecycle over Docusign's own REST API.\n\nIt creates envelopes from an inline document or a saved template, sends them for signature, lists and reads envelope and recipient status, retrieves submitted form data, and downloads signed documents. Templates and account users round out the coverage needed to build a request without guessing recipient roles. Both Docusign's production and developer-sandbox environments are supported, so a workflow can be built and tested against a sandbox account before pointing it at production.\n\nGood for sending contracts, agreements or consent forms for signature from a workflow trigger, tracking signing status without polling manually, pulling completed documents into storage automatically, or embedding a signing session inside another application.",
     "categories": [
       "documents",
       "legal",

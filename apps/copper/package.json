@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.copper",
     "displayName": "Copper",
+    "longDescription": "Copper is the CRM built into Google Workspace, reading Gmail and Calendar so a salesperson's pipeline sits beside their inbox rather than in a separate tab — and this app covers its core objects: people, companies, opportunities, leads, tasks and activities, over Copper's own API.\n\nIt searches and manages people and companies (keyed on email address and domain, matching how Copper itself treats uniqueness), creates and advances opportunities through pipeline stages, creates and searches leads, and logs tasks and activities including calls and notes. Lookups for pipelines, activity types and custom field definitions let a workflow resolve the per-account ids Copper's write endpoints require.\n\nGood for syncing contacts and companies from email or web forms, keeping deal stage and value current from an external system, logging customer activity from another tool into Copper's timeline, or automating routine tasks tied to a pipeline stage change.",
     "categories": [
       "crm"
     ],

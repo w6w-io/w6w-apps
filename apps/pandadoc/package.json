@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.pandadoc",
     "displayName": "PandaDoc",
+    "longDescription": "PandaDoc creates documents from templates, sends them out for signature, and tracks their status through completion — and this app covers that lifecycle: creating a document from a template, sending it, checking and changing its status, downloading the signed PDF, and reading back the templates, contacts and webhook subscriptions that feed those steps, over PandaDoc's own API.\n\nBecause PandaDoc merges a template asynchronously, this app exposes the intermediate status explicitly rather than hiding it, so a workflow can wait for a document to become sendable before sending it and treat a merge failure as the real error it is. Contact creation has no dedup or upsert guard on PandaDoc's side, so a workflow that cares about duplicates should look a contact up by its exact email first; reading a template's roles and fields before creating a document is likewise how a request actually succeeds.\n\nGood for generating a proposal or contract from a template the moment a deal reaches a certain stage, sending it for signature automatically, tracking its progress without polling the PandaDoc dashboard, and pulling the finished PDF into storage once every recipient has signed.",
     "categories": [
       "documents",
       "legal",

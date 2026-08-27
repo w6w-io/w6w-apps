@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.tidycal",
     "displayName": "TidyCal",
+    "longDescription": "TidyCal is a scheduling tool — publish booking types, let people pick from your live availability, and get a booking with a contact attached — and this app covers that flow over TidyCal's own REST API.\n\nIt lists booking types and their open timeslots, creates and cancels bookings, manages contacts, and covers TidyCal's team features — team bookings, team booking types, and adding or removing team members. Reading real availability before booking means a workflow never has to reproduce TidyCal's own scheduling logic, such as calendar conflicts, padding and minimum notice, itself.\n\nGood for booking a call automatically once a lead reaches a certain stage elsewhere, canceling a booking when an external event says the meeting is no longer needed, syncing new bookings and contacts into a CRM, and coordinating team scheduling across a shared calendar link.",
     "categories": [
       "calendar",
       "productivity"
