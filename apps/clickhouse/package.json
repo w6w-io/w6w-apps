@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.clickhouse",
     "displayName": "ClickHouse",
+    "longDescription": "ClickHouse is unusual among databases in this category for one reason: it speaks HTTP natively, so a workflow can not only manage a ClickHouse Cloud service but actually run SQL against it and get rows back. Query actions are read-only by default \u2014 enforced by ClickHouse itself, not just by this app \u2014 and insert rows safely without ever concatenating values into a statement, warning when a workflow is inserting in a pattern that will eventually get writes throttled.\n\nService management covers the full lifecycle: provision, start, stop, scale and delete a ClickHouse Cloud service, control which IP addresses may connect, and list backups and usage costs. Schema actions list tables together with their part counts and describe a table's columns and sorting key \u2014 the detail that determines whether a filter reads a fraction of a table or scans the whole thing.\n\nZero-downtime re-indexing, service scaling, and cost visibility make this as much an operations tool as a query interface, useful for a workflow that provisions ClickHouse capacity on demand or keeps a warehouse's schema and access list under version control.",
     "categories": [
       "databases",
       "data-warehousing"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.plaid",
     "displayName": "Plaid",
+    "longDescription": "Plaid brings bank data into a workflow \u2014 account details, balances, transactions, identity information and liabilities \u2014 and manages the Items that connect a person's bank to an application. Reading transactions uses Plaid's sync model rather than a fixed date range: each call returns exactly what changed since the last cursor, so a workflow stays correct as pending charges settle, amounts get corrected and transactions occasionally get removed, without re-reading or double-counting anything.\n\nAccount actions distinguish a cached balance, fast and free of the bank's own rate limits, from a live balance fetched fresh from the institution for anything approaching a payment decision. Identity and liabilities actions return what a bank itself believes about an account holder and their loans or cards \u2014 evidence rather than self-reported data. Connecting a new bank still requires a human in Plaid's own Link flow, but this app handles both server-side halves: minting the token Link needs and exchanging what it returns for a working connection.\n\nItem management actions read a connection's health (including when a user's bank login has expired and needs re-authentication), point a connection's webhook at a new URL, and disconnect a bank entirely when access should end.",
     "categories": [
       "finance",
       "databases"

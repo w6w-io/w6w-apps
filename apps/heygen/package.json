@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.heygen",
     "displayName": "HeyGen",
+    "longDescription": "HeyGen brings AI avatar video generation into a workflow \u2014 turning a script into a talking avatar video, translating an existing video into new languages with voice cloning and lip-sync, and generating speech from text. Video actions create, poll, list and delete avatar videos, while translation actions submit a video for translation into one or more target languages and track each language's job independently.\n\nSupporting actions let a workflow browse the avatars, voice options and templates already available in a HeyGen account before generating from them \u2014 a template action fetches its variable schema so a workflow can fill in the right fields, and rendering from a template applies those substitutions directly. Assets like images or audio can be uploaded and referenced by ID in later generation steps, and account details are available for checking billing and plan information.\n\nEvery video and translation job is asynchronous: creating one returns immediately with an ID to poll or a webhook to wait on, while text-to-speech is the one exception, returning a ready audio file directly.",
     "categories": [
       "ai",
       "video",

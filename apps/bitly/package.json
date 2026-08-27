@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.bitly",
     "displayName": "Bitly",
+    "longDescription": "Bitly turns link management into a workflow step \u2014 shorten a URL, look one up, update its destination, and pull click analytics, all through Bitly's REST API. Actions cover creating and updating Bitlinks, expanding a short link back to its original destination, and listing an account's Bitlinks by group, alongside summary and detailed click reporting for tracking how a link performs over time.\n\nA list-groups action rounds out the set, since Bitly scopes link listing to one group at a time and every account needs at least its default group's ID to use the others. The app authenticates with Bitly's Generic Access Token, a single long-lived credential that needs no OAuth flow \u2014 the fastest path from an account to a working connection.\n\nThis is a focused slice of Bitly's link and analytics surface: it does not manage custom domains, campaigns or bulk operations, keeping the footprint to the core loop of shortening, tracking and updating the links a workflow actually needs to touch.",
     "categories": [
       "marketing",
       "analytics"

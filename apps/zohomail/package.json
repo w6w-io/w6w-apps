@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.zohomail",
     "displayName": "Zoho Mail",
+    "longDescription": "Zoho Mail puts a mailbox under workflow control, wired for every one of Zoho's eight regional data centres. Message actions send new mail, search and list what has already arrived, read a message's metadata, content or headers individually, mark messages read or unread, move them between folders, apply labels, and delete them. Folder and label actions create and list the organizational structures a mailbox uses to sort messages.\n\nBecause a Zoho account lives on exactly one of eight regional data centres \u2014 each with its own login and mail API host \u2014 the app offers a separate connection method per region, so a workflow author picks the one matching their account rather than hitting a host their account was never issued on. Account actions list and read the mailbox or mailboxes a connection can see, covering the case where one connection legitimately spans more than one.\n\nThis app is scoped specifically to Zoho Mail and is separate from this pack's Zoho CRM integration, which is a different product with its own API surface entirely.",
     "categories": [
       "communication",
       "email"

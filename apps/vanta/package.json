@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.vanta",
     "displayName": "Vanta",
+    "longDescription": "Vanta brings a compliance program's live state into a workflow \u2014 which tests are failing and why, which controls have an owner, which issues and vulnerabilities are approaching their deadlines, and which vendors and people are covered. Test actions read what is currently failing and which specific resources are causing it, with an action to formally exclude a resource from a test as a documented compliance exception rather than silently ignoring it.\n\nControl, framework and policy actions read what an organization is held to and who owns meeting each requirement, while issue and vulnerability actions surface the work queue sorted by due date or SLA deadline, plus what has already been remediated and whether it happened in time. People actions track who the compliance program covers and their overdue tasks, with a dedicated offboarding action for completing that checklist when someone leaves. Vendor, integration and monitored-device actions round out the picture \u2014 including the accounts feeding evidence into Vanta at all, since a disconnected integration doesn't fail its tests, it just lets them go stale.\n\nThis app deliberately never deletes compliance records, uploads evidence files, or acknowledges a missed security deadline on a workflow's behalf \u2014 those stay decisions for a person to make directly in Vanta.",
     "categories": [
       "legal",
       "security",

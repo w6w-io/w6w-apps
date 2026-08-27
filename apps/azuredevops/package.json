@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.azuredevops",
     "displayName": "Azure DevOps",
+    "longDescription": "Azure DevOps brings an organization's repositories, pipelines and work items into a workflow. Browse repositories and branches, read commit history, and open, inspect and comment on pull requests \u2014 as a draft by default, since merging stays a human decision this app deliberately never automates. Pipeline actions list, run, queue and cancel builds, and read a run's artifacts and results, distinguishing a genuine pass from one that only partially succeeded.\n\nWork items are the deepest integration: create and update Bugs, Tasks, User Stories or whatever a project's process defines, and query with WIQL \u2014 resolved into full field data automatically, since Azure DevOps's own query API only returns bare IDs. Custom fields pass through untouched alongside the well-known ones, so a team's own tracking fields keep working.\n\nThe app also normalizes some of Azure DevOps's rougher edges for a workflow author: branch names work whether an endpoint expects a bare name or a full ref, and reviewer votes are read by their meaning rather than their raw numeric encoding. It deliberately never deletes or merges anything, and never edits pipeline definitions or branch policies \u2014 those stay in version control and in human hands.",
     "categories": [
       "version-control",
       "devops",
