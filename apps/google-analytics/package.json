@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-analytics",
     "displayName": "Google Analytics",
+    "longDescription": "Google Analytics (GA4) reports on how people use a site or app, and this app runs those reports and manages the properties feeding them. Run a report over a date range, a realtime view of the last 30 minutes, or a pivoted breakdown — up to five reports in one batch call — and read back which dimensions and metrics a property supports and which combinations are valid before building a query around them.\n\nBeyond reporting, it reaches into the configuration side: list accounts and properties, read or update a property's settings, manage data streams and key events (GA4's renamed conversion events), inspect custom dimensions and metrics, and check how long a property retains event data. Audience exports can be started and queried once built, for pulling a defined audience's user list out of GA4.\n\nGood for feeding analytics numbers into a dashboard or report on a schedule, auditing who accessed a property's data, or triggering downstream automation off a key event or a realtime spike — all without opening the Analytics UI.",
     "categories": [
       "analytics",
       "marketing"

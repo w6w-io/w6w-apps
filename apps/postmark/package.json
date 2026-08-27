@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.postmark",
     "displayName": "Postmark",
+    "longDescription": "Postmark sends transactional email and gives visibility into what happened to it after. Send a single message, a batch, or one built from a template, then look up a specific outbound message, see who opened it, and check bounce details — including reactivating an address that bounced once the underlying problem is fixed.\n\nServer-level actions cover the day-to-day work a sending server needs: server configuration and stats, plus creating and listing the templates a send can reference. Account-level operations — provisioning new servers, verifying sending domains, billing — stay out of scope, since those are occasional admin tasks rather than something a workflow should trigger.\n\nGood for transactional email from an app — receipts, password resets, notifications — with enough visibility into delivery and bounces to react when something didn't arrive, without leaving the workflow to check the Postmark dashboard by hand.",
     "categories": [
       "email",
       "communication"

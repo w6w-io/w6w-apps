@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.woocommerce",
     "displayName": "WooCommerce",
+    "longDescription": "WooCommerce turns a WordPress site into a store, and this app manages the products, orders and customers behind it. Create, read, update, delete and list products and orders, and create, read and list customers — the core catalog and fulfillment data a workflow needs to act on.\n\nSince every WooCommerce store lives on its own WordPress domain rather than one shared host, each connection carries its own store URL, so the same actions work against any self-hosted install. Deleting a product or order defaults to permanent removal, with the option to move it to trash instead when that's the safer choice.\n\nA fit for syncing orders into a fulfillment or accounting system, updating stock or pricing from another source, or creating a customer record the moment someone signs up elsewhere — the everyday store operations a workflow can handle instead of a person in the WordPress admin.",
     "categories": [
       "commerce"
     ],

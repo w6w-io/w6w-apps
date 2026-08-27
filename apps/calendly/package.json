@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.calendly",
     "displayName": "Calendly",
+    "longDescription": "Calendly manages who's meeting whom and when. This app reads users, event types, scheduled events and their invitees, generates single-use scheduling links a workflow can hand out, and manages webhook subscriptions so Calendly can notify a workflow when something books or cancels.\n\nEvery object is addressed by Calendly's own absolute identifier, and actions that take a single object accept either that identifier or the bare id, so results from one call feed directly into the next without extra parsing. Reading the current user or looking up a specific scheduled event and its invitees covers the common case of finding out who booked what and when, without opening the Calendly dashboard.\n\nA good fit for workflows built around booking events — creating a one-off scheduling link for a specific request, reacting to a new booking through a webhook, or pulling invitee details into a CRM or support ticket the moment someone schedules time.",
     "categories": [
       "calendar",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.circleci",
     "displayName": "CircleCI",
+    "longDescription": "CircleCI runs the CI/CD pipelines behind a repository, and this app lets a workflow trigger and watch them instead of only building on push. Start a new pipeline for a project — optionally against a specific branch or tag, with parameters matching the project's own configuration — then list or fetch the workflows and jobs that ran under it, or cancel one still running.\n\nPipelines, workflows and jobs form CircleCI's own hierarchy: a pipeline can spawn several workflows, and each workflow runs a series of jobs, so the actions here follow that structure — list workflows under a pipeline, then jobs under a workflow, then a single job's details by its project-facing number.\n\nUseful for workflows that need to kick off a build from outside CircleCI's own triggers, gate a deploy on a pipeline's outcome, or pull job results into a status page or notification without polling the CircleCI UI. Authentication is a personal API token, since CircleCI has no portable OAuth flow for third-party integrations.",
     "categories": [
       "devops",
       "developer-tools"

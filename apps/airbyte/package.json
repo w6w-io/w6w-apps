@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.airbyte",
     "displayName": "Airbyte",
+    "longDescription": "Airbyte moves data between sources and destinations, and this app lets a workflow watch and drive that pipeline instead of running it from the Airbyte UI. Trigger a sync, cancel one that's running, and read back job history with computed durations — including the \"incomplete\" status that a naive success/failure check would silently miss, meaning some streams landed and others didn't.\n\nInspect the pipeline itself before acting: connections, sources, destinations and workspaces, including which connections are paused and which streams support incremental sync. Resetting a connection is kept as its own explicit action rather than a flag on a sync, since it clears the destination and re-reads the source from scratch — not something to trigger by accident.\n\nA good fit for workflows that need visibility into pipeline health beyond \"did it run\" — catching syncs that finished without fully landing, watching for a connection Airbyte itself paused after repeated failures, and kicking off syncs on a schedule or a trigger rather than a timer inside Airbyte.",
     "categories": [
       "data-warehousing",
       "devops"

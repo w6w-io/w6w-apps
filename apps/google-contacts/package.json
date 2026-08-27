@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-contacts",
     "displayName": "Google Contacts",
+    "longDescription": "Google Contacts manages the people in a Google account's address book, and this app reads and writes them through Google's current People API. List a user's connections, look up or search for a specific contact, and create, update or delete one — plus create, update, delete and manage membership of contact groups, including built-in ones like \"starred\".\n\nUpdates follow Google's required read-then-write pattern: fetch a contact for its etag, then send changes back with that etag attached, so two writers can't silently overwrite each other's edits. Field masks — which fields to fetch or write — are required by the API on nearly every call, and this app ships working defaults so a workflow author doesn't have to learn Google's parameter-naming quirks per action.\n\nA fit for syncing contacts into or out of a CRM, keeping a mailing list's groups current from another system, or looking up a person's details before drafting an outbound message.",
     "categories": [
       "crm",
       "productivity"

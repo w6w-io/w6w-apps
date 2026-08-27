@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.dropbox-sign",
     "displayName": "Dropbox Sign",
+    "longDescription": "Dropbox Sign (formerly HelloSign) sends documents out for signature and tracks them to completion, alongside the templates and teams that structure how they go out. Send a document directly or fill and send a reusable template, then follow a request's signer-by-signer status, nudge someone who hasn't signed, or cancel one that hasn't finished — down to fetching the signed PDF once it's done.\n\nTemplates make repeat sends fast: fill a template's roles instead of re-uploading fields every time, and manage who on the account has access to which templates. Bulk send jobs and their results are readable too, for visibility into requests generated from a batch. Account and team info — remaining plan quota, team members, pending invitations — comes back for workflows that need to check headroom or account ownership before acting.\n\nEvery action explicitly declares whether it runs in Dropbox Sign's test mode or produces a legally binding signature, since that default matters for anything that automates sending real contracts. Good for onboarding flows, contract routing and any process that needs a document signed and confirmed without a human tracking it by hand.",
     "categories": [
       "legal",
       "documents",

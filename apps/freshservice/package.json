@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.freshservice",
     "displayName": "Freshservice",
+    "longDescription": "Freshservice is Freshworks' ITSM platform, and this app manages the tickets at its center along with problems, changes, releases, assets and the service catalog around them. Create, read, update, delete and restore tickets, add notes and replies to a conversation, and pull requesters, agents, groups, departments and locations — the directory data ticket work depends on.\n\nBeyond ticketing, it reaches into change management — creating a change with its priority, risk and impact grading — the CMDB, where assets are created and looked up by their display id, and the service catalog and knowledge base, where service items are listed and solution articles searched. These are the parts of ITSM that sit around a ticket rather than inside one.\n\nA fit for workflows that create tickets from an external trigger, keep a change record in sync with a deployment pipeline, or surface asset and requester context automatically instead of an agent looking it up by hand. Every account has its own Freshservice subdomain, which the connection resolves once so no action needs to carry it.",
     "categories": [
       "support",
       "devops"

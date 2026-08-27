@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.bigquery",
     "displayName": "BigQuery",
+    "longDescription": "Run SQL against BigQuery, page through the results, and stream rows straight into a table without going through a query at all. Jobs can be started for query, load, extract or copy work, and tracked, cancelled or listed by state — with the label to watch being \"done,\" which BigQuery uses to mean finished, not succeeded.\n\nThe app absorbs a few of BigQuery's rougher edges rather than passing them on: query results come back as positional cells rather than named fields, so rows are decoded into a plain array alongside the raw response; a dry run prices a query without executing it; and streaming inserts, which BigQuery can accept with a success response while silently rejecting individual rows, are checked row by row and can carry a stable per-row id so a retry doesn't duplicate data.\n\nDatasets and tables are manageable end to end — create, list, update schema, delete — alongside the list of projects a connection can query in. Good for workflows that run reporting or ELT jobs against BigQuery, stream events into a table for later analysis, or need job status back before moving on to the next step.",
     "categories": [
       "data-warehousing",
       "databases"

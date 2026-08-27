@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.highlevel",
     "displayName": "HighLevel",
+    "longDescription": "HighLevel (GoHighLevel) is a CRM and marketing platform built for agencies running multiple client sub-accounts, and this app works within one of those accounts. Manage contacts and their tags, track opportunities through pipelines, list calendars and appointments, and read and search conversations — the core of a sales and client-management workflow.\n\nThe connection resolves to a single sub-account automatically from the OAuth grant, so every action already knows which one it's operating in without an id being passed around by hand. Sending a message and creating an appointment cover the two most common ways a workflow reaches out on HighLevel's behalf, alongside reading custom fields and forms for context before acting.\n\nGood for automating lead intake into a pipeline, syncing contact and opportunity data with another system, or triggering an appointment or message from an external event — the kind of client-facing follow-up an agency would otherwise do by hand across many accounts.",
     "categories": [
       "crm",
       "marketing"

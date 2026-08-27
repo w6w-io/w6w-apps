@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mongodb-atlas",
     "displayName": "MongoDB Atlas",
+    "longDescription": "MongoDB Atlas is the managed hosting layer around a MongoDB deployment, and this app manages its control plane — projects, clusters, database users and network access — not the data inside a database, which needs a driver speaking the wire protocol directly. Create, scale, pause and delete clusters, mint or revoke database user credentials, and open or close the IP access list entries that gate who can connect at all.\n\nVisibility comes from reading alerts, change events and the running processes behind a cluster, including which node is currently primary. Cluster actions default toward safety where Atlas doesn't: creation requires an explicit instance size and turns on termination protection, deletion keeps backup snapshots unless told otherwise, and opening network access to everyone requires an explanatory comment.\n\nUseful for provisioning a cluster as part of an environment setup, rotating a database credential on a schedule, pausing non-production clusters overnight to cut cost, or reacting to Atlas's own alert and event stream instead of watching the console.",
     "categories": [
       "databases",
       "devops"

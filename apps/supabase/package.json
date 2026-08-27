@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.supabase",
     "displayName": "Supabase",
+    "longDescription": "Supabase is a hosted Postgres platform, and this app talks to a project's data over its REST API rather than the Postgres wire protocol — list rows from a table with PostgREST's own filter syntax, fetch a single row, count matching rows without transferring them, insert or upsert rows, update or delete matching rows, and call a Postgres function exposed through the API.\n\nEvery action is table-agnostic, since a project's own schema isn't known ahead of time — a workflow names the table (or function) and supplies the filter and payload it needs. Write actions return the affected rows by default, so there's rarely a need for a separate read afterward to see what changed.\n\nWhich key to use matters: the anon key respects whatever Row Level Security policies a project defines, while the service-role key bypasses them entirely and should only sit on a connection that genuinely needs full read and write access, never one exposed to untrusted input like a public form or webhook. A fit for automating reads and writes against a Supabase-backed app's data, or calling a stored Postgres function as part of a workflow.",
     "categories": [
       "databases"
     ],

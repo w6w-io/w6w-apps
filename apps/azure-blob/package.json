@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.azure-blob",
     "displayName": "Azure Blob Storage",
+    "longDescription": "Azure Blob Storage covers containers and blobs: list, upload, download, copy and delete, plus tier changes between Hot, Cool, Cold and Archive and metadata management. It completes the pack's object-storage set alongside S3 and Google Cloud Storage, for workflows that already have data landing in an Azure storage account.\n\nDistinctive here is a real lease — an exclusive lock on a blob, unlike the optimistic-concurrency-only pattern S3 and Cloud Storage offer — useful for a read-modify-write sequence that would otherwise lose a race. Container deletion counts the blobs it will remove and requires that number to be acknowledged before it proceeds, since Azure deletes a container and everything inside it in one irreversible call.\n\nBlob tiering exposes what each move commits you to: moving into Cool, Cold or Archive comes with a minimum retention period, and an Archive-tier blob is offline until a rehydration completes, not just slow. The app authenticates with the account's shared key and does not mint SAS URLs, a limitation of what that signature needs rather than a missing feature.",
     "categories": [
       "storage",
       "devops"
