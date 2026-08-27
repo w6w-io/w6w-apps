@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.sanity",
     "displayName": "Sanity",
+    "longDescription": "Sanity is a headless CMS built around a structured content store, and this app queries and mutates it from a workflow: running GROQ queries, fetching documents by id, and creating, patching, or deleting content, with unpublished drafts filtered out of query results by default. It is built for workflows that read or update structured content directly, rather than through Sanity's own Studio editor.\n\nPublishing and unpublishing go through Sanity's dedicated publish mechanism rather than a manual replace-and-delete, so a document's revision history and any scheduled release stay intact. A document's history can be read as of a specific moment or revision, a whole dataset can be exported for backup, and every project and dataset a token can see can be listed — useful before pointing a workflow at the right one, since a mistyped dataset name returns an empty result rather than an error. Query-based patches and deletes support a dry run first, since a broad query can otherwise change far more than intended.",
     "categories": [
       "cms",
       "databases",

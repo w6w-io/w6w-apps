@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.documenso",
     "displayName": "Documenso",
+    "longDescription": "Documenso sends documents out for electronic signature, and this app manages the whole lifecycle of an envelope — the unit that holds the documents, recipients, and signature fields together. A template can be turned into a real envelope with its placeholders filled in, sent to recipients, cancelled if something is wrong, or duplicated into a fresh draft; once distributed, its recipients and fields are fixed, so nothing changes what a signer already sees.\n\nBeyond sending, it tracks the parts of a signature workflow that are easy to get wrong: reading a specific recipient's own signing status rather than waiting for everyone to finish, re-sending only to whoever hasn't signed yet, and pulling the audit trail — who opened, viewed, and signed, and when — which is the evidence a signed document actually depends on. Signed documents and their signing certificates can both be downloaded as short-lived links, and folders can be created to keep documents and templates organized.",
     "categories": [
       "legal",
       "documents",

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.toggl",
     "displayName": "Toggl Track",
+    "longDescription": "Toggl Track is a time-tracking tool, and this app manages the time entries, projects, workspaces, and clients behind it: starting and stopping a timer, listing and updating past entries, and creating a project to track time against. It is built for workflows that need to record or report on time spent — starting a timer when a task begins, pulling a workspace's entries for a report, or keeping projects in sync with work tracked elsewhere.\n\nEntries can be listed and filtered, updated after the fact, and deleted, and the workspace and client lists round out the reference data other actions need, such as which workspace a new project or time entry belongs to. Because Toggl scopes most of its API by workspace, actions that create or change data take a workspace as a required parameter rather than guessing at a default.",
     "categories": [
       "productivity"
     ],

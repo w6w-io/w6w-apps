@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.homeassistant",
     "displayName": "Home Assistant",
+    "longDescription": "Home Assistant is a home automation hub you run yourself, and this app reads and controls a running instance: entity states, the services that actually operate devices, historical state changes, calendars, and events. It is built to automate a smart home from a workflow — checking whether a door is locked, turning on a light, or reading what a sensor recorded overnight — while steering around the sharp edges of an API built for the home rather than for automation software talking to it over the internet.\n\nThe most important of those edges is that setting an entity's state directly does not control the underlying device; only a service call or the dedicated on/off/toggle action does that, and this app refuses the former on device-backed entities unless explicitly told otherwise. It also renders Home Assistant's own templating language against live state, fires custom events to trigger automations, and can validate a configuration file before a restart that would otherwise risk leaving the instance down.",
     "categories": [
       "iot",
       "productivity"

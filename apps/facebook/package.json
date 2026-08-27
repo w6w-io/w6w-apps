@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.facebook",
     "displayName": "Facebook Pages",
+    "longDescription": "This app manages a Facebook Page day to day: reading and publishing posts, moderating comments, uploading photos and listing videos, and pulling Page-level performance insights — the everyday work of running a Page's presence rather than a personal profile. It also lists the Pages a connected account manages, so a workflow can enumerate everything it has access to before acting on a specific one.\n\nIt covers one narrow slice of Meta's advertising surface too: a read-only list of ad campaigns on a connected ad account, useful for reporting rather than for creating or managing ads. For Facebook Lead Ads specifically — a page's lead forms and the leads submitted through them — a separate, dedicated app in this pack covers that surface instead, so this one stays focused on general Page management: profile, content, and analytics.",
     "categories": [
       "social-media",
       "marketing"
