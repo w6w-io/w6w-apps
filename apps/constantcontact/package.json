@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.constantcontact",
     "displayName": "Constant Contact",
+    "longDescription": "Constant Contact syncs contact records from other systems into its lists and gets the email campaigns sent to them under workflow control, on Constant Contact's own V3 API.\n\nContacts can be created, updated, upserted, unsubscribed or deleted, with membership managed across lists — including bulk imports and bulk add or remove for large audiences. Campaign creation and campaign activity are readable and writable too, and long-running operations like an import or a bulk list change can be tracked to completion through their own status action rather than assumed done on response.\n\nThe three ways to write a contact (create, replace, or upsert-and-merge) and the several ways to stop someone receiving mail (delete, unsubscribe, or remove from a list) each carry real, different consequences in Constant Contact's own data model, and this app follows the vendor's own guidance for each. It fits marketing teams consolidating list hygiene, campaign sends and contact lifecycle management into the same automation that handles the rest of their stack.",
     "categories": [
       "marketing",
       "email"

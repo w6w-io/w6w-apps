@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.aircall",
     "displayName": "Aircall",
+    "longDescription": "Aircall connects a workflow to a company's cloud phone system — call history and live-call actions, contact records, and the users, teams, numbers, tags and webhooks that tie them together, all over Aircall's own Public API.\n\nCalls can be listed, searched, tagged, commented on, transferred, and paused or resumed mid-recording. Contacts are created, updated, searched by phone or email, and deleted. Agents can be dialled or have a call started for them directly from a workflow, and webhooks can be created, listed and updated so a company's own integrations keep receiving Aircall events.\n\nTeams and numbers round out the picture for routing and reporting: list a team's members, see which numbers a user can call from, and pull tag definitions to apply consistently across every conversation. It's a fit for support and sales workflows that need call context in the same place as ticketing, CRM or notification tools — anywhere a call, contact or webhook needs to trigger or receive automation.",
     "categories": [
       "communication",
       "support",

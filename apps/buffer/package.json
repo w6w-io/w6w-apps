@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.buffer",
     "displayName": "Buffer",
+    "longDescription": "Buffer queues and publishes social content from inside a workflow, across every channel a team runs — Instagram, Facebook, X, LinkedIn, Pinterest, TikTok, YouTube, Mastodon, Threads, Bluesky and Google Business Profile — through Buffer's own GraphQL API.\n\nPosts can be listed, created, edited and deleted, with per-network fields (a LinkedIn first comment, an X thread, an Instagram reel) passed straight to Buffer so nothing new the vendor adds ever needs a rebuild. Queueing, custom scheduling and posting-limit checks keep a bulk publish from silently overrunning a channel's daily cap, and aggregated post metrics summarise engagement over a chosen window.\n\nBeyond publishing, the Ideas backlog lets a workflow capture and group post concepts before they're scheduled, and organization and channel listing give every other action the ids it needs. It suits marketing and social-media workflows that plan content in bulk, coordinate approvals across several organizations, and want performance numbers back in the same automation that queued the post.",
     "categories": [
       "social-media",
       "marketing"

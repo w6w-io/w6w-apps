@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.raindrop",
     "displayName": "Raindrop.io",
+    "longDescription": "Raindrop.io keeps a bookmark library organized from inside a workflow — filing links into the right collection, tagging and highlighting them, and checking whether something has already been saved, across collections, raindrops (bookmarks), highlights and tags.\n\nBookmarks can be created singly or in bulk, updated, searched, moved to Trash and restored, or checked against a URL before saving to avoid a duplicate. Collections nest, share with collaborators, merge, and reorder, with sharing invitations and role changes handled as their own actions. Highlights are added, edited and removed on a bookmark, and tags are listed, renamed or merged in one step, since Raindrop treats a tag's name as its whole identity.\n\nIt fits research, reading-list and content-curation workflows that file links from other tools into the right collection, keep a shared collection's membership and tags tidy, or check whether something has already been saved before adding it again — for a personal account with a permanent test token, or for someone else's account via OAuth.",
     "categories": [
       "productivity",
       "search",

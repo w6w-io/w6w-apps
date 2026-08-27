@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.ticktick",
     "displayName": "TickTick",
+    "longDescription": "TickTick puts the same account a person's TickTick app runs on within reach of a workflow — creating and updating tasks and projects, checking off habits, and reading back focus session history, through the TickTick Open API.\n\nProjects (TickTick's word for a list) can be created, updated and read back with their tasks and kanban columns; tasks can be created, updated, completed, deleted, moved between projects, and filtered by date, priority, tags or status, with a separate action for pulling completed tasks over a time range. Focus sessions and habit check-ins are also readable, so a productivity workflow can report on more than just open tasks.\n\nIt fits personal and team productivity automations — creating a task from an email or form, syncing due dates with another planner, or reporting on completed work and habit streaks — for any TickTick account connected through OAuth. Tags, comments, attachments and un-completing a task are product features TickTick's own API does not expose, so they aren't available here either.",
     "categories": [
       "productivity",
       "project-management"

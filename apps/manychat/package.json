@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.manychat",
     "displayName": "Manychat",
+    "longDescription": "Manychat puts a Page's chat-marketing audience within reach of a workflow — segmenting subscribers with tags and custom fields, and triggering the Automations that message them over Messenger, Instagram, WhatsApp or Telegram.\n\nSubscribers can be looked up by name, email, phone or a custom field, tagged and untagged, and have their custom fields set individually or in a batch; Page-wide bot fields carry a single value shared across every subscriber, for things like a feature flag or a current promo code. Sending a pre-built Automation Flow is the usual way to reach someone, and an ad-hoc content payload is available for messages authored outside Manychat, both subject to Meta's own messaging-window rules rather than anything this app can waive.\n\nIt fits chat-marketing workflows that sync a subscriber's state from a CRM, trigger a Flow when something happens elsewhere, or keep tags and segments current across every channel Manychat manages — one API token per Page, with the messaging rules Meta enforces surfaced rather than hidden.",
     "categories": [
       "marketing",
       "communication",

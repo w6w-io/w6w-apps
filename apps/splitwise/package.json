@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.splitwise",
     "displayName": "Splitwise",
+    "longDescription": "Splitwise settles who owes what from inside a workflow — expenses carry the full per-person share model (who paid, who owes) that a plain equal split can't express, alongside the groups, friends and comments that give each one its context.\n\nAn expense can be split equally or by explicit per-person shares, updated, deleted and undeleted, and read back with its running balance; groups and friends are created, listed and managed, including invites and member removal. Comments thread onto an expense for context, and currencies, categories and notifications round out the picture for building a coherent expense-tracking workflow.\n\nIt fits roommate, travel and shared-household automations that create an expense from another system — a receipt scan, a booking confirmation — keep a group's membership current, or surface Splitwise's own notification feed as a change log, against a single personal account's full-access API key, since Splitwise offers no narrower credential.",
     "categories": [
       "finance",
       "productivity"

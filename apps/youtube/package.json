@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.youtube",
     "displayName": "YouTube",
+    "longDescription": "YouTube gives a workflow the same reach into a channel that its own Studio has — reacting to comments, keeping playlists current, and rating and updating videos — plus public search and metadata lookups that need no account connection at all, through the YouTube Data API.\n\nVideos can be searched, read, updated, rated and deleted, with playlists created, updated, deleted and populated one item at a time. Comment threads on a video or channel can be listed and replied to, and subscriptions read back for a connected account. Read-only calls can also run against public data alone, on an API key with no user connection at all, when a workflow just needs search results or public metadata.\n\nIt fits content-operations and reporting workflows — reacting to a new comment, keeping a playlist in sync with a content calendar, or pulling public video metadata for analysis — for a channel owner connected through OAuth, or for public lookups that need no account at all. Video upload is not available: YouTube's own upload protocol needs a stateful multi-request session this app's sandboxed execution model cannot hold.",
     "categories": [
       "video",
       "social-media"
