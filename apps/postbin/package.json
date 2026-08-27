@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.postbin",
     "displayName": "PostBin",
+    "longDescription": "PostBin gives a workflow a disposable HTTP inbox: create a bin, get back a throwaway URL, point any API client or webhook sender at it, then read back exactly what arrived. Bins expire around 30 minutes after creation, which makes this genuinely useful for testing a webhook integration or inspecting what a client actually sends, without standing up a real endpoint.\n\nThere is no bulk \"list requests\" call \u2014 a workflow reads everything a bin collected by repeatedly popping the oldest uncollected request off the queue until none remain, or fetches one already-known request directly if it already has the id. Popping a request is a mutating operation even though it happens to use GET on the wire, so it is not safe to retry blindly.\n\nPostBin has no account, no API key and no OAuth flow \u2014 every call, including creating and deleting a bin, is unauthenticated by design, and deleting an already-gone bin still succeeds cleanly rather than erroring.",
     "categories": [
       "developer-tools"
     ],

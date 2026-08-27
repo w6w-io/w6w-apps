@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.segment",
     "displayName": "Segment",
+    "longDescription": "Segment's Tracking API is the write side of a customer-data pipeline, and this app implements its full verb set: identify a person by their traits, track a named event, record a page view, associate a user with a group or account, alias two identities together as one, and batch up to 2,500 of any of those calls into a single request. Free-form trait, property and context objects pass straight through to Segment untouched, so the wire shape a workflow builds is exactly what Segment receives.\n\nSegment splits its API in two \u2014 a write-only Tracking API for events and a separate, bearer-authenticated config API for managing sources and warehouses \u2014 and this app deliberately calls only the Tracking API, so it has nothing to say about workspace configuration. Every call is idempotent: a message id derived from the invocation is attached to each event, so a host's retry of the same run lands on Segment's own deduplication window rather than double-recording it.\n\nThe write key is sent as HTTP Basic with an empty password, and the Tracking API has no dedicated ping endpoint of its own \u2014 the connection test instead sends a harmless identify call against a fixed anonymous id, so repeated checks update one throwaway profile rather than minting a new one each time.",
     "categories": [
       "analytics"
     ],

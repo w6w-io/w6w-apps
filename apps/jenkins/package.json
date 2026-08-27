@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.jenkins",
     "displayName": "Jenkins",
+    "longDescription": "Jenkins connects a workflow to any Jenkins instance \u2014 a customer's own CI box, an on-prem network segment, or a managed offering \u2014 to trigger builds, inspect jobs, manage the build queue and stop a build in progress. Because Jenkins is almost always self-hosted, the instance's own base URL is collected on the connection rather than pinned to a single vendor host, and every action builds its request against that URL.\n\nTriggering a build queues it rather than starting it immediately; the useful part of the response is a queue item, which a separate action resolves once Jenkins actually schedules an executor and hands back the real build number. Job names accept a folder path, so builds inside a Folders-plugin or multibranch-pipeline layout are addressed the same way a flat job would be.\n\nAuthentication is HTTP Basic with a username and personal API token \u2014 the credential form Jenkins itself documents as CSRF-exempt, so no separate crumb needs to be fetched or attached to any write.",
     "categories": [
       "devops"
     ],

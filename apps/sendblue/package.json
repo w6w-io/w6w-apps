@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.sendblue",
     "displayName": "Sendblue",
+    "longDescription": "Sendblue puts business messaging into a workflow \u2014 send and manage iMessage, SMS and RCS messages, reactions, read receipts, typing indicators, media and carousel cards, plus the contacts, webhooks, seats, phone lines, TOTP codes, location sharing and phone verification underneath a messaging program. Group messaging, contact bulk import and removal, and per-line health status are all covered alongside the core send and receive surface.\n\nSendblue's phone verification works differently from the send-a-code-and-check-it pattern most vendors use: there is no endpoint to submit a code a user typed in. Instead the recipient texts the code back to a pool number, and Sendblue verifies it automatically the moment that reply arrives \u2014 a workflow watches verification status rather than submitting an answer. TOTP support goes further, letting a workflow read a rotating two-factor code as if it were the account holder, useful for automations that must clear a 2FA gate on the recipient's behalf.\n\nAuthentication is two custom headers \u2014 an API key id and secret \u2014 rather than a bearer token. Provisioning a new phone line or requesting a subaccount is deliberately left out of this first pass, since both are agency-only operations that charge the card on file; direct raw-file uploads and open-ended event-streaming endpoints are also out of scope since they don't fit a single request/response call.",
     "categories": [
       "communication"
     ],

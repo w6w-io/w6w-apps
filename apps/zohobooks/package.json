@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.zohobooks",
     "displayName": "Zoho Books",
+    "longDescription": "Zoho Books puts a business's accounting and invoicing records into a workflow \u2014 list, read, create, update and delete contacts and items, manage invoices through their full lifecycle including marking one sent, voiding it or emailing it to a customer, and create and read estimates. Every action falls back to the organization the connection was authorized against, so a single-organization account needs nothing extra configured; listing organizations is how a workflow discovers the id for anything else.\n\nZoho hosts every organization in one of eight regional data centres, each with its own API host and, almost always, its own OAuth host, so this app ships a separate OAuth method per region rather than one connection that could silently send an EU organization's login through the US flow. Canada is the one region where the OAuth host breaks the naming pattern the other seven follow, and this app uses the real host rather than the one the pattern would suggest.\n\nBulk export, recurring invoices, sales and purchase orders, banking and every jurisdiction-specific tax feature such as GST or CFDI are deliberately left out as not core to workflow automation of a Books account; create and update calls take a generic set of fields for the same reason, since Zoho Books' own forms run to dozens of optional, region-specific attributes.",
     "categories": [
       "finance"
     ],
