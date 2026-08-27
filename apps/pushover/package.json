@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.pushover",
     "displayName": "Pushover",
+    "longDescription": "Pushover sends push notifications to phones, tablets and desktops through Pushover's small four-endpoint API, including emergency-priority messages that repeat until someone acknowledges them or a set time expires. A single connection pairs an application token with a recipient's user or group key, so sending a notification is a one-step call rather than a per-message credential lookup \u2014 though a different recipient can still be named per call when needed.\n\nMessage text, title and link fields are checked against Pushover's own length limits before sending, so a workflow finds out at the boundary rather than having its text silently truncated. Emergency-priority messages are validated locally too \u2014 the required retry interval and expiry are enforced together, so a misconfigured emergency alert fails with a clear reason instead of being silently ignored by Pushover.\n\nQuota is read live from Pushover's own limits endpoint rather than declared unknown, since Pushover publishes the real numbers: a monthly allowance shared by every application on the account, with sending disabled entirely once it's exhausted rather than merely throttled.",
     "categories": [
       "communication",
       "monitoring"

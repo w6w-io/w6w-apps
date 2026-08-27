@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.reddit",
     "displayName": "Reddit",
+    "longDescription": "Reddit submits and reads posts and comments, votes, searches, and reads back the connected account's own identity against Reddit's OAuth-authenticated API. Posts and comments can be submitted and listed by subreddit or sort order, a specific post fetched directly by its id, and search run either sitewide or scoped to one subreddit.\n\nAuthentication uses Reddit's standard OAuth2 flow with the minimal set of scopes each action actually needs, requesting a permanent grant so a refresh token comes back rather than requiring the user to reconnect once the initial token expires. Reddit's own quirks are handled directly rather than left for a workflow to discover: write endpoints are form-encoded rather than JSON, and a validation failure can arrive as an HTTP 200 with the real error nested inside the body, so both are normalized into an ordinary rejected call.\n\nComment threads are read one level deep \u2014 top-level comments only, without walking nested replies \u2014 and moderation, editing, deleting, saving and subreddit management are left out entirely, since none of those were part of this app's requested action set.",
     "categories": [
       "social-media"
     ],

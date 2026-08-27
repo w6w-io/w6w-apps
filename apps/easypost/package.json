@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.easypost",
     "displayName": "EasyPost",
+    "longDescription": "EasyPost rates a parcel across every carrier on an account, buys the label, tracks it to the door, verifies an address before a bad one turns into a costly return, and insures what matters. Rating and buying are deliberately separate steps \u2014 quoting a shipment never spends money, and only purchasing a label moves money and issues a tracking code \u2014 so a workflow that only wants a price never risks buying one by accident.\n\nTracking statuses are read for what they actually mean rather than taken at face value: an unscanned parcel reads as unknown rather than lost, and the two statuses that actually need a human's attention \u2014 returned to sender and carrier failure \u2014 are flagged explicitly rather than left to blend into everything else. Address verification runs as its own cheap step ahead of purchase, returning the carrier's corrected version of an address so a mismatch is caught before a label is printed rather than after a parcel comes back.\n\nBeyond shipping, this app can also insure a parcel shipped elsewhere, generate a single scan-form barcode for a batch of packages, and book or cancel a carrier pickup. Managing carrier accounts, configuring webhooks and one-call purchasing are left out, since those are dashboard-level or workflow-antithetical decisions rather than steps in an automation.",
     "categories": [
       "commerce",
       "developer-tools"

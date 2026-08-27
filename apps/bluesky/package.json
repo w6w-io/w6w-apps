@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.bluesky",
     "displayName": "Bluesky",
+    "longDescription": "Bluesky connects a workflow to the AT Protocol social network \u2014 Bluesky's own service or any self-hosted PDS \u2014 to post, search, follow and read without re-implementing the protocol's quirks. Posts, likes, reposts and follows are built as real network records rather than plain API calls, and rich-text links, mentions and hashtags are computed as proper facets so they render live instead of as plain grey text.\n\nSession handling is built around Bluesky's tight sign-in limit: an app password is exchanged once at connect time, and every subsequent call refreshes the session rather than re-authenticating, so a workflow that runs many times a day doesn't burn through the daily quota. Actions cover posting and replies with correct thread roots, searching and reading profiles and feeds, following and reacting, and reading notifications without accidentally marking them seen.\n\nThe app also smooths over protocol details a naive integration gets wrong: resolving mentions to the account's own identifier rather than trusting a cached handle, treating deletes as idempotent, and reporting posts and thread nodes that come back missing, blocked or taken down rather than silently misaligning them with the wrong record.",
     "categories": [
       "social-media",
       "communication"

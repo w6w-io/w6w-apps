@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.posthog",
     "displayName": "PostHog",
+    "longDescription": "PostHog captures analytics events and reads back a project's persons, cohorts, feature flags, insights and annotations. Capturing an event uses PostHog's public, per-project API key and needs no stored connection at all \u2014 the same key PostHog ships inside its own frontend snippet \u2014 while every other action authenticates against the account-level API with a private personal API key, since reading and writing project data is a different trust level entirely from sending it an event.\n\nReading persons, cohorts, feature flags and insights, and creating annotations, all scope to one project selected when the connection is made \u2014 a single personal API key's account can span more than one, so the project id is fixed once rather than guessed per call. Annotations can be scoped to a dashboard item, a dashboard, a project or an organization, matching PostHog's own documented set.\n\nSelf-hosted PostHog is not supported; only PostHog's US and EU cloud regions are reachable, since a fixed egress allowlist can't address a customer-chosen host.",
     "categories": [
       "analytics"
     ],
