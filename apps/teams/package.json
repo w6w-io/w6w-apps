@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.teams",
     "displayName": "Microsoft Teams",
+    "longDescription": "Microsoft Teams is where a lot of internal business communication happens, and this app reads teams and channels and sends channel and chat messages through the Microsoft Graph API.\n\nIt covers finding your way around a tenant's Teams structure — listing teams you belong to, their channels, and the members of both — then posting into a channel or replying to an existing message thread. On the chat side, listing existing one-to-one and group chats, reading their messages, and sending a new message are all covered by a single permission, with none of the admin-consent friction channel reading requires.\n\nMicrosoft's own permission model creates a real asymmetry worth knowing before you build around it: a workflow can post to a channel with no administrator involved at all, but reading channel messages back needs a tenant administrator's consent first. This app is honest about that split rather than requesting one broad scope and hoping it works. It is scoped to messaging and membership — creating teams or channels, editing or deleting sent messages, and meetings or calls are all separate surfaces this app does not touch.",
     "categories": [
       "communication"
     ],

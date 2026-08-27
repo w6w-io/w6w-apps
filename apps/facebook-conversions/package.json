@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.facebook-conversions",
     "displayName": "Meta Conversions API",
+    "longDescription": "Meta's Conversions API lets a business report conversions — purchases, leads, sign-ups — directly from its own server rather than relying on browser-side pixel tracking, and this app sends those events to a Meta dataset (pixel) on a business's behalf.\n\nCustomer-matching fields like email and phone are normalized and SHA-256 hashed automatically before they leave this app, following the same rules Meta's own SDKs apply, so a workflow can pass a plain email address without hand-rolling the hashing itself. Both a single-event and a batched send are available, and dataset-quality and diagnostics reads let a workflow check how well its events are matching Meta's own audience data after the fact.\n\nThis app is deliberately narrow: it is the write path for one specific product, Meta's Conversions API, and does not touch Facebook Pages content or Lead Ads — those are separate integrations with separate credentials. A health check reports live quota headroom against Meta's own usage meters, since Meta publishes no general status feed for this API.",
     "categories": [
       "marketing",
       "analytics",

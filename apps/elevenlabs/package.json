@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.elevenlabs",
     "displayName": "ElevenLabs",
+    "longDescription": "ElevenLabs turns text into speech and audio into text, and this app covers the generative-audio surface a workflow reaches for: text-to-speech with optional per-character timestamps for captioning or lip-sync, speech-to-text from a hosted audio or video URL, and one-shot sound-effect generation.\n\nBeyond generation, it manages the voice catalogue and public library — listing, reading and editing voice settings, and adding a shared voice to your own account — plus generation history, including re-downloading past audio without spending new credits, and ElevenLabs Studio project listings.\n\nIt also surfaces account and plan visibility: current subscription tier, character usage against your limit, and remaining voice slots, so a workflow can check headroom before an expensive batch of generations. Health checks track ElevenLabs' own status page and that same plan headroom, and audio responses come back as portable base64 so a workflow step can pass generated speech straight to whatever comes next.",
     "categories": [
       "ai"
     ],

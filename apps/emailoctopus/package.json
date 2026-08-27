@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.emailoctopus",
     "displayName": "EmailOctopus",
+    "longDescription": "EmailOctopus manages email marketing lists, and this app covers the list side of a campaign: contacts, custom fields, tags and the lists that hold them, over the EmailOctopus v2 API.\n\nIt handles the everyday contact lifecycle — creating, updating and upserting contacts individually or in a batch, applying and removing tags, and managing custom fields — plus starting an API-triggered automation for a contact who just joined a list. On the reporting side, it reads campaign summaries, click and open reports, so a workflow can act on how a past send performed.\n\nEmailOctopus's v2 API is read-only for campaigns themselves — there is no way to create or send an email through it — so this app focuses on the list-management and reporting half of the job, the part a script or scheduled automation actually needs. Health checks track EmailOctopus's own status page, live API reachability and rate-limit headroom, so a workflow can tell a slow patch from an outage.",
     "categories": [
       "marketing",
       "email"

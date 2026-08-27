@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.discourse",
     "displayName": "Discourse",
+    "longDescription": "Discourse is community forum software, and this app reads and writes topics, posts, categories, users and groups on any Discourse forum — self-hosted or Discourse-hosted — over its REST API.\n\nIt covers the full posting lifecycle: creating topics, replies and private messages, liking and deleting posts, and updating a topic's status. On the community side, it manages categories, lists and manages group membership, and looks up or suspends users. A dedicated search action exposes Discourse's own filter syntax — by user, category, tag, date range and more — as a single query string, rather than reassembling it from a dozen separate parameters.\n\nBecause a Discourse forum lives at whatever domain its community chose rather than a fixed vendor host, this app connects to the specific forum a workflow is pointed at. Health checks reflect that: alongside Discourse's own hosting-status page, each connection gets its own reachability check against its actual forum, so a self-hosted install is judged on its own uptime rather than on Discourse's hosted service.",
     "categories": [
       "communication",
       "social-media"

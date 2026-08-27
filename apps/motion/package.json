@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.motion",
     "displayName": "Motion",
+    "longDescription": "Motion is an AI-driven calendar and task manager that decides when your work actually happens, and this app covers the whole of Motion's public API: tasks, projects, comments, recurring tasks, custom fields, and the workspaces, users, statuses and schedules everything else is addressed by.\n\nTask management covers the full lifecycle — creating, updating, moving between workspaces, unassigning and deleting — plus dedicated recurring-task definitions with Motion's own flexible scheduling grammar for things that repeat weekly, monthly or on a custom pattern. Projects can be created against a template with matching stages, and comments let a workflow leave context on a task or project for a human to see. Custom fields extend both tasks and projects with account-specific data, addressed consistently whether you're reading, setting or clearing a value.\n\nBecause Motion assigns work to people by their internal user id rather than an email address, this app's directory actions — listing users, workspaces, task statuses and schedules — exist mainly to resolve the ids other actions need. A live reachability check backs Motion's own status page, which currently reports only on its web app rather than the API this app calls.",
     "categories": [
       "productivity",
       "project-management",
