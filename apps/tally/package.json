@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.tally",
     "displayName": "Tally",
+    "longDescription": "Tally is a form builder, and this app covers more of it than most form integrations can — not just reading submissions, but authoring the form itself. Create, update and delete forms and their blocks, retitle questions, and organize everything into workspaces and folders you can create, update and delete as well.\n\nRead submissions as they come in, and pull five different analytics views for a form — metrics, visits, submission counts, response dimensions and drop-off — to see how it is actually performing, not just what came through. Manage the webhook subscriptions that notify your systems of new activity, replay a delivery that failed, and read the delivery log.\n\nOn the team side, list an organization's members, remove one, and send, list or cancel an invitation. The one thing this app cannot do is create a submission — Tally has no API for that; responses arrive only through the hosted form itself.",
     "categories": [
       "forms",
       "productivity"

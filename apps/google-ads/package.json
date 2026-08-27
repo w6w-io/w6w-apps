@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-ads",
     "displayName": "Google Ads",
+    "longDescription": "Google Ads runs the paid-search and display advertising for a huge share of online marketing spend, and this app puts a workflow directly on top of the account data and campaign controls advertisers use every day. Pull a built-in performance report or write your own query against any resource — campaigns, ad groups, ads, keywords, customers — and get back exactly the columns you asked for.\n\nOn the management side, create and update campaigns and their budgets, and create ad groups. List accessible customers, walk the account hierarchy under a manager login, and list campaigns, ad groups, ads and keywords to build the rest of a workflow around real ids rather than guesswork.\n\nThis app covers reporting, campaign and budget management, and account structure — not ad creative authoring, keyword bidding changes, or billing, which stay in the Google Ads UI.",
     "categories": [
       "marketing",
       "analytics"

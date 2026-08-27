@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.followupboss",
     "displayName": "Follow Up Boss",
+    "longDescription": "Follow Up Boss is a CRM built specifically for real-estate teams, and this app lets a workflow act on the same data the sales side works from every day: people (buyer and seller leads), deals with earnest-money and possession dates, and everything logged against them.\n\nSend a lead in as an event so Follow Up Boss actually runs its follow-up machine — de-duplicating against existing contacts, notifying the assigned agent, and applying action plans — rather than creating a bare contact record with none of that. Log calls, add notes, create and update tasks and appointments, and create, update and search deals through the account's own pipelines and stages.\n\nLook up and search people, check for a duplicate before creating a new one, and read the account's own custom fields, smart lists and users, so a workflow can work with the exact picklists and stages a given Follow Up Boss account actually has.",
     "categories": [
       "crm"
     ],

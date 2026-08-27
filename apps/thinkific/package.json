@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.thinkific",
     "displayName": "Thinkific",
+    "longDescription": "Thinkific is an online course and membership platform, and this app lets a workflow manage the people and purchases side of a Thinkific site. List and look up courses, create, update and delete users, and enroll a user in a course — or, for a bundle of courses sold as one product, enroll them in the whole bundle at once.\n\nRead orders and products to see what has actually been sold, and look up or update an existing enrollment, including activating one for full access rather than leaving it as a free trial. Bundle actions cover their own courses and enrollments the same way individual courses do.\n\nCourses, orders and products are read-only through this app because Thinkific's own API is read-only for them too — a course is authored in Thinkific's course builder and a product's sellable details are edited alongside it, not through this API.",
     "categories": [
       "commerce",
       "crm"

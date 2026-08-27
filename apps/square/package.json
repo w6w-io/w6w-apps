@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.square",
     "displayName": "Square",
+    "longDescription": "Square runs payments and point-of-sale for a huge range of in-person and online sellers, and this app lets a workflow act on that transaction data directly. Create a payment and, when something needs to be undone, refund it, then list and look up individual payments and refunds to reconcile what actually happened. Search and read orders, and look up a seller's locations to know where a sale took place.\n\nOn the customer and catalog side, create, update, list and look up customers, and browse the whole catalog or search it for a specific item. List invoices to see what has been billed.\n\nEvery write is idempotent by default — a retried call reuses the same id rather than creating a second charge or a second refund — and this app talks to whichever of Square's production or sandbox environments the connected token belongs to.",
     "categories": [
       "commerce",
       "finance"

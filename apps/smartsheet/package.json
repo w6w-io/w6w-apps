@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.smartsheet",
     "displayName": "Smartsheet",
+    "longDescription": "Smartsheet runs project and work tracking on a spreadsheet-shaped model of sheets, rows and columns, and this app lets a workflow read and write that data directly. Create a new sheet in a workspace or folder, look up an existing one, and add, update or delete rows and add columns, using the same column-id contract Smartsheet's own API requires so a write always lands in the field you intended.\n\nBeyond individual sheets, list an account's workspaces, folders, sheets and saved reports, search a single sheet or search across the whole account, and look up users on the plan, including the connected user's own profile.\n\nSmartsheet's API is available only on Business and Enterprise plans, so a workflow using this app needs a token minted on one of those.",
     "categories": [
       "spreadsheets",
       "productivity"

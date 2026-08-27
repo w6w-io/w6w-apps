@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.bamboohr",
     "displayName": "BambooHR",
+    "longDescription": "BambooHR is the HR system many growing companies use as their single source of truth for employee data, and this app brings that data into your workflows. Look up individual employees or pull the full company directory, create and update employee records, and read the tabular history behind a job title or compensation change rather than just its current value.\n\nTime off is a first-class citizen: submit and query time-off requests, approve or deny them, check whether someone has accrued enough leave for a future date, and see who's out today. Run whatever custom report has already been built in BambooHR's own UI instead of reassembling its columns and filters by hand.\n\nBecause BambooHR's field set is different per company, custom-field discovery is built in — list every field and every dropdown's allowed values before you build the rest of a workflow around them, so you're always working with fields your account actually has.",
     "categories": [
       "hr"
     ],
