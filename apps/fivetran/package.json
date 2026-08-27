@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.fivetran",
     "displayName": "Fivetran",
+    "longDescription": "Fivetran automates the pipelines that load a data warehouse, and this app reaches into that pipeline from a workflow: list and inspect connections, trigger an incremental sync or a full historical resync, pause and resume a connection, and run or cancel the dbt transformations that turn raw rows into models.\n\nIt also reads the destinations, connector types, sync history and account info behind those pipelines, so a workflow can answer practical questions — which connections are broken, which are merely paused, which destination is failing every connection writing to it — without opening the Fivetran dashboard. Sync and resync are kept distinct on purpose: an incremental sync is the routine, low-cost call, while a full resync rereads a source's entire history and is billed accordingly, so it requires an explicit acknowledgement rather than being one flag away from the ordinary sync.\n\nThis app is built for operating pipelines that already exist — triggering and monitoring syncs and transformations, reading what is broken or paused — rather than for creating connections and destinations or managing who can reach them, neither of which is exposed here.",
     "categories": [
       "data-warehousing",
       "devops",

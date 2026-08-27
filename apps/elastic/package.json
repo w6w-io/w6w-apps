@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.elastic",
     "displayName": "Elasticsearch",
+    "longDescription": "Elasticsearch is a search and analytics engine that speaks plain HTTP for every operation, and this app exposes that directly: search with the full Query DSL, index, fetch, update and delete individual documents, and create, delete, list and inspect indices and their mappings.\n\nBecause an Elasticsearch cluster can live anywhere — a hosted deployment, a customer's own VPC, an on-prem box — this app connects to whichever cluster a workflow's credentials point at rather than a single fixed vendor host, so it works the same way against Elastic Cloud, a self-managed cluster, or another cloud provider's managed Elasticsearch.\n\nSearch passes a query straight through in Elasticsearch's own DSL, which means anything the engine can express — full-text search, filters, aggregations — is available rather than a narrowed subset. Document actions cover indexing with or without an explicit id, partial updates that merge into an existing document, and deletion; index actions cover creation with optional mappings and settings, deletion, listing and reading a mapping back.",
     "categories": [
       "search"
     ],

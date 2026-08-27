@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.cloudflare",
     "displayName": "Cloudflare",
+    "longDescription": "Cloudflare sits in front of a domain's traffic, and this app reaches the parts of that surface a workflow is most likely to need: the zones (domains) a token can see, their settings and analytics, DNS records, and the edge cache in front of them.\n\nList and inspect zones and their configuration, read request and bandwidth analytics over a time range, list, create and delete DNS records, and purge the cache — either everything or a specific list of URLs. A deploy workflow is the common trigger: update a DNS record, then purge the cache so the change takes effect immediately instead of waiting out the TTL.\n\nDNS record creation covers the common record types that fit a single value field (A, AAAA, CNAME, MX, NS, TXT, SRV, CAA, PTR); types needing structured, record-specific fields are left out. Cache purge supports purge-everything and purge-by-URL-list, which work on every plan, rather than the tag/hostname/prefix purge that Cloudflare reserves for Enterprise.",
     "categories": [
       "devops"
     ],

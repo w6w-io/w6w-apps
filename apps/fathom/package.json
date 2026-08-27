@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.fathom",
     "displayName": "Fathom",
+    "longDescription": "Fathom is an AI meeting notetaker that joins video calls and turns them into transcripts, summaries and action items, and this app reads that output into a workflow: list meetings and recordings, pull a recording's summary or full transcript, request and download a recording, and see the teams and users behind them.\n\nA typical use is picking up a meeting shortly after it ends — list recent meetings, then fetch the summary or transcript for the one that matters, or request a download when the audio or video itself is needed downstream. This app also creates and deletes webhook subscriptions so a workflow can be notified as new meeting content becomes available, rather than polling for it.\n\nFathom's API is small and entirely covered here: nine reads plus the two webhook writes are the whole surface. There is no action to edit or delete a recording, mark an action item complete, or control the notetaker itself — those aren't things the vendor's API exposes, not gaps in this app.",
     "categories": [
       "ai",
       "productivity",

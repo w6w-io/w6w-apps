@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.resend",
     "displayName": "Resend",
+    "longDescription": "Resend is a transactional and marketing email platform, and this app sends and manages email through it: send a single transactional email or up to a hundred in one batch, and create and manage the domains, audiences, contacts and broadcasts a sending program depends on.\n\nBoth send actions support idempotency, so a retried workflow step can't accidentally send the same email twice — the key defaults to the step's own invocation id, stable across a retry and different for the next send. Domain actions cover adding a new sending domain, reading back the DNS records it needs, and asking Resend to re-verify it once those records are in place. Audience and contact actions manage subscriber lists and their subscription state, and broadcast actions draft, list and send a campaign to a chosen segment.\n\nThis app covers sending and the audience infrastructure around it; API key creation, inbound email, and Resend's templates and automation features are left out, since minting a live credential or handling raw message bodies belongs to a different kind of surface than a workflow action.",
     "categories": [
       "email",
       "communication"

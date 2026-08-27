@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.todoist",
     "displayName": "Todoist",
+    "longDescription": "Todoist is a task manager, and this app is the everyday task-management loop from a workflow: create, read, update, close and reopen tasks, manage the projects and sections that organize them, add comments, and read labels.\n\nClosing and reopening a task, and deleting a task or a project, map onto Todoist's own lightweight completion model, so a workflow can mark something done without a full update call. This app covers the REST v2 surface, which is the everyday task and project workflow; Todoist's separate Sync API — used for bulk operations, reminders and quick natural-language task entry — isn't reached here, since task placement (which project, section, or parent task) is already expressible directly at creation time.\n\nThis is a straightforward, focused app: a workflow that needs to turn an external event into a Todoist task, update one as work progresses, or read back a project's open items has everything it needs, without the bulk-sync machinery Todoist offers for its own native clients.",
     "categories": [
       "productivity"
     ],
