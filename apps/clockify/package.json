@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.clockify",
     "displayName": "Clockify",
+    "longDescription": "Clockify tracks time from inside a workflow — creating a time entry the moment work starts, and updating it with an end time to close it out, the same start/stop pattern Clockify's own API is built around rather than a dedicated timer endpoint.\n\nProjects and clients are manageable too: projects can be listed, fetched, created and deleted, and clients and workspaces can be listed to keep entries pointed at the right place without hardcoding an id. That makes it straightforward to turn an external trigger — a ticket picked up, a calendar event starting — into a running time entry, and a completion event into a closed one, with reporting staying inside Clockify itself.",
     "categories": [
       "productivity"
     ],

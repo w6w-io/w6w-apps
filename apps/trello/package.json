@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.trello",
     "displayName": "Trello",
+    "longDescription": "Trello manages boards, lists and cards from a workflow — creating and updating cards, adding comments, attachments and labels to them, and moving work through lists that can themselves be created, updated and read.\n\nChecklists are a full sub-resource: created on a card, read back, and updated item by item, which is the granularity a workflow needs to track a card's own sub-tasks rather than treating a checklist as one opaque field. Board membership is manageable too — members can be added to or removed from a board — and a list's cards can all be archived at once, the bulk action for clearing out a completed list.\n\nA fit for turning an external event into a new Trello card, keeping card status in sync as work progresses through a workflow, or automating board housekeeping like archiving finished lists.",
     "categories": [
       "project-management",
       "productivity"

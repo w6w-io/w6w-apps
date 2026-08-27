@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.linear",
     "displayName": "Linear",
+    "longDescription": "Linear creates and manages issues from a workflow through its GraphQL API — creating, updating, fetching and deleting issues, and adding comments to them, so a process outside Linear can file and track work the same way a person would in the app.\n\nProjects can be created directly, and the reference data a workflow needs to build a well-formed issue — teams, labels, workflow states, users — can each be listed, which matters because Linear scopes most of that data per team rather than treating it as global.\n\nA fit for turning an external event — a bug report, a support escalation, a triaged alert — into a tracked Linear issue, or keeping issue status in sync with progress happening in another system.",
     "categories": [
       "project-management",
       "developer-tools"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.bitbucket",
     "displayName": "Bitbucket",
+    "longDescription": "Bitbucket gives a workflow visibility into repositories and workspaces on Bitbucket Cloud, and control over the webhooks that make that visibility programmatic — listing workspaces and their repositories, fetching a single repository's details, and reading the event history at both the repository and workspace level.\n\nWebhook management is a full create/list/delete surface at two scopes: hooks can be managed on an individual repository, or on a workspace as a whole so one webhook covers every repository inside it — the right choice for a process that needs to react across an entire team's repositories rather than wiring up each one separately.\n\nUseful for connecting Bitbucket into a broader engineering workflow — auditing which webhooks exist across a workspace, provisioning new ones as part of onboarding a repository, or pulling repository and event data into a dashboard or another tool.",
     "categories": [
       "developer-tools"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-drive",
     "displayName": "Google Drive",
+    "longDescription": "Google Drive manages files, folders and shared drives from a workflow — uploading a file or creating one directly from text, downloading, copying, updating and deleting files, and organizing them into folders that can themselves be created, listed and deleted.\n\nSharing is a first-class action on both files and folders, so a workflow can grant access as part of the same process that creates or updates content rather than requiring a separate manual step. Shared drives are supported alongside a user's own Drive — they can be created, listed, fetched, updated and deleted, which matters for any team that organizes its files under a shared drive rather than a personal one.\n\nUseful for generating and distributing documents, archiving files produced elsewhere in a workflow, or keeping a folder structure and its sharing permissions in sync with an external process.",
     "categories": [
       "storage",
       "productivity"

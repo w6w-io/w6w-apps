@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-sheets",
     "displayName": "Google Sheets",
+    "longDescription": "Google Sheets reads and writes spreadsheet data from a workflow — appending new rows, updating existing ranges, or using an append-or-update action that decides between the two based on a key column, which is the pattern most sync workflows actually need rather than always inserting a new row.\n\nSheet and spreadsheet structure is manageable too: sheets can be created, listed, cleared and deleted, columns and rows can be deleted individually, and whole spreadsheets can be created and deleted, so a workflow can provision or tear down structure as part of its own process rather than assuming it already exists.\n\nA fit for logging workflow output into a spreadsheet as it runs, syncing a sheet with data from another system, or reading a range back to drive a later step's logic.",
     "categories": [
       "spreadsheets",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.sendgrid",
     "displayName": "SendGrid",
+    "longDescription": "SendGrid sends email and manages marketing contacts from a workflow — sending mail directly through the API, and creating, reading, updating and deleting the lists a marketing send targets.\n\nContacts are upserted rather than requiring a workflow to check existence first — a single action creates a contact if it doesn't exist yet or updates it if it does — and contacts can be fetched individually or listed in bulk to check current state before acting on them.\n\nA fit for sending transactional email straight from a workflow, growing and maintaining a marketing list as people sign up or opt out elsewhere, or keeping SendGrid's contact data in sync with a CRM.",
     "categories": [
       "email",
       "communication"

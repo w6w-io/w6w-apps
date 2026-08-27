@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.zendesk",
     "displayName": "Zendesk",
+    "longDescription": "Zendesk manages the full ticket lifecycle from a workflow — creating, updating, searching, fetching, listing and deleting tickets, and adding comments to keep a conversation moving without an agent working inside Zendesk's own interface. Ticket fields can be listed too, so a workflow can populate a custom field correctly rather than guessing at what a Zendesk instance has configured.\n\nUsers and organizations round it out: users can be created, searched, fetched, deleted and upserted with a single create-or-update action, and organizations can be created, fetched and listed, giving a workflow what it needs to file a ticket against the right requester and account.\n\nA fit for routing an external event — a support email, an alert, a form submission — into a new Zendesk ticket, or syncing user and organization records between Zendesk and a CRM.",
     "categories": [
       "support",
       "crm"

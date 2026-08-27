@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.airtable",
     "displayName": "Airtable",
+    "longDescription": "Airtable turns a workflow into a full read/write client for any base — creating, updating, upserting and deleting records without hand-rolling the field-type quirks Airtable's API is known for. Records can be searched with a formula filter, or appended in bulk, or reconciled through the upsert action so a sync doesn't have to choose between create and update ahead of time.\n\nBase and table structure is available too: listing every base a token can see and pulling a table's live schema, so a workflow can adapt its own field mapping instead of hardcoding column names that drift when someone edits a view.\n\nIt fits any process built around Airtable as a lightweight database — turning a form submission into a new record, keeping a CRM view in sync with an external source, or reading structured data out of a base for another step in a workflow to consume.",
     "categories": [
       "spreadsheets",
       "databases",

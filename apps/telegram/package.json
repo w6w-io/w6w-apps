@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.telegram",
     "displayName": "Telegram",
+    "longDescription": "Telegram sends messages and media through a bot from a workflow — text, photos, video, audio, documents, animations, stickers and location, each as its own dedicated action rather than one generic send that has to guess at content type, plus chat actions like typing to make an automated reply feel less abrupt.\n\nMessages can be edited, pinned, unpinned and deleted after sending, and inline-keyboard callback queries can be answered, which is what a bot needs to build an interactive flow rather than only broadcasting one-way. Chat management covers reading a chat or its member list, listing administrators, updating a group's title or description, and leaving a chat the bot no longer needs to be in.\n\nA fit for turning an external event into a Telegram notification, running a bot that responds to button presses, or managing group chats a bot administers as part of a larger workflow.",
     "categories": [
       "communication"
     ],

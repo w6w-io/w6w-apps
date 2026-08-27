@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.stripe",
     "displayName": "Stripe",
+    "longDescription": "Stripe covers the core objects a payments workflow needs — customers can be created, updated, searched, fetched and deleted; payment intents can be created, captured, canceled or read back; and refunds can be issued directly against a charge.\n\nSubscriptions and invoicing are both supported end to end: a subscription can be created, fetched or canceled, and an invoice can be created, finalized and paid as three distinct steps, matching how Stripe's own invoicing lifecycle actually works rather than collapsing it into one call. Products and prices can be created and listed to keep a workflow's catalogue in sync, and a Checkout Session can be created to hand a customer a hosted payment page.\n\nA fit for automating subscription lifecycle events, reconciling payments and refunds with an external ledger, or generating invoices and checkout links as part of a larger sales or billing workflow.",
     "categories": [
       "commerce",
       "finance"

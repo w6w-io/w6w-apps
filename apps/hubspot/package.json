@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.hubspot",
     "displayName": "HubSpot",
+    "longDescription": "HubSpot covers the core CRM objects a workflow needs to keep in sync — contacts, companies, deals and tickets can each be created, updated, fetched, listed, searched and deleted, with contacts additionally upsertable and batch-creatable, updatable and deletable for higher-volume syncs.\n\nEngagement objects — calls, emails, meetings, notes and tasks — can be logged against a record, and associations between two CRM objects can be created or removed directly, so a workflow can build the same relationships (a deal tied to a company, a ticket tied to a contact) a person would set up by hand. Lists and forms are supported too: contacts can be added to or removed from a static list, and a HubSpot form can be submitted programmatically the same way a website visitor would fill it in.\n\nA fit for syncing leads and deals from another system into HubSpot, automating engagement logging, or routing form submissions and list membership as part of a larger marketing or sales workflow.",
     "categories": [
       "crm",
       "marketing"

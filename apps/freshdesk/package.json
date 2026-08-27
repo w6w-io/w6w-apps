@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.freshdesk",
     "displayName": "Freshdesk",
+    "longDescription": "Freshdesk manages the full lifecycle of a support ticket from a workflow — creating, updating, fetching, listing and deleting tickets, and adding both internal notes and customer-facing replies to keep a conversation moving without an agent opening Freshdesk directly.\n\nContacts and companies round out the picture: contacts can be created, updated, fetched and listed, and companies can be fetched and listed, so a workflow can look up or create the requester behind a ticket as part of the same process that files it.\n\nA fit for routing an external event — a form submission, an email, an alert from another system — into a new Freshdesk ticket, updating tickets as a workflow progresses through its own steps, or syncing contact and company data between Freshdesk and a CRM.",
     "categories": [
       "support"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.databricks",
     "displayName": "Databricks",
+    "longDescription": "Databricks runs SQL directly against a workspace from a workflow — submitting a statement and getting back either a finished result or a pending status with an id to poll, so a workflow can wait on a query without holding a connection open the whole time.\n\nUnity Catalog is a first-class part of the surface too: catalogs can be listed, fetched, created and deleted, and tables can be listed and inspected, so a workflow can discover what data exists in a workspace rather than assuming a fixed set of table names.\n\nA fit for pulling data out of a lakehouse for use elsewhere in a workflow, running scheduled or triggered SQL against a workspace, or managing catalog structure as part of provisioning a new data source.",
     "categories": [
       "data-warehousing"
     ],

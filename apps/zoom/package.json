@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.zoom",
     "displayName": "Zoom",
+    "longDescription": "Zoom schedules and manages meetings and webinars from a workflow — creating, updating, fetching, listing and deleting meetings, and creating and reading webinars, so a process outside Zoom can set up a session the same way a host would in the Zoom app.\n\nRegistrants are a first-class part of the surface: a meeting can have registrants added to it and its registrant list read back, which covers a registration-gated meeting directly rather than requiring a separate signup form bolted on. Cloud recordings can be listed and deleted, and users can be looked up individually or listed in bulk to resolve who a meeting or webinar should be scheduled under.\n\nA fit for turning an external event — a booking, a signup, a calendar trigger — into a scheduled Zoom meeting or webinar, or managing recording retention and cleanup as part of a workflow.",
     "categories": [
       "video",
       "communication"

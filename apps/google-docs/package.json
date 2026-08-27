@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-docs",
     "displayName": "Google Docs",
+    "longDescription": "Google Docs creates and structurally edits documents from a workflow — not just appending text, but inserting and formatting tables, adding page breaks, turning a paragraph into a bulleted list, and managing headers, footers and named ranges the way a person editing the document by hand would.\n\nText itself can be inserted at a position or replaced by matching pattern across the whole document, and a full document can be read back to check its current structure before making a change. A batch-update action covers issuing several of these edits as one atomic call, matching how the underlying Docs API is actually built.\n\nA fit for generating a document from a template — a report, a contract, a proposal — populating it with data from earlier in a workflow, or reading a document's contents back for further processing elsewhere.",
     "categories": [
       "productivity",
       "documents"

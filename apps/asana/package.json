@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.asana",
     "displayName": "Asana",
+    "longDescription": "Asana gives a workflow full control over projects and tasks — creating, updating, moving and deleting tasks and subtasks, searching across them, and keeping tags, comments and project membership in sync as work moves through a process.\n\nTasks can carry comments and tags that are added or removed independently, and a task can belong to more than one project at once — added to or removed from either without touching the task itself. Subtasks are managed as their own resource (created, listed) rather than as fields on the parent, which matches how Asana actually models a checklist of smaller pieces of work.\n\nProject and user data — creating and updating projects, listing and looking up users — round it out, so a workflow can turn an external event, such as a support ticket or a form submission, into tracked work in Asana, or pull task state back out to drive another step.",
     "categories": [
       "productivity",
       "project-management"

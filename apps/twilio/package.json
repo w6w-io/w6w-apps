@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.twilio",
     "displayName": "Twilio",
+    "longDescription": "Twilio sends messages and makes calls from a workflow — one action covers SMS, MMS and WhatsApp, switching between them by sender and destination rather than requiring three separate actions, with media attachments supported for MMS. A second action places an outbound phone call.\n\nThe messaging action supports both a plain phone number sender and a Messaging Service SID — the pooled-sender setup Twilio's own A2P 10DLC registration attaches to — so a workflow can use whichever a Twilio account is actually configured with.\n\nA fit for sending transactional notifications, appointment reminders or two-factor codes by SMS or WhatsApp, or triggering an automated outbound call as part of an alerting or reminder workflow.",
     "categories": [
       "communication"
     ],
