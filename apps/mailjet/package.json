@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mailjet",
     "displayName": "Mailjet",
+    "longDescription": "Mailjet sends transactional email and manages the contacts, lists and templates it draws on. Send a single message, a templated one, or a batch — with Mailjet reporting success or failure per recipient rather than one status for the whole call — and read back message logs and delivery statistics afterward.\n\nContacts and lists are manageable end to end: create and update contacts, add or remove them from a list, and bulk-load a set of contacts asynchronously with a job to poll for completion. Listing templates and senders rounds out what's needed to build a send with confidence that the sender address is actually validated.\n\nA fit for transactional email from an app or workflow — order confirmations, notifications, password resets — and for keeping a contact list in sync as people opt in or out elsewhere. Campaign authoring stays in Mailjet's own interface; this app is for sending and reading data around it, not building newsletters.",
     "categories": [
       "email",
       "marketing"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.looker",
     "displayName": "Looker",
+    "longDescription": "Looker turns a data warehouse into governed, reusable queries, and this app runs those queries and inspects what's built around them without touching the warehouse's raw SQL. Run a saved Look or an ad-hoc query against a model and Explore, and read back the models, dashboards, users and scheduled plans that make up a Looker instance.\n\nEvery query respects Looker's own model — field names stay qualified to their view, and a row limit is required so a workflow can't accidentally trigger an unbounded warehouse scan. Because access in Looker is scoped per user, the app also surfaces who a credential is and what it can see, which explains why the same query can return different rows through different connections.\n\nThis app is read-only by design: dashboards, Looks and scheduled plans are content an analyst owns, so nothing here creates or edits them. Good for pulling metrics into a workflow on a schedule, auditing who has access to what, or checking which warehouse connections a query actually depends on.",
     "categories": [
       "analytics",
       "data-warehousing"

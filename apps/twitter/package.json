@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.twitter",
     "displayName": "Twitter (X)",
+    "longDescription": "Twitter/X posts, deletes and searches tweets, looks up users, and likes or retweets, on the current X API v2. Create a tweet — optionally with an image or GIF attached — read one back by id, search recent tweets from the last seven days, and look up a user by username or read their recent tweets.\n\nLiking and retweeting resolve to the authenticated user's own account automatically, matching how X's API itself scopes those actions. Authentication runs through OAuth with PKCE, X's only supported flow for acting as a user, with a refresh token requested up front so a connection doesn't need reauthorizing every two hours.\n\nGood for posting scheduled or triggered content, monitoring recent mentions or a search term, and pulling a user's tweet history into another system. Since 2026, most X API usage bills per request rather than through a flat free tier, worth knowing before wiring this into anything high-volume.",
     "categories": [
       "social-media"
     ],

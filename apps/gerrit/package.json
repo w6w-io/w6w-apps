@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gerrit",
     "displayName": "Gerrit",
+    "longDescription": "Gerrit is the code-review tool sitting in front of a Git repository, and this app searches and reviews changes without leaving a workflow. Pull changes by Gerrit's own query language, read one change's full state — labels, reviewers, current revision, whether it's mergeable — and vote on a review label, add a reviewer, or leave a comment.\n\nSubmitting and abandoning changes are both supported, including reporting the chain of unmerged ancestors a submit would also merge, so a workflow automating a merge doesn't unknowingly take dependent changes along without confirming it first. Comments and touched files come back keyed for straightforward inspection, and votes are read out separately as blocking versus approving, matching Gerrit's actual per-label scale rather than treating them as a simple sum.\n\nA fit for automating code-review status checks, tracking which changes are ready to merge, or bridging Gerrit review activity into notifications and dashboards elsewhere — especially useful since each Gerrit instance is self-hosted and has no shared status page to watch instead.",
     "categories": [
       "version-control",
       "developer-tools"

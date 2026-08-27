@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mailerlite",
     "displayName": "MailerLite",
+    "longDescription": "MailerLite manages email subscribers and the campaigns sent to them, and this app covers both sides. Add, update or upsert subscribers, assign or remove them from groups, and read the custom fields and segments that make targeting possible. Group membership added through an upsert is additive, while setting it explicitly through an update replaces it outright — the app follows MailerLite's own distinction rather than picking one behavior for both.\n\nCampaigns can be created and scheduled to send, staying in draft until scheduling is explicitly triggered — nothing goes out by accident. Listing groups, fields and segments feeds directly into the write actions, since MailerLite's API expects subscribers tagged with those exact names and ids.\n\nGood for syncing subscriber data from a signup form or CRM, triggering a campaign send from an external event, or keeping group membership current as people move through a workflow. Built against MailerLite's current API, not the older Classic API some integrations still target.",
     "categories": [
       "marketing",
       "email"

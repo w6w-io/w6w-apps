@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.deepl",
     "displayName": "DeepL",
+    "longDescription": "DeepL translates text and documents and manages the glossaries that keep specific terms consistent across translations. Run a translation with a source and target language, or hand off a document for background translation — upload, poll status, then download the finished file, since large documents can take minutes and don't fit a single blocking call.\n\nThe app follows DeepL's own account-tier split without needing separate configuration: Free and Pro keys route to different hosts automatically based on the key itself, so the same connection setup works either way. Reading usage — characters translated against the plan limit, and document count where a cap applies — gives a workflow a way to check quota before spending it on a large job.\n\nA good fit for translating support tickets, product content or documents as part of a larger workflow, especially where consistent terminology matters enough to maintain a glossary rather than translating cold each time.",
     "categories": [
       "ai"
     ],
