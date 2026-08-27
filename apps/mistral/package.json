@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mistral",
     "displayName": "Mistral AI",
+    "longDescription": "Mistral runs chat completions and embeddings from a workflow — sending a chat-completion request to any available model, and generating embeddings for text so a workflow can do semantic search or similarity matching downstream.\n\nText extraction covers Mistral's OCR capability directly: documents can be turned into text as an action in their own right, rather than a workflow having to route through a separate OCR service. Models can be listed to keep a workflow's model choice explicit and current rather than hardcoded against whatever was available when it was built.\n\nA fit for adding an LLM step to a workflow — summarizing or classifying text, extracting text from a scanned document, or generating embeddings to feed a search or recommendation step elsewhere in the process.",
     "categories": [
       "ai"
     ],

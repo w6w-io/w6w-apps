@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.eventbrite",
     "displayName": "Eventbrite",
+    "longDescription": "Eventbrite reads events, orders and attendees directly into a workflow — listing and fetching events, pulling the orders and attendees tied to them, and reading ticket classes to see what was actually offered for sale.\n\nOrganizations and organizers are available too: an account's organizations can be listed, and organizers can be listed or fetched individually, which matters for anyone managing events across more than one Eventbrite organizer profile.\n\nA fit for keeping attendee and order data in sync with a CRM or spreadsheet, triggering follow-up actions once an event's attendee list is known, or reporting on ticket sales without logging into Eventbrite's own dashboard. This app reads Eventbrite data; it does not create or modify events, orders or tickets.",
     "categories": [
       "commerce",
       "calendar"

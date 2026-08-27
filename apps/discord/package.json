@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.discord",
     "displayName": "Discord",
+    "longDescription": "Discord lets a workflow post and manage content on a server the same way a bot would — sending messages, reacting to them, and reading, creating, updating and deleting channels as a process needs to communicate with a community or team.\n\nRoles and membership are manageable directly: roles can be created, updated and deleted, and added to or removed from a specific member, which covers a workflow granting or revoking access as someone completes an onboarding step or a subscription changes. Guild, channel and message data can all be listed or fetched individually, so a workflow can react to what's already there rather than only creating new content.\n\nA good fit for turning an external event into a Discord notification, running moderation or role-management logic from outside Discord itself, or building a lightweight community-ops workflow around a server.",
     "categories": [
       "communication"
     ],

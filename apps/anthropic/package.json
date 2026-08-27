@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.anthropic",
     "displayName": "Anthropic",
+    "longDescription": "Anthropic connects a workflow directly to Claude — sending message-create calls for chat completions, and counting tokens ahead of a request so cost and context-window use can be checked before it is actually sent.\n\nMessage Batches are a first-class surface, not an afterthought: batches can be created, listed, polled, cancelled and their results pulled once complete, which is the right shape for processing large volumes of prompts asynchronously rather than issuing them one at a time. Files can be uploaded, listed, fetched and deleted for use as batch or message inputs, and models can be listed or looked up individually to keep a workflow's model choice explicit rather than hardcoded.\n\nUseful anywhere a workflow needs an LLM step — summarizing text, classifying content, or running a large batch of prompts against source data pulled from an earlier action — without wiring up a client library or handling batch polling by hand.",
     "categories": [
       "ai"
     ],

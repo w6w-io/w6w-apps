@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.contentful",
     "displayName": "Contentful",
+    "longDescription": "Contentful reads and writes structured content from a workflow — listing and fetching entries, creating and updating them, and reading the content types that define their shape, so a workflow can adapt to a space's schema instead of assuming a fixed set of fields.\n\nAssets and locales are available too: assets can be listed and fetched for use alongside the entries that reference them, and locales can be listed to handle a space that publishes in more than one language correctly rather than assuming a single default.\n\nUseful for keeping Contentful in sync with another system — publishing a new entry when content is approved elsewhere, updating one as source data changes, or pulling entries and their assets into another step of a workflow for further processing or distribution.",
     "categories": [
       "cms"
     ],

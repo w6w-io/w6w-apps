@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.dropbox",
     "displayName": "Dropbox",
+    "longDescription": "Dropbox gives a workflow full file and folder management — uploading and downloading files, listing a folder's contents, and copying, moving and deleting both files and folders as part of a larger process.\n\nSearch covers finding a file or folder by name across an account without already knowing its path, and file metadata can be read on its own when a workflow needs to check size, modification time or existence before acting on a file.\n\nUseful for moving files between Dropbox and another system — archiving an upload, distributing a generated document, or syncing a folder's contents as part of a broader automation — without building direct integration against Dropbox's own SDK.",
     "categories": [
       "storage"
     ],

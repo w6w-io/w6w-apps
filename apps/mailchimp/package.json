@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mailchimp",
     "displayName": "Mailchimp",
+    "longDescription": "Mailchimp manages an audience and its campaigns from a workflow — creating and updating members, tagging them (and untagging them) to drive segmentation, and reading a member's or a campaign's current state without opening Mailchimp's dashboard.\n\nSending is covered from more than one angle: a campaign can be sent outright, resent to non-openers, or replicated into a new draft first — the pattern for reusing a campaign's design without editing the original. Group interests can be listed to see how an audience is segmented before targeting a send at part of it.\n\nA fit for growing and tagging an audience as people sign up elsewhere, triggering a campaign send from an external event, or keeping member data in sync between Mailchimp and another system.",
     "categories": [
       "marketing",
       "communication"

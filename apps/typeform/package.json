@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.typeform",
     "displayName": "Typeform",
+    "longDescription": "Typeform manages forms and reads their responses from a workflow — creating, updating, fetching, listing and deleting forms, so a workflow can provision or retire a form as part of a larger process rather than only reading data from ones built by hand.\n\nResponses can be listed and deleted, which covers pulling in what people submitted and clearing out ones that shouldn't be kept, such as a deletion request. Workspaces, themes and images can each be listed, giving a workflow the context — which workspace a form lives in, which theme or image assets are available — needed to create a form that matches the rest of an account's style.\n\nA fit for spinning up forms programmatically, pulling submitted responses into a CRM or spreadsheet, or managing form lifecycle and workspace organization from outside Typeform's own dashboard.",
     "categories": [
       "forms",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.salesforce",
     "displayName": "Salesforce",
+    "longDescription": "Salesforce runs SOQL and SOSL directly from a workflow — querying any object with SOQL, paging through large result sets with a dedicated query-more action, or searching across multiple object types at once with SOSL, and reading, creating, updating, upserting or bulk-creating records on any object by name.\n\nObject structure is discoverable rather than assumed: every sobject in an org can be listed, and any one of them described in full — its fields, types and relationships — so a workflow can adapt to a custom object or a customized standard one instead of hardcoding field names that may not exist in a given org.\n\nA fit for syncing any Salesforce object with an external system, running reporting queries against CRM data, or writing records into Salesforce as part of a larger process — because the actions work against any object, not a fixed set of standard ones.",
     "categories": [
       "crm"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.klaviyo",
     "displayName": "Klaviyo",
+    "longDescription": "Klaviyo manages the full subscriber lifecycle from a workflow — creating and updating profiles, tracking custom events against them, and subscribing or unsubscribing profiles from marketing communication, plus adding to and removing them from specific lists.\n\nCampaigns and templates can be fetched and listed, and a template can be rendered on demand to preview or reuse its content, while sending a campaign is a direct action too. Segments and lists are readable individually or in bulk, so a workflow can check membership or pull an audience's current definition before acting on it.\n\nA fit for syncing customer or event data from another system into Klaviyo as it happens, triggering a campaign send from an external condition, or managing list and segment membership as part of a broader lifecycle-marketing workflow.",
     "categories": [
       "marketing",
       "email"

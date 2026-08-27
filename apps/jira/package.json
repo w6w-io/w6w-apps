@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.jira",
     "displayName": "Jira",
+    "longDescription": "Jira creates, searches and moves issues through their workflow from outside Jira itself — creating and updating issues, assigning them, and transitioning them between statuses after first reading which transitions are actually available from an issue's current state, rather than guessing at a status name that may not apply.\n\nComments are a full create/list/delete surface, and issues can be searched with JQL to find exactly the set a workflow needs to act on rather than paging through everything in a project. Projects and users round it out — both can be listed or looked up individually, and users can be searched by name, which matters for resolving who to assign an issue to.\n\nA fit for filing issues from an external event — a bug report, a support escalation, a form submission — and for moving work through a Jira workflow driven by something happening outside Jira.",
     "categories": [
       "project-management",
       "developer-tools"

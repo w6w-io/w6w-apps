@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.brevo",
     "displayName": "Brevo",
+    "longDescription": "Brevo (formerly Sendinblue) manages contacts and sends email directly from a workflow — creating, updating, upserting and deleting contacts, and sending both one-off transactional emails and template-based ones without opening Brevo's dashboard.\n\nContact attributes — the custom fields a Brevo account defines for segmentation — are managed as their own resource: created, listed and deleted, so a workflow can keep an account's schema in sync as new fields are needed rather than assuming they already exist. Senders can be created and listed too, covering the identities transactional email is sent from.\n\nA natural fit for turning an external event into an email send — welcoming a new signup, sending a receipt, or upserting a contact's attributes as their status changes elsewhere in a workflow — while keeping the underlying marketing list Brevo's own source of truth.",
     "categories": [
       "marketing",
       "email"
