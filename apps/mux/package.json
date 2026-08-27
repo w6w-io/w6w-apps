@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mux",
     "displayName": "Mux",
+    "longDescription": "Mux brings video ingestion, live streaming and viewer analytics into a workflow. Asset actions create a video from a URL \u2014 letting Mux fetch the file itself rather than needing the bytes in the workflow \u2014 or mint a single-use upload URL for a browser to use directly, then poll, list or delete assets as they move from preparing to ready.\n\nPlayback IDs are the access control layer: minting one makes a video watchable, and revoking it cuts off access without touching the underlying asset, making per-audience access grants straightforward. A dedicated action assembles playback and thumbnail URLs locally with no API call at all, picking a thumbnail frame a few seconds in to avoid a video's often-black opening frame.\n\nLive streaming actions create, list, and end a stream's current broadcast or retire it entirely, distinguishing an immediate end (which finalizes the recording right away) from simply waiting out a reconnect window. Analytics actions surface how video actually performed for viewers \u2014 startup time, rebuffering, playback failures \u2014 both in aggregate and as individual viewing sessions, letting a workflow investigate a specific complaint rather than only see an average.",
     "categories": [
       "video",
       "developer-tools",

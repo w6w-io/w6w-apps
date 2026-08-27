@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.pipedrive",
     "displayName": "Pipedrive",
+    "longDescription": "Pipedrive brings core CRM data into a workflow \u2014 deals, people, organizations, activities, notes and leads \u2014 across the six resources a sales process touches most. Deal actions create, read, update and delete deals, with a dedicated bulk-read action for pulling many at once, while person and organization actions manage the contacts and companies behind those deals.\n\nActivity and note actions let a workflow log a scheduled task or a piece of context against a deal or contact, and a lead action creates a new lead before it has been qualified into a full deal.\n\nThis is a focused CRUD surface on Pipedrive's most-used resources \u2014 search endpoints, file attachments and Pipedrive's own webhook triggers are deliberately left out, keeping the action set to the operations a sales workflow reaches for most often.",
     "categories": [
       "crm"
     ],

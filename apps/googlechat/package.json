@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.googlechat",
     "displayName": "Google Chat",
+    "longDescription": "Google Chat brings a Workspace organization's team messaging into a workflow \u2014 posting and managing messages, spaces, memberships and reactions as the signed-in user. Actions cover creating and updating spaces (including setting one up as a direct message), posting, updating, deleting and searching messages within a space, and managing who belongs to a space, down to reacting to a specific message.\n\nThreading is handled the way Google Chat expects: replying into an existing thread or starting a new one, with control over whether a missing thread should fail or silently start fresh. Retried create operations converge on the same resource rather than creating duplicates, so a workflow step that gets retried after a network hiccup does not double-post.\n\nThis app acts strictly as a human user \u2014 the messages and spaces it touches are ones the connected account already has access to, and it deliberately never uses the separate app/bot authentication mode Google Chat also supports, keeping every action attributable to a real person's account.",
     "categories": [
       "communication"
     ],

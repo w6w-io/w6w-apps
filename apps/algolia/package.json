@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.algolia",
     "displayName": "Algolia",
+    "longDescription": "Algolia turns a workflow step into full control over a search index: running one-off and multi-index searches, walking an entire index page by page with browse, and reading, adding, updating or deleting individual records, plus batch writes and filtered bulk deletes for larger changes.\n\nIndex management goes beyond records: list indices, read and update settings, manage synonyms and query rules, and re-index with zero downtime by building a temporary index and atomically moving it into place, or cloning configuration without records. Every write in Algolia is asynchronous \u2014 it returns immediately with a task ID, and the change is not searchable until that task publishes. A dedicated action checks a task's status, so a workflow that searches right after writing can wait for the real guarantee instead of racing it.\n\nReads are automatically routed through Algolia's geo-replicated read host and writes go to the primary, matching the split Algolia's own client libraries use. A log-list action surfaces recent API activity for troubleshooting search and indexing issues.",
     "categories": [
       "search",
       "developer-tools"

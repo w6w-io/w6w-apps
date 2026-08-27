@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.strava",
     "displayName": "Strava",
+    "longDescription": "Strava brings an athlete's activity data into a workflow \u2014 reading and logging activities, comments, kudos and stats. Activity actions list an athlete's activities, read one in detail, create a manually-logged activity, and update an existing one's details, alongside reading the comments and kudos left on a specific activity and the effort zones it was recorded in.\n\nAthlete actions read the connected athlete's own profile and their aggregate stats \u2014 recent, year-to-date and all-time totals across their sport of choice. Because Strava's access tokens are short-lived, refreshing happens automatically behind the scenes so a scheduled workflow keeps working hours or days after the original connection.\n\nThis app deliberately does not cover file-based activity uploads (a separate multipart flow), or Strava's segments, routes, clubs and gear resources, focusing instead on the read-and-log loop around individual activities and an athlete's own stats.",
     "categories": [
       "productivity"
     ],
