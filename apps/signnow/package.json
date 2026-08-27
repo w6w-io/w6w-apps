@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.signnow",
     "displayName": "SignNow",
+    "longDescription": "SignNow handles the electronic-signature side of a document's life: getting it in front of a signer and getting a signed copy back. This app manages that for documents that already exist in a SignNow account — sending an invite, tracking and cancelling it, downloading the signed result, spinning up a new document from a template, and organizing everything into folders.\n\nSending an invite supports both a single recipient on a document with no fillable fields and a role-based invite for a document whose fields are already bound to signer roles — the same action accepts either shape and dispatches on what it's given. A downloaded document comes back as a single PDF or a ZIP bundling the PDF with its attachments, and this app can also subscribe a webhook to document and user events so a workflow can react as things happen rather than polling.\n\nUploading a brand-new document isn't supported — every action here operates on documents already in the account, whether added through SignNow's own interface or produced by copying a template. Field and tab placement, notarization, and account or team administration are likewise left to SignNow's own editor.",
     "categories": [
       "legal",
       "documents",

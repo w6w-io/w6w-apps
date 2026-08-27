@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.front",
     "displayName": "Front",
+    "longDescription": "Front centers a team's shared inbox — every channel a customer might reach out through, routed into one place — and this app works that inbox from a workflow: find and search conversations, reply to the customer or add an internal comment for the team, tag, assign and snooze conversations, and keep the contact record behind each one current.\n\nReplying and commenting are deliberately separate actions, because Front keeps the customer conversation and the team's internal discussion in the same thread, and getting them confused sends internal notes to a customer. Tags and followers can be added or removed without touching the rest of a conversation's state, and updates only replace what's explicitly changed rather than defaulting to a full overwrite.\n\nBeyond conversations, this app lists inboxes, channels, teammates and tags, and reads or writes contact records and their notes — enough to run a support or shared-inbox workflow end to end without leaving Front's own conversation model behind.",
     "categories": [
       "support",
       "communication",

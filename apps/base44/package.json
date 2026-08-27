@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.base44",
     "displayName": "Base44",
+    "longDescription": "Base44 is a platform for building and running AI-powered apps, and this app reads the operational side of a Base44 workspace: usage analytics, member and app inventories, and — on the Enterprise plan — a stream of audit log events and security-scan findings.\n\nPull workspace-wide KPIs and credit consumption, drill into a specific app's or Superagent's usage, and see who owns what across the workspace. The audit log actions surface authentication, entity, app-lifecycle and workspace-admin events, filterable by type, app, user or date, and security-scan findings come back alongside their own coverage status so a clean result can be told apart from a scan that never ran.\n\nEverything here is a read: this app is built for visibility into a workspace's health, usage and security posture rather than for managing the apps or Superagents themselves, and the audit log and security-scan actions specifically require an Enterprise-plan workspace.",
     "categories": [
       "developer-tools",
       "ai",

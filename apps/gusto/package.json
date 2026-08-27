@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gusto",
     "displayName": "Gusto",
+    "longDescription": "Gusto runs payroll, benefits and HR for a company, and this app reads and updates the operational side of that account: the employee and contractor roster, compensation history, payroll runs and pay schedules, time-off requests, and departments.\n\nNew employees are added into Gusto's onboarding flow rather than hired outright — no job, compensation or tax withholding is set here — which lets self-onboarding collect the sensitive details directly from the employee instead of routing them through a workflow. Compensation, payroll and pay-period data are all read-only, giving a workflow visibility into who earns what, which payrolls have actually been processed, and when the next deadline lands, without the ability to submit a payroll run itself.\n\nDeliberately excluded: submitting or approving payroll, anything touching Social Security numbers or bank details, and edits to garnishments or home addresses, since those carry legal and compliance weight this app leaves to Gusto's own interface. What's here is the everyday read-and-light-write loop — who earns what, whether they took time off, and what department they sit in.",
     "categories": [
       "hr",
       "finance",

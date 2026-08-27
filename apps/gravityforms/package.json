@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gravityforms",
     "displayName": "Gravity Forms",
+    "longDescription": "Gravity Forms is the WordPress plugin behind a huge share of self-hosted form-driven sites, and this app talks to a site's own Gravity Forms REST API: read form definitions, search and manage entries, and submit a form the same way a visitor filling it in would.\n\nBecause every call goes to the customer's own WordPress install rather than a shared vendor host, this app connects per site rather than per account. Submitting a form runs the complete pipeline a real visitor triggers — validation, spam checks, connected add-ons, notifications — while creating an entry directly writes a database row without any of that, which is the right choice for imports and backfills that shouldn't refire a payment or send a customer email.\n\nEntry reads and writes cover the common lifecycle: search and fetch entries, create, update, and delete them, and resend an entry's notifications on demand. Form authoring and add-on-feed configuration are left to the WordPress admin; this app works with forms and entries that already exist rather than building the forms themselves.",
     "categories": [
       "forms",
       "productivity"

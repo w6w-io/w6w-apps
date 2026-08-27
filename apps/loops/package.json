@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.loops",
     "displayName": "Loops",
+    "longDescription": "Loops is an email platform built around triggered sends, and this app is how a workflow talks to it: send a transactional email or fire an event that can kick off a Loops-side automation, and manage the contacts, mailing lists, segments and campaigns those sends depend on.\n\nLoops keeps template design and audience logic inside its own editor — there's no send-arbitrary-HTML endpoint — so this app reads and triggers what's already built there rather than authoring new templates. Contact writes distinguish creating (which fails if the contact already exists) from updating (which upserts), and both sending actions can be made safely retryable by keying each send to the workflow step that made it, so a retried step never sends the same email twice.\n\nBeyond sending, this app reads campaigns, workflows, mailing lists and audience segments, manages custom contact properties, and checks or lifts a suppression when a message needs to reach an address that previously bounced. It does not build emails or workflows themselves, or handle asset uploads — those stay in the Loops editor.",
     "categories": [
       "email",
       "marketing",
