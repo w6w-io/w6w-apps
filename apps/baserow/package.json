@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.baserow",
     "displayName": "Baserow",
+    "longDescription": "Baserow is an open-source, no-code database with the shape of a spreadsheet and the guarantees of a real database underneath, and this app is built around the part of it a workflow actually touches: rows. Read them with the same filters a saved view already applies, write them one at a time or two hundred at a time, and move or remove them without opening the grid.\n\nBecause Baserow runs equally as a hosted cloud product and as a container someone deployed themselves, this app works against either — the instance address travels with the credential rather than being hard-coded. Before writing, a workflow can browse what a database token can actually reach: which tables exist and what fields each one has, so a bulk import can be built against the real schema instead of a guess.\n\nSchema changes — creating tables or fields, or building views — stay a task for Baserow's own interface; this app is deliberately about moving data through an already-designed base, which is what a workflow needs it for.",
     "categories": [
       "databases",
       "spreadsheets",

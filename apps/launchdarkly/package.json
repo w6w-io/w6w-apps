@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.launchdarkly",
     "displayName": "LaunchDarkly",
+    "longDescription": "LaunchDarkly runs feature flags and the audience segments that target them, and this app puts both under workflow control: read a flag's state across every environment, turn it on or off, and read or edit the segments its targeting rules point at, alongside the audit trail of who changed what.\n\nToggling a flag is the headline capability, and it's treated with the weight that deserves — a change reaches production within seconds, so every write here is logged loudly and takes an optional comment that lands directly in LaunchDarkly's own audit log rather than only in workflow output. Flags aren't deleted casually either: archiving is offered as the reversible cleanup step, keeping a flag's history intact, while permanent deletion needs its own explicit confirmation. A companion action reports whether a flag is still actually being evaluated anywhere, which is the question worth asking before removing one.\n\nStarting or stopping an experiment, and creating new projects, environments or members, stay out of scope — those are decisions with statistical or account-wide consequences that belong with a person, not an unattended workflow step.",
     "categories": [
       "devops",
       "developer-tools"

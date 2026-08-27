@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.clicksend",
     "displayName": "ClickSend",
+    "longDescription": "ClickSend puts several outbound communication channels behind one account and one credential, and this app covers the ones a workflow is most likely to reach for: SMS, MMS, voice calls and transactional email, plus the contact lists that feed them.\n\nEvery send reports back what it actually cost — message parts, price, and per-recipient delivery status — so a workflow can see whether a longer message quietly split into extra billed segments, or whether one recipient in a batch failed while the rest went through, rather than assuming a single message and a single price for every send. Voice messages are read from text with a selectable language and voice, and a companion action lists which pairings ClickSend actually supports before a call is placed.\n\nBulk and campaign-oriented sending, fax, physical mail, and account administration aren't part of this app — it stays focused on sending a message and knowing what happened to it, and reading and building the contact lists a workflow sends to.",
     "categories": [
       "communication"
     ],

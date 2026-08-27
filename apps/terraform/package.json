@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.terraform",
     "displayName": "HCP Terraform",
+    "longDescription": "HCP Terraform runs infrastructure changes as reviewable runs against a shared state file, and this app drives that pipeline from a workflow: list and configure workspaces, queue and confirm runs, read the outputs a run produced, and manage the variables a workspace executes with.\n\nBecause this app can change real infrastructure, its most consequential actions are deliberately harder to trigger by accident than a typical read or write: queuing a run defaults to a plan only, an apply that would destroy resources requires the workflow to state how many it expects, and deleting a workspace removes only the workspace record — never the infrastructure it was managing, which keeps running and keeps costing money until something else tears it down. Reading a run's state outputs is the standout integration point, since that's how a piece of infrastructure a workflow just created — a database endpoint, a queue address — gets handed to whatever needs it next.\n\nThis app works identically against HashiCorp's own hosted platform and against Terraform Enterprise, an organisation's self-hosted copy of the same API, since a connection simply points at whichever address is in use. Reading and writing individual resources inside a state file isn't part of it — this operates at the level of runs and workspaces, which is where Terraform's own API draws the same line.",
     "categories": [
       "devops",
       "developer-tools"

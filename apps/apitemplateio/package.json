@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.apitemplateio",
     "displayName": "APITemplate.io",
+    "longDescription": "APITemplate.io turns a template designed once in its own editor into PDFs and images generated on demand, and this app is the generation half of that loop: fill a template with data and get back a rendered PDF or image, ready to attach, store or send on from the rest of a workflow.\n\nBeyond generation, it can look up a specific template's fields before filling it, list every template and object an account has produced, so a workflow can confirm a template still exists — or find last week's output — without opening the dashboard.\n\nIt targets APITemplate.io's current v2 API rather than the deprecated v1 host some older integrations still point at, so the actions here match what the vendor actually supports today. Account-wide reporting like generation credit remaining isn't exposed by the API at all, so this app sticks to the two things it can promise: turning a template into a file, and finding the files and templates already made.",
     "categories": [
       "developer-tools"
     ],

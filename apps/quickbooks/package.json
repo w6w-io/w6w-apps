@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.quickbooks",
     "displayName": "QuickBooks",
+    "longDescription": "QuickBooks Online is where a lot of small-business accounting actually happens, and this app puts the core of it under workflow control: customers, invoices, items, vendors, payments, bills and the chart of accounts, plus a Profit and Loss report and a raw query action for anything else in the ledger.\n\nCreating and updating these records follows QuickBooks' own rules rather than assuming a generic REST shape: updates require the record's current version token and apply only the fields a workflow actually supplied, so two processes editing the same invoice can't silently overwrite each other's changes. The raw query action is there deliberately, covering entities like journal entries or tax codes that don't have a dedicated action of their own, so a workflow isn't blocked on waiting for one to be added.\n\nEmployees, purchase orders, deposits, and operations like voiding a transaction or emailing a PDF invoice are left out of this first pass — most of what they'd need is still reachable read-only through the same raw query action, which is exactly the escape hatch it's there for.",
     "categories": [
       "finance"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.activecampaign",
     "displayName": "ActiveCampaign",
+    "longDescription": "ActiveCampaign combines email marketing, CRM and marketing automation in one account, and this app gives a workflow a direct line into all three: create, update and remove contacts, create and track deals, and look up campaigns as they go out.\n\nAutomations stay something built in ActiveCampaign's own editor — the vendor's API doesn't allow creating or editing them — but a workflow can list existing automations and enroll a contact into one the moment some other system says they qualify, which covers the common case of triggering a sequence from an external event without duplicating its logic elsewhere.\n\nBecause ActiveCampaign issues each account its own API hostname rather than a single fixed endpoint, that address is collected once alongside the credential, so every action reaches the right account automatically and a workflow never has to track the URL itself.",
     "categories": [
       "marketing",
       "crm"

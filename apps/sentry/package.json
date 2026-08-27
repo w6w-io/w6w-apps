@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.sentry",
     "displayName": "Sentry",
+    "longDescription": "Sentry is where an application's errors surface, and this app lets a workflow act on them directly: triage issues by resolving, ignoring, reassigning or reprioritising, read the events and stack traces behind them, and manage the projects, releases and deploys those errors belong to.\n\nRecording a release and its deploys is the standout capability for a workflow wired into a deployment pipeline — telling Sentry that version X shipped to production is what lets it later say \"this error started after that release,\" turning an alert into something actionable rather than just a count. Issue and event listing support the filtering a triage workflow actually needs: by project, by search query, and by time period, so a workflow can ask \"what's new and unresolved\" rather than pulling everything and filtering it downstream.\n\nSentry can run as the vendor's own hosted service or as a self-hosted install on an organisation's own domain, and this app works against either without assuming which. Deleting an issue is here too, though account and team administration — creating members, changing roles — stays out of scope, since that's a decision for a person rather than an automated step.",
     "categories": [
       "monitoring",
       "developer-tools"
