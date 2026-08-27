@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.upstash",
     "displayName": "Upstash Redis",
+    "longDescription": "Upstash Redis is a serverless Redis database reachable entirely over HTTP, and this app reads and writes it directly: getting and setting keys, incrementing counters, managing lists, hashes, and sets, and setting expirations. It is built for workflows that need fast key-value storage or simple counters and queues — caching a value, tracking a count, or building a small work queue — without needing a persistent connection.\n\nIt covers the commands most commonly automated: string get/set with optional expiry, atomic increment and decrement, list pushes and range reads, hash field get/set and full-hash reads, and set membership operations. Because Upstash exposes its full command set over a REST API rather than the raw Redis wire protocol, every one of these works from a sandboxed workflow step the same way a normal API call would, with no socket or driver required.",
     "categories": [
       "databases"
     ],

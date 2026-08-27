@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.helpscout",
     "displayName": "Help Scout",
+    "longDescription": "Help Scout is a shared-inbox help desk, and this app manages the conversations, customers, and mailboxes behind it: listing and reading conversations, replying to a customer or leaving an internal note, and updating a conversation's status, assignee, or mailbox. It is built for workflows that need to act on support tickets — routing, triaging, or replying — rather than just observing them.\n\nCustomer records can be created, read, updated, and searched, so a workflow can keep customer details in sync with another system or look someone up before replying on their behalf. Conversations and customers both support partial updates — changing just a status or a handful of fields — without having to resend the whole record, and the mailbox and tag lists round out the reference data other actions depend on, such as knowing which mailbox to file a new conversation into.",
     "categories": [
       "support"
     ],

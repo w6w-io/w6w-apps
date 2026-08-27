@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.amplitude",
     "displayName": "Amplitude",
+    "longDescription": "Amplitude is a product analytics platform, and this app covers both halves of it: sending events and identifying users and groups, and querying the analytics built on top of them — segmentation, funnel conversion, retention curves, cohorts, and a user's own recent activity. It is the app to reach for when a workflow needs to record what happened in a product, or answer a question about it, without hand-rolling calls to Amplitude's separate ingest and query APIs.\n\nBeyond the basics, it handles the details that make Amplitude's API easy to get subtly wrong: duplicate event delivery is deduplicated automatically rather than double-counted, a batch send reports exactly which events were rejected so only those need resending, and release annotations can be marked on every chart in a project. Cohort and event-taxonomy reads make it possible to pull the same segments and definitions the Amplitude dashboard uses. GDPR-style user erasure is also supported, for workflows that need to remove a person's data on request.",
     "categories": [
       "analytics",
       "marketing"

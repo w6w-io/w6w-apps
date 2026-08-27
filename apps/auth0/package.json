@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.auth0",
     "displayName": "Auth0",
+    "longDescription": "Auth0 is an identity platform, and this app manages a tenant's users, roles, organizations, connections, and applications through its Management API — the pieces a workflow needs to touch when someone joins, changes teams, or leaves. It creates, looks up, and updates users; assigns and revokes roles at the tenant or organization level; adds people to B2B organizations; and reads the connections and applications a tenant has configured.\n\nA few capabilities go further than a bare CRUD wrapper. Offboarding can block a user instead of deleting them, preserving the audit trail and revocable access that a permanent delete throws away. Inviting someone who doesn't have an account yet works through a one-time password-setup link, creating the user only once they use it — useful for provisioning flows that shouldn't leave half-made accounts behind if an invitation is ignored. Reading the tenant's authentication log supports the reliable, no-gaps pagination Auth0 recommends for a recurring job, rather than the ordinary paging that stops working past a thousand entries.",
     "categories": [
       "security",
       "developer-tools"

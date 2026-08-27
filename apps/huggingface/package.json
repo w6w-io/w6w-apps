@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.huggingface",
     "displayName": "Hugging Face",
+    "longDescription": "Hugging Face is the largest hub for machine learning models, datasets, and Spaces, and this app searches all three, reads a repository's files and a dataset's rows without downloading anything, and runs chat inference through Hugging Face's own router. It is built for workflows that need to discover a model or dataset, check what a repository actually contains, or call an already-deployed model — rather than for training or hosting one.\n\nRepository management is covered too: creating and deleting models, datasets, and Spaces, defaulting new ones to private since a repository created by an automation is rarely meant to be public. Because the searchable Hub and the callable inference catalogue are different things — most models on the Hub were never deployed for inference — a separate action lists only the models actually available to call, so a workflow can check before it commits to one. Token permissions are also surfaced directly, since a fine-grained token's limits otherwise look like an intermittent fault rather than what they are.",
     "categories": [
       "ai",
       "developer-tools"

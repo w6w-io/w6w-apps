@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.pinecone",
     "displayName": "Pinecone",
+    "longDescription": "Pinecone is a managed vector database, and this app reads and writes an index from a workflow: upserting records, searching by vector or by text, and managing the indexes and namespaces records live in. It supports both ways of building an index — bringing your own vectors, or letting Pinecone embed and rerank text for you — and exposes Pinecone's hosted embedding and reranking models directly, which removes the most common source of vector-search bugs: querying with a different embedding model than the one used to write the documents.\n\nIndex lifecycle is covered end to end: creating and configuring an index, listing and deleting namespaces, and creating a point-in-time backup or restoring one into a new index for recovery. Every action that cannot say in advance how much data it will remove — deleting by filter, emptying a namespace, deleting an index — requires an explicit confirmation, and index and namespace deletion cannot be undone once run.",
     "categories": [
       "ai",
       "databases",
