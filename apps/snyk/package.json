@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.snyk",
     "displayName": "Snyk",
+    "longDescription": "Snyk reads issues, projects, targets and SBOMs, and audits an organization's security posture, across every org a token can reach. Issues can be listed and read individually, filtered by their effective severity \u2014 the one that already accounts for an organization's own policies and ignores, which is what a triage workflow should actually act on \u2014 and the same query can run across every organization in a group rather than one at a time.\n\nProjects, the repositories they came from, and the collections they're grouped into can all be listed and read, a project's tags and lifecycle can be updated, and a project or target can be removed along with its history. Software bills of materials can be generated per project in either CycloneDX or SPDX format, and known vulnerabilities can be looked up for a single package or a whole dependency list at once by package URL.\n\nEvery request is pinned to a specific, fixed API version rather than tracking Snyk's latest, so response shapes stay stable under a running workflow even as Snyk ships new versions elsewhere. Minting or rotating credentials, on-premise broker connections, and Snyk Learn content are left out, since none of them fit a workflow step the way reading security data does.",
     "categories": [
       "security",
       "developer-tools"

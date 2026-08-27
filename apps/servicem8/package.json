@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.servicem8",
     "displayName": "ServiceM8",
+    "longDescription": "ServiceM8 manages the day-to-day of a field-service business \u2014 Jobs (Quotes, Work Orders and Completed jobs), Clients, staff scheduling, and the line items on a Job's Quote or Invoice \u2014 over ServiceM8's own REST API. Jobs and clients can be listed, read, created and updated, scheduling entries (job activities) can be listed and created, and quote/invoice line items and job notes can be added directly.\n\nBecause ServiceM8's API key carries no scope restriction, every action available to this app is available to any connection, and creating or updating a record returns only an acknowledgement \u2014 reading the fields back always means a follow-up read of the same record by its id. Deleting a job archives it rather than erasing it; the record and its full history stay reachable afterward.\n\nList actions expose ServiceM8's own generic filter and cursor-based pagination rather than inventing per-field parameters the vendor doesn't document. Attachments, webhook subscriptions and OAuth2 are left out, since each needs a wire format or a partner registration this integration can't yet verify end to end.",
     "categories": [
       "crm",
       "calendar",

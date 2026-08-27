@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.spotify",
     "displayName": "Spotify",
+    "longDescription": "Spotify searches the catalog and manages playlists, profile and playback state through Spotify's own Web API. Tracks, albums and artists can be looked up directly, and search runs across the whole catalog \u2014 all without any special scope, since catalog reads work with any valid user token. A user's own profile, including their subscription tier, and what's currently playing can also be read.\n\nPlaylists can be listed \u2014 including private ones \u2014 created, and have tracks added to them, using Spotify's current playlist-creation endpoint rather than the older, removed one. Every id or URI parameter accepts either a bare Spotify id or a full spotify: URI, so a value copied straight from a link or a share doesn't need to be parsed first.\n\nPlayback control \u2014 play, pause, skip, queue, volume \u2014 is left out, since every one of those needs an active, connected Spotify device and fails outright the moment nothing is playing, which fits poorly with an unattended workflow step. Liked tracks, followed artists and Spotify's deprecated audio-analysis endpoints are left out for the same reason: either not yet requested, or already retired by Spotify itself.",
     "categories": [
       "productivity"
     ],

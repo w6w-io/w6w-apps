@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.strapi",
     "displayName": "Strapi",
+    "longDescription": "Strapi reads, creates, updates and deletes entries on any Strapi content type and browses the media library, working against any self-hosted or cloud Strapi instance rather than one fixed host. Because every Strapi install lives at its own address, the instance's own URL is set once when the connection is created, and every action builds its request from that.\n\nThe app is entirely collection-agnostic: every entry action names the content type to work against, so one connection reaches every collection a given Strapi project defines rather than a fixed handful. Entries can be listed with filters, sorting and pagination, read individually, created, updated and deleted, and Strapi's own entry-id conventions are passed through unchanged whether the instance uses the older numeric ids or the newer document-id form.\n\nAuthentication uses Strapi's own long-lived API tokens \u2014 scoped to read-only, full access, or custom permissions \u2014 rather than the separate end-user login flow, since a workflow credential should belong to the integration, not to a human account. Content-type schema editing is left entirely to Strapi's own admin panel; this app works only with the data those content types hold.",
     "categories": [
       "cms"
     ],

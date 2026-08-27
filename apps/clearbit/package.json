@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.clearbit",
     "displayName": "Clearbit",
+    "longDescription": "Clearbit enriches people and companies, searches for prospects, resolves anonymous website visitors by IP, autocompletes company names, and scores sign-up risk \u2014 the classic Clearbit enrichment API that predates HubSpot's 2023 acquisition of the company.\n\nThat acquisition matters for anyone evaluating this app: new enrichment access is now sold inside HubSpot as Breeze Intelligence credits, and there is no longer a way to provision a fresh, standalone Clearbit key. This app is built for teams who already hold a legacy Secret API Key \u2014 the classic person, company, prospector, reveal and risk endpoints are still live and answer exactly as documented, and a connection test is the fastest way to confirm an existing key still carries the right scopes.\n\nEnrichment lookups use Clearbit's synchronous streaming endpoints so a single request always resolves inline, without a webhook or a polling loop. Company-to-domain lookup and risk scoring are included as well, and autocomplete works without any credential at all, since Clearbit serves it free and keyless.",
     "categories": [
       "marketing",
       "crm"

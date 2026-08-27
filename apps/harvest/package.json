@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.harvest",
     "displayName": "Harvest",
+    "longDescription": "Harvest tracks time entries, projects, tasks, clients and users through Harvest's own API v2, giving a workflow the same time-tracking primitives as the product itself. Time entries can be created, read, updated and deleted, and Harvest's own timer controls are used directly to start, stop and restart a running entry rather than approximating them with plain create calls.\n\nEvery request carries both a token and an explicit account id, since a single Harvest credential can reach more than one account \u2014 connecting confirms the id actually resolves to a real Harvest account before it's used anywhere else. Both a personal access token and OAuth2 are supported, covering unattended automation and interactive sign-in alike.\n\nBilling and CRM-adjacent surfaces \u2014 invoices, estimates, expenses, contacts and companies \u2014 are left out of this first pass; the actions here stay focused on the time-tracking data the API's own name promises.",
     "categories": [
       "productivity"
     ],

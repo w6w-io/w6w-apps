@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.formstack",
     "displayName": "Formstack",
+    "longDescription": "Formstack manages forms, fields, folders and submissions through the Formstack V2025 API, giving a workflow read access to a form's structure and full control over the submissions built against it. Forms and their field definitions are listed and read first, since a submission is keyed by field id \u2014 the same ids a workflow needs both to write a new submission and to make sense of one read back.\n\nReading submissions defaults to returning parsed field values rather than just metadata, since the answers are what most workflows actually want and Formstack only includes them when explicitly asked. New submissions are always sent as JSON, because Formstack's default form-encoded format can't carry structured field values like checkboxes and matrix questions intact. Deleting a submission is permanent \u2014 Formstack removes it and any attached files with no way to recover it.\n\nBuilding and editing forms themselves \u2014 fields, confirmation emails, smart lists \u2014 is left to Formstack's own design-time UI rather than this integration, which stays focused on submission data.",
     "categories": [
       "forms",
       "productivity"

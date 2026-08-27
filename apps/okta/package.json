@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.okta",
     "displayName": "Okta",
+    "longDescription": "Okta manages the identity lifecycle for an org \u2014 users and the groups they belong to \u2014 against Okta's own management API for either a production org or a sandbox. Users can be listed by name, email prefix or a SCIM-style filter, created, partially updated, deactivated and reactivated, and a user's full set of assigned apps \u2014 direct or via group membership \u2014 can be read back.\n\nDeactivation unwinds every app assignment and group membership for a user and cannot be undone; reactivation is not its inverse, it restarts activation for a user stuck mid-provisioning. Groups can be listed, read, and have members added or removed, for Okta-native groups \u2014 membership managed by an app import or a built-in group isn't something this app changes.\n\nEvery request targets the org's own domain, collected once when the connection is created, since an Okta org is its own host and every action needs to know which one it's talking to.",
     "categories": [
       "security"
     ],
