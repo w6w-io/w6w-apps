@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.chargebee",
     "displayName": "Chargebee",
+    "longDescription": "Chargebee runs subscription billing for a lot of SaaS and recurring-revenue businesses, and this app lets a workflow act directly on that billing data. Create and look up customers, list and inspect subscriptions, and drive the full subscription lifecycle — cancel, pause and resume — without leaving your workflow.\n\nOn the money side, list invoices, pull up a specific one, and collect payment against it. Browse the product catalog (items and item prices) to know what you're billing for, check a customer's saved payment sources, and pull the raw event stream for anything Chargebee recorded on an account.\n\nThis app targets accounts on Chargebee's Product Catalog 2.0 — the newer of Chargebee's two mutually exclusive catalog models. Customer, invoice and payment actions work regardless, but subscription and catalog actions expect a Product Catalog 2.0 site.",
     "categories": [
       "commerce",
       "finance"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.ringcentral",
     "displayName": "RingCentral",
+    "longDescription": "RingCentral runs phone, SMS and team communication for a business, and this app covers the core a workflow reaches for: send an SMS from a Toll-Free number, read the message store, and look up an account's extensions, phone numbers and company directory. Pull call log records, including the detailed per-leg view, check whether a colleague is available before reaching out, and place a RingOut call that rings two numbers and bridges them together.\n\nEvery action can act on the connection's own extension by default or, for an admin credential, target a specific extension elsewhere in the account — useful for pulling another user's call log or presence without needing their own connection.\n\nThis app targets RingCentral's core communication and directory data rather than call control, provisioning, meetings or video: day-to-day lookups and messaging a workflow can act on immediately, not account administration.",
     "categories": [
       "communication",
       "productivity"

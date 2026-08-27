@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.kajabi",
     "displayName": "Kajabi",
+    "longDescription": "Kajabi is a creator-commerce platform for courses, memberships and other digital products, and this app lets a workflow manage the contact and commerce side of a Kajabi site. Create, update and look up contacts, tag and untag them, grant or revoke access to an offer, and browse the courses and products those offers unlock.\n\nMoney questions go through customers, orders, purchases and transactions: list a customer's orders and their line items, check payout history for sites on Kajabi Payments, and reactivate, deactivate or fully cancel a purchase's subscription. Submit a form on a contact's behalf to trigger the same automations — email sequences, tags, offer grants — that a live signup on a landing page would fire, or use plain contact creation for a bulk import that should stay quiet.\n\nDiscovery actions round it out: list a site's custom fields, tags and forms, and read a form's own submissions, so a workflow can work with the exact vocabulary a given Kajabi site actually uses.",
     "categories": [
       "commerce",
       "crm",

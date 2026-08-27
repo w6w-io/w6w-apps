@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.companycam",
     "displayName": "CompanyCam",
+    "longDescription": "CompanyCam is a photo-documentation platform built for contractors, and this app brings a project's whole record into a workflow: photos, videos, documents, comments and checklists, all filed under the project they belong to. List, create and update projects, attach a photo from a hosted URL or a document as a base64 file, add labels and tags, and manage who is assigned to or invited into a project.\n\nBeyond projects, manage the company's users and groups, and read or maintain the webhook subscriptions that notify your systems when something changes. A workflow can search for an existing project before creating a duplicate, and every list of photos or videos supports the cursor pagination CompanyCam's API expects.\n\nCompanyCam's own documentation marks this API surface for depreciation in early 2027 with a successor API in development; this app targets the current, fully live surface.",
     "categories": [
       "project-management",
       "documents",

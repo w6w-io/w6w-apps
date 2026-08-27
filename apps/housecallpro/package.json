@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.housecallpro",
     "displayName": "Housecall Pro",
+    "longDescription": "Housecall Pro runs the day-to-day operations for home-service businesses — plumbers, HVAC and electrical contractors, cleaners and more — and this app puts that operational data into a workflow. Create and update customers, look up and create jobs, schedule and dispatch them to the right technician, and manage line items and notes on a job as it moves through the pipeline.\n\nOn the sales side, list and read estimates, approve or decline the individual options a customer was offered, and convert a qualified lead straight into a job or an estimate. Read invoices, browse the price book of services you already have on file, and check which zip codes or addresses a service zone actually covers.\n\nReference data rounds it out: employees, tags, lead sources, job types, routes and pipeline statuses are all readable, so a workflow can label and route work using the same vocabulary Housecall Pro's own UI does.",
     "categories": [
       "crm",
       "calendar",

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.productboard",
     "displayName": "Productboard",
+    "longDescription": "Productboard organizes product management around one hierarchy — products, components, features, subfeatures, initiatives, objectives, key results, releases and release groups — and this app lets a workflow read and write that whole structure plus the customer feedback that feeds it. List, create, update and search entities anywhere in the hierarchy, set an entity's parent, and link related entities together.\n\nFeedback runs through notes: create a note against an existing customer or company, comment on one, search across the note inbox, and link a note straight to the feature or initiative it is about. Look up teams and members, read which Jira issues and plugin integrations are connected to which entities, and track engagement with member activity data.\n\nManage the webhook subscriptions that tell your systems when something in the hierarchy changes, so a workflow can react the moment a feature moves, a note lands, or a release ships.",
     "categories": [
       "project-management",
       "productivity",
