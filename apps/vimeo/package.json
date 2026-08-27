@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.vimeo",
     "displayName": "Vimeo",
+    "longDescription": "Vimeo puts a video library within reach of a workflow — pull in a video from a public URL, keep folders and showcases organized, and moderate the comments and likes that come in, all through Vimeo's own REST API.\n\nVideos can be listed, searched, updated and deleted, and a video can be pulled in directly from a public URL rather than uploaded through this app. Folders and showcases (called projects and albums on the wire) organise a video library: create, rename and delete either, add or remove videos from them one at a time, or replace a showcase's whole contents in one call when that's genuinely what's meant. Comments and replies thread onto a video for moderation or engagement workflows, and likes can be listed, added or removed on behalf of the connected account.\n\nIt fits video-library and content-operations workflows — publishing a video pulled from another system, keeping a showcase in sync with a content calendar, or moderating comments as they come in — for a Vimeo account authenticated with a personal access token or a bearer token from any of Vimeo's own OAuth grants.",
     "categories": [
       "video",
       "social-media"

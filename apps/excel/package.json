@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.excel",
     "displayName": "Microsoft Excel",
+    "longDescription": "Excel puts a shared workbook into a workflow's reach — pulling data out of it or writing results back — using the Microsoft Graph workbook API, the same surface OneDrive for Business and SharePoint serve to Excel Online itself.\n\nA workbook is located by item id or file path, and then its worksheets, ranges, tables and charts become directly readable and writable: pull or overwrite a range, add or remove a worksheet, create a table and append rows to it in a single batch, or render a chart to an image for a report. A session keeps a multi-step run fast and lets a workflow discard scratch changes rather than always saving to the live file.\n\nIt fits reporting and data-entry workflows that already live in a shared workbook — updating a tracker, appending rows from another system, or pulling a used range into the rest of an automation — for a work or school Microsoft account (personal OneDrive is not supported by this API).",
     "categories": [
       "spreadsheets",
       "productivity"

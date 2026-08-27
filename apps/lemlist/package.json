@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.lemlist",
     "displayName": "lemlist",
+    "longDescription": "lemlist enrolls and manages leads in a cold-email sequence from inside a workflow — advancing them through interested, not-interested, paused and resumed states as a campaign's own automation runs, and reading back the activity that got them there.\n\nLeads can be added to or removed from a campaign, marked interested or not interested, and paused or resumed, with activity history filterable by type, lead and date range for reporting. Campaign, sender and schedule details are all readable so a workflow can pick the right sequence and sending window before it acts, and the team's enrichment credits are visible alongside the rest of its data. Suppression is a first-class action too — unsubscribing a variable (an email, domain, LinkedIn URL or phone number) and reading back the current suppression list.\n\nIt fits outbound sales workflows that need to enrol leads from another system, react to a reply or an interested mark, or keep a suppression list in sync across tools — anywhere lemlist's own sequences need to start, pause or branch based on what happens elsewhere.",
     "categories": [
       "marketing",
       "email"

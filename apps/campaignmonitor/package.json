@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.campaignmonitor",
     "displayName": "Campaign Monitor",
+    "longDescription": "Campaign Monitor manages email marketing at the agency scale — clients (Campaign Monitor's term for sub-accounts), each with its own subscriber lists, segments, templates and suppression list, plus the campaigns sent to them and the transactional email sent alongside them.\n\nSubscribers can be added, bulk-imported, updated, unsubscribed or looked up by history, and lists carry their own custom fields and stats. Campaigns are created from a hosted HTML source, sent or previewed, and read back through open, click, bounce and unsubscribe reporting plus recipient-level detail. Transactional sends (SmartEmail and classic) go out alongside the marketing side, with delivery statistics and message history of their own.\n\nIt fits agencies and marketing teams running several client accounts through one connection — list hygiene, campaign performance and transactional delivery all reachable from the same workflow, without switching between the client- and account-level views Campaign Monitor itself keeps separate.",
     "categories": [
       "email",
       "marketing"
