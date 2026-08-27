@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.jobber",
     "displayName": "Jobber",
+    "longDescription": "Jobber runs the office side of a home-service business — plumbing, landscaping, HVAC, cleaning — and this app models the chain that is the product: a request becomes a quote, a quote becomes a job, a job is made of visits, and completed visits become an invoice, over Jobber's own GraphQL API.\n\nIt covers clients and their serviced properties, work requests, quotes (create and approve), jobs created from an approved quote, visits (create, list, complete) and invoices generated straight from a job's uninvoiced work. An escape-hatch action runs any GraphQL query or mutation directly, reaching timesheets, expenses, job costing, payouts and everything else in Jobber's much larger schema that the named actions don't cover.\n\nGood for turning an external booking or web-form request into a Jobber request automatically, converting an approved quote into a scheduled job, generating and marking invoices as sent once a job wraps up, or syncing visit schedules with a dispatch or calendar tool.",
     "categories": [
       "calendar",
       "crm",

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.attio",
     "displayName": "Attio",
+    "longDescription": "Attio is a CRM built around a flexible, user-defined data model — objects, records, attributes and lists — rather than a fixed schema, so this app reaches whatever structure a workspace has actually built, including custom objects a team invented on its own.\n\nThis app covers the full data surface: create, read, update, upsert and delete records on any standard or custom object (people, companies, deals, or one a workspace defined itself) through a single set of object-parameterised actions rather than a separate action per object type. Lists and list entries are exposed alongside records, so a workflow can query which lists a record belongs to and manage its membership directly. Notes, tasks, workspace members and schema lookups (attributes, select options, statuses) round out the coverage, so a caller can inspect a workspace's own structure before writing to it.\n\nGood for syncing leads and companies into Attio from web forms, other CRMs or product tools; keeping sales and account data current without a manual copy step; and triggering downstream steps off new notes, tasks or record changes.",
     "categories": [
       "crm"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.grist",
     "displayName": "Grist",
+    "longDescription": "Grist is a spreadsheet whose cells are backed by a real SQLite database, so it can be queried like one — and this app reads and writes Grist records, tables and columns, plus runs read-only SQL, over the Grist API, against both Grist's hosted service and a self-hosted install.\n\nIt covers the full record lifecycle — list, add, update, upsert, delete — with exact-match filtering, schema actions to create tables and add columns, a CSV/TSV export, and a run-sql action for anything a simple filter can't express, such as joins, aggregates or an ordering the records endpoint doesn't support. Discovery actions for orgs, workspaces and docs resolve the ids the other actions need, since a document id has to come from somewhere before you can act on it.\n\nGood for treating a Grist doc as a lightweight database behind a workflow — appending form submissions as rows, updating a record when an external event fires, running a report query on a schedule, or building a table and its columns as part of a setup step.",
     "categories": [
       "spreadsheets",
       "databases",
