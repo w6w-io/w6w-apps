@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.pdfco",
     "displayName": "PDF.co",
+    "longDescription": "PDF.co puts a full document-processing toolkit into a workflow \u2014 convert a PDF to text, structured JSON, CSV table data, HTML or per-page JPEGs; render HTML, a live web page, or an image into a PDF; merge, split, rotate, search and inspect PDFs; overlay text, images and form fields onto an existing page; add or remove password protection; and generate or read barcodes across multiple formats in one call. A background job can be polled to completion, and a remote file can be rehosted into PDF.co's own temporary storage before further processing.\n\nEvery action is built against the vendor's own per-endpoint documentation rather than its generated OpenAPI file, which lower-cases nearly every field name in a case-sensitive API \u2014 sending that casing does not error, it silently falls back to a default and returns a normal-looking success. The same care applies to page numbering: nearly every action counts pages from 0, except deleting pages, which the vendor's own docs mark as the one 1-based exception.\n\nThe app covers a well-documented core of PDF.co's roughly 67 endpoints rather than every conversion permutation; less common format conversions and narrower extraction endpoints are left for a later pass.",
     "categories": [
       "documents",
       "developer-tools"

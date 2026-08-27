@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.wufoo",
     "displayName": "Wufoo",
+    "longDescription": "Wufoo puts form data into a workflow \u2014 list an account's forms, read one form's fields and identifiers, list entries with structured filters, count entries, submit a new entry, and read saved reports and the entries behind them. Every field on a form is addressed by a stable id rather than its label, so a workflow starts by reading a form's fields once and reuses those ids for filtering and submitting.\n\nWufoo answers a rejected entry submission with an HTTP 200 carrying a per-field error list rather than a failure status, so this app reads that success flag directly instead of trusting the status code \u2014 the most damaging way to misuse this API is to treat a 200 as proof the entry was accepted. Filters use a closed set of vendor-defined operators; a misspelt one silently returns an empty result rather than an error, so the app validates against the real list before sending the request, and every date filter is interpreted in Pacific time regardless of what timezone a workflow is running in.\n\nOne documented endpoint is deliberately never called: it returns every user's credential on the account, not just the caller's, so this app has no user-listing action and its connection label is built from the account subdomain instead.",
     "categories": [
       "forms",
       "productivity"

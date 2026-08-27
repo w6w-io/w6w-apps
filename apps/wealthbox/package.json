@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.wealthbox",
     "displayName": "Wealthbox",
+    "longDescription": "Wealthbox is a CRM built for financial advisors, and this app puts its core records into a workflow \u2014 list, read, create, update and delete contacts, tasks, events and opportunities, plus list and create notes, and read the users and custom fields a write actually needs to reference. Tasks can be assigned to a user or to a whole team from one action, and opportunity listing excludes closed deals by default so a pipeline view doesn't fill up with old wins and losses.\n\nOne inconsistency in Wealthbox's own API is worth knowing before writing against it: updating a contact is a genuine partial patch, but updating a task, event or opportunity is not \u2014 Wealthbox requires the same fields the create call does, so moving a deal to a new stage means resending its name, close date, probability and amounts too, not just the one field that changed. This app mirrors that requirement directly rather than assuming one partial-update convention applies everywhere.",
     "categories": [
       "crm"
     ],

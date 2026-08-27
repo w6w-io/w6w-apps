@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.oncehub",
     "displayName": "OnceHub",
+    "longDescription": "OnceHub puts scheduling operations into a workflow \u2014 list, fetch, cancel, reassign and mark bookings as no-shows; read a booking calendar's own available time slots and generate a one-time scheduling link for it; manage contacts, users and teams; and create, list and remove webhook subscriptions for downstream automation. Users can be created, updated and deleted, and each one's scheduling availability read and updated directly.\n\nThe API returns every error, regardless of HTTP status, in one consistent shape naming the failure type, and the app surfaces the vendor's own message rather than collapsing distinct problems into one generic verdict \u2014 a bad key and a plan that lacks API access both come back as related but different errors. A deleted booking calendar or contact does not 404; it answers with a normal success status carrying a \"deleted\" flag, which the app treats as gone rather than as a live record with no data.",
     "categories": [
       "calendar"
     ],

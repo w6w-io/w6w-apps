@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-tasks",
     "displayName": "Google Tasks",
+    "longDescription": "Google Tasks puts a user's own task lists and tasks into a workflow \u2014 list, create, update and delete task lists; create, update, complete, reorder and delete tasks; and clear out everything already completed in a list. Every write goes through a partial update rather than a full replace, so setting one field never silently clears the others.\n\nThe app follows the API's own quirks rather than papering over them: completing a task is a status change, not a separate endpoint, and reopening one just sets the status back; clearing completed tasks hides them rather than deleting them, so they keep their ids and can still be found later with the right flag; and a due date only ever carries a date, never a time of day, because that is all Google's Tasks API stores.",
     "categories": [
       "productivity",
       "project-management"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mastodon",
     "displayName": "Mastodon",
+    "longDescription": "Mastodon is the fediverse \u2014 thousands of independently run servers speaking a shared API, and a connection here means a connection to exactly one of them. This app posts, reads, searches, follows and reacts on that instance: post a status (checked against that server's own character limit, not a fixed 500), read a thread, favourite or boost, follow or unfollow an account, read the home and public timelines, list notifications, upload media, and read the instance's own limits and rules before pointing a workflow at somebody's server.\n\nBecause every server differs in character limits, media limits, poll rules and even which API version it runs, the app reads those limits from the instance itself rather than assuming defaults, and returns both the raw HTML a status arrives as and a plain-text version alongside it. Favouriting and boosting report whether the call actually changed anything, and following a locked account is tracked separately as a pending request rather than conflated with an accepted follow. Posts are deduplicated using a key derived from their own content, so a retried request lands once rather than twice.",
     "categories": [
       "social-media",
       "communication"
