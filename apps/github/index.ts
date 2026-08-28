@@ -27,6 +27,7 @@ import issueLock from "./actions/issue-lock.ts";
 import repositoryGet from "./actions/repository-get.ts";
 import repositoryGetIssues from "./actions/repository-get-issues.ts";
 import repositoryGetLicense from "./actions/repository-get-license.ts";
+import refGet from "./actions/ref-get.ts";
 import releaseCreate from "./actions/release-create.ts";
 import releaseGetMany from "./actions/release-get-many.ts";
 import releaseUpdate from "./actions/release-update.ts";
@@ -58,6 +59,7 @@ export default {
     repositoryGet,
     repositoryGetIssues,
     repositoryGetLicense,
+    refGet,
     // release
     releaseCreate,
     releaseGetMany,
