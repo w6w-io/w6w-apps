@@ -23,3 +23,15 @@ Deno.test("file-create-or-update: supplying the SHA makes it a compare-and-set u
     branch: "main",
   });
 });
+
+Deno.test("file-create-or-update: a nested path renders as real segments, each percent-encoded", async () => {
+  const { ctx, calls } = mockCtx([{ body: { commit: {} } }]);
+  await action.execute(
+    { ...BASE, filePath: "cfg/documents/a.md", commitMessage: "add" },
+    ctx,
+  );
+  assertEquals(
+    calls[0].url,
+    "https://api.github.com/repos/acme/api/contents/cfg/documents/a.md",
+  );
+});
