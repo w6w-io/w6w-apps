@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.linkedin-ads",
     "displayName": "LinkedIn Ads",
+    "longDescription": "LinkedIn's Marketing (Ads) API is how a business manages advertising on LinkedIn programmatically, and this app covers the campaign-management side of it: Ad Accounts, Campaign Groups, Campaigns and Creatives, plus performance analytics and Matched Audiences segments.\n\nIt handles the day-to-day campaign lifecycle — creating and updating campaign groups, campaigns and creatives, and pausing or retiring one when it's done — alongside analytics reads that pull performance metrics by date range and up to three pivots at once, by campaign, by creative, by demographic, and more. Matched Audiences actions create and manage the audience segments a campaign can target, separately from the audience-population step, which is a higher-volume upload flow of its own.\n\nAccess to LinkedIn's Advertising API is approval-gated by LinkedIn directly, and Matched Audiences segments require a second, separate approval on top of that — this app authenticates each surface with its own credential so a workflow's campaign management doesn't stall on an audience-program review it doesn't need. A health check tracks LinkedIn's own developer-API status page.",
     "categories": [
       "marketing",
       "analytics"

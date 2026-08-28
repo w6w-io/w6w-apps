@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.checkly",
     "displayName": "Checkly",
+    "longDescription": "Checkly runs synthetic monitors — scripted checks that hit an API or browse a page on a schedule — and this app puts the results of that monitoring into a workflow. List and inspect checks and the groups they belong to, trigger an ad-hoc run, and read back results, current status and the alerts Checkly actually sent.\n\nBeyond the read path, it can activate, deactivate or mute a check, open and close maintenance windows to silence monitoring during a planned deploy, and manage the environment variables a check's script depends on. Reporting and account-entitlement actions round out the picture for a workflow that needs to know what the current plan allows.\n\nThe distinctions matter here: a muted check keeps recording without paging anyone, a deactivated one stops recording entirely, and a triggered run reports only that it started, not whether it passed. This app surfaces those states the way Checkly itself defines them rather than collapsing everything into a single pass-or-fail signal.",
     "categories": [
       "monitoring",
       "devops",

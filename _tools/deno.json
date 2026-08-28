@@ -1,9 +1,21 @@
 {
   "nodeModulesDir": "auto",
+  "imports": {
+    "@w6w/types": "../../core/packages/types/mod.ts",
+    "@w6w/runtime": "../../core/packages/runtime/mod.ts",
+    "@std/assert": "jsr:@std/assert@^1.0.0"
+  },
   "tasks": {
     "convert": "deno run --allow-net --allow-read --allow-write --allow-env n8n-to-w6w.ts",
     "icons": "deno run --allow-read icon-legibility.ts check",
     "icons:fix": "deno run --allow-read --allow-write icon-legibility.ts fix",
-    "icons:normalize": "deno run --allow-read --allow-write --allow-run --allow-env icon-normalize.ts --all"
+    "icons:normalize": "deno run --allow-read --allow-write --allow-run --allow-env icon-normalize.ts --all",
+    "test": "deno test -A audit.test.ts"
+  },
+  "fmt": {
+    "exclude": [
+      "_fixtures/entry-import-broken/assets",
+      "_fixtures/network-allow-wildcard-apex/assets"
+    ]
   }
 }

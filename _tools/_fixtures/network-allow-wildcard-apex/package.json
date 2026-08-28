@@ -1,0 +1,29 @@
+{
+  "name": "@w6w-apps/fixture-network-allow-wildcard-apex",
+  "version": "0.1.0",
+  "description": "Fixture app pinning the `*.apex` egress predicate against `hostAllowed()` (T1.2.1).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.fixture-network-allow-wildcard-apex",
+    "displayName": "Fixture: Network Allow Wildcard Apex",
+    "categories": [
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Fixture: Network Allow Wildcard Apex"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.fixture-apex.test"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

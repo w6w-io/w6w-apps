@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.slack",
     "displayName": "Slack",
+    "longDescription": "Slack brings a workspace's day-to-day communication into a workflow. Message actions post, update, delete and schedule messages, search across a workspace's history, and manage stars and emoji reactions on individual messages. Channel actions create, archive, rename and manage membership of channels, including inviting, removing and listing members.\n\nFile actions upload and retrieve files shared in a workspace, and user actions look up people by ID, email or presence, alongside updating a user's own profile. User group actions create, enable, disable and manage the members of Slack's named groups, useful for keeping notification groups or team rosters in sync from outside Slack itself.\n\nWith 47 actions, this is one of the more complete integrations in the pack, covering essentially everything a workflow would reach for when working with Slack day to day rather than a narrow slice of its API.",
     "categories": [
       "communication"
     ],

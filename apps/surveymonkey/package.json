@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.surveymonkey",
     "displayName": "SurveyMonkey",
+    "longDescription": "SurveyMonkey puts a survey program's read side into a workflow \u2014 list and read surveys, pull a survey's full page and question detail, create a new survey, read bulk survey responses and drill into one response's detail, list and create collectors, list survey pages, and manage contact lists including adding a new contact.\n\nWriting responses back into SurveyMonkey is deliberately left out: that scope needs the vendor's own approval to use in a public app, and this pack has no case yet that needs it. Webhooks are likewise out of scope for an app that only performs actions, not triggers.\n\nSurveyMonkey is one of the few vendors in this pack to publish live, real rate-limit headers rather than leaving quota undocumented \u2014 a draft or private app is capped at 120 requests per minute and 500 per day, shared across every connection made through this app rather than metered separately per connection.",
     "categories": [
       "forms",
       "productivity"

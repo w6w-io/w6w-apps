@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.splunk",
     "displayName": "Splunk",
+    "longDescription": "Splunk brings search and monitoring data from a Splunk Cloud Platform stack into a workflow \u2014 dispatching searches, reading back results, and listing saved searches and indexes. Splunk's search API is asynchronous by default: dispatching a search returns a job ID immediately, and separate actions check the job's progress and fetch its results once complete, modeling the real asynchronous behavior rather than pretending it is instant.\n\nA dedicated oneshot search action covers the opposite case \u2014 a search small enough to wait for inline, returning results directly without managing a job. Saved-search and index actions round out the picture: listing an account's configured reports and the indexes available to search against, including metric indexes alongside the more common event indexes.\n\nThis app is scoped specifically to Splunk Cloud Platform rather than self-hosted Splunk Enterprise, since a self-hosted install can live at any hostname a workflow sandbox cannot know about ahead of time.",
     "categories": [
       "monitoring",
       "devops"

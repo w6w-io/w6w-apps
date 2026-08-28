@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.pagerduty",
     "displayName": "PagerDuty",
+    "longDescription": "PagerDuty routes and escalates incidents to on-call responders, and this app manages that response from a workflow: create, list, and update incidents; acknowledge, resolve, or reassign one; add a note documenting what happened; and read the services, on-call schedules and escalation policies behind the alerting.\n\nAcknowledge, resolve and reassign are given their own dedicated actions rather than leaving a workflow to construct a generic incident update, since those are the moves a responder actually reaches for. Every action that changes an incident is attributed to a named user, matching how PagerDuty records who took each step in an incident's history.\n\nThis app is aimed at the incident-response loop itself — creating, updating and closing out incidents, and reading who is on call and how escalation is configured — rather than at configuring services, schedules or escalation policies, which stay in PagerDuty's own interface.",
     "categories": [
       "monitoring",
       "devops"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.getresponse",
     "displayName": "GetResponse",
+    "longDescription": "GetResponse is an email marketing platform built around contacts, lists (which it calls campaigns) and the newsletters sent to them, and this app lets a workflow manage all three: create, update, look up and remove contacts, tag them, and read the campaigns and custom fields that shape how they're segmented.\n\nSending a newsletter is the one action here with real, immediate consequences — it requires a verified sender address and an existing campaign, and defaults its audience to that same campaign so the common case of \"send this to the list it's already tied to\" takes one field rather than several. Because GetResponse queues a new contact rather than creating it instantly, a workflow that creates and immediately reads back has to expect a short delay, which is simply how the platform's own API behaves.\n\nThis app works against both GetResponse's retail product and its enterprise MAX platform, since a single account only ever lives on one of the two. Design-time surfaces like forms, landing pages and autoresponders stay out of scope — this is about the contacts and sends a marketing workflow actually needs to touch.",
     "categories": [
       "marketing",
       "email"

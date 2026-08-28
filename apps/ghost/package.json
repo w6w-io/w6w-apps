@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.ghost",
     "displayName": "Ghost",
+    "longDescription": "Ghost is a self-hosted publishing platform, and this app manages content on a Ghost site through its Admin API: creating, updating, and deleting posts and pages, listing members and the subscription tiers they belong to, and reading and applying tags. It is built for workflows that publish or maintain content programmatically — scheduling a post, syncing tags from another system, or keeping a members list in view — rather than for a public-facing content widget, which is what Ghost's separate read-only Content API is for.\n\nBecause every Ghost site lives at its own domain, this app connects to whichever install a user names rather than a fixed host, the same shape of problem as a self-hosted WordPress. Updating a post correctly requires knowing its current version to avoid overwriting someone else's edit, which this app handles as part of the update rather than leaving it to the caller to get right.",
     "categories": [
       "cms",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.openai",
     "displayName": "OpenAI",
+    "longDescription": "OpenAI covers most of what a workflow would reach for across the API — chat completions, generating embeddings for search or similarity, and moderating content before it's shown to anyone else in a process.\n\nAudio and images are both first-class: audio can be transcribed or translated to English, and images can be generated from a prompt, edited, or used to produce variations — three distinct image actions rather than one that tries to cover every case. Files can be uploaded, listed, fetched and deleted for use as inputs elsewhere in the API, and models can be listed to keep a workflow's choice explicit.\n\nA fit for adding an AI step almost anywhere in a workflow — summarizing or classifying text, moderating user-submitted content, transcribing audio, or generating an image from data produced earlier in the process.",
     "categories": [
       "ai",
       "developer-tools"

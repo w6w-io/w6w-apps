@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gitlab",
     "displayName": "GitLab",
+    "longDescription": "GitLab manages projects, issues, merge requests, files and releases against GitLab's own REST API, working equally against GitLab.com or a self-managed instance. Issues can be created, edited, closed and read back individually or in bulk; merge requests can be created and listed; files can be created, read and updated directly in a repository; and releases can be created and listed for a project.\n\nTwo authentication paths are supported: a personal, project or group access token for any instance including self-managed ones, or GitLab.com's own OAuth2 flow for the hosted service. Pointing a connection at a self-managed host only takes setting its URL \u2014 the token method resolves the right host for every action and health check from that one setting.\n\nHealth reporting distinguishes GitLab's own platform status from whether a specific credential still works and how much request quota remains, so a routine token expiry doesn't read the same as a GitLab outage, and a quota check never has to guess which host to ask when self-managed.",
     "categories": [
       "developer-tools",
       "version-control"

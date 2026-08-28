@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.snowflake",
     "displayName": "Snowflake",
+    "longDescription": "Snowflake is a cloud data warehouse, and this app runs SQL against it over Snowflake's own SQL API — submitting a statement, polling for its result once it finishes, and cancelling one still running. It is the app to reach for when a workflow needs to query or write to a warehouse directly, whether that is pulling a report, loading data, or triggering a stored procedure, without standing up a database driver.\n\nBecause a query can take longer than a single request allows, results are fetched asynchronously and support pagination for large result sets. Two read-only conveniences round it out: listing the databases and warehouses visible to the connected account, both of which work without needing an active warehouse selected, since they are metadata operations rather than data queries. The app deliberately stays narrow — a statement-execution surface rather than a full CRUD layer — leaving schema and object management to SQL itself.",
     "categories": [
       "data-warehousing"
     ],

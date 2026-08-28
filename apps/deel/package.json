@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.deel",
     "displayName": "Deel",
+    "longDescription": "Deel manages contracts, people, time off, timesheets and invoice adjustments for a global workforce, exposing what an HR or finance workflow needs without going near payroll or employment-record changes. Contracts can be listed, read and terminated; workers' profiles, personal details and department assignments can be read and updated; time off can be requested, approved or cancelled against a worker's actual leave balance; and timesheets and invoice adjustments \u2014 bonuses, expenses, deductions \u2014 can be logged against a contract.\n\nMoney-moving actions are marked as non-idempotent on purpose, since retrying a milestone, adjustment or timesheet submission pays twice rather than correcting a mistake. Time-off requests can either enter Deel's own approval chain or be created directly in a given status, for a workflow that has already collected approval elsewhere.\n\nWebhooks can be registered and listed so a workflow can react to Deel's own events rather than polling. Employment-record administration \u2014 EOR and global payroll worker data, the applicant tracking system, immigration and compliance screening \u2014 is deliberately out of scope; those are separate products with their own legal weight and belong to their own integrations.",
     "categories": [
       "hr",
       "finance"

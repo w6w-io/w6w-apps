@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.customerio",
     "displayName": "Customer.io",
+    "longDescription": "Customer.io's Track API is the write side of customer data \u2014 creating and updating people, recording events, managing segment membership, and merging duplicate profiles. This app implements exactly that surface: identify a person (an upsert keyed by id), delete one outright, track a named event either against a known person or anonymously, add or remove people from a segment in batches of up to 1,000, and merge a duplicate profile into its primary.\n\nCustomer.io splits its API in two \u2014 a write-only Track API for data and a separate App API for campaigns and workspace management \u2014 and this app deliberately calls only the Track API, so it has nothing to say about broadcasts, newsletters or campaign configuration. It also respects the platform's two independent data regions, US and EU, each on its own host with no cross-region fallback, set once at connection time rather than per action.\n\nA few operations carry consequences worth knowing: deleting a person is permanent rather than a suppression, merging a duplicate profile is irreversible since the secondary profile stops existing afterward, and tracked events have no dedupe key, so retrying a failed track call creates a second, distinct event rather than converging on the first.",
     "categories": [
       "marketing",
       "email"

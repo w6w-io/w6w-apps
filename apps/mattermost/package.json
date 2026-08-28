@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mattermost",
     "displayName": "Mattermost",
+    "longDescription": "Mattermost is a team messaging platform, self-hosted or on Mattermost Cloud, and this app posts and reads on it the way a person would: create, edit, delete and thread posts, search across them, and create channels and manage their membership.\n\nBecause a Mattermost install can be anyone's own server, this app connects to whichever instance a workflow's credentials point at rather than a single fixed host, and works the same way against a self-hosted deployment or Mattermost Cloud. Editing a post applies only the fields actually sent, so a workflow correcting one line of a message doesn't blank out its attachments or other properties. Replying to a thread always resolves to the thread's root, since Mattermost doesn't support nested threads.\n\nThis app covers day-to-day messaging — posting, editing, searching, and managing channels and their members — rather than user or team administration, incoming/outgoing webhook configuration, or reactions and file attachments, which stay out of scope for this first pass.",
     "categories": [
       "communication",
       "productivity"

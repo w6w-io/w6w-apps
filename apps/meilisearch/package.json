@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.meilisearch",
     "displayName": "Meilisearch",
+    "longDescription": "Meilisearch is a fast, self-hostable search engine, and this app runs both the search and the indexing side of it: search an index with filters, sorting and facets, run several searches at once, add or delete documents, and manage indexes and their settings.\n\nBecause a Meilisearch instance can be a customer's own server as easily as a cloud project, this app connects to whichever address a workflow's credentials name rather than a fixed vendor host. Writes are asynchronous — adding a document or changing settings returns a task immediately, before the work has actually happened — so this app returns that task and gives a workflow a way to check whether it later succeeded, rather than treating an immediate 200 response as confirmation.\n\nBeyond search and documents, this app manages tasks (checking status, cancelling pending ones), reads API keys and their scopes, and reports index and database statistics. Backup, snapshotting, and minting new API keys are left out, since those carry consequences a workflow step shouldn't trigger casually.",
     "categories": [
       "search",
       "databases",

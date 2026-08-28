@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.browseai",
     "displayName": "Browse AI",
+    "longDescription": "Browse AI turns website scraping into an API: robots record what to extract from a page, and this app runs them, polls the results, and manages everything that keeps a robot scraping on a schedule. A single run creates a task carrying the captured text, lists, and screenshots; a monitor re-runs a robot automatically and diffs the result over time; and a bulk run can kick off up to tens of thousands of task variations from one call — useful for a workflow that needs to scrape many similar pages at once, such as a list of product URLs.\n\nIt also manages the supporting pieces: updating the cookies a robot uses to reach content behind a login, registering webhooks so a workflow is notified as tasks complete instead of polling for them, and reading the current status of Browse AI's own task queue. Task and bulk-run history can be searched and filtered by date, which matters on an active robot generating a large volume of runs.",
     "categories": [
       "developer-tools",
       "ai",

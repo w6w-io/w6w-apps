@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.fillout",
     "displayName": "Fillout",
+    "longDescription": "Fillout is a form builder, and this app covers its entire public API: reading which forms exist, pulling their submissions, creating a submission programmatically, and subscribing a webhook so a workflow hears about new responses as they arrive.\n\nBecause that's the whole surface Fillout currently exposes, there's no larger feature set held back — a workflow gets everything a form owner could automate today. Submissions come through with any file uploads already resolved to URLs, so downstream steps can fetch an attachment without needing a separate storage flow. Deleting a submission or a webhook is available too, each safe to retry without creating a duplicate.\n\nWhat isn't here is anything Fillout itself doesn't support well from outside its own dashboard: there's no API for a form's design, and Fillout's third-party OAuth path is still gated behind vendor approval, so this app authenticates with a straightforward account-level key instead — simpler to set up and just as capable for reading and moving submission data.",
     "categories": [
       "forms",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.microsoft-todo",
     "displayName": "Microsoft To Do",
+    "longDescription": "Microsoft To Do is Microsoft's personal task manager, and this app manages its task lists, tasks, checklist items and linked resources through the Microsoft Graph To Do API — the same API behind every official To Do client.\n\nIt covers the everyday task lifecycle: creating, updating and completing tasks, and reopening one by unmarking it, organized into task lists a workflow can also create and manage. Checklist items add subtasks within a single task, and a linked resource attaches a back-pointer to whatever caused the task in the first place — an email, a ticket, a CRM record — so a workflow can round-trip between a task and the system that spawned it.\n\nChange-tracking actions let a workflow poll for what changed since its last run, including deletions a simple timestamp filter can't detect, which is useful for keeping an external system in sync with someone's task list without re-reading everything each time. This app is scoped to Microsoft To Do specifically — it does not reach into Microsoft Planner's team task boards, a related but separate product with its own API.",
     "categories": [
       "productivity",
       "project-management"

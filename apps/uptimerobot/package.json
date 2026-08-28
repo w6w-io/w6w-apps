@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.uptimerobot",
     "displayName": "UptimeRobot",
+    "longDescription": "UptimeRobot monitors websites, servers, and other endpoints for downtime, and this app manages the monitors and alert contacts behind an account: listing and creating monitors, updating what they check and how often, resetting a monitor's uptime statistics, and reading the alert contacts notified when something goes down. It is built for workflows that provision or maintain monitoring as part of a larger process — standing up a monitor when a new service goes live, or auditing what is currently being watched.\n\nAccount-level details are also readable directly, useful for checking plan limits and usage before creating another monitor. Monitors can be deleted once no longer needed, and every write against the API is handled the same way UptimeRobot expects: as a single account-wide credential rather than anything scoped per monitor, so a workflow's connection can manage everything on the account it is authorized for.",
     "categories": [
       "monitoring"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.box",
     "displayName": "Box",
+    "longDescription": "Box handles file and folder management inside a workflow \u2014 uploading, downloading, browsing folder contents, creating shared links, and searching across a Box account. It authenticates via OAuth2 scoped to the account's fixed application scopes, and the download action follows Box's own redirect to whichever regional content host serves the file, so a workflow doesn't need to special-case that URL itself.\n\nUploads are sent as Box's documented multipart layout, with the file's metadata written before its content, matching what Box's own API requires and avoiding the ordering error Box's docs warn about.\n\nHealth reporting keeps three separate questions apart: is Box's service up, via its public status page; is the current connection's credential still valid; and whether request quota remains \u2014 the last of which Box does not expose, so it is declared absent rather than guessed. A live credential check is never treated as proof there's no outage, and vice versa.",
     "categories": [
       "storage"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-slides",
     "displayName": "Google Slides",
+    "longDescription": "Google Slides builds and edits presentations from a workflow — create a deck, add and reorder slides, insert or replace text across the whole presentation, drop in images and shapes, build a table, and duplicate or delete any object on a page.\n\nThe common editing verbs (create a slide, insert text, replace text everywhere, swap a shape for an image, build a table) are exposed as plain form fields; deeper formatting and structural edits — text style, borders, table row and column editing — go through Slides' own raw batch-update payload, so nothing here goes stale the moment Google adds a style property. Text and shape replacement report exactly how many matches they changed, so a template run that silently matched nothing can be caught and failed on purpose rather than shipping a deck with a stale placeholder.\n\nIt fits report-generation and templating workflows — filling a pitch deck from CRM data, swapping a logo across every slide, or assembling a deck slide by slide from another system — for a Google account or a service account with access to the presentation.",
     "categories": [
       "documents",
       "productivity"

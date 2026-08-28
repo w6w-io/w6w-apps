@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.storyblok",
     "displayName": "Storyblok",
+    "longDescription": "Storyblok is a headless CMS, and this app reads and writes the content stored in it: fetch a story in its draft or published form, list and search stories, create and update them, publish or unpublish, move a story between folders, and read the components, assets and datasource entries a space is built from.\n\nStoryblok splits its API in two — a fast, read-only Content Delivery API for published (or draft) content, and a slower Management API for authoring — and this app routes each action to the one it needs. Updates merge into a story's existing content rather than overwriting it wholesale, since Storyblok itself replaces the whole content object on a plain write, and validates a story's structure before sending it so a malformed nested block doesn't silently render as empty in the editor.\n\nBeyond individual stories, this app lists a space's components (the schemas content must satisfy), its uploaded assets, and the site's link structure, giving a workflow enough visibility to navigate and maintain a content tree, not just edit one entry at a time.",
     "categories": [
       "cms",
       "marketing"

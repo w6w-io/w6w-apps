@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.tldv",
     "displayName": "tl;dv",
+    "longDescription": "tl;dv brings AI meeting recordings into a workflow \u2014 listing and searching meetings, reading full transcripts and AI-generated notes, and importing recordings captured outside tl;dv's own bots. Meeting actions list and filter meetings by participation, date range or type, and read a specific meeting's details, while transcript and notes actions return the AI-generated output only once tl;dv has finished processing a call.\n\nProgrammatic API access follows the plan of whichever person organized the meeting, not the plan of whoever generated the API key \u2014 so a workflow's visibility into a given meeting depends on who called it, which is worth knowing when a query returns fewer meetings than expected in the tl;dv web app. The import action lets a workflow bring an externally-recorded meeting into tl;dv as a background job, checked afterward through the meeting list rather than returned synchronously.\n\nThis app is built on tl;dv's own labeled \"alpha\" API, and covers meetings, transcripts, notes and import rather than tl;dv's separate webhook-driven integrations, which are a different kind of surface entirely.",
     "categories": [
       "ai",
       "productivity",

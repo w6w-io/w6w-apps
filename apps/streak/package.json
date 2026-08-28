@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.streak",
     "displayName": "Streak",
+    "longDescription": "Streak is a CRM built directly on top of Gmail, and this app manages its pipelines, boxes (Streak's term for a deal or record), stages, custom fields, contacts, organizations and tasks over the Streak API.\n\nPipelines, stages, fields, boxes and tasks each support the full list/get/create/update/delete lifecycle; contacts support the same create/get/update/delete lifecycle, found through the general search rather than a dedicated list call; organizations support only get, update and delete, since Streak derives an organization from its boxes and contacts rather than letting you create one directly. A general search reaches across boxes, contacts and organizations at once, and a separate name-scoped search covers boxes alone. Custom fields are modeled explicitly, since a Streak pipeline's real data usually lives in fields the account defined itself rather than in the built-in ones.\n\nGood for creating a Streak box and its contacts automatically from a form submission or another CRM, moving a deal along a pipeline as an external status changes, keeping contact and organization records in sync, and managing tasks tied to a box from an outside scheduling or reminder tool.",
     "categories": [
       "crm"
     ],

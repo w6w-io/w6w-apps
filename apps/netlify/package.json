@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.netlify",
     "displayName": "Netlify",
+    "longDescription": "Netlify hosts and builds sites from Git, and this app manages the deploys, environment variables, and form submissions around a site: listing sites and their deploy history, triggering a fresh deploy from a site's connected repository, cancelling one in progress, and reading a specific deploy's status. It is the app to reach for when a workflow needs to kick off a rebuild in response to something else happening — a CMS update, a scheduled trigger — without going through the Netlify dashboard.\n\nEnvironment variables can be read and set per deploy context, useful for rotating a value or configuring a site as part of a larger provisioning workflow. Netlify's built-in form handling is also covered: a workflow can list which forms a site has detected and read the submissions across all of them, which is a lightweight way to react to a form submission without standing up a separate webhook receiver.",
     "categories": [
       "devops"
     ],

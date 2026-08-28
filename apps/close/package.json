@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.close",
     "displayName": "Close",
+    "longDescription": "Close is a CRM built for high-volume sales teams, and this app covers its core objects — leads, contacts, opportunities, activities and tasks — through the Close API.\n\nIt manages leads (the company/account record) and their nested contacts, creates and updates opportunities with won/lost/active status, and reads the unified activity feed alongside logging calls and notes. Advanced Filtering search covers cases a simple list-and-filter can't reach, and lookups for users, lead and opportunity statuses and custom fields round out the coverage a workflow needs to fill in real values rather than guesses.\n\nGood for teams that want to create leads and contacts automatically from a form or another CRM, keep opportunity status and value synced with a pipeline dashboard, log calls or notes from an outside dialer or support tool, or trigger downstream steps off task and activity changes.",
     "categories": [
       "crm"
     ],

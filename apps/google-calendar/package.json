@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-calendar",
     "displayName": "Google Calendar",
+    "longDescription": "Google Calendar checks availability and manages events from a workflow — creating an event with full detail or with Google's own natural-language quick-add, updating or deleting an existing one, and reading a single event or listing everything on a calendar in a given range.\n\nAvailability is a purpose-built check, not something inferred from a list of events: a workflow can ask whether a person or resource is free before booking, the way a scheduling tool would. Multiple calendars are supported too — calendars can be listed, so a workflow isn't locked to a single default one.\n\nA fit for booking meetings triggered by an external event, keeping a calendar in sync with another scheduling system, or gating a workflow step on whether a time slot is actually free.",
     "categories": [
       "calendar",
       "productivity"

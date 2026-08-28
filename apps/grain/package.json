@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.grain",
     "displayName": "Grain",
+    "longDescription": "Grain brings AI meeting recordings, transcripts and highlights into a workflow \u2014 listing and reading recordings, pulling structured or plain-text transcripts, and managing who a recording is shared with. Actions cover the full recording lifecycle: list and filter recordings by team, meeting type or date, read a recording's metadata and AI-generated summary content, fetch its transcript in JSON or as plain text/WebVTT/SubRip, and share or unshare it with individual users or whole teams.\n\nTagging actions add and remove labels on a recording for organization, and a dedicated upload flow mints a single-use URL a workflow can hand off to whatever has the actual video bytes \u2014 Grain then processes the file and reports the result through a webhook rather than synchronously. Webhook management actions let a workflow register, list and remove delivery targets for Grain's own event notifications.\n\nRead-only actions round out the picture: listing a workspace's users, teams and configured meeting types, so a workflow can resolve names and IDs before acting on a specific recording.",
     "categories": [
       "ai",
       "productivity",

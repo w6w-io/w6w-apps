@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.xero",
     "displayName": "Xero",
+    "longDescription": "Xero brings core accounting data into a workflow \u2014 contacts, invoices, bank transactions, the chart of accounts and inventory items. Contact and invoice actions cover the standard create-read-update loop, letting a workflow keep customer records current and generate or amend invoices as a business process requires. Bank transaction actions read transaction history for reconciliation, while account and item actions expose the chart of accounts and product catalog invoices and transactions reference.\n\nBecause a Xero connection can be authorized for more than one organization, the app resolves and records which one a given connection acts on right after authorizing, so every subsequent action reaches the correct set of books automatically. Create and update actions accept Xero's own field names directly, so the full breadth of what Xero's accounting API supports on an invoice or contact is reachable without the action surface needing to enumerate every possible field.\n\nThis app deliberately leaves out credit notes, purchase orders, quotes, payments, manual journals, reports and file attachments, focusing on the core contact, invoice, bank transaction and reference-data operations most workflows need first.",
     "categories": [
       "finance"
     ],

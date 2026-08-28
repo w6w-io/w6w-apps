@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.vercel",
     "displayName": "Vercel",
+    "longDescription": "Vercel deploys and hosts sites and functions, and this app ships and inspects deployments without leaving the workflow. Trigger a deployment from a Git source, watch its build logs, cancel it while it's still building, or promote and roll back which deployment serves production traffic. Build logs and runtime logs are read separately, since one is what the build printed and the other is what the deployed functions log while serving requests.\n\nBeyond deployments, it manages the surrounding project config: environment variables (encrypted by default, redacted unless decryption is explicitly requested), domains and the aliases that point them at a specific deployment, and project settings like framework and build command. Team scope is set once on the connection rather than repeated per action, with a per-call override for a token that spans several teams.\n\nGood for triggering a deploy from an external event, rolling back production the moment an error rate spikes, or keeping environment variables and domains in sync as part of an infrastructure workflow — the deployment operations a developer would otherwise run from the Vercel dashboard or CLI.",
     "categories": [
       "devops",
       "developer-tools"

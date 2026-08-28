@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.datadog",
     "displayName": "Datadog",
+    "longDescription": "Datadog brings observability data into a workflow that already handles the rest of a deploy or an incident — metrics and events go in, and monitors, downtimes, dashboards, logs, hosts and access records come back out, across any of Datadog's nine regional sites (US, EU, AP, UK and both government clouds).\n\nMetrics can be pushed and queried, events posted and searched, and monitors and downtimes listed, inspected, scheduled or cancelled — enough to mute a noisy alert during a deploy and un-mute it afterward, or pull dashboard and host inventory for a status report. Log search reaches Datadog's own indexed logs directly, and account and user lookups round out the picture for reporting who has access.\n\nA single connection is scoped to one site and one organization's api and application keys, so this fits infrastructure and on-call workflows that need to read or write Datadog state as part of a larger deploy, incident-response or reporting pipeline, without a separate credential per region.",
     "categories": [
       "monitoring",
       "devops",

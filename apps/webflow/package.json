@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.webflow",
     "displayName": "Webflow",
+    "longDescription": "Webflow is a visual website builder with a built-in CMS and e-commerce store, and this app manages the content and commerce behind a site: listing and reading sites and their CMS collections, and creating, updating, listing, and deleting the items inside them. It is built for workflows that keep site content in sync with another system — publishing a blog post created elsewhere, or updating a CMS record when something changes upstream.\n\nItem changes can either stay staged until a deliberate publish step, or write straight to the live site immediately, matching the two ways Webflow itself lets an editor work. E-commerce orders and products round it out: orders can be listed, read, and updated — useful for syncing fulfillment status — and products can be listed for workflows that need to reference what a store sells without editing it directly.",
     "categories": [
       "cms"
     ],

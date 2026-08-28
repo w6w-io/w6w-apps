@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.balena",
     "displayName": "balena",
+    "longDescription": "balenaCloud manages fleets of Linux devices remotely, and this app covers the everyday operations of running one: listing and inspecting fleets and devices, renaming or moving a device between fleets, pinning it to a specific release for a canary rollout, and reading or setting its environment variables and tags. It is built for workflows that manage IoT or edge hardware at scale rather than one machine at a time — grouping devices by tag, auditing which release each one is actually running, and rolling configuration changes out safely.\n\nIt also reaches into the device itself where balena's supervisor allows it: rebooting a device, restarting its application containers, blinking an identifying LED, and purging its local data — all of which check that the device is online first, since balena has no way to queue these for later. Environment and tag changes are handled as the deployments they really are, since setting a variable triggers a container recreation, and every destructive action requires an explicit confirmation before it runs.",
     "categories": [
       "iot",
       "devops"

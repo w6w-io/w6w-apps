@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.onedrive",
     "displayName": "Microsoft OneDrive",
+    "longDescription": "Microsoft OneDrive stores a user's files, and this app browses, uploads, shares and searches them through the Microsoft Graph drive API — the same surface behind OneDrive personal and business accounts and SharePoint document libraries alike.\n\nIt covers everyday file management: listing folder contents, reading and searching for items across a whole drive, creating folders, uploading text-based files, and copying, moving, renaming or deleting an item once you've found it. Sharing actions create OneDrive's own view or edit links, list and remove existing permissions, and send a direct sharing invite to a specific person by email. A change-tracking action reports what has been added, updated or removed since a previous run, which is the only way to detect a deletion — a simple listing can't.\n\nThis app works across a user's personal drive, a colleague's shared drive, or a SharePoint library, all addressed the same way. A live check reports remaining storage headroom directly from OneDrive's own quota data, alongside a credential check, since Microsoft publishes no general status page for the service itself.",
     "categories": [
       "documents",
       "storage"

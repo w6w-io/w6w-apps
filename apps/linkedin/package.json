@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.linkedin",
     "displayName": "LinkedIn",
+    "longDescription": "LinkedIn's own API is narrow by design, and this app covers exactly what it allows: posting text or article updates, reading a post back by its id, deleting one, and reading basic profile or organization information for whoever is connected.\n\nPosting as an organization — and reading the posts an organization has published — needs LinkedIn's separate Community Management approval, which is why this app offers two connection methods rather than one: a default that works with any LinkedIn developer app for posting and reading as yourself, and a second for the organization-level access LinkedIn gates behind its own review. A workflow using the wrong one for an action gets LinkedIn's own permission error rather than a silent failure.\n\nAttaching an image or video to a post isn't supported, because LinkedIn's upload flow hands back a one-time, unpredictable address this app's sandboxed network access can't reach ahead of time — an article post can still carry a thumbnail if one has already been uploaded elsewhere. Post analytics sit behind a separate, harder-to-get advertising approval and aren't included either.",
     "categories": [
       "social-media",
       "marketing"

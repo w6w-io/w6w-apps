@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.lever",
     "displayName": "Lever",
+    "longDescription": "Lever runs a company's hiring pipeline, and this app moves and reads candidates through it: list and inspect opportunities (a candidate's application to one specific posting), move somebody to a new stage, archive or reopen an application, write notes, and see offers, postings and pipeline stages.\n\nA few of Lever's own conventions carry through directly. A person is a contact, separate from each of their applications, so someone who applied three times is one contact with three opportunities. Listing opportunities defaults to including confidential candidates as well as ordinary ones, since Lever's own API silently excludes them otherwise. And every write is attributed to a specific user, so notes and stage moves show up as made by a real person rather than by whichever credential happens to be connected.\n\nThis app covers the everyday recruiting loop — reviewing and moving candidates, writing notes, checking what's been offered — rather than posting management or account administration, and it surfaces Lever's own stage and archive-reason names so a workflow can resolve them without guessing at ids that differ per account.",
     "categories": [
       "hr",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mailcheck",
     "displayName": "Mailcheck",
+    "longDescription": "Mailcheck verifies email addresses from a workflow — checking a single address synchronously and getting back trust and deliverability signals, such as whether the domain accepts mail, whether it's a disposable address, and whether it's a catch-all, alongside best-effort identity hits like a matching Gravatar or GitHub username.\n\nFor larger volumes, a batch check runs as an async operation: submitted once, then polled or listed until it completes, which is the right shape for validating a list of addresses — a signup import, a marketing list — without checking each one inline and blocking on the result.\n\nA fit for filtering out invalid or disposable addresses before adding them to a mailing list, gating a signup flow on a real-looking email, or cleaning an existing list in bulk.",
     "categories": [
       "email",
       "marketing"

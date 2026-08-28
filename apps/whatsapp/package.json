@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.whatsapp",
     "displayName": "WhatsApp",
+    "longDescription": "This app sends and manages messages through the WhatsApp Business Cloud API — Meta's current hosted platform, not the older on-premise product — covering the two message types a business actually needs: freeform replies inside an active conversation, and pre-approved templates that can reach a customer at any time.\n\nThat distinction matters because WhatsApp enforces it strictly: a freeform text, image, document or video can only be delivered within the 24-hour window after a customer last messaged the business, while a template message is the only way to start or restart a conversation outside that window, once it's been approved through Meta's own template review. A companion action lists which templates are already approved, so a workflow can check before attempting to send one cold.\n\nBeyond sending, this app reads and updates the business profile customers see, and marks an inbound message as read. Media is sent by public URL only, since uploading raw bytes or referencing a previously-uploaded file both require moving binary data through the workflow sandbox, which this app's actions don't do.",
     "categories": [
       "communication"
     ],

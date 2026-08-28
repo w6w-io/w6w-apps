@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.metabase",
     "displayName": "Metabase",
+    "longDescription": "Metabase is a BI tool people point at a database to build questions, save them into collections and pin them onto dashboards — and this app's job is running a question someone already built and getting today's number out of it. Run a saved question or a dashboard card with its filters applied, or run raw SQL or MBQL directly against a connected database, and export any result as CSV, JSON or XLSX.\n\nBeyond running numbers, list and search dashboards, collections and databases, read a dashboard's own cards, and pull a database's table and field metadata from Metabase's last sync — useful for building the rest of a workflow around real question and database ids rather than guessing at them. Create new questions and collections directly from a workflow, too.\n\nMetabase is open source and works the same way whether it is self-hosted or running as Metabase Cloud, so this app connects to whichever instance a site actually runs, using an API key scoped to a single permissions group.",
     "categories": [
       "analytics",
       "databases"

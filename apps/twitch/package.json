@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.twitch",
     "displayName": "Twitch",
+    "longDescription": "Twitch is a live-streaming platform, and this app reads channel, stream, video, clip, chat and schedule data over Twitch's Helix API, plus lets a broadcaster update their own channel.\n\nIt covers channel information (read and update), live stream and followed-stream lookups, video and clip listings including creating a new clip, category and channel search, chat settings, emotes, badges and cheermotes, and team and moderator lookups. A stream marker action lets a workflow flag a moment during a live broadcast for later reference.\n\nGood for posting a notification when a channel goes live, pulling recent clips or videos into a highlights feed, keeping channel title and category current from a content calendar, and building a dashboard of chat and moderation metadata without touching Twitch's own creator tools.",
     "categories": [
       "video",
       "social-media",

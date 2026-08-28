@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.mandrill",
     "displayName": "Mandrill",
+    "longDescription": "Mandrill (Mailchimp Transactional) sends transactional email — receipts, password resets, notifications — and this app covers both sending and the account-level management around it: sending a message directly, sending from a pre-built template, and reading account info and the senders a domain has verified. It is built for workflows that need to send email as part of a larger process rather than through Mailchimp's own marketing-campaign tools.\n\nTemplates can be listed, created, updated, and deleted, so a workflow can manage the templates it sends from as well as use them. Deliverability tooling is covered too: tags can be listed and their stats read for reporting, and both the reject list — addresses that bounced or complained — and the whitelist can be read and managed directly, for clearing a wrongly-rejected address or exempting one from Mandrill's own filtering.",
     "categories": [
       "email",
       "marketing"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.statuspage",
     "displayName": "Statuspage",
+    "longDescription": "Statuspage is how a company tells its own customers what's working and what isn't, and this app is the publishing side of that: set a component's status, open an incident and move the components it affects in the same step, post updates as an incident develops, and resolve it while restoring what it broke.\n\nNotifying subscribers is treated as a decision, not a default — every action that can email, text or push an update leaves that off unless a workflow turns it on explicitly, so an automated first post doesn't page an entire customer base off a single flapping check. A companion action lists who's actually watching a page or a specific component, which is useful for knowing the size of an audience before deciding whether an update is worth sending to it. Publishing a value to a metric graph is included too, for feeding an existing uptime or performance chart from monitoring data a workflow already has.\n\nCreating or removing subscribers, deleting an incident outright, and page branding or settings all stay out of scope — a status page is meant to be an honest public record, and this app is built to keep it one rather than to rewrite it.",
     "categories": [
       "monitoring",
       "communication",

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.deepgram",
     "displayName": "Deepgram",
+    "longDescription": "Deepgram turns audio and video into text and text into speech, and this app gives a workflow that pipeline without ever having to move the media itself — point it at a URL and Deepgram fetches the file directly, so a step can transcribe an hour of audio without holding a byte of it.\n\nBeyond transcription, it can analyse text for sentiment, topics and intent, generate spoken audio from a script, and mint a short-lived token so a browser never needs the underlying API key. Because a long job or a text-to-speech request can outlive an ordinary request timeout, results are delivered to a callback rather than held open, and a companion action looks up what happened to a request that never seemed to finish.\n\nThe remaining actions turn Deepgram's own account and spend data into something a workflow can act on: how many hours were billed and against which tags, how much prepaid credit is left, and who and what can access the project — useful for keeping an automated pipeline inside its budget rather than discovering the ceiling by hitting it.",
     "categories": [
       "ai",
       "video",

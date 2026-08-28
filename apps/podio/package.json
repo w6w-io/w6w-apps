@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.podio",
     "displayName": "Podio",
+    "longDescription": "Podio is a customizable work platform where teams build their own record types — leads, invoices, bug reports, anything — inside workspaces, and this app lets a workflow read and write those records directly. Look up an item by id or by an external id for upsert-style syncing, create and update items, count and filter a whole app's worth of records, and search across an app or a whole workspace when a filter alone cannot find what you need.\n\nBeyond items, list an organization's workspaces and a workspace's apps, discover an app's own field definitions and option lists (Podio's fields are user-defined, so this is how a workflow learns the exact vocabulary a given app uses), add comments, and create and complete tasks. Manage the webhook subscriptions that notify your systems when something in Podio changes.\n\nBecause every Podio app has its own fields, chosen by whoever set it up, discovering a workspace's actual schema before writing to it is part of using this app well, not an extra step.",
     "categories": [
       "project-management",
       "databases",

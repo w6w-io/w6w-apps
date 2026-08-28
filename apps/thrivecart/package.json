@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.thrivecart",
     "displayName": "ThriveCart",
+    "longDescription": "ThriveCart reads products, bump/upsell/downsell offers, transactions, customers and affiliates, and manages subscriptions, affiliates, Learn students and webhook subscriptions, against ThriveCart's own external API. Products and their pricing options, along with every bump, upsell and downsell offer attached to them, can be listed and read individually, and transactions can be searched and refunded.\n\nSubscription lifecycle actions \u2014 cancel, pause, resume \u2014 and affiliate state changes \u2014 approve, reject, favorite, set custom commissions \u2014 are all idempotent, since each sets a target to the same end state no matter how many times it runs. Creating a resource or moving money is treated differently: refunds, new affiliates, new students and new webhook subscriptions are all non-repeatable, since retrying any of them creates a duplicate or double-charges rather than converging on the same result.\n\nA customer's email can be updated with an explicit opt-in required before two customers' order histories are merged, and webhook subscriptions can be registered and removed \u2014 though only against a target URL already registered in ThriveCart's own settings first.",
     "categories": [
       "commerce",
       "marketing"

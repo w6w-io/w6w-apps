@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.wix",
     "displayName": "Wix",
+    "longDescription": "Wix is a website builder and hosting platform, and this app manages the content and customer data of a Wix site — its CMS collections and data items, its contacts, and its Stores catalog and eCommerce orders — over the Wix REST API.\n\nIt covers the full record lifecycle for Wix Data, Wix's built-in CMS: list, query, get, insert, update, remove, count and bulk-insert items in any collection a site has defined. Contacts can be listed, queried, created, updated, deleted and labeled, and Stores products and eCommerce orders can be read to keep an external system in sync with what a site is selling.\n\nGood for syncing form submissions or leads into a site's CMS collections, keeping contact records and labels current from another system, pulling new eCommerce orders into fulfillment or accounting, and reading a site's product catalog into a workflow that needs current inventory or pricing.",
     "categories": [
       "cms",
       "crm",

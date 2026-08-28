@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.google-maps",
     "displayName": "Google Maps Platform",
+    "longDescription": "Google Maps Platform brings geocoding, place search and routing into a workflow — turn an address into coordinates and back, validate an address before shipping to it, search or autocomplete places, compute a route or an origin-to-destination matrix, snap a GPS trace onto real roads, and read the time zone or elevation at a point.\n\nEvery action here is a read: nothing writes to a map or a place, so it's safe to point at any workflow that needs location context rather than location management. Route computation accounts for live traffic by default, a nearby place search reports when it hit its result cap rather than silently returning a partial answer, and address validation reports exactly what Google corrected so a workflow can decide whether to trust the fix.\n\nIt fits logistics, delivery, field-service and lead-qualification workflows that need to resolve, verify or measure a location as one step among several — geocode a form submission, validate a shipping address, or compute drive time between two points — on a single Google Cloud API key shared across the whole Maps Platform surface.",
     "categories": [
       "developer-tools",
       "search"

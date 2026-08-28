@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.zoho",
     "displayName": "Zoho CRM",
+    "longDescription": "Zoho CRM manages a sales pipeline, and this app reads and writes the core records in it: create, read, update, delete and convert Leads; manage Contacts, Deals and Accounts; add Tasks and Notes; and search across any module — including a custom one — by name.\n\nConverting a Lead is one of the more consequential calls in a CRM integration, since it turns a prospect into a Contact, Deal and Account in one step, and this app exposes that conversion directly rather than requiring three separate creates. Every list and get action ships with a sensible default set of fields, since Zoho's own API requires them to be named explicitly and offers no everything default.\n\nThis app is scoped to Zoho CRM specifically, not Zoho's wider suite of business apps (Books, Desk, Mail and the rest), and today it connects only to accounts hosted in Zoho's US data centre — an account hosted in the EU, India, or another regional data centre can't be connected through it yet.",
     "categories": [
       "crm"
     ],

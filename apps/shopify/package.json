@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.shopify",
     "displayName": "Shopify",
+    "longDescription": "Shopify manages products, orders, customers and inventory from a workflow through the Admin API — creating and updating products, and reading and managing orders including canceling or closing one directly, without a person opening the Shopify admin.\n\nCustomers can be created, updated, searched and looked up by their order history, and inventory levels can be set directly at a location, which covers keeping stock counts accurate as they change outside Shopify itself. Store locations can be listed, and the shop's own record fetched, giving a workflow the context it needs before acting on a specific order or inventory item.\n\nA fit for syncing inventory from an external warehouse system, automating order fulfillment steps like cancellation or closing, or keeping customer records in sync between Shopify and a CRM.",
     "categories": [
       "commerce"
     ],

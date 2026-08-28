@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.fireflies",
     "displayName": "Fireflies.ai",
+    "longDescription": "Fireflies.ai brings AI meeting intelligence into a workflow \u2014 reading transcripts, summaries, soundbites and analytics from recorded meetings, and driving the notetaker while a meeting is happening live. Actions cover searching and reading full transcripts, creating and searching short audio/video highlights (\"Bites\"), sharing or revoking access to a whole meeting, managing meeting privacy and channel assignment, and joining or steering an active meeting's notetaker in real time.\n\nLive-meeting actions let a workflow add action items as a call unfolds and adjust the notetaker's state mid-meeting, while AskFred actions let a workflow ask questions of an AI assistant grounded in a team's own meeting history. Administrative actions cover users, contacts and channels, and audio can be uploaded directly for transcription without a live meeting at all.\n\nEvery read and write goes through Fireflies' GraphQL API, with each action modeling one specific operation rather than exposing raw query access \u2014 so a workflow author gets validated, described parameters instead of having to know the underlying schema.",
     "categories": [
       "ai",
       "productivity",

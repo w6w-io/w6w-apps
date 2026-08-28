@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.dbtcloud",
     "displayName": "dbt Cloud",
+    "longDescription": "dbt Cloud triggers and watches the jobs that build a data warehouse's tables, downloads the artifacts each run produces, and reads the projects, environments and access behind them \u2014 everything a workflow needs to react to a build rather than just kick one off.\n\nTriggering a run only queues it; this app makes the distinction explicit rather than papering over it, since dbt reports completion as a set of boolean flags, not a single status number. Reruns follow dbt's own two different behaviors \u2014 resuming a failed run from its point of failure, or triggering a brand-new full rebuild when the last run succeeded \u2014 and a retry against a run that is no longer a job's most recent one is refused rather than silently escalating into something larger.\n\nArtifacts are where a build's real story lives: run_results.json for per-model status and errors, manifest.json for the full project graph, and catalog.json for warehouse schema, each readable either as a summary or in full. Environment variables come back masked and service tokens never reveal their value, so configuration and access can be audited without ever exposing a secret.\n\nRead-only access extends to accounts, projects, environments, connections, users, groups and audit logs \u2014 dbt Cloud's own Terraform provider remains the tool for changing any of that infrastructure.",
     "categories": [
       "data-warehousing",
       "devops",

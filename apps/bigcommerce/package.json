@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.bigcommerce",
     "displayName": "BigCommerce",
+    "longDescription": "BigCommerce runs a merchant's storefront, and this app manages the store behind it — catalog, orders, customers, carts, inventory, price lists and webhooks — over BigCommerce's REST Management API.\n\nBeyond core catalog and order operations, it covers order-line detail like shipments, shipping addresses and payment transactions, customer address books, inventory levels across locations, and price lists for multi-currency or wholesale pricing. Webhook management lets a workflow react the moment an order or catalog item changes instead of polling for it.\n\nUnder the surface it targets whichever of BigCommerce's split API versions is actually current for each resource — orders still live on the older surface, catalog and customers on the newer one — so a workflow author doesn't have to track which version a given operation belongs to. Health checks cover BigCommerce's own status page, live rate-limit headroom, and the specific store's own status, so a suspended or trial-expired store shows up distinctly from a platform-wide outage.",
     "categories": [
       "commerce",
       "crm"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.paddle",
     "displayName": "Paddle",
+    "longDescription": "Paddle acts as merchant of record for a subscription business — selling the software, handling payment and sales tax, and issuing the invoice — which makes its API the system of record for what a customer is actually paying. This app reads and manages that lifecycle: products, prices and customers; subscriptions, including pausing, resuming and cancelling them; transactions and their invoice PDFs; and refunds and other adjustments.\n\nCancelling or pausing a subscription schedules the change for the end of the current billing period by default rather than applying immediately, and the subscription's status stays active until then — a detail this app surfaces explicitly so a workflow doesn't mistake a scheduled cancellation for a completed one. Adjustments cover both refunds against a completed transaction and credits against one that's still outstanding.\n\nThis app is built around Paddle Billing, the current generation of Paddle's API; it does not create new transactions or checkouts, change a subscription's price or proration, or manage discounts, notifications, or reporting exports, all of which stay out of scope for this first pass.",
     "categories": [
       "commerce",
       "finance"

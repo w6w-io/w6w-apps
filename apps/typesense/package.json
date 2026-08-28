@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.typesense",
     "displayName": "Typesense",
+    "longDescription": "Typesense is an open-source, typo-tolerant search engine, and this app searches and indexes documents in it, and manages the collections, aliases, and API keys around them: writing and searching documents, running several searches in one request, and reading a collection's schema to see what it can actually search on. It is built for workflows that need to keep a search index up to date or query it directly, whether self-hosted or on Typesense Cloud.\n\nA few actions handle failure modes that are easy to miss: a bulk document import checks each document's own result rather than trusting the overall success response, since a partial import otherwise looks identical to a complete one, and a filtered delete previews how many documents it will remove before running. Collections can be created, retired, and swapped behind an alias for a zero-downtime reindex, and scoped API keys can be minted, listed, and revoked for narrower access than a full admin key.",
     "categories": [
       "search",
       "databases"

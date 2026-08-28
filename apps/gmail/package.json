@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gmail",
     "displayName": "Gmail",
+    "longDescription": "Gmail gives a workflow full control over a mailbox — sending messages directly or building a draft first and sending it later, replying to a message or a whole thread, and reading messages and threads by id or in bulk.\n\nLabels are a first-class part of the surface: they can be created, deleted, listed, and added to or removed from a message or an entire thread, which is the mechanism Gmail itself uses for filing and triage — so a workflow can sort mail the same way a person would. Read state and trash are manageable too, marking a message read or unread and trashing or untrashing a thread, rounding out what a mailbox-automation process needs.\n\nUseful for sending transactional or notification email through an actual Gmail account, triaging inbound mail by label as it arrives, or building drafts a person reviews before they go out.",
     "categories": [
       "communication",
       "email"

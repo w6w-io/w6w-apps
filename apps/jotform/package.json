@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.jotform",
     "displayName": "Jotform",
+    "longDescription": "Jotform builds and hosts online forms, and this app reads what's been built and manages what comes in. List a user's forms and their questions, then read, create, edit and delete individual submissions — the day-to-day work of running a form once it's published, rather than designing one.\n\nSubmissions can be pulled per form or across every form on the account, and created or edited using the same field-keyed structure Jotform's own API expects, including multi-part answers like a full name or address. Reports and folders round out the picture for organizing and summarizing what a form collects.\n\nA fit for routing new form submissions into another system, updating a submission's status as a workflow processes it, or pulling usage and submission data into a report — without needing form-building or account-administration capabilities, which stay in Jotform's own designer.",
     "categories": [
       "forms",
       "productivity"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.retellai",
     "displayName": "Retell AI",
+    "longDescription": "Retell AI runs AI voice and chat agents over phone and browser calls, and this app is what places and manages the calls an already-configured agent makes: dialing an outbound phone call, starting a browser-based call session, and queuing a batch of calls against a list of numbers with an optional calling window. It is built for workflows that trigger a call in response to something else happening — a new lead, a scheduled reminder — using an agent already set up in the Retell dashboard, rather than for configuring the agent's own voice, prompt, or tools.\n\nCall results can be searched and read back, including the transcript, recording, and analysis once a call finishes — calls run and finish asynchronously, so reading one back is a matter of polling until it completes. Available phone numbers and voices can be listed for use when placing a call, and current call concurrency can be checked directly, which is the real ceiling on how many calls can run at once.",
     "categories": [
       "ai",
       "communication"

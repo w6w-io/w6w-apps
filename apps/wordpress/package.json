@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.wordpress",
     "displayName": "WordPress",
+    "longDescription": "WordPress manages posts, pages and users on a site from a workflow — creating, updating, fetching, listing and deleting both posts and pages, the same core content types the WordPress REST API itself is built around, and doing the same full create/read/update/delete/list cycle for user accounts.\n\nBecause it talks to any site's own REST API rather than a hosted platform, it works the same way against a self-hosted install as against one hosted elsewhere — the only requirement is that the site's REST API is reachable and enabled.\n\nA fit for publishing content generated or approved elsewhere in a workflow, syndicating posts from another source into a WordPress site, or managing user accounts as part of an onboarding or offboarding process.",
     "categories": [
       "cms"
     ],

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.github",
     "displayName": "GitHub",
+    "longDescription": "GitHub gives a workflow a broad surface across the pieces engineering teams actually script around — reading and writing repository files, creating, commenting on, locking and updating issues, and reviewing and merging pull requests without a human opening a browser.\n\nReleases are fully manageable (created, updated, listed and deleted), and GitHub Actions workflows can be listed, enabled and dispatched, so a process outside GitHub can kick off a CI run or ship a release as one of its own steps. Repository- and organization-level reads — a repository's issues, its license, a user's or an organization's repositories — cover the discovery a workflow needs before acting on a specific one.\n\nA natural fit for release automation, issue triage pulled in from another system, PR review gating, or triggering CI/CD from an event GitHub itself doesn't know about.",
     "categories": [
       "version-control",
       "developer-tools"

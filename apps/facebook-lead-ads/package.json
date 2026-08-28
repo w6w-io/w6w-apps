@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.facebook-lead-ads",
     "displayName": "Facebook Lead Ads",
+    "longDescription": "Facebook Lead Ads pulls lead-generation data out of Meta's ad platform — listing the lead forms configured on a Page, and reading the leads recently submitted through them, so a workflow can pick up new submissions without polling Facebook's own Ads Manager or Business Suite by hand.\n\nIt's a narrow, read-focused surface by design: two actions cover discovering which forms exist on a Page and fetching what came in through each one, which is exactly the shape a lead-routing workflow needs — get the new submissions as they arrive, then hand them off to a CRM, spreadsheet, or notification step elsewhere in the workflow rather than building that polling loop from scratch against the Graph API directly.",
     "categories": [
       "marketing",
       "social-media"

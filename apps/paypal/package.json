@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.paypal",
     "displayName": "PayPal",
+    "longDescription": "PayPal creates and manages orders, payments, invoices and payouts through PayPal's own REST API, working against either a live or sandbox app depending on the credentials connected. Orders can be created and captured, a completed capture can be looked up and refunded, and invoices can be created, listed, read and sent to a customer.\n\nPayouts to one or many recipients can be created, checked and cancelled, accepting PayPal's own payout-item shape directly so a multi-recipient batch doesn't need to be flattened into a simplified form first. Capture and refund actions carry PayPal's own idempotency key so a retried step can't double-charge or double-refund a customer, and a retried payout batch is deduplicated the same way through its own batch id.\n\nAuthentication is app-level rather than tied to any individual buyer, using PayPal's client-credentials grant \u2014 the same shape suited to scheduled and unattended workflow runs, with no browser sign-in step involved.",
     "categories": [
       "commerce",
       "finance"

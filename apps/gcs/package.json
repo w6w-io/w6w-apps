@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.gcs",
     "displayName": "Google Cloud Storage",
+    "longDescription": "Google Cloud Storage is where an application keeps files at any scale, and this app covers the everyday shape of that: create and configure buckets, and upload, list, update, copy, and delete the objects inside them, with lifecycle rules and access settings included.\n\nThe standout capability is signing a URL that lets someone with no Google account fetch or upload a single object over ordinary HTTPS for a limited time — the reason to reach for this app rather than routing a file's bytes through a workflow itself. New buckets default to a locked-down configuration rather than Google's own more permissive defaults, on the reasoning that a bucket an automation creates is one nobody manually reviewed. Every write can be made conditional on the object's current state, so two workflows racing to update the same file don't silently clobber each other.\n\nRestoring a deleted object, composing several objects into one server-side, and reading a bucket's access policy round out the set — covering the operations a workflow doing real file management actually needs, short of the bucket and object administration that belongs in the Cloud Console.",
     "categories": [
       "storage",
       "devops"

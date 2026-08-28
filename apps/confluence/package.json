@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.confluence",
     "displayName": "Confluence",
+    "longDescription": "Confluence Cloud is Atlassian's team wiki, and this app reads and writes its pages, spaces, blog posts, comments, and inline tasks — everything a workflow needs to publish documentation, keep a knowledge base current, or pull content into another system. Pages can be created, updated, listed by space or title, and searched with Confluence's own query language; spaces can be created and browsed, including as a tree of child pages; and blog posts can be published into a space the same way.\n\nComments and tasks round it out: the discussion thread at the bottom of a page can be read and posted to, and a workflow can list the inline action items assigned across a space, filterable by status or assignee. Content search covers the single most useful thing a workflow does with a wiki — finding what mentions something and has changed recently — even where Confluence's current API doesn't otherwise offer a search endpoint of its own.",
     "categories": [
       "documents",
       "productivity"

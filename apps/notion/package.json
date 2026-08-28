@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.notion",
     "displayName": "Notion",
+    "longDescription": "Notion reads and writes pages, databases and blocks from a workflow — creating a page directly or as a new row in a database, updating a database page's properties, and appending blocks to build out a page's content programmatically.\n\nDatabases are a first-class part of the surface: they can be listed, searched and read individually, and their pages fetched one at a time or in bulk, which is what lets a workflow treat a Notion database as a lightweight structured store rather than only writing unstructured pages. Pages can be archived and restored, and both pages and databases are searchable by title across a workspace. Users can be listed or looked up individually too.\n\nA fit for turning external data into a new Notion page or database row, keeping a database in sync with another system, or pulling structured content out of Notion for use elsewhere in a workflow.",
     "categories": [
       "productivity",
       "documents"

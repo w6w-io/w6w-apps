@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.keap",
     "displayName": "Keap",
+    "longDescription": "Keap (formerly Infusionsoft) is a small-business CRM and marketing-automation platform, and this app covers the parts a workflow actually reaches for: contacts, tags, companies, opportunities, tasks, notes, campaigns, automations, commerce reads, users, and transactional email.\n\nOn the contact side, it handles the full lifecycle — creating, updating and tagging contacts, attaching notes, and looking up a contact's applied tags — alongside company and opportunity tracking through Keap's pipeline stages. It can add contacts to a campaign sequence, trigger an automation goal, and send transactional email through Keap's own delivery. Commerce data — products, orders and subscriptions — is available to read, so a workflow can act on purchase history without a separate billing integration.\n\nAppointments are included as a small addition for scheduling-adjacent workflows. Health checks track daily and per-minute quota headroom across Keap's own usage tiers and the shared tenant ceiling, plus Keap's status page, so a workflow can tell its own throttling apart from someone else's traffic on the same account.",
     "categories": [
       "crm",
       "marketing",

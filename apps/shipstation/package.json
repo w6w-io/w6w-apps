@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.shipstation",
     "displayName": "ShipStation",
+    "longDescription": "ShipStation creates shipments, gets carrier rates, buys and voids labels, and manages warehouses and carrier accounts across every carrier connected to a ShipStation account, built entirely against ShipStation's current V2 API rather than the deprecated V1 surface. Getting a rate and creating a shipment are kept conceptually distinct from buying a label \u2014 a label purchase is the one step that actually spends money and issues a tracking number, and it can be built from a rate, a shipment, or details supplied directly.\n\nA shipment can be listed, read, updated before a label is bought, and cancelled; purchased labels can be listed, read and voided for a refund where the carrier allows it. Warehouses and reusable shipment tags can be created and listed, and every carrier account connected to the account can be read individually or as a whole.\n\nHealth reporting follows ShipStation's own V2-specific status component rather than the page as a whole, and separately reports when a connection has no carrier accounts to ship with at all \u2014 a state that otherwise looks like an ordinary validation error rather than what it actually is. Sales orders, batches, manifests and automatic rate-shopping rules are left out, either because they sit behind a higher plan or because they belong to ShipStation's own dashboard rather than a workflow step.",
     "categories": [
       "commerce",
       "developer-tools"

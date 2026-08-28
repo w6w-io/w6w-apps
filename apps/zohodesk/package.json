@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.zohodesk",
     "displayName": "Zoho Desk",
+    "longDescription": "Zoho Desk creates, reads, updates and comments on tickets, contacts and accounts in Zoho Desk's customer-support platform, across any of Zoho's ten regional data centres. Tickets, contacts and accounts can each be listed, read, created, updated and deleted; agents and departments can be looked up; and comments, threads and attachments can be listed and added to a ticket, giving a workflow the same conversation history a support agent sees.\n\nA single search action reaches across tickets, accounts, contacts and tasks at once. Every action resolves the right organization automatically from the connection's own default, with an explicit override available for an account that spans more than one organization \u2014 a detail that would otherwise trip up a workflow the moment an org has more than one.\n\nZoho Desk is a distinct product and API from Zoho CRM, Zoho Books and Zoho Mail, each already covered by this pack's other Zoho apps; this app is scoped to the helpdesk surface alone rather than any of the others. SLAs, business hours, macros, blueprints and the knowledge-base/Help Center module are left out, since the actions here focus on the core support-ticket workflow rather than the whole product.",
     "categories": [
       "support"
     ],

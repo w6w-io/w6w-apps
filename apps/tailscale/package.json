@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.tailscale",
     "displayName": "Tailscale",
+    "longDescription": "Tailscale builds a private network out of the devices that join it, and this app manages that network's administrative side: list and inspect every device on a tailnet, approve or remove one, mint the keys that let a new device join, and read the access policy that decides who can reach what.\n\nDevice tagging and route approval are handled as careful merges rather than the plain replacements Tailscale's own API performs — sending a device's tags or its approved routes as a fresh list would otherwise silently drop whatever wasn't included, quietly cutting off access nobody meant to touch. The access policy itself can be tested against a proposed change or the live network without ever installing anything, which covers the safe half of policy work; actually rewriting the policy file is left to a reviewed change elsewhere, the same way an infrastructure team already treats it.\n\nBecause Tailscale's data plane is peer-to-peer, devices that have already connected keep working even if this app's own calls are failing — an outage here means new devices can't join or policies can't change, not that the network itself is down. User management rounds it out: suspending someone stops them signing in without touching the devices they're already using.",
     "categories": [
       "security",
       "devops"

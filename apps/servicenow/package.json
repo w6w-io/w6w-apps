@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.servicenow",
     "displayName": "ServiceNow",
+    "longDescription": "ServiceNow runs a company's IT service management on tables of records, and this app gives a workflow direct access to two levels of that: a dedicated set of actions for incidents — the day-to-day case of opening, reading, listing and updating them — and a generic set that reaches any other table by name.\n\nThat second, generic group is what makes this app cover far more than incidents alone: problems, change requests, configuration items, users, groups and any custom table an instance has added all go through the same create, read, list, update and delete actions, just pointed at a different table name. Fields that an instance customises for itself — categories, states, close codes — are collected as an open set of name-and-value pairs rather than a fixed dropdown, since a hard-coded list would misdescribe an instance that's changed its own configuration.\n\nBinary attachments and the dynamic dropdowns ServiceNow's own interface uses to populate pickers aren't part of this app; it takes table and field names as plain values instead, which keeps the surface simple and predictable across very differently configured instances.",
     "categories": [
       "support",
       "devops"

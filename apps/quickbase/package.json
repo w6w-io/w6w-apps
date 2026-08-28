@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.quickbase",
     "displayName": "Quickbase",
+    "longDescription": "Quickbase is a low-code application platform built around custom tables and records, and this app queries, updates and manages that data through Quickbase's modern JSON REST API.\n\nRecord actions cover the core data loop: querying with Quickbase's own filter language, inserting or updating records in bulk while reporting exactly which rows succeeded and which didn't (a partial write still counts as an overall success), deleting by filter, and pulling only what has changed since a given time. Schema actions let a workflow read and manage the tables, fields and relationships records live in, and reporting actions list, read and run a Quickbase report to reuse work already built in the app. A formula action evaluates a Quickbase formula on demand without having to store it as a report first.\n\nRecords come back keyed by numeric field id rather than by field name, so this app also exposes field listings as the way a workflow discovers what each id actually means. Health checks track Quickbase's own status page, live credential validity tied to a specific application, and API rate-limit headroom where Quickbase's response headers make it available.",
     "categories": [
       "databases",
       "productivity",

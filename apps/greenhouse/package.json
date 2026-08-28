@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.greenhouse",
     "displayName": "Greenhouse",
+    "longDescription": "Greenhouse is an applicant tracking system, and this app reads and writes its core recruiting data — candidates, applications, jobs, interviews, scorecards and offers — over Greenhouse's own Harvest v3 API.\n\nMost of what a workflow needs is one path: find the applications matching a filter, then act on them. This app covers exactly that — creating candidates and their applications, moving an application through pipeline stages, rejecting or hiring it, and filing notes — alongside listing jobs, interviews, scorecards and offers to read the state of a pipeline. Reference lookups for departments, offices, sources, rejection reasons and users let a workflow resolve the real ids Greenhouse's write endpoints expect rather than guessing labels.\n\nGood for automating candidate intake from a careers page or referral form, moving candidates between pipeline stages based on an external signal such as an assessment result or a scheduling confirmation, syncing interview or offer status into another system, or triggering a rejection notice once a hiring decision is made elsewhere.",
     "categories": [
       "hr"
     ],

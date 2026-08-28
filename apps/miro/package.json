@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.miro",
     "displayName": "Miro",
+    "longDescription": "Miro brings visual collaboration boards into a workflow \u2014 creating and reading boards, and populating them with sticky notes, cards, shapes, text, frames, images and connectors. Board actions list, read, create, copy, update and delete boards, with board-copy built for the common case of duplicating a template board to start a new one.\n\nItem actions cover the full canvas: list a board's items overall, scoped to one frame, or filtered by tag, and create, move or delete any item type \u2014 including a bulk-create action for adding up to twenty mixed items in a single call. Tags can be created, listed and attached to items for organizing a busy board, and connectors draw lines between two items to show relationships. Sharing actions list who already has access to a board and invite new people by email.\n\nThe app stays on Miro's stable API surface rather than the experimental endpoints Miro reserves the right to change without notice.",
     "categories": [
       "productivity",
       "project-management"

@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.figma",
     "displayName": "Figma",
+    "longDescription": "Figma's REST API is read-heavy by design, and so is this app: it pulls a file's structure, individual nodes, rendered images, comments, project listings and version history straight into a workflow, without anyone opening the design tool itself.\n\nRendering is the standout capability here — a node can be turned into a PNG, JPG, SVG or PDF on demand, which is the piece a workflow actually needs to hand a design off somewhere else, whether that is a marketing asset pipeline or an automated changelog. Comments are the one part of a file this app can also write to, posting or removing a note on a design rather than only reading what is already there.\n\nEverything else about a file's actual content — the layers, components and styles a designer edits — stays read-only here, because Figma's own API offers no way to write it. What this app covers is exactly the part meant for integration: pulling structure and renders out of Figma and keeping a conversation going on top of a file.",
     "categories": [
       "productivity",
       "developer-tools"

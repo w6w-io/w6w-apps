@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.apify",
     "displayName": "Apify",
+    "longDescription": "Apify runs Actors — containerized scraping and automation programs, either your own or one of the tens of thousands published in Apify Store — and gives a workflow the three-beat path most Apify automations need: start a run, poll it, and read the dataset or key-value store it produces.\n\nBeyond starting and monitoring Actor and Task runs, this app covers the Actor's full output lifecycle: creating and listing datasets, pushing and reading their items, and reading or writing key-value store records, plus webhooks for reacting to a run's completion instead of polling for it.\n\nIt also surfaces account-level visibility that a workflow needs to run safely at scale — current usage and plan limits across compute, proxy traffic, and concurrent runs — so a workflow can check headroom before kicking off an expensive crawl. Health checks track Apify's own status page alongside that live quota, and the app quietly protects a few working credentials that Apify's own read endpoints would otherwise hand back in plain sight.",
     "categories": [
       "developer-tools",
       "storage",

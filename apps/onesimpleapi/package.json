@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.onesimpleapi",
     "displayName": "OneSimpleApi",
+    "longDescription": "OneSimpleApi brings a toolbox of small utility operations into a workflow: fetching a web page's metadata, taking a screenshot, generating a PDF or QR code, validating an email address, expanding a shortened URL, and converting between currencies. Each action wraps one focused, well-defined utility endpoint rather than a broad product surface, making this a good fit for the small one-off lookups and conversions that come up inside a larger workflow.\n\nThe screenshot, PDF and QR code actions each generate a hosted resource on the vendor's own CDN and are safe to retry \u2014 the same inputs reuse a previously generated result rather than creating duplicates. The remaining actions are simple, side-effect-free reads: checking a page's metadata, validating an email format, resolving a shortened link back to its destination, or converting a currency amount at current rates.\n\nThis app covers a focused subset of OneSimpleApi's documented endpoints, chosen to match the small-utility use case rather than the vendor's larger, more specialized surfaces like image manipulation or link shortening.",
     "categories": [
       "developer-tools"
     ],

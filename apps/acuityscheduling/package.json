@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.acuityscheduling",
     "displayName": "Acuity Scheduling",
+    "longDescription": "Acuity Scheduling handles the booking pages that turn website visitors into calendar appointments, and this app brings that pipeline into a workflow. Create, look up, cancel and reschedule appointments; check open availability before offering a time slot elsewhere; and read back the appointment types, calendars and clients behind a booking.\n\nA common pattern is triggering a workflow off an external event — a form submission, a CRM stage change, a support ticket — and creating the appointment directly, or checking availability before recommending a time. Because Acuity addresses every appointment, calendar and client by a plain numeric ID, these actions are simple lookups and writes rather than multi-step resolution.\n\nThis app covers the appointment lifecycle and the read-only data around it; it does not touch payment processing or custom intake-form fields, which stay specific to each Acuity account.",
     "categories": [
       "calendar"
     ],

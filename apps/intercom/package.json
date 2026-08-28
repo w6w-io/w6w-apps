@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.intercom",
     "displayName": "Intercom",
+    "longDescription": "Intercom manages contacts, companies and conversations from a workflow — creating, updating, searching for and deleting contacts, and upserting companies through a single create-or-update action rather than requiring a workflow to check existence first.\n\nConversations can be fetched individually or listed in bulk, and replied to directly, so a workflow can respond to an inbound message — or follow up on one — without an agent opening Intercom's own inbox. Notes can be logged against a contact and tags can be listed, rounding out the record-keeping a support or sales process needs.\n\nA fit for routing support conversations based on external context, keeping company and contact records in sync with a CRM, or triggering an automated reply when a conversation matches a known pattern.",
     "categories": [
       "support",
       "communication",

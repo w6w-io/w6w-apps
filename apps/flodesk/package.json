@@ -10,6 +10,7 @@
   "w6w": {
     "id": "io.w6w.flodesk",
     "displayName": "Flodesk",
+    "longDescription": "Flodesk is an email marketing platform built around visually designed campaigns and workflows, and this app manages the subscriber side of it: subscribers, segments, custom fields and webhooks, over the Flodesk API.\n\nIt covers the everyday subscriber lifecycle — creating or updating a subscriber individually or in a batch, adding or removing segment membership, moving someone into or out of a workflow, and unsubscribing them — plus managing the webhooks a workflow can use to react to a new subscriber or a segment change. Custom fields let a workflow enrich a subscriber record with data from wherever it originated.\n\nFlodesk's API is deliberately narrow by the vendor's own design: it has no endpoints for creating, sending or reporting on a campaign, and no way to build or edit a workflow's own steps. This app covers everything the API actually offers rather than reaching past it. A live quota check tracks Flodesk's published rate limits, since Flodesk publishes no general status page for the service itself.",
     "categories": [
       "marketing",
       "email"
