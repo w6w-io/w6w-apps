@@ -42,6 +42,24 @@ export function repoPath(owner: string, repository: string): string {
 }
 
 /**
+ * A `/`-separated path rendered as real URL path segments, each encoded so no
+ * segment can escape the route it is spliced into. `.`, `..` and empty segments
+ * are REFUSED rather than encoded: `new URL()` resolves dot-segments before the
+ * request is sent, so passing them through would turn a contents-scoped action
+ * into an arbitrary api.github.com call (measured: a path of `../../../../user`
+ * resolves to `https://api.github.com/user`).
+ */
+export function contentsPath(path: string): string {
+  const segments = path.split("/");
+  for (const s of segments) {
+    if (s === "" || s === "." || s === "..") {
+      throw new Error(`Illegal path segment in "${path}": segments may not be empty, "." or "..".`);
+    }
+  }
+  return segments.map(encodeURIComponent).join("/");
+}
+
+/**
  * Thin wrapper over `ctx.fetch`. It never sets Authorization — the runtime
  * routes every request through the auth `sign` hook.
  */
