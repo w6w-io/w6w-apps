@@ -64,6 +64,8 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | campaignmonitor | email, marketing | api-key, oauth2 | 42 |
 | canny | project-management, support | api-key | 39 |
 | chargebee | commerce, finance | api-key | 17 |
+| chatbase | ai, support, communication | api-key | 35 |
+| chatwork | communication, productivity | api-token | 32 |
 | checkly | monitoring, devops, developer-tools | api-key | 25 |
 | circle | communication, social-media | api-token | 33 |
 | circleci | devops, developer-tools | api-token | 8 |
@@ -80,6 +82,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | coda | productivity, documents | api-token | 11 |
 | companycam | project-management, documents, productivity | access-token, oauth2 | 62 |
 | confluence | documents, productivity | api-token, oauth2 | 22 |
+| connecteam | hr, productivity, calendar | api-key | 27 |
 | constantcontact | marketing, email | oauth2 | 22 |
 | contentful | cms | access-token | 10 |
 | copper | crm | api-key | 24 |
@@ -293,7 +296,9 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | vimeo | video, social-media | access-token | 36 |
 | wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
+| whatconverts | marketing, analytics, crm | basic | 25 |
 | whatsapp | communication | access-token | 9 |
+| whop | commerce, finance | api-key | 35 |
 | wix | cms, crm, commerce | api-key | 24 |
 | woocommerce | commerce | api-key | 13 |
 | wordpress | cms | basic, oauth2 | 15 |

@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/whop",
+  "version": "0.1.0",
+  "description": "Manage Whop memberships, products, plans, payments, promo codes and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.whop",
+    "displayName": "Whop",
+    "longDescription": "Whop is a creator-commerce platform: sellers list Products, price them with Plans, and buyers hold Memberships that track billing state (active, trialing, past_due, canceled, ...) and access. This app covers the operational path around that model — read and manage Memberships (list, retrieve, update metadata, cancel, pause, resume, extend with free days), read and manage the Products and Plans that back them, read and refund Payments, run Promo Codes end to end, and manage the Webhook endpoints that notify a workflow of what changed instead of polling for it.\n\nWhop's REST API is versioned by date: every request this app sends pins a confirmed `Api-Version-Date`, because a request without one silently falls back to the pre-2025 API shape — different field names (`company_id` instead of `account_id`), different parameter conventions — for every native resource the versioning changelog has since migrated.\n\nMembers and Users cover the buyer side: a Member is one buyer's relationship with an account regardless of how many Memberships they hold, and a User is the underlying Whop identity, with an access check for gating content by product or experience.",
+    "categories": [
+      "commerce",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Whop"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.whop.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

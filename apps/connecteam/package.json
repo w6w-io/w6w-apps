@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/connecteam",
+  "version": "0.1.0",
+  "description": "Manage Connecteam's deskless workforce: employees, time clock, scheduling, forms and tasks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.connecteam",
+    "displayName": "Connecteam",
+    "longDescription": "Connecteam is deskless workforce management: employee directory, GPS time clock, shift scheduling, digital forms and task boards for teams that don't sit at a desk.\n\nThis app covers Connecteam's REST API v1 (`api.connecteam.com`) end to end for the surfaces a workflow needs most: read, create, update and archive employees; clock a user in and out and read or write their time-clock entries and timesheet totals; list, create, update and delete shifts on a schedule; read forms and their submissions; and list, create and update tasks on a task board.\n\nEvery action stays inside what the vendor's own OpenAPI document declares — no endpoint here was inferred from a sibling integration or guessed from a UI screenshot.",
+    "categories": [
+      "hr",
+      "productivity",
+      "calendar"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Connecteam"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.connecteam.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@w6w-apps/whatconverts",
+  "version": "0.1.0",
+  "description": "Read and write call, form, chat and transaction leads from WhatConverts's conversion tracking and attribution platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.whatconverts",
+    "displayName": "WhatConverts",
+    "longDescription": "WhatConverts tracks phone calls, web form submissions, chats, emails, transactions, appointments, text messages and custom events, attributing every one back to the marketing source, medium, campaign, content and keyword that produced it. WhatConverts calls all of these a \"lead\" — one resource with a `lead_type` field, rather than a resource per channel.\n\nThis app covers the full lead lifecycle a workflow needs: list and filter leads by type, status, date range, value and more; fetch a single lead's full attribution and (on Elite plans) its AI-generated lead analysis and customer journey; create leads from another system; and edit a lead's qualification (quotable) and dollar-value fields. A dedicated action downloads a phone call's MP3 recording as bytes, for workflows that need the audio itself rather than just its playback URL.\n\nOn an agency plan, a Master Account Key additionally unlocks account and profile management (list, create, edit, delete), role and permission lookups, user invitation and access management, and tracking-number/web-form inventory and deletion — the full multi-client surface an agency automates on top of its clients' lead data.\n\nA health check tracks WhatConverts's own status page; there is no quota check because the vendor documents its rate limits in prose and confirmed on the wire that no request — success or failure — carries a rate-limit header to read.",
+    "categories": [
+      "marketing",
+      "analytics",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "WhatConverts"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.whatconverts.com",
+        "status.whatconverts.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

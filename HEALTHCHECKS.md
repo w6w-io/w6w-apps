@@ -25,7 +25,7 @@ methods. Sixty-four apps add a fourth question — **is this tenant's own host r
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **917 checks**: 364 live probes, 220 declared absences, and 335
+Across the pack that comes to **932 checks**: 367 live probes, 227 declared absences, and 340
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -73,6 +73,8 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [campaignmonitor](apps/campaignmonitor/README.md) | StatusCast, WAF-blocked to server-side clients | no | `GET /systemdate.json` | no | `api` · ~~service~~ · ~~quota~~ · 2 derived |
 | [canny](apps/canny/README.md) | [Pingdom Public Reports](https://status.canny.io) — no JSON/RSS/Atom output of any kind; declared `unavailable` | no | `POST /v1/boards/list` | no (Canny publishes no rate-limit headers) | ~~service~~ · 1 derived |
 | [chargebee](apps/chargebee/README.md) | [Statuspage](https://status.chargebee.com/api/v2/summary.json) | yes | `GET /customers?limit=1` | no | `service` · ~~quota~~ · 1 derived |
+| [chatbase](apps/chatbase/README.md) | none published — `chatbase.statuspage.io` 302s to the unclaimed Statuspage decoy, `status.chatbase.co` has an expired TLS cert on a dead deployment | no | `GET /health` (unauthenticated) | no | ~~service~~ · ~~quota~~ · 1 derived |
+| [chatwork](apps/chatwork/README.md) | none published | no | `GET /me` (also feeds `X-RateLimit-*` for quota) | yes | ~~service~~ · `quota` · 1 derived |
 | [checkly](apps/checkly/README.md) | none usable (the page is an SPA catch-all; the old Statuspage instance is stale since 2026-04-28) | no | `GET /v1/accounts/me` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [circle](apps/circle/README.md) | [Statuspage](https://status.circle.so/api/v2/summary.json) | yes | `GET /community` | no | `service` · ~~quota~~ · 1 derived |
 | [circleci](apps/circleci/README.md) | [Statuspage](https://status.circleci.com/api/v2/summary.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 1 derived |
@@ -89,6 +91,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [coda](apps/coda/README.md) | [Atom](https://status.coda.io/history.atom) | yes | `GET /whoami` | no | `service` · ~~quota~~ · 1 derived |
 | [companycam](apps/companycam/README.md) | [Statuspage](https://status.companycam.com/api/v2/status.json) | yes | `GET /users/current` | no | `service` · ~~quota~~ · 2 derived |
 | [confluence](apps/confluence/README.md) | [Statuspage](https://confluence.status.atlassian.com/api/v2/summary.json) | yes | `GET /wiki/rest/api/user/current` | no | `service` · `site` · ~~quota~~ · 2 derived |
+| [connecteam](apps/connecteam/README.md) | [Statuspage](https://connecteam.statuspage.io/) — verified via component-name overlap with this app's own action groups, not just the claimed page name | yes | `GET /users/v1/users?limit=1` | no (no rate-limit headers anywhere, checked signed and unsigned; zero mentions in the 617KB OpenAPI doc) | `service` · ~~quota~~ · 1 derived |
 | [constantcontact](apps/constantcontact/README.md) | [Statuspage](https://status.constantcontact.com/api/v2/summary.json) | yes | `GET /contacts?limit=1` | no | `service` · ~~quota~~ · 1 derived |
 | [contentful](apps/contentful/README.md) | [Statuspage](https://www.contentfulstatus.com/api/v2/status.json) | yes | `GET /spaces/{spaceId}` | yes | `service` · `quota` · 1 derived |
 | [copper](apps/copper/README.md) | [Statuspage](https://status.copper.com/api/v2/summary.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 1 derived |
@@ -302,7 +305,9 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [vimeo](apps/vimeo/README.md) | [Statuspage](https://www.vimeostatus.com/api/v2/status.json) | yes | `GET /me?fields=uri,name` | yes | `service` · `quota` · 1 derived |
 | [wealthbox](apps/wealthbox/README.md) | `status.wealthbox.com` answers status.io-shaped JSON, but every timestamp is frozen at 2019-02-08 — a stale decoy, not polled | no | `GET /v1/me` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [webflow](apps/webflow/README.md) | [Statuspage](https://status.webflow.com/api/v2/status.json) | yes | `GET /v2/sites` | yes | `service` · `quota` · 2 derived |
+| [whatconverts](apps/whatconverts/README.md) | [genuine WhatConverts-branded Statuspage](https://status.whatconverts.com/) with a dedicated `API` component | yes | `GET /leads?limit=1` (classified by `error_message` body text — a missing vs. wrong credential both answer 401) | no (documented prose limits only; no response headers) | `service` · ~~quota~~ · 1 derived |
 | [whatsapp](apps/whatsapp/README.md) | [RSS](https://metastatus.com/outage-events-feed-whatsapp-business-api.rss) | yes | `GET /{phone-number-id}?fields=verified_name` | no | `service` · ~~quota~~ · 1 derived |
+| [whop](apps/whop/README.md) | none published | no | `GET /permissions` (not `/users/me`, which 404s identically for missing and fake credentials) | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [wix](apps/wix/README.md) | [Statuspage](https://status.wix.com/api/v2/status.json) | yes | `GET /contacts/v4/contacts` | no | `service` · ~~quota~~ · 1 derived |
 | [woocommerce](apps/woocommerce/README.md) | none published | no | `GET /wp-json/wc/v3/system_status` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
 | [wordpress](apps/wordpress/README.md) | none published | no | `GET /wp-json/wp/v2/users/me` | no | ~~service~~ · ~~quota~~ · `site` · 2 derived |

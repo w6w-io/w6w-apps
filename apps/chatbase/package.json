@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/chatbase",
+  "version": "0.1.1",
+  "description": "Create and manage Chatbase AI agents, chat with them, and run their helpdesk, sources, and WhatsApp surfaces.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.chatbase",
+    "displayName": "Chatbase",
+    "longDescription": "Chatbase builds AI agents trained on your own content — a website, uploaded files, Q&A pairs — and puts them in front of customers over a chat widget, WhatsApp, Slack, and a growing set of other channels. This app covers Chatbase's API v2, its current, structured REST surface: create and configure agents, train them, chat with one directly (as a bot-to-bot or backend integration, not just the widget), and manage the conversations, knowledge sources, helpdesk tickets, and WhatsApp templates those agents produce.\n\nEvery agent-management, chat, conversation, source, helpdesk, and WhatsApp action here talks to API v2 (`www.chatbase.co/api/v2`), which Chatbase itself points integrators toward from its own legacy v1 docs. The one exception is reading captured leads, which as of this writing has no v2 equivalent at all and is served from the older v1 surface (`www.chatbase.co/api/v1`) — both hosts resolve to the same hostname, so a single Connection and network allowlist cover both.\n\nFile-type knowledge sources (PDF/DOC/DOCX uploads) are deliberately left out: Chatbase serves that upload from a *different* host (`files.chatbase.co`) as a binary multipart body, and this sandbox's fetch coerces every request body to a string on its way to the network — the same limitation that caps this pack's Box and Dropbox uploads to text content. Plain-text, Q&A, and link sources (the create-source / update-source actions here) are unaffected and cover the rest of Chatbase's knowledge-source surface.",
+    "categories": [
+      "ai",
+      "support",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Chatbase"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Chatbase"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "www.chatbase.co"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

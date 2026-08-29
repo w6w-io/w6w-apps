@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.107.0",
+  "version": "0.108.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -127,6 +127,12 @@
       "path": "./apps/chargebee"
     },
     {
+      "path": "./apps/chatbase"
+    },
+    {
+      "path": "./apps/chatwork"
+    },
+    {
       "path": "./apps/checkly"
     },
     {
@@ -173,6 +179,9 @@
     },
     {
       "path": "./apps/confluence"
+    },
+    {
+      "path": "./apps/connecteam"
     },
     {
       "path": "./apps/constantcontact"
@@ -817,7 +826,13 @@
       "path": "./apps/webflow"
     },
     {
+      "path": "./apps/whatconverts"
+    },
+    {
       "path": "./apps/whatsapp"
+    },
+    {
+      "path": "./apps/whop"
     },
     {
       "path": "./apps/wix"
