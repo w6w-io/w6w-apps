@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/instantly",
+  "version": "0.1.0",
+  "description": "Manage Instantly cold-email campaigns, leads, sending accounts and the Unibox over API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.instantly",
+    "displayName": "Instantly",
+    "longDescription": "Instantly is a cold-email outreach platform: campaigns of scheduled email sequences sent from a pool of connected sending accounts, with lead tracking, interest-status labeling and a shared inbox (Unibox) for replies. This app covers the run-and-read path a workflow actually needs against Instantly's API v2 — create, launch, pause and read back campaign analytics; add, search, update and move leads between campaigns and lists; list and manage the sending accounts a campaign draws from, including their warmup and daily-volume analytics; and read, reply to or forward the emails a campaign receives.\n\nEvery path, verb and field was verified against Instantly's own OpenAPI 3.0 document rather than inferred from a sibling app or a community integration. Two vendor realities shaped the design: creating a sending account means handing Instantly that mailbox's own IMAP/SMTP password as a request field (a legitimate, vendor-required exception to the credential-only-in-sign rule, since that password belongs to the mailbox being provisioned, not to this app's own Connection), and API keys are scope-gated per resource, so a key scoped away from Campaigns will see the health probe refuse with a distinguishable 'insufficient scope' message rather than a bare failure.",
+    "categories": [
+      "marketing",
+      "email",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Instantly"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.instantly.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

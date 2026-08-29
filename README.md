@@ -154,6 +154,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | hubspot | crm, marketing | private-app-token, oauth2, api-key | 42 |
 | huggingface | ai, developer-tools | token | 14 |
 | hunter | email, marketing, crm | api-key | 20 |
+| instantly | marketing, email, crm | api-key | 38 |
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | jenkins | devops | basic | 6 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
@@ -221,11 +222,13 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | posthog | analytics | personal-api-key | 8 |
 | postmark | email, communication | api-key | 13 |
 | productboard | project-management, productivity, support | api-token | 41 |
+| pushbullet | communication, productivity | access-token | 24 |
 | pushover | communication, monitoring | app-token | 4 |
 | qdrant | search, databases, ai | api-key | 19 |
 | quickbase | databases, productivity, project-management | user-token | 20 |
 | quickbooks | finance | oauth2 | 20 |
 | raindrop | productivity, search, storage | test-token, oauth2 | 39 |
+| readwise | productivity | api-token | 20 |
 | reddit | social-media | oauth2 | 8 |
 | resend | email, communication | api-key | 24 |
 | retellai | ai, communication | api-key | 9 |
@@ -276,6 +279,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | twitch | video, social-media, communication | app-access-token, user-access-token | 28 |
 | twitter | social-media | oauth2 | 8 |
 | typeform | forms, productivity | personal-access-token, oauth2 | 10 |
+| typefully | social-media, marketing | api-key | 25 |
 | typesense | search, databases | api-key | 16 |
 | upstash | databases | rest-token | 15 |
 | uptimerobot | monitoring | api-key | 8 |
@@ -289,6 +293,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | woocommerce | commerce | api-key | 13 |
 | wordpress | cms | basic, oauth2 | 15 |
 | workos | security, developer-tools | api-key | 23 |
+| wrike | project-management, productivity | permanent-token | 29 |
 | wufoo | forms, productivity | api-key | 8 |
 | xero | finance | oauth2 | 13 |
 | youtube | video, social-media | api-key, oauth2 | 16 |

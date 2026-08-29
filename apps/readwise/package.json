@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/readwise",
+  "version": "0.1.1",
+  "description": "Create, list, and export Readwise highlights and books, manage tags, and read the daily review.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.readwise",
+    "displayName": "Readwise",
+    "longDescription": "Readwise aggregates highlights and notes from Kindle, Instapaper, Pocket, Twitter, Apple Books and dozens of other reading apps into one account, then resurfaces them for spaced-repetition review.\n\nThis app covers Readwise's classic Highlights API (api/v2), not the separate Reader product: creating highlights from your own application (with automatic de-duplication and update-by-highlight_url), exporting a user's full highlight history for backup or sync, and the fuller CRUD surface for reading, updating and deleting individual highlights and books plus their tags. It also reads and completes the Daily Review, Readwise's spaced-repetition resurfacing queue.\n\nAuthentication is a single access token, verified through Readwise's dedicated /api/v2/auth/ endpoint rather than any read that could echo the token back.",
+    "categories": [
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Readwise"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Readwise"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "readwise.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
