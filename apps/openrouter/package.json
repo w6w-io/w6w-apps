@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/openrouter",
+  "version": "0.1.0",
+  "description": "Chat completions, embeddings, and model/usage introspection via OpenRouter's unified LLM API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.openrouter",
+    "displayName": "OpenRouter",
+    "longDescription": "OpenRouter fronts 400+ models from dozens of providers behind one OpenAI-compatible chat-completions endpoint, so a workflow can call `openai/gpt-5.2`, `anthropic/claude-sonnet-4.6` or any other listed model through the same request shape and the same credential — including OpenRouter-only routing controls such as an explicit model-fallback list, provider preferences, and plugins (web search, PDF parsing) layered on top of the normalized request.\n\nEmbeddings are exposed the same way, unified across providers behind one endpoint. Models can be listed and filtered (by category, price, context length, supported parameters) to keep a workflow's model choice explicit and current instead of hardcoded. Because every chat completion is billed and metered centrally, a generation's exact token counts and cost can be pulled back after the fact by id — useful for auditing spend per workflow run — and the connected key's own credit limit and usage can be checked before it runs out mid-workflow.\n\nA fit for a workflow that wants model choice as a runtime decision rather than a deploy-time one — routing a step to whichever model is cheapest, fastest, or best for the task — without integrating a separate app per LLM vendor.",
+    "categories": [
+      "ai"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "OpenRouter"
+      }
+    },
+    "network": {
+      "allow": [
+        "openrouter.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
