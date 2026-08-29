@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/dialpad",
+  "version": "0.1.0",
+  "description": "Calls, SMS, users, contacts, call routers, rooms and webhooks on the Dialpad business phone platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.dialpad",
+    "displayName": "Dialpad",
+    "longDescription": "Dialpad is a cloud business phone and contact center platform. This app covers its Admin API v2's core surface: list and inspect concluded calls, ring an outbound call and transfer or hang up a live one, manage users and shared/local contacts, send SMS/MMS, manage API-based call routers and rooms, and register webhooks with call-event subscriptions so a workflow can react to a call's state changes instead of polling for them.\n\nTwo live signing secrets — the ones Dialpad uses to sign webhook and call-router payloads — are redacted from every response that would otherwise echo them back in plain text, the same class of finding this pack has caught in other vendors' ordinary reads.",
+    "categories": [
+      "communication",
+      "support"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Dialpad"
+      }
+    },
+    "network": {
+      "allow": [
+        "dialpad.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

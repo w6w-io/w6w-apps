@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/salesloft",
+  "version": "0.1.0",
+  "description": "Manage Salesloft people, accounts, cadences, cadence enrollment, calls, notes, tasks and users.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.salesloft",
+    "displayName": "Salesloft",
+    "longDescription": "Salesloft brings a sales engagement platform's core resources into a workflow — people (contacts), accounts (companies), cadences (sequences), and the calls, notes and tasks that log engagement with them. Person and account actions cover the full create/read/list/update/delete set, while cadence actions list and fetch the sequences a team runs, and cadence membership actions enroll a person into a cadence (optionally starting at a specific step) or remove them from one.\n\nCall actions log a phone call against a person and list past calls; note actions create and list notes associated with a person or account; task actions create, list, update and delete the follow-up tasks a rep works from. User actions list and fetch the Salesloft team members (not CRM contacts) a workflow needs to assign work to.\n\nThis is a focused surface on Salesloft's most-used v2 API resources — the generic activity-logging endpoint (which needs Salesloft-internal action/task ids this app does not expose), email activity sync, bulk import/export jobs, and CRM-sync configuration are deliberately left out.",
+    "categories": [
+      "crm",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Salesloft"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.salesloft.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

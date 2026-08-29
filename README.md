@@ -44,6 +44,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | azuredevops | version-control, devops, project-management | pat | 19 |
 | balena | iot, devops | api-key | 16 |
 | bamboohr | hr | api-key | 18 |
+| bannerbear | marketing, video, developer-tools | bearer-token | 61 |
 | base44 | ai, developer-tools | api-key | 11 |
 | basecamp | project-management, productivity | oauth | 11 |
 | baserow | databases, spreadsheets, productivity | database-token | 12 |
@@ -89,6 +90,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | deel | hr, finance | api-token | 25 |
 | deepgram | ai, video, developer-tools | api-key | 19 |
 | deepl | ai | api-key | 8 |
+| dialpad | communication, support | api-key | 35 |
 | digitalocean | devops, storage | token | 15 |
 | discord | communication | bot-token, oauth2 | 19 |
 | discourse | communication, social-media | api-key | 26 |
@@ -187,6 +189,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | metabase | analytics, databases | api-key | 17 |
 | microsoft-todo | productivity, project-management | oauth2 | 19 |
 | miro | productivity, project-management | oauth2 | 27 |
+| missive | communication, support, productivity | api-token | 42 |
 | mistral | ai | api-key | 4 |
 | mixpanel | analytics, marketing | service-account | 13 |
 | monday | project-management, productivity | api-token, oauth2 | 14 |
@@ -215,6 +218,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pdfco | documents | api-key | 24 |
 | perplexity | ai | api-key | 5 |
 | pinecone | ai, databases, search | api-key | 24 |
+| pinterest | social-media, marketing | oauth2 | 16 |
 | pipedrive | crm | api-token, oauth2 | 14 |
 | plaid | finance, databases | client-secret, client-secret-sandbox | 14 |
 | podio | project-management, databases, productivity | app-auth, oauth2 | 29 |
@@ -235,6 +239,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | ringcentral | communication, productivity | oauth2, jwt-bearer | 13 |
 | s3 | storage | aws-iam | 9 |
 | salesforce | crm | access-token, oauth2 | 12 |
+| salesloft | crm, communication | api-key, oauth2 | 26 |
 | sanity | cms, databases, developer-tools | token | 11 |
 | segment | analytics | write-key | 6 |
 | sendblue | communication | api-key | 47 |

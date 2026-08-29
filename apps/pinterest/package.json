@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/pinterest",
+  "version": "0.1.1",
+  "description": "Create and manage Pinterest boards and Pins, save content, and read account info via the Pinterest REST API v5.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pinterest",
+    "displayName": "Pinterest",
+    "longDescription": "Pinterest's v5 REST API is organized around two owned resources — boards and Pins — plus the account that owns them, and this app covers the full CRUD surface for both: create, read, list, update and delete a board; create, read, list, update and delete a Pin; save an existing Pin onto one of your own boards; search your own Pins; and read the connected account's profile and, when the connection has Business Access to one, its ad accounts.\n\nCreating a Pin from an image is fully supported by pointing `media_source` at a public image URL, which Pinterest fetches server-side — no upload step required. Creating a VIDEO Pin is deliberately left out: it requires first registering a video with `POST /media`, which hands back a one-time upload target this app's sandboxed network access has no way to reach in advance (the same reason LinkedIn's image/video posting is absent from this pack). A Pin can still be updated, deleted or saved regardless of its media type.\n\nEverything here was verified against Pinterest's own OpenAPI 3.0 description (`github.com/pinterest/api-description`, `v5/openapi.json`, REST API version 5.28.0) and live probes against `api.pinterest.com`, not a third-party integration directory.",
+    "categories": [
+      "social-media",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Pinterest"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Pinterest"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.pinterest.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
