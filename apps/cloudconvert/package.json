@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/cloudconvert",
+  "version": "0.1.0",
+  "description": "Convert, compress and manipulate files with CloudConvert's job/task pipeline.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.cloudconvert",
+    "displayName": "CloudConvert",
+    "longDescription": "CloudConvert converts, compresses, watermarks and otherwise transforms files through a job/task pipeline: a job is a small graph of tasks (typically an import, a conversion, and an export), and this app covers the job and task lifecycle end to end — create, inspect, wait for, list and delete jobs; inspect, wait for, cancel, retry, list and delete the tasks inside them.\n\nThe centre of gravity is `convert-url`, a one-shot action that builds and runs the whole import-URL -> convert -> export-URL graph on CloudConvert's synchronous host and hands back the converted file's download URL directly, for the common case of converting one file without polling. `job-create` and `job-create-and-wait` expose the full task graph as CloudConvert itself defines it (import from S3/Azure/GCS/OpenStack/SFTP/a base64 or raw string, convert, optimize, watermark, thumbnail, merge, and more) for anything more elaborate than the one-shot path.\n\nBrowser-style local-file upload (`import/upload`) is deliberately not covered — see the README for why — so every action here works with files already reachable by URL or by one of CloudConvert's cloud-storage import/export operations.",
+    "categories": [
+      "documents",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "CloudConvert"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.cloudconvert.com",
+        "sync.api.cloudconvert.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

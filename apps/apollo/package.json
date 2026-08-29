@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/apollo",
+  "version": "0.1.0",
+  "description": "Search and enrich people and companies, and manage contacts, accounts, deals, sequences, tasks and lists in Apollo.io's sales intelligence and engagement platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.apollo",
+    "displayName": "Apollo",
+    "longDescription": "Apollo is a sales intelligence and engagement platform: a database of over 240 million contacts and 30 million companies, plus the CRM-style records (contacts, accounts, deals) and outreach machinery (sequences, tasks) sales teams run on top of it.\n\nThis app covers both halves. The database half is search and enrichment — find net-new people and companies by title, location, technology and dozens of other filters, or enrich a person or company you already have a name, email or domain for, individually or up to ten at a time. The CRM half is the records your team already tracks — create and update contacts, accounts and deals, move them through stages, enroll contacts in outreach sequences, and manage tasks and saved lists.\n\nEvery search endpoint accepts its filters as bracket-style query parameters even though it is a POST request (`person_titles[]=CEO&person_titles[]=CTO`), which is not how the rest of the API works and is easy to get wrong from outside a generated client. Enrichment and CRM-write endpoints take an ordinary JSON body instead.",
+    "categories": [
+      "crm",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Apollo"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.apollo.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

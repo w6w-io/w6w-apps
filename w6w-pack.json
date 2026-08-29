@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.103.0",
+  "version": "0.104.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -35,6 +35,9 @@
     },
     {
       "path": "./apps/apitemplateio"
+    },
+    {
+      "path": "./apps/apollo"
     },
     {
       "path": "./apps/asana"
@@ -82,6 +85,9 @@
       "path": "./apps/bitly"
     },
     {
+      "path": "./apps/blandai"
+    },
+    {
       "path": "./apps/bluesky"
     },
     {
@@ -107,6 +113,9 @@
     },
     {
       "path": "./apps/campaignmonitor"
+    },
+    {
+      "path": "./apps/canny"
     },
     {
       "path": "./apps/chargebee"
@@ -140,6 +149,9 @@
     },
     {
       "path": "./apps/close"
+    },
+    {
+      "path": "./apps/cloudconvert"
     },
     {
       "path": "./apps/cloudflare"
@@ -374,6 +386,9 @@
     },
     {
       "path": "./apps/huggingface"
+    },
+    {
+      "path": "./apps/hunter"
     },
     {
       "path": "./apps/intercom"

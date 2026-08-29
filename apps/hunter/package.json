@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/hunter",
+  "version": "0.1.0",
+  "description": "Find and verify professional email addresses, enrich people and companies, and manage Hunter Leads.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.hunter",
+    "displayName": "Hunter",
+    "longDescription": "Hunter (hunter.io) finds and verifies professional email addresses. Domain Search returns every email address the given domain is known for, with sources and a confidence score; Email Finder guesses the most likely address for a named person at a company; Email Verifier checks a specific address's deliverability. Email, Company and Combined Enrichment layer on richer person/company profiles (name, location, socials, headcount, industry) for an address or domain already in hand, and Domain Finder resolves a bare company name to its domain up front.\n\nBeyond finding addresses, this app covers Hunter's Leads CRM surface end to end: list, create, upsert-by-email, update and delete leads, plus manage the lists that organize them. Account Information reports the plan and the current search/verification/credit balances so a workflow can check headroom before a bulk run.\n\nHunter's own Discover company-search, the beta Multi-Domain Search, Sequences/Email Accounts (which manage a connected mailbox rather than data), and Author Finder (no longer present in the v2 API) are deliberately out of scope — see the README for why.",
+    "categories": [
+      "email",
+      "marketing",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Hunter"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.hunter.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

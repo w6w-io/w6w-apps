@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/canny",
+  "version": "0.1.0",
+  "description": "Manage posts, boards, votes, comments, tags and users on Canny — the product feedback and feature request platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.canny",
+    "displayName": "Canny",
+    "longDescription": "Canny collects product feedback: users post feature requests on a board, vote and comment on the ones they care about, and your team triages, tags, categorizes and moves posts through a status pipeline — then tells everyone what shipped in a changelog. This app covers that whole loop from a workflow: read and search posts and boards, create posts and comments on a user's behalf, move a post through status/category/board changes, tag it, merge duplicates, and cast or remove votes.\n\nIt also covers the two records every automation eventually needs: users (Canny's own identity, keyed by your application's userID or a Canny-issued id) and companies (the account a user belongs to, with custom fields and MRR) — both upserted and read the same way Canny's own SSO/Identify integrations do. A changelog entry action lets a workflow publish a release note the moment a linked post's status changes, and a status-change feed lets a workflow react to the whole team's triage activity instead of one post at a time.\n\nCanny's API is authenticated with one secret, workspace-wide API key — there is no per-token scoping — sent as an `apiKey` field in the JSON body of every POST, never as a header or query string. Every path, argument and response field here was read off Canny's own generated API reference (developers.canny.io) rather than a third-party directory.",
+    "categories": [
+      "project-management",
+      "support"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Canny"
+      }
+    },
+    "network": {
+      "allow": [
+        "canny.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

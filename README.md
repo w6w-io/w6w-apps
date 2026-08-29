@@ -34,6 +34,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | anthropic | ai | api-key | 14 |
 | apify | developer-tools, storage, ai | api-token | 31 |
 | apitemplateio | developer-tools | api-key | 5 |
+| apollo | crm, marketing | api-key | 44 |
 | asana | productivity, project-management | access-token, oauth2 | 22 |
 | ashby | hr, productivity | api-key | 27 |
 | attio | crm | api-key | 29 |
@@ -49,6 +50,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | bigquery | data-warehousing, databases | oauth2 | 18 |
 | bitbucket | developer-tools | basic, access-token | 12 |
 | bitly | marketing, analytics | access-token | 8 |
+| blandai | ai, communication | api-key | 19 |
 | bluesky | social-media, communication | app-password | 21 |
 | box | storage | oauth2 | 10 |
 | brevo | marketing, email | api-key | 15 |
@@ -58,6 +60,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | calendly | calendar, productivity | personal-access-token, oauth2 | 12 |
 | callrail | marketing, communication, analytics | api-token | 26 |
 | campaignmonitor | email, marketing | api-key, oauth2 | 42 |
+| canny | project-management, support | api-key | 39 |
 | chargebee | commerce, finance | api-key | 17 |
 | checkly | monitoring, devops, developer-tools | api-key | 25 |
 | circle | communication, social-media | api-token | 33 |
@@ -69,6 +72,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | clickhouse | databases, data-warehousing | api-key, service | 15 |
 | clockify | productivity | api-key | 10 |
 | close | crm | api-key | 21 |
+| cloudconvert | documents, developer-tools | api-token | 18 |
 | cloudflare | devops | api-token | 8 |
 | cloudinary | storage, documents, developer-tools | basic | 21 |
 | coda | productivity, documents | api-token | 11 |
@@ -147,6 +151,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | housecallpro | crm, calendar, finance | api-key, oauth2 | 39 |
 | hubspot | crm, marketing | private-app-token, oauth2, api-key | 42 |
 | huggingface | ai, developer-tools | token | 14 |
+| hunter | email, marketing, crm | api-key | 20 |
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | jenkins | devops | basic | 6 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
