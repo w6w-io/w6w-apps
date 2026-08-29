@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/missive",
+  "version": "0.1.0",
+  "description": "Enrich Missive conversations with posts, drafts and comments; manage contacts, shared labels, teams and tasks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.missive",
+    "displayName": "Missive",
+    "longDescription": "Missive is a shared team inbox that unifies email, SMS, WhatsApp, live chat and social messages into one collaborative workspace. Its public REST API is deliberately narrow next to the product surface it fronts: no inbox browsing beyond a handful of read endpoints, but a solid path for the two things most integrations actually need — inserting content into a conversation (drafts that send real messages, posts that leave an automation's trace, comments) and keeping the surrounding data (contacts, contact books, shared labels, teams, users, tasks, canned responses) in sync with an outside system.\n\nEvery endpoint here is read straight off Missive's own GitBook-hosted API reference (missiveapp.com/docs/developers/rest-api), not inferred from a sibling integration. The app covers conversations (list, get, update, merge, and reading their messages/comments/drafts/posts), drafts (create — including send-immediately and scheduled send — and delete), messages (create for custom channels, get, list by Message-ID), posts (create and delete), canned responses (full CRUD), contacts and contact books/groups (full CRUD on contacts, listing books and groups), shared labels (create, update, list), teams and users (list, create/update teams), tasks (full CRUD), webhook subscriptions (create/delete), organizations (list) and analytics reports (create + poll).\n\nMissive tokens are personal, not scoped, and not organization-bound — a single token reaches every account and shared conversation its owner can see in the app. Health checks reflect that plainly: there is no machine-readable status feed to probe (Missive's own status page runs on PagerDuty's status-page product behind a private, authenticated API) and no advance-of-refusal quota signal (rate-limit headers are only ever returned on the 429 itself), so both are declared absent rather than guessed at.",
+    "categories": [
+      "communication",
+      "support",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Missive"
+      }
+    },
+    "network": {
+      "allow": [
+        "public.missiveapp.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

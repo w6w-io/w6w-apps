@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.106.0",
+  "version": "0.107.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -65,6 +65,9 @@
     },
     {
       "path": "./apps/bamboohr"
+    },
+    {
+      "path": "./apps/bannerbear"
     },
     {
       "path": "./apps/base44"
@@ -200,6 +203,9 @@
     },
     {
       "path": "./apps/deepl"
+    },
+    {
+      "path": "./apps/dialpad"
     },
     {
       "path": "./apps/digitalocean"
@@ -496,6 +502,9 @@
       "path": "./apps/miro"
     },
     {
+      "path": "./apps/missive"
+    },
+    {
       "path": "./apps/mistral"
     },
     {
@@ -580,6 +589,9 @@
       "path": "./apps/pinecone"
     },
     {
+      "path": "./apps/pinterest"
+    },
+    {
       "path": "./apps/pipedrive"
     },
     {
@@ -641,6 +653,9 @@
     },
     {
       "path": "./apps/salesforce"
+    },
+    {
+      "path": "./apps/salesloft"
     },
     {
       "path": "./apps/sanity"

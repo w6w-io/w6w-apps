@@ -1,0 +1,33 @@
+{
+  "name": "@w6w-apps/bannerbear",
+  "version": "0.1.0",
+  "description": "Generate images and videos from Bannerbear templates: render, poll, batch, and manage templates, webhooks, assets, and workflows.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.bannerbear",
+    "displayName": "Bannerbear",
+    "longDescription": "Bannerbear turns a design (an Image Template or Animation Template built in its dashboard editor) into a rendering API: send template modifications — swap in text, images, colors — and get back a finished JPG/PNG/PDF or MP4/MOV. This app covers the full v5 REST surface: create and poll Images and Animations, submit up to 100 images at once as a Batch, manage Image and Animation Templates and their versions, install Publications from the public template library, mint self-service Instant URLs that render on GET with no API call, register Webhooks instead of polling, and run the 16 standalone video/image Tools (background removal, subtitles, trims, overlays, concatenation, AI image generation, and more) plus multi-step Workflows that chain several of those together server-side.\n\nTwo hosts matter: api.bannerbear.com renders asynchronously (submit, then poll or subscribe a webhook) everywhere, while sync.api.bannerbear.com accepts only image creation and returns the finished render inline — useful for a workflow step that needs the URL immediately and can tolerate a 408 on a slow render. Every action here defaults to the async host; nothing silently blocks a workflow run waiting on a video.\n\nHealth is reported from what the API itself exposes: /account returns live plan quota (current vs. max renders this billing period) with no scope requirement, so it doubles as this app's credential probe and its quota check. Bannerbear's own status page (status.bannerbear.com) is a stale client-rendered app with no reachable JSON, RSS, or Atom feed, so vendor-status is declared unavailable rather than faked.",
+    "categories": [
+      "marketing",
+      "video",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Bannerbear"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.bannerbear.com",
+        "sync.api.bannerbear.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -25,7 +25,7 @@ methods. Sixty-four apps add a fourth question — **is this tenant's own host r
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **901 checks**: 362 live probes, 212 declared absences, and 329
+Across the pack that comes to **917 checks**: 364 live probes, 220 declared absences, and 335
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -53,6 +53,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [azuredevops](apps/azuredevops/README.md) | [structured JSON](https://status.dev.azure.com/_apis/status/health) — per service AND per geography; not a Statuspage | yes | `GET /{org}/_apis/projects` | no (throughput units) | `service` · ~~quota~~ · `organization` · 1 derived |
 | [balena](apps/balena/README.md) | [Statuspage](https://status.balena.io/api/v2/summary.json) — weights `API` and reports `Cloudlink (VPN)` separately at no worse than degraded, because the four SUPERVISOR actions travel over the VPN and fail independently of every read; names its own components rather than the feed's worst, which mixes in a dozen `AWS …` entries | yes | `GET /user/v1/whoami` (NOT `/v7/application` — measured, that answers 200 with NO credential at all, returning the platform's public fleets) | no — measured 2026-08-19, no rate-limit header on success or 401; the plan's DEVICE COUNT is the ceiling | `service` · `api` · ~~quota~~ · 1 derived |
 | [bamboohr](apps/bamboohr/README.md) | [RSS](https://status.bamboohr.com/pages/54f0de009d6f51e7140002b7/rss) | yes | `GET /api/v1/employees/0` | no | `service` · ~~quota~~ · 1 derived |
+| [bannerbear](apps/bannerbear/README.md) | none published — `status.bannerbear.com` is a stale Hyperping SPA whose every JSON path answers the identical HTML shell | no | derived `auth:bearer-token` | no (no rate-limit headers of any kind; the vendor's 60 POST/10s ceiling is prose-only) | ~~service~~ · ~~quota~~ · 1 derived |
 | [base44](apps/base44/README.md) | none published — `base44.statuspage.io` is the unclaimed-Statuspage decoy, `status.base44.com` is Cloudflare-gated | no | Monitoring API, falls back to Audit Logs API | no | ~~service~~ · `api` · 1 derived |
 | [basecamp](apps/basecamp/README.md) | [Statuspage](https://37signals.statuspage.io/api/v2/summary.json) | yes | `GET launchpad/authorization.json` | no | `service` · ~~quota~~ · 1 derived |
 | [baserow](apps/baserow/README.md) | [Better Stack](https://status.baserow.org/index.json) | yes | `GET /api/database/tables/all-tables/` | no | `service` · ~~quota~~ · 1 derived |
@@ -98,6 +99,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [deel](apps/deel/README.md) | Statuspage exists but is private (401 "page is inactive") | no | `GET /contracts?limit=1` | yes | ~~service~~ · `quota` · 1 derived |
 | [deepgram](apps/deepgram/README.md) | [Statuspage](https://status.deepgram.com/api/v2/components.json) — streaming and Voice Agent excluded, being WebSocket surfaces this app cannot reach | yes | `GET /v1/projects` | yes (pre-paid balance) | `service` · `quota` · ~~concurrency~~ · 1 derived |
 | [deepl](apps/deepl/README.md) | [JSON](https://api-status.deepl.com/api/status) | yes | `GET /v2/usage` | yes | `service` · `quota` · 1 derived |
+| [dialpad](apps/dialpad/README.md) | none published | no | `GET /api/v2/offices` (user-level scope, unlike `GET /api/v2/company` which needs admin) | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [digitalocean](apps/digitalocean/README.md) | [Statuspage](https://status.digitalocean.com/api/v2/summary.json) — 256 components in 17 groups, where `Global` appears 15 times and `FRA1` 13, so a component is only identifiable as (GROUP, name); resolved through `group_id` and reported as `Droplets / FRA1` | yes | `GET /v2/account` | YES — a real 5,000/hour per-token budget, but `RateLimit-Reset` is a Unix TIMESTAMP not a delay, and the headers are absent on a 401 | `service` · `quota` · 1 derived |
 | [discord](apps/discord/README.md) | [Statuspage](https://discordstatus.com/api/v2/status.json) | yes | `GET /users/@me` | yes | `service` · `quota` · 2 derived |
 | [discourse](apps/discourse/README.md) | [status.io](https://api.status.io/1.0/status/5e2141ce30dc5c04b3ac32fc) | yes | `GET /u/{username}.json` | no | `service` · ~~quota~~ · `site` · 1 derived |
@@ -196,6 +198,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [metabase](apps/metabase/README.md) | [Statuspage](https://status.metabase.com/api/v2/summary.json) | yes | `GET /api/user/current` | no | `service` · ~~quota~~ · `instance` · 1 derived |
 | [microsoft-todo](apps/microsoft-todo/README.md) | none published | no | `GET /me/todo/lists` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [miro](apps/miro/README.md) | [Statuspage](https://status.miro.com/api/v2/status.json) | yes | `GET /v1/oauth-token` | no | `service` · ~~quota~~ · 1 derived |
+| [missive](apps/missive/README.md) | none published — `status.missiveapp.com` runs on an authenticated Ably realtime channel with no static feed | no | derived `auth:api-token` (tokens are personal/unscoped by design, so there is no narrower credential to probe) | no (rate-limit headers appear only on the 429 refusal itself, never in advance) | ~~service~~ · ~~quota~~ · 1 derived |
 | [mistral](apps/mistral/README.md) | [RSS](https://status.mistral.ai/feed.rss) | yes | `GET /v1/models` | yes | `service` · `quota` · 1 derived |
 | [mixpanel](apps/mixpanel/README.md) | [Statuspage](https://www.mixpanelstatus.com/api/v2/components.json) (connection-scoped: this project's region only, split by capability — querying, ingestion and export fail independently) | yes | `GET /api/app/me` (not a query, so it costs nothing from the 60/hour budget) | no | `service` · ~~quota~~ · 1 derived |
 | [monday](apps/monday/README.md) | [Statuspage](https://status.monday.com/api/v2/status.json) | yes | `POST /v2 · { me { id } }` | yes | `service` · `quota` · 2 derived |
@@ -224,6 +227,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [pdfco](apps/pdfco/README.md) | none published — `status.pdf.co` and `pdf-co.statuspage.io` are both unclaimed placeholders | no | `GET /v1/account/credit/balance` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [perplexity](apps/perplexity/README.md) | [Instatus](https://status.perplexity.com/v2/components.json) | yes | `GET /v1/models` | no | `service` · ~~quota~~ · 1 derived |
 | [pinecone](apps/pinecone/README.md) | [Statuspage](https://status.pinecone.io/api/v2/components.json) (the global components decide; the per-region grid is reported but capped at degraded, since an app-scoped check cannot know which region an index is in) | yes | `GET /indexes` | no | `service` · `indexes` · ~~quota~~ · 1 derived |
+| [pinterest](apps/pinterest/README.md) | [Statuspage](https://www.pintereststatus.com/) — 41 components spanning the consumer site, Ads Manager and the developer API; filtered to the 8-component "The Pinterest API" group rather than the page-level indicator | yes | derived `auth:oauth2` | no | `service` · ~~quota~~ · 1 derived |
 | [pipedrive](apps/pipedrive/README.md) | [page](https://status.pipedrive.com) | no | `GET /users/me` | yes | ~~service~~ · `quota` · 2 derived |
 | [plaid](apps/plaid/README.md) | [Statuspage](https://status.plaid.com/api/v2/components.json) (API and Link only — institution connectivity is per Item and lives in `item-get`'s error) | yes | `POST /institutions/get` (needs no Item, so a failure can only be the connection) | no | `service` · `credentials` · 2 derived |
 | [podio](apps/podio/README.md) | [Statuspage](https://status.podio.com/api/v2/summary.json) | yes | `GET /oauth/scope` | yes | `service` · `api` · `quota` · 2 derived |
@@ -244,6 +248,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [ringcentral](apps/ringcentral/README.md) | dashboard only, private feed host | no | `GET /restapi/v1.0/account/~/extension/~` | no | ~~service~~ · `api` · ~~quota~~ · 2 derived |
 | [s3](apps/s3/README.md) | [JSON](https://health.aws.amazon.com/public/currentevents) | yes | `GET /` (ListBuckets) | no | `service` · 1 derived |
 | [salesforce](apps/salesforce/README.md) | [JSON](https://api.status.salesforce.com/v1/instances) | yes | _varies by method_ | yes | `service` · `quota` · 2 derived |
+| [salesloft](apps/salesloft/README.md) | none published | no | derived `auth:api-key`/`auth:oauth2` | yes (`x-ratelimit-remaining-minute`; `limit` deliberately omitted since Salesloft can override the per-team ceiling without notice) | ~~service~~ · `quota` · 2 derived |
 | [sanity](apps/sanity/README.md) | [Statuspage](https://www.sanity-status.com/api/v2/components.json) (Content Lake, API, CDN and assets; Studio and the manage dashboard excluded) | yes | `GET /projects/{id}` (management API — no dataset, no GROQ) | no | `service` · `dataset` · 1 derived |
 | [segment](apps/segment/README.md) | [Statuspage](https://status.segment.com/api/v2/summary.json) | yes | `POST /v1/identify` | no | `service` · ~~quota~~ · 1 derived |
 | [sendblue](apps/sendblue/README.md) | none published — `sendblue.statuspage.io` is the unclaimed decoy, `status.sendblue.com` is real but has no machine-readable feed | no | `GET /api/v2/contacts/count` | no — 429 refusal only, no `X-RateLimit-*` header on any response | ~~service~~ · ~~quota~~ · `lines` · 1 derived |
