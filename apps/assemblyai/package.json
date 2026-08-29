@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/assemblyai",
+  "version": "0.1.0",
+  "description": "Transcribe audio and video and run Audio Intelligence (speaker labels, key phrases, content moderation, topic detection, entity detection, sentiment analysis, PII redaction) with AssemblyAI.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.assemblyai",
+    "displayName": "AssemblyAI",
+    "longDescription": "AssemblyAI turns audio and video into text and turns that text into structured insight — this app covers the full Speech-to-Text lifecycle (submit a URL-reachable file, poll or wait for the result, list and delete transcripts) plus the Audio Intelligence add-ons AssemblyAI enables as flags on that same submit call: speaker diarization, key phrases, content moderation, topic detection, entity detection, sentiment analysis, and PII redaction (text and, optionally, a beeped-out audio copy).\n\n`transcript-submit-and-wait` is the one-call path for the common case of \"transcribe this and give me the text back\"; `transcript-submit` plus `transcript-wait`/a Webhook URL cover everything from fire-and-forget batch jobs to long-running files. Companion actions export the finished transcript as SRT/VTT subtitles, split it into sentences or paragraphs, search it for keywords, and fetch the PII-redacted audio download link.\n\nEvery action works with a publicly reachable audio/video URL — this app's sandbox coerces network bodies to strings, which is incompatible with AssemblyAI's separate raw-bytes upload endpoint; see the README for the full explanation.",
+    "categories": [
+      "ai",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "AssemblyAI"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.assemblyai.com",
+        "api.eu.assemblyai.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

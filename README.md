@@ -37,6 +37,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | apollo | crm, marketing | api-key | 44 |
 | asana | productivity, project-management | access-token, oauth2 | 22 |
 | ashby | hr, productivity | api-key | 27 |
+| assemblyai | ai, developer-tools | api-token | 11 |
 | attio | crm | api-key | 29 |
 | auth0 | security, developer-tools | client-credentials | 18 |
 | azure-blob | storage, devops | shared-key | 14 |
@@ -137,6 +138,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | google-slides | documents, productivity | oauth2, service-account | 17 |
 | google-tasks | productivity, project-management | oauth2 | 13 |
 | googlechat | communication | oauth2 | 18 |
+| gorgias | support | basic | 22 |
 | grafana | monitoring | service-account-token | 8 |
 | grain | ai | api-key | 19 |
 | gravityforms | forms, productivity | basic | 12 |
@@ -162,6 +164,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | keap | crm, marketing, email | oauth2, access-key | 36 |
 | kit | marketing, email | api-key | 18 |
 | klaviyo | marketing, email | api-key | 23 |
+| kustomer | support, crm | api-key | 23 |
 | launchdarkly | devops, developer-tools | api-key | 21 |
 | lemlist | marketing, email | api-key | 18 |
 | lever | hr, productivity | api-key | 12 |
@@ -199,7 +202,9 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | onedrive | documents, storage | oauth2 | 18 |
 | onepassword | security, developer-tools | connect-token, events-token | 14 |
 | onesimpleapi | developer-tools | api-key | 7 |
+| onfleet | commerce, productivity | api-key | 32 |
 | openai | ai, developer-tools | api-key | 13 |
+| openrouter | ai | api-key | 6 |
 | outlook | communication, email, calendar | oauth2 | 18 |
 | paddle | commerce, finance | api-key | 21 |
 | pagerduty | monitoring, devops | api-token, oauth2 | 14 |

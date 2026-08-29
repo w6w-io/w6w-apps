@@ -25,7 +25,7 @@ methods. Sixty-four apps add a fourth question — **is this tenant's own host r
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **867 checks**: 351 live probes, 199 declared absences, and 319
+Across the pack that comes to **884 checks**: 359 live probes, 203 declared absences, and 324
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -46,6 +46,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [apollo](apps/apollo/README.md) | [Better Stack](https://status.apollo.io/) — confirmed via its own `/index.json`, not the Statuspage-shaped paths (a decoy `apollo.statuspage.io` also exists, unclaimed) — declared `informational` | yes | `GET /api/v1/users/api_profile` | yes | `service` · `quota` · `request-rate` · 1 derived |
 | [asana](apps/asana/README.md) | [Statuspage](https://status.asana.com/api/v2/status.json) | yes | `GET /api/1.0/users/me` | no | `service` · ~~quota~~ · 2 derived |
 | [ashby](apps/ashby/README.md) | [Statuspage](https://status.ashbyhq.com/api/v2/components.json) — mixes Ashby services with the vendors it depends on; only the former count | yes | `POST /apiKey.info` | no | `service` · ~~quota~~ · `permissions` · 1 derived |
+| [assemblyai](apps/assemblyai/README.md) | [Statuspage](https://status.assemblyai.com/) | yes | `GET /v2/transcript?limit=1` | no (no readable balance endpoint — a 401 can mean bad key, disabled account, or insufficient prepaid balance, and the vendor gives no way to tell them apart) | `service` · ~~quota~~ · 1 derived |
 | [attio](apps/attio/README.md) | [Statuspage](https://status.attio.com/api/v2/summary.json) | yes | `GET /v2/self` | no | `service` · ~~quota~~ · 1 derived |
 | [auth0](apps/auth0/README.md) | none machine-readable (status.auth0.com is an HTML app; its only machine-readable source is a PER-TENANT RSS feed at `/api/rss?domain=…`, whose URL cannot be a static `feed.url`) | no | `GET /api/v2/users?per_page=1` | no | ~~service~~ · `tenant` · 1 derived |
 | [azure-blob](apps/azure-blob/README.md) | none machine-readable — Azure publishes incident announcements as RSS PROSE with no per-service state, and Storage health is per REGION and per account anyway | no | `GET /?comp=list` (SIGNED — Azure offers no unauthenticated probe, so an outage and a rotated key cannot be fully separated; clock drift presents as a 403) | no — Azure publishes no rate-limit header | ~~service~~ · `account` · 1 derived |
@@ -146,6 +147,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [google-slides](apps/google-slides/README.md) | [JSON](https://www.google.com/appsstatus/dashboard/incidents.json) | yes | `POST /tokeninfo` | no | `service` · ~~quota~~ · 2 derived |
 | [google-tasks](apps/google-tasks/README.md) | [JSON](https://www.google.com/appsstatus/dashboard/incidents.json) | yes | `GET /users/@me/lists?maxResults=1` | no | `service` · ~~quota~~ · 1 derived |
 | [googlechat](apps/googlechat/README.md) | [JSON](https://www.google.com/appsstatus/dashboard/incidents.json) | yes | `GET /spaces` | no | `service` · ~~quota~~ · 1 derived |
+| [gorgias](apps/gorgias/README.md) | RSS/feed-backed | yes | `GET /account` (401 with a real subdomain proves the account is serving; a made-up subdomain 404s instead) | yes | `service` · `quota` · `domain` · 1 derived |
 | [grafana](apps/grafana/README.md) | none published | no | `GET /api/org` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
 | [grain](apps/grain/README.md) | [Statuspage](https://www.grainstatus.com/api/v2/summary.json) — `status.grain.com` 301s here; no component named "API", capped at `degraded` | yes | `POST /_/public-api/v2/teams` | yes | `service` · `quota` · 1 derived |
 | [gravityforms](apps/gravityforms/README.md) | none published | no | `GET /gf/v2/forms` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
@@ -171,6 +173,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [keap](apps/keap/README.md) | [Statuspage](https://status.thryv.com/api/v2/summary.json) (Keap group only) | yes | `GET /crm/rest/v2/oauth/connect/userinfo` | yes | `service` · `quota` · ~~spike-rate~~ · 2 derived |
 | [kit](apps/kit/README.md) | [Statuspage](https://status.kit.com/api/v2/summary.json) | yes | `GET /v4/account` | no | `service` · ~~quota~~ · 1 derived |
 | [klaviyo](apps/klaviyo/README.md) | [Statuspage](https://status.klaviyo.com/api/v2/status.json) | yes | `GET /api/accounts/` | yes | `service` · `quota` · 1 derived |
+| [kustomer](apps/kustomer/README.md) | [Statuspage](https://status.kustomer.com/) — one Atom `<entry>` per incident with the full update history concatenated inside, so the check reads the first status word rather than a fixed "Resolved" prefix | yes | `GET /customers` (org-subdomain probe) | no | `service` · ~~quota~~ · `organization` · 1 derived |
 | [launchdarkly](apps/launchdarkly/README.md) | [Statuspage](https://status.launchdarkly.com/api/v2/components.json) (the management components; NOT the four named "API", which are SDK delivery) | yes | `GET /api/v2/projects?limit=1` | yes | `service` · `quota` · 1 derived |
 | [lemlist](apps/lemlist/README.md) | [Hyperping](https://status.lempire.com/status.json) | yes | `GET /team` | yes | `service` · `quota` · 1 derived |
 | [lever](apps/lever/README.md) | [Statuspage](https://status.lever.co/api/v2/summary.json) — 41 components across seven groups where EVERY NAME APPEARS TWICE, once per data centre, so a component is only identifiable as (GROUP, name); resolved through `group_id` for the data centre the connection names, weighting `Integration API & Webhooks` and reporting `Hire` separately since the API and the product fail independently | yes | `GET /users?limit=1`, plus a probe for CONFIDENTIAL access — which Lever grants only at key creation, and whose absence shortens every list silently | no — Lever documents a 429 without stating the budget or window and publishes no header; the real constraint is the OPAQUE pagination cursor, which cannot be parallelised | `service` · ~~quota~~ · 1 derived |
@@ -208,7 +211,9 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [onedrive](apps/onedrive/README.md) | none machine-readable | no | `GET /me` | yes | ~~service~~ · `quota` · ~~request-rate~~ · 1 derived |
 | [onepassword](apps/onepassword/README.md) | [Statuspage](https://status.1password.com/api/v2/summary.json) — 88 components grouped by region with names repeating in each, so keys are group-qualified. Nearly irrelevant to a Connect connection, which keeps serving its local vault copy through an outage | yes | `GET /v1/vaults` (Connect) or `GET /api/auth/introspect` (Events) | no | `service` · `surface` · ~~quota~~ · 2 derived |
 | [onesimpleapi](apps/onesimpleapi/README.md) | none published | no | `GET /exchange_rate?to_currency=USD` | no | ~~service~~ · ~~quota~~ · 1 derived |
+| [onfleet](apps/onfleet/README.md) | none published — the only signal is the credential-safe `GET /auth/test` probe itself | no | `GET /auth/test` (echoes only org id + caller IP, never the key; also carries `X-RateLimit-*`) | yes (org-wide, shared across every key on the account) | ~~service~~ · `quota` · 1 derived |
 | [openai](apps/openai/README.md) | [Statuspage](https://status.openai.com/api/v2/status.json) | yes | `GET /v1/models` | yes | `service` · `quota` · 1 derived |
+| [openrouter](apps/openrouter/README.md) | none published — both `status.openrouter.ai` (client-rendered SPA) and `openrouter.statuspage.io` (unclaimed, redirects to Atlassian marketing) are decoys | no | `GET /key` | yes (`GET /key`'s `limit`/`limit_remaining` — no rate-limit response headers exist on success) | ~~service~~ · `quota` · 1 derived |
 | [outlook](apps/outlook/README.md) | none machine-readable | no | `GET /me` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [paddle](apps/paddle/README.md) | [incident.io](https://paddlestatus.com/api/v2/summary.json) | yes | `GET /event-types` | no | `service` · ~~quota~~ · 1 derived |
 | [pagerduty](apps/pagerduty/README.md) | [page](https://status.pagerduty.com) | no | `GET /abilities` | yes | ~~service~~ · `quota` · 2 derived |

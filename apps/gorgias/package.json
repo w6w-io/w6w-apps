@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/gorgias",
+  "version": "0.1.0",
+  "description": "Manage Gorgias tickets, customers, messages, tags, views and satisfaction surveys.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.gorgias",
+    "displayName": "Gorgias",
+    "longDescription": "Gorgias is a helpdesk built for ecommerce. This app covers the ticket lifecycle from a workflow — creating, updating, fetching, listing and deleting tickets, and posting both internal notes and customer-facing replies to keep a conversation moving without an agent opening Gorgias directly.\n\nCustomers can be created, updated, fetched, listed and deleted, so a workflow can look up or create the requester behind a ticket. Tags can be listed, created and deleted, and can be attached to a ticket at creation time. Views (Gorgias's saved ticket filters) can be listed and retrieved so a workflow can react to the same queues an agent works from. Satisfaction surveys — CSAT scores tied to a ticket and customer — can be listed, created, fetched and updated.\n\nA fit for routing an external event — an order issue, a form submission, an alert from another system — into a new Gorgias ticket, updating tickets as a workflow progresses, or syncing customer data and CSAT results between Gorgias and the rest of a support stack.",
+    "categories": [
+      "support"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Gorgias"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.gorgias.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
