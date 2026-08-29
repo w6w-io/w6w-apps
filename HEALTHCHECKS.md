@@ -25,7 +25,7 @@ methods. Sixty-four apps add a fourth question — **is this tenant's own host r
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **852 checks**: 343 live probes, 197 declared absences, and 314
+Across the pack that comes to **867 checks**: 351 live probes, 199 declared absences, and 319
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -43,6 +43,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [anthropic](apps/anthropic/README.md) | [Statuspage](https://status.anthropic.com/api/v2/status.json) | yes | `GET /v1/models` | yes | `service` · `quota` · 1 derived |
 | [apify](apps/apify/README.md) | [Statuspage](https://status.apify.com/api/v2/summary.json) | yes | `GET /v2/users/me/limits` | yes | `service` · `quota` · ~~request-rate~~ · 1 derived |
 | [apitemplateio](apps/apitemplateio/README.md) | none published | no | `GET /v2/list-templates?limit=1` | no | ~~service~~ · ~~quota~~ · 1 derived |
+| [apollo](apps/apollo/README.md) | [Better Stack](https://status.apollo.io/) — confirmed via its own `/index.json`, not the Statuspage-shaped paths (a decoy `apollo.statuspage.io` also exists, unclaimed) — declared `informational` | yes | `GET /api/v1/users/api_profile` | yes | `service` · `quota` · `request-rate` · 1 derived |
 | [asana](apps/asana/README.md) | [Statuspage](https://status.asana.com/api/v2/status.json) | yes | `GET /api/1.0/users/me` | no | `service` · ~~quota~~ · 2 derived |
 | [ashby](apps/ashby/README.md) | [Statuspage](https://status.ashbyhq.com/api/v2/components.json) — mixes Ashby services with the vendors it depends on; only the former count | yes | `POST /apiKey.info` | no | `service` · ~~quota~~ · `permissions` · 1 derived |
 | [attio](apps/attio/README.md) | [Statuspage](https://status.attio.com/api/v2/summary.json) | yes | `GET /v2/self` | no | `service` · ~~quota~~ · 1 derived |
@@ -58,6 +59,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [bigquery](apps/bigquery/README.md) | [Google Cloud dashboard](https://status.cloud.google.com/incidents.json) (incident feed; `Google BigQuery` only, not the Data Transfer Service) | yes | `GET /projects/{id}/datasets?maxResults=1` | no | `service` · ~~quota~~ · 1 derived |
 | [bitbucket](apps/bitbucket/README.md) | [Statuspage](https://bitbucket.status.atlassian.com/api/v2/status.json) | yes | `GET /2.0/user` | yes | `service` · `quota` · 2 derived |
 | [bitly](apps/bitly/README.md) | [Atom](https://status.bitly.com/history.atom) | yes | `GET /user` | no | `service` · ~~quota~~ · 1 derived |
+| [blandai](apps/blandai/README.md) | [Statuspage](https://status.bland.ai/) | yes | `GET /v1/me` | yes (pay-as-you-go call credit) | `service` · `quota` · 1 derived |
 | [bluesky](apps/bluesky/README.md) | none usable — status.bsky.app is an UptimeRobot page whose only JSON route is keyed by a token scraped from its own `pspApiPath` script, and whose monitors are per-PDS-instance | no | `GET /xrpc/com.atproto.server.getSession` | yes (real `ratelimit-*` headers; the ~10/day createSession limit is documented rather than probed, because probing consumes it) | ~~service~~ · `pds` · `quota` · 1 derived |
 | [box](apps/box/README.md) | [Statuspage](https://status.box.com/api/v2/summary.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 1 derived |
 | [brevo](apps/brevo/README.md) | [Statuspage](https://status.brevo.com/api/v2/status.json) | yes | `GET /v3/account` | yes | `service` · `quota` · 1 derived |
@@ -67,6 +69,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [calendly](apps/calendly/README.md) | [Statuspage](https://www.calendlystatus.com/api/v2/status.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 2 derived |
 | [callrail](apps/callrail/README.md) | [Statuspage](https://status.callrail.com/api/v2/summary.json) | yes | `GET /v3/a.json` | no | `service` · ~~quota~~ · 1 derived |
 | [campaignmonitor](apps/campaignmonitor/README.md) | StatusCast, WAF-blocked to server-side clients | no | `GET /systemdate.json` | no | `api` · ~~service~~ · ~~quota~~ · 2 derived |
+| [canny](apps/canny/README.md) | [Pingdom Public Reports](https://status.canny.io) — no JSON/RSS/Atom output of any kind; declared `unavailable` | no | `POST /v1/boards/list` | no (Canny publishes no rate-limit headers) | ~~service~~ · 1 derived |
 | [chargebee](apps/chargebee/README.md) | [Statuspage](https://status.chargebee.com/api/v2/summary.json) | yes | `GET /customers?limit=1` | no | `service` · ~~quota~~ · 1 derived |
 | [checkly](apps/checkly/README.md) | none usable (the page is an SPA catch-all; the old Statuspage instance is stale since 2026-04-28) | no | `GET /v1/accounts/me` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [circle](apps/circle/README.md) | [Statuspage](https://status.circle.so/api/v2/summary.json) | yes | `GET /community` | no | `service` · ~~quota~~ · 1 derived |
@@ -78,6 +81,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [clickhouse](apps/clickhouse/README.md) | [Statuspage](https://status.clickhouse.com/api/v2/summary.json) — separates the CONTROL PLANE from the services (an API outage stops provisioning, not queries) and never claims a full outage, because incidents are regional and this check is app-scoped | yes | `GET /v1/organizations` · `SELECT version()` | no — neither plane publishes a rate-limit header, and the constraints are MEMORY, concurrency and part count rather than request rate | `service` · ~~quota~~ · 2 derived |
 | [clockify](apps/clockify/README.md) | none machine-readable | no | `GET /workspaces` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [close](apps/close/README.md) | [Statuspage](https://status.close.com/api/v2/summary.json) | yes | `GET /me/` | yes | `service` · `quota` · 1 derived |
+| [cloudconvert](apps/cloudconvert/README.md) | [Better Stack](https://status.cloudconvert.com/) — the Statuspage-shaped paths all 301 to the page root instead | yes | `GET /v2/jobs?per_page=1` | no (~~request-rate~~ — no rate-limit header published) | `service` · `quota` · 1 derived |
 | [cloudflare](apps/cloudflare/README.md) | [Statuspage](https://www.cloudflarestatus.com/api/v2/summary.json) | yes | `GET /user/tokens/verify` | yes | `service` · `quota` · 1 derived |
 | [cloudinary](apps/cloudinary/README.md) | [Statuspage](https://status.cloudinary.com/api/v2/components.json) (connection-scoped: only THIS cloud's datacenter components — an EU outage leaves a US connection green) | yes | `GET /ping` | yes | `service` · `quota` · 1 derived |
 | [coda](apps/coda/README.md) | [Atom](https://status.coda.io/history.atom) | yes | `GET /whoami` | no | `service` · ~~quota~~ · 1 derived |
@@ -155,6 +159,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [homeassistant](apps/homeassistant/README.md) | [Statuspage](https://status.home-assistant.io/api/v2/summary.json) — covers the PROJECT's infrastructure and Nabu Casa Cloud, not your instance; probed anyway because a Remote UI outage is what makes a healthy instance unreachable. Capped at degraded | yes | `GET /api/` | no | `service` · `instance` · `entities` · ~~quota~~ · 1 derived |
 | [housecallpro](apps/housecallpro/README.md) | [Statuspage](https://status.housecallpro.com/api/v2/status.json) (no API component) | yes | `GET /company` | yes | ~~service~~ · `api` · `quota` · 2 derived |
 | [hubspot](apps/hubspot/README.md) | [Statuspage](https://status.hubspot.com/api/v2/status.json) | yes | `GET /account-info/v3/details` | yes | `service` · `quota` · 3 derived |
+| [hunter](apps/hunter/README.md) | none published — `status.hunter.io` is a client-rendered SPA whose `/api/v2/*.json` paths all answer the identical HTML shell; a same-named `hunter.instatus.com` page serves real JSON but lists a component literally named "Test", the signature of an unclaimed default page, so it is not trusted either | no | derived `auth:api-key` | yes (`GET /v2/account`'s credits/searches/verifications buckets) | ~~service~~ · `quota` · 1 derived |
 | [huggingface](apps/huggingface/README.md) | [Better Stack](https://status.huggingface.co/index.json) — NOT Statuspage: every `summary.json`-shaped path answers 200 with 746 KB of the page's own HTML. Capped at degraded, because the router's third-party inference providers are not on it | yes | `GET /api/whoami-v2` | yes (IETF structured fields — `ratelimit: "api";r=494;t=170`, not `X-RateLimit-*`) | `service` · `quota` · 1 derived |
 | [intercom](apps/intercom/README.md) | [Statuspage](https://www.finstatus.com/api/v2/status.json) | yes | `GET /me` | yes | `service` · `quota` · 2 derived |
 | [jenkins](apps/jenkins/README.md) | none published | no | `GET /api/json` | no | ~~service~~ · `site` · 1 derived |

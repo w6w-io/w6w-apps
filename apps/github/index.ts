@@ -27,6 +27,7 @@ import issueLock from "./actions/issue-lock.ts";
 import repositoryGet from "./actions/repository-get.ts";
 import repositoryGetIssues from "./actions/repository-get-issues.ts";
 import repositoryGetLicense from "./actions/repository-get-license.ts";
+import refGet from "./actions/ref-get.ts";
 import releaseCreate from "./actions/release-create.ts";
 import releaseGetMany from "./actions/release-get-many.ts";
 import releaseUpdate from "./actions/release-update.ts";
@@ -58,6 +59,7 @@ export default {
     repositoryGet,
     repositoryGetIssues,
     repositoryGetLicense,
+    refGet,
     // release
     releaseCreate,
     releaseGetMany,
@@ -82,4 +84,54 @@ export default {
   ],
   auth: [accessToken, oauth2],
   healthChecks: [service, quota],
+  interfaces: [{
+    interfaceId: "blob-store@1",
+    methods: {
+      headRef: {
+        uses: { action: "ref-get" },
+        outputMap: { sha: { "$": "output.object.sha" } },
+      },
+      list: {
+        uses: { action: "file-get" },
+        with: {
+          owner: { "$": "inputs.owner" },
+          repository: { "$": "inputs.repository" },
+          filePath: { "$": "inputs.path" },
+          ref: { "$": "inputs.ref" },
+        },
+      },
+      get: {
+        uses: { action: "file-get" },
+        with: {
+          owner: { "$": "inputs.owner" },
+          repository: { "$": "inputs.repository" },
+          filePath: { "$": "inputs.path" },
+          ref: { "$": "inputs.ref" },
+        },
+      },
+      put: {
+        uses: { action: "file-create-or-update" },
+        with: {
+          owner: { "$": "inputs.owner" },
+          repository: { "$": "inputs.repository" },
+          filePath: { "$": "inputs.path" },
+          content: { "$": "inputs.content" },
+          sha: { "$": "inputs.expectedSha" },
+          commitMessage: "w6w interface sync", // D-11: a LITERAL
+        },
+        outputMap: { sha: { "$": "output.content.sha" } },
+      },
+      delete: {
+        uses: { action: "file-delete" },
+        with: {
+          owner: { "$": "inputs.owner" },
+          repository: { "$": "inputs.repository" },
+          filePath: { "$": "inputs.path" },
+          sha: { "$": "inputs.expectedSha" },
+          commitMessage: "w6w interface sync",
+        },
+        outputMap: { ok: true },
+      },
+    },
+  }],
 } satisfies AppDefinition;

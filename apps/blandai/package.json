@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/blandai",
+  "version": "0.1.0",
+  "description": "Send AI phone calls, manage conversational pathways, phone numbers, and voices with Bland.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.blandai",
+    "displayName": "Bland AI",
+    "longDescription": "Bland is an enterprise voice AI platform: telephony, speech-to-text, language model, text-to-speech, and conversational-pathway orchestration in one stack. This app covers Bland's core call surface — dispatch a phone call with a task prompt or a conversational pathway, list and inspect calls (including the full transcript), stop an active call or all of them, transfer a live call to another number, and grade a completed call against a goal and a set of questions with AI.\n\nBeyond calls, it covers the two other things most Bland automations need: conversational pathways (list, get, create, update, and delete the node/edge graphs an agent follows) and the account's phone numbers and voices (list and inspect inbound numbers, purchase a new number, and list or inspect the voices — curated, cloned, or library — available to speak on a call).\n\nHealth checks track Bland's own status page (status.bland.ai) alongside the account's live credit balance and status, so a workflow can see both whether Bland itself is healthy and whether this account still has call credit left.\n\nBland's reference also documents a much larger surface this v1 does not cover — agent testing and evals, knowledge bases, widgets, SMS/RCS/iMessage messaging, SIP trunks, memory, triage, custom dialing pools, and personas — left out deliberately rather than built against guesses; see this app's README for what was left out and why.",
+    "categories": [
+      "ai",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Bland"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.bland.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

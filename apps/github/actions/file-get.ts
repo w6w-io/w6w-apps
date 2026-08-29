@@ -1,5 +1,5 @@
 import type { ActionDefinition } from "@w6w/types";
-import { GitHubClient, repoPath, unset } from "../lib/client.ts";
+import { contentsPath, GitHubClient, repoPath, unset } from "../lib/client.ts";
 import { owner, repository } from "../lib/params.ts";
 
 interface Input {
@@ -46,9 +46,7 @@ const fileGet: ActionDefinition<Input> = {
 
   execute(input, ctx) {
     return new GitHubClient(ctx).request(
-      `/repos/${repoPath(input.owner, input.repository)}/contents/${
-        encodeURIComponent(input.filePath)
-      }`,
+      `/repos/${repoPath(input.owner, input.repository)}/contents/${contentsPath(input.filePath)}`,
       { query: { ref: unset(input.ref) } },
     );
   },
