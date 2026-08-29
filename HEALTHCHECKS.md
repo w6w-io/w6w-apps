@@ -25,7 +25,7 @@ methods. Sixty-four apps add a fourth question — **is this tenant's own host r
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **884 checks**: 359 live probes, 203 declared absences, and 324
+Across the pack that comes to **901 checks**: 362 live probes, 212 declared absences, and 329
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -163,6 +163,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [hubspot](apps/hubspot/README.md) | [Statuspage](https://status.hubspot.com/api/v2/status.json) | yes | `GET /account-info/v3/details` | yes | `service` · `quota` · 3 derived |
 | [hunter](apps/hunter/README.md) | none published — `status.hunter.io` is a client-rendered SPA whose `/api/v2/*.json` paths all answer the identical HTML shell; a same-named `hunter.instatus.com` page serves real JSON but lists a component literally named "Test", the signature of an unclaimed default page, so it is not trusted either | no | derived `auth:api-key` | yes (`GET /v2/account`'s credits/searches/verifications buckets) | ~~service~~ · `quota` · 1 derived |
 | [huggingface](apps/huggingface/README.md) | [Better Stack](https://status.huggingface.co/index.json) — NOT Statuspage: every `summary.json`-shaped path answers 200 with 746 KB of the page's own HTML. Capped at degraded, because the router's third-party inference providers are not on it | yes | `GET /api/whoami-v2` | yes (IETF structured fields — `ratelimit: "api";r=494;t=170`, not `X-RateLimit-*`) | `service` · `quota` · 1 derived |
+| [instantly](apps/instantly/README.md) | none published — no machine-readable feed found | no | `GET /campaigns?limit=1` (403 handled as a distinct "not scoped for Campaigns" case rather than a bad credential) | no (no rate-limit headers of any kind) | ~~service~~ · ~~quota~~ · 1 derived |
 | [intercom](apps/intercom/README.md) | [Statuspage](https://www.finstatus.com/api/v2/status.json) | yes | `GET /me` | yes | `service` · `quota` · 2 derived |
 | [jenkins](apps/jenkins/README.md) | none published | no | `GET /api/json` | no | ~~service~~ · `site` · 1 derived |
 | [jira](apps/jira/README.md) | [Statuspage](https://jira-software.status.atlassian.com/api/v2/status.json) | yes | _varies by method_ | no | `service` · ~~quota~~ · `site` · 2 derived |
@@ -230,11 +231,13 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [posthog](apps/posthog/README.md) | none published | no | `GET /api/users/@me/` | no | ~~service~~ · 1 derived |
 | [postmark](apps/postmark/README.md) | [JSON](https://status.postmarkapp.com/api/v1/status) | yes | `GET /server` | no | `service` · ~~quota~~ · 1 derived |
 | [productboard](apps/productboard/README.md) | [Statuspage](https://status.productboard.com/api/v2/status.json) | yes | `GET /v2/entities` | yes | `service` · `api` · `quota` · 1 derived |
+| [pushbullet](apps/pushbullet/README.md) | none published | no | derived `auth:access-token` | yes (`X-Ratelimit-Limit/-Remaining/-Reset` on every response; the separate 500-pushes/month free-tier ceiling has no readable counterpart, modeled as a second, declared-absent check) | ~~service~~ · `quota` · ~~push-limit~~ · 1 derived |
 | [pushover](apps/pushover/README.md) | [page](https://status.pushover.net) | no | `POST /1/users/validate.json` | yes | ~~service~~ · `quota` · 1 derived |
 | [qdrant](apps/qdrant/README.md) | [Better Stack](https://status.qdrant.io/index.json) — NOT a Statuspage; every `summary.json`-shaped path returns the page's own 983,546-byte HTML with a 200. Capped at degraded (an app-scoped check cannot know the connection's region, or whether it is self-hosted at all) except when every region is down | yes | `GET /collections` | no | `service` · `instance` · `collections` · ~~quota~~ · 1 derived |
 | [quickbase](apps/quickbase/README.md) | [status.page](https://quickbasestatus.status.page/status.json) | yes | `GET /v1/apps/{appId}` | yes | `service` · `quota` · 1 derived |
 | [quickbooks](apps/quickbooks/README.md) | [Statuspage](https://status.developer.intuit.com/api/v2/summary.json) | yes | `GET /v3/company/{realmId}/companyinfo/{realmId}` | no | `service` · ~~quota~~ · 1 derived |
 | [raindrop](apps/raindrop/README.md) | [Better Stack](https://status.raindrop.io/index.json) | yes | `GET /rest/v1/user` | yes | `service` · `quota` · 2 derived |
+| [readwise](apps/readwise/README.md) | none published | no | `GET /api/v2/auth/` (204, zero body — a genuinely safe probe) | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [reddit](apps/reddit/README.md) | [Statuspage](https://www.redditstatus.com/api/v2/summary.json) | yes | `GET /api/v1/me` | yes | `service` · `quota` · 1 derived |
 | [resend](apps/resend/README.md) | status page is a catch-all HTML route | no | `GET /emails?limit=1` | no | ~~service~~ · ~~quota~~ · 1 derived |
 | [retellai](apps/retellai/README.md) | [Statuspage](https://status.retellai.com/api/v2/summary.json) — component named "API" | yes | `GET /get-api-key-info` | yes — `GET /get-concurrency` (no rate-limit response header at all) | `service` · `quota` · 1 derived |
@@ -285,6 +288,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [twitch](apps/twitch/README.md) | [Statuspage](https://status.twitch.com/api/v2/status.json) | yes | `GET id.twitch.tv/oauth2/validate` | yes | `service` · `api` · `quota` · ~~api-status~~ · 2 derived |
 | [twitter](apps/twitter/README.md) | [page](https://developer.x.com/status) | no | `GET /2/users/me` | yes | ~~service~~ · `quota` · 1 derived |
 | [typeform](apps/typeform/README.md) | [Statuspage](https://status.typeform.com/api/v2/status.json) | yes | `GET /me` | no | `service` · ~~quota~~ · 2 derived |
+| [typefully](apps/typefully/README.md) | none published — `status.typefully.com` (bad TLS/404), `typefully.statuspage.io` (unclaimed decoy), `typefully.betteruptime.com` (generic redirect) | no | derived `auth:api-key` | yes (`X-RateLimit-User-*` headers on every response) | ~~service~~ · `quota` · 1 derived |
 | [typesense](apps/typesense/README.md) | [Instatus](https://typesense.instatus.com/v2/components.json) — covers TYPESENSE CLOUD only, and Typesense is mostly self-hosted, so it is declared `informational` rather than fatal; a Management Console incident is provisioning and the dashboard, not the search path | yes | `GET /collections` (NOT `/health`, which needs no key and would pass with no credential at all) | YES, and unusually it is the real resource: Typesense serves its index from RAM, so `/metrics.json` memory and disk headroom is the quota, and the failure is WRITES stopping while searches carry on | `service` · `node` · `capacity` · 1 derived |
 | [upstash](apps/upstash/README.md) | [Statuspage](https://status.upstash.com/api/v2/summary.json) | yes | `GET /ping` | no | `service` · `host` · 1 derived |
 | [uptimerobot](apps/uptimerobot/README.md) | none published | no | `POST /getAccountDetails` | yes | ~~service~~ · `quota` · 1 derived |
@@ -298,6 +302,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [woocommerce](apps/woocommerce/README.md) | none published | no | `GET /wp-json/wc/v3/system_status` | no | ~~service~~ · ~~quota~~ · `site` · 1 derived |
 | [wordpress](apps/wordpress/README.md) | none published | no | `GET /wp-json/wp/v2/users/me` | no | ~~service~~ · ~~quota~~ · `site` · 2 derived |
 | [workos](apps/workos/README.md) | [Statuspage](https://status.workos.com/api/v2/components.json) | yes | `GET /organizations?limit=1` | no | `service` · ~~quota~~ · `environment` · 1 derived |
+| [wrike](apps/wrike/README.md) | none published — `status.wrike.com` is a client-rendered SPA whose every JSON/RSS route 404s; `wrike.statuspage.io`/`wrike.freshstatus.io` are unclaimed decoys | no | `GET /version` scoped by the account's own host (`www`/`app-eu`/`app-us2`.wrike.com — the wrong one 401s indistinguishably from a bad token, so the host is a connect-time field, never the credential) | no (no rate-limit headers of any kind) | ~~service~~ · ~~quota~~ · `account` · 1 derived |
 | [wufoo](apps/wufoo/README.md) | [Statuspage](https://status.wufoo.com/api/v2/summary.json) | yes | `GET /forms.json` | no | `service` · ~~quota~~ · 1 derived |
 | [xero](apps/xero/README.md) | [Statuspage](https://status.xero.com/api/v2/summary.json) | yes | `GET /connections` | yes | `service` · `quota` · 1 derived |
 | [youtube](apps/youtube/README.md) | not on the Workspace dashboard | no | _varies by method_ | no | ~~service~~ · ~~quota~~ · 2 derived |

@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/pushbullet",
+  "version": "0.1.0",
+  "description": "Send push notifications, links, files and SMS across devices via Pushbullet.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pushbullet",
+    "displayName": "Pushbullet",
+    "longDescription": "Pushbullet bridges phones, browsers and desktops: a note, link or file pushed from a workflow shows up as a native notification on every device signed into the account, or on one device, or to another person's email, or to every subscriber of a broadcast channel.\n\nThis app covers Pushbullet's full HTTP API: sending and managing pushes (notes, links and files), registering and managing devices, one-to-one chats, broadcast channels and subscriptions, and SMS/MMS sent through an Android device's own number. Health checks track the account's live API rate-limit headroom — genuinely readable from response headers, unlike most vendors in this pack — alongside honest declarations for the two things Pushbullet does not expose: a public status page, and remaining monthly push allowance.",
+    "categories": [
+      "communication",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Pushbullet"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.pushbullet.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

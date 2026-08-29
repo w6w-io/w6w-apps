@@ -1,0 +1,33 @@
+{
+  "name": "@w6w-apps/wrike",
+  "version": "0.1.0",
+  "description": "Manage Wrike tasks, folders/projects, comments, contacts and timelogs.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.wrike",
+    "displayName": "Wrike",
+    "longDescription": "Wrike is a work-management platform organized around a folder tree: spaces contain projects and folders, which contain tasks, which carry comments, timelogs and attachments. This app covers that core surface end to end — creating, searching, updating and deleting tasks and folders/projects, reading and posting comments, reading and updating contacts (Wrike's term for users and groups), and recording or editing timelogs — plus read access to attachment metadata and download links.\n\nWrike's API v4 is unusual among REST APIs: every mutating request (POST/PUT) passes its whole payload as query-string parameters, not a JSON body, with arrays and objects JSON-encoded inline inside the query value. Every action in this app builds requests that way, matching Wrike's own OpenAPI definitions rather than the more common JSON-body convention. Wrike also serves customer data from one of three fixed regional hosts (US, EU, US2); the Connection records which one, and every action reads it from there rather than guessing.\n\nHealth checks track credential liveness via Wrike's lightweight, scope-free /version endpoint and the connected account's own suspension flag. Wrike publishes no machine-readable status feed and no rate-limit headroom, and both are declared as such rather than guessed at.",
+    "categories": [
+      "project-management",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Wrike"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.wrike.com",
+        "app-eu.wrike.com",
+        "app-us2.wrike.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

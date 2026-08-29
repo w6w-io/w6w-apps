@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.105.0",
+  "version": "0.106.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -397,6 +397,9 @@
       "path": "./apps/hunter"
     },
     {
+      "path": "./apps/instantly"
+    },
+    {
       "path": "./apps/intercom"
     },
     {
@@ -598,6 +601,9 @@
       "path": "./apps/productboard"
     },
     {
+      "path": "./apps/pushbullet"
+    },
+    {
       "path": "./apps/pushover"
     },
     {
@@ -611,6 +617,9 @@
     },
     {
       "path": "./apps/raindrop"
+    },
+    {
+      "path": "./apps/readwise"
     },
     {
       "path": "./apps/reddit"
@@ -766,6 +775,9 @@
       "path": "./apps/typeform"
     },
     {
+      "path": "./apps/typefully"
+    },
+    {
       "path": "./apps/typesense"
     },
     {
@@ -803,6 +815,9 @@
     },
     {
       "path": "./apps/workos"
+    },
+    {
+      "path": "./apps/wrike"
     },
     {
       "path": "./apps/wufoo"

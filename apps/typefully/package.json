@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/typefully",
+  "version": "0.1.1",
+  "description": "Write, schedule, and publish social media drafts across X, LinkedIn, Mastodon, Threads, Bluesky, and Substack Notes with Typefully.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.typefully",
+    "displayName": "Typefully",
+    "longDescription": "Typefully is a writing and scheduling tool for social media, and this app covers its full Public API v2 surface: create, update, list, and delete drafts across X, LinkedIn, Mastodon, Threads, Bluesky, and Substack Notes; plan a draft's date without committing it to auto-publish, then confirm or schedule it later; reserve media uploads and poll their processing status; manage tags; read and replace a social set's recurring queue schedule and view its upcoming queue; resolve a LinkedIn company or school URL into ready-to-use @mention syntax; and read, create, resolve, update, and delete the comment threads collaborators leave on a draft.\n\nAccount-level visibility rounds it out: list every social set (account) an API key's user can reach, read a social set's configured platforms and publishing quota, and pull per-post or daily-follower analytics for X.\n\nHealth checks track the per-user request-rate headroom Typefully reports on every response; the vendor publishes no independent status feed, which this app states as a verified fact rather than leaving as a silent gap.",
+    "categories": [
+      "social-media",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Typefully"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Typefully"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.typefully.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
