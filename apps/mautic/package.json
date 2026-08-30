@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/mautic",
+  "version": "0.1.0",
+  "description": "Manage Mautic contacts, segments, companies, campaigns and email sends.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.mautic",
+    "displayName": "Mautic",
+    "longDescription": "Mautic is self-hosted open-source marketing automation, and this app puts the daily loop of running one — contacts, segments, companies, campaigns, tags and email sends — behind a workflow, whichever instance an organisation happens to run.\n\nContact management is the core of it: create and edit contacts, adjust their lead score, add or remove them from the Do Not Contact list per channel, and move them between segments and campaigns without touching Mautic's UI. Companies round out the picture with the same add/remove-contact primitives, and a segment or a specific email can be triggered to send from a workflow step — the same send Mautic's own campaign builder would fire, available as an action.\n\nDeleting a contact is here as well, deliberately made harder to trigger by accident than everything else, because a self-hosted instance has no trash to recover it from. Administrative surfaces — the campaign builder itself, forms, landing pages, dynamic content, themes, plugins and Mautic's own user management — stay out of scope in favor of the actions a marketing workflow touches day to day.",
+    "categories": [
+      "marketing",
+      "email",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Mautic"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

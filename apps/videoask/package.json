@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/videoask",
+  "version": "0.1.0",
+  "description": "Create and manage VideoAsk forms, questions, respondents and their asynchronous video/audio/text conversations.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.videoask",
+    "displayName": "VideoAsk",
+    "longDescription": "VideoAsk (by Typeform) turns a form into an asynchronous video, audio or text conversation: a form has questions, a contact (aka respondent) answers them, and the exchange of answers and replies is a conversation over the REST API at api.videoask.com.\n\nThis app covers the lifecycle a workflow needs: list, search, create, update, duplicate, restore and delete forms; read a form's metrics; read and create questions (an external media URL only — direct video/audio upload is a two-step, S3-presigned-POST flow this app does not attempt); filter a form's conversations and read a single contact's answers and messages; read a question's answers and aggregate insights; create, update and delete respondents (contacts); read a video/audio's transcript and edit its captions; manage tags, including attaching/detaching one to a contact; manage per-form webhooks; list an account's organizations and brands; and read the connected account's own profile.\n\nEvery request that isn't organization-scoped by nature accepts an optional organization-id, because VideoAsk documents most endpoints as reachable across any organization the caller belongs to, not just their default one.",
+    "categories": [
+      "forms",
+      "video",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "VideoAsk"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.videoask.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -189,6 +189,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | manychat | marketing, communication, social-media | api-token | 25 |
 | mastodon | social-media, communication | access-token | 18 |
 | mattermost | communication, productivity | access-token | 13 |
+| mautic | marketing, email | client-credentials | 28 |
 | meilisearch | search, databases, developer-tools | api-key | 24 |
 | metabase | analytics, databases | api-key | 17 |
 | microsoft-todo | productivity, project-management | oauth2 | 19 |
@@ -229,6 +230,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | postbin | developer-tools | none | 5 |
 | posthog | analytics | personal-api-key | 8 |
 | postmark | email, communication | api-key | 13 |
+| powerbi | analytics | oauth2 | 18 |
 | productboard | project-management, productivity, support | api-token | 41 |
 | pushbullet | communication, productivity | access-token | 24 |
 | pushover | communication, monitoring | app-token | 4 |
@@ -275,7 +277,9 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | systemeio | marketing | api-key | 41 |
 | tailscale | security, devops | api-key, oauth-client | 16 |
 | tally | forms, productivity | api-key | 38 |
+| teachable | commerce, productivity | api-key | 21 |
 | teams | communication | oauth2 | 16 |
+| teamwork | project-management, productivity | api-key | 17 |
 | telegram | communication | bot-token | 21 |
 | terraform | devops, developer-tools | token | 20 |
 | thinkific | commerce, crm | api-key | 20 |
@@ -297,6 +301,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | uptimerobot | monitoring | api-key | 8 |
 | vanta | legal, security, monitoring | client-credentials | 25 |
 | vercel | devops, developer-tools | access-token, oauth2 | 28 |
+| videoask | forms, video | oauth2 | 38 |
 | vimeo | video, social-media | access-token | 36 |
 | wave | finance | oauth2, full-access-token | 21 |
 | wealthbox | crm | api-key | 21 |
