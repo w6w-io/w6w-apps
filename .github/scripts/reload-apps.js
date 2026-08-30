@@ -81,7 +81,20 @@ async function fetchWithRetry(url, init) {
   throw new Error(lastErr);
 }
 
-async function refreshOrImport(relPath) {
+/**
+ * How many entries process concurrently once the tarball cache is warm. The API's
+ * IP rate limiter defaults to a 120 burst / 20-per-sec refill (`app.ts`'s `apiRate`)
+ * — comfortably above this.
+ */
+const CONCURRENCY = 8;
+
+/**
+ * `force` controls BOTH the refresh body's `force` and the import fallback's
+ * `refresh` — both ultimately reach the same `resolveSource(sourceRef, { force })`
+ * (`registry.ts`'s `refresh()` / `importApp`'s pre-warm). See `main()`'s header
+ * comment for why this must be `true` for only the very first entry of a run.
+ */
+async function refreshOrImport(relPath, force) {
   const pkg = JSON.parse(
     fs.readFileSync(path.join(__dirname, "..", "..", relPath, "package.json"), "utf8"),
   );
@@ -94,7 +107,7 @@ async function refreshOrImport(relPath) {
     const refreshRes = await fetchWithRetry(`${API_URL}/system-ops/apps/${id}/refresh`, {
       method: "POST",
       headers: { "content-type": "application/json", authorization: `Bearer ${mintToken(APPS_RELOAD_SCOPE)}` },
-      body: JSON.stringify({ force: true }),
+      body: JSON.stringify({ force }),
     });
     if (refreshRes.ok) {
       return { id, name, ok: true, detail: "refreshed" };
@@ -108,7 +121,7 @@ async function refreshOrImport(relPath) {
     const importRes = await fetchWithRetry(`${API_URL}/system-ops/apps/import`, {
       method: "POST",
       headers: { "content-type": "application/json", authorization: `Bearer ${mintToken(APPS_RELOAD_SCOPE)}` },
-      body: JSON.stringify({ source: `github:w6w-io/w6w-apps@main#${relPath}`, refresh: true }),
+      body: JSON.stringify({ source: `github:w6w-io/w6w-apps@main#${relPath}`, refresh: force }),
     });
     if (importRes.ok) {
       return { id, name, ok: true, detail: "imported" };
@@ -124,13 +137,45 @@ async function main() {
   const pack = JSON.parse(fs.readFileSync(PACK_PATH, "utf8"));
   const entries = pack.apps.map((a) => a.path.replace(/^\.\//, "").replace(/\/+$/, ""));
 
+  if (entries.length === 0) {
+    console.log("reload-apps: no entries in w6w-pack.json");
+    process.exit(0);
+  }
+
   let failed = 0;
-  for (const relPath of entries) {
-    const result = await refreshOrImport(relPath);
+  function report(result) {
     const status = result.ok ? "OK  " : "FAIL";
     console.log(`  ${status}  ${result.id.padEnd(28)} ${result.name.padEnd(20)} ${result.detail}`);
     if (!result.ok) failed++;
   }
+
+  // Every entry resolves `github:w6w-io/w6w-apps@main#<path>` — same repo, same ref,
+  // only the subpath fragment differs, and that's applied AFTER extraction
+  // (`applySubpath`), not part of the tarball cache key. So the whole pack shares ONE
+  // cached extraction of the repo. Forcing a refresh (`force: true`) on every entry —
+  // as this script used to — deletes and re-downloads+re-extracts that shared ~80MB
+  // repo tarball once per entry: 265 apps meant 265 full repo fetches, serially, which
+  // is what pushed a run past an hour (root-caused 2026-08-25).
+  //
+  // The fix: force exactly ONE entry, run it alone and awaited (never inside the
+  // concurrent pool below — a concurrent force:true would rm -rf the cache dir while
+  // others are mid-read of it), then let every other entry ride the now-warm cache
+  // with force:false. force:false is always safe even if the warm-up entry fails: the
+  // resolver only skips its fetch on a cache HIT, so a cold/missing cache still fetches
+  // normally, just without redundantly wiping it first.
+  const [warmupPath, ...restPaths] = entries;
+  report(await refreshOrImport(warmupPath, true));
+
+  let cursor = 0;
+  async function worker() {
+    while (cursor < restPaths.length) {
+      const relPath = restPaths[cursor++];
+      report(await refreshOrImport(relPath, false));
+    }
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(CONCURRENCY, restPaths.length) }, worker),
+  );
 
   console.log(`\nreload-apps: ${entries.length} entries processed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
