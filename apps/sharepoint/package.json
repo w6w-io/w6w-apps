@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/sharepoint",
+  "version": "0.1.0",
+  "description": "Read and manage SharePoint team sites, lists and document libraries through the Microsoft Graph SharePoint API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.sharepoint",
+    "displayName": "Microsoft SharePoint",
+    "longDescription": "Microsoft SharePoint organizes an organization's team sites, lists and document libraries, and this app reaches all three through the Microsoft Graph SharePoint API — the modern, Graph-native surface, not the legacy SharePoint REST API.\n\nIt covers the SharePoint API's three core resource types. Sites: get the tenant root site, a site by its ID, or a site by its hostname and server-relative path, plus enumerating a site's subsites and its document libraries. Lists: enumerate a site's lists, read one, and create a new one against a template. List items: list, read, create, update and delete rows in a list, addressing the SharePoint column values through the `fields` facet the reference documents. Document libraries: list the files and folders in a site's default or a named drive, upload text content as a new file or replace an existing one, read a file's short-lived download URL, and create a folder.\n\nEvery SharePoint endpoint in this app requires a work or school Microsoft account — Microsoft's own permission tables mark every one of them 'Not supported' for a personal Microsoft account, which is why the OAuth tenant segment is `organizations` rather than the `common` this pack's `onedrive` app uses. A live check reports storage headroom on the default document library alongside a credential check, since Microsoft publishes no general status page for SharePoint Online itself.",
+    "categories": [
+      "documents",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Microsoft SharePoint"
+      }
+    },
+    "network": {
+      "allow": [
+        "graph.microsoft.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

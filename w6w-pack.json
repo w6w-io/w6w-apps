@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.107.0",
+  "version": "0.109.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -127,6 +127,12 @@
       "path": "./apps/chargebee"
     },
     {
+      "path": "./apps/chatbase"
+    },
+    {
+      "path": "./apps/chatwork"
+    },
+    {
       "path": "./apps/checkly"
     },
     {
@@ -169,10 +175,16 @@
       "path": "./apps/coda"
     },
     {
+      "path": "./apps/cognitoforms"
+    },
+    {
       "path": "./apps/companycam"
     },
     {
       "path": "./apps/confluence"
+    },
+    {
+      "path": "./apps/connecteam"
     },
     {
       "path": "./apps/constantcontact"
@@ -628,6 +640,9 @@
       "path": "./apps/quickbooks"
     },
     {
+      "path": "./apps/quo"
+    },
+    {
       "path": "./apps/raindrop"
     },
     {
@@ -677,6 +692,9 @@
     },
     {
       "path": "./apps/servicenow"
+    },
+    {
+      "path": "./apps/sharepoint"
     },
     {
       "path": "./apps/shipstation"
@@ -796,6 +814,9 @@
       "path": "./apps/typesense"
     },
     {
+      "path": "./apps/unbounce"
+    },
+    {
       "path": "./apps/upstash"
     },
     {
@@ -811,13 +832,22 @@
       "path": "./apps/vimeo"
     },
     {
+      "path": "./apps/wave"
+    },
+    {
       "path": "./apps/wealthbox"
     },
     {
       "path": "./apps/webflow"
     },
     {
+      "path": "./apps/whatconverts"
+    },
+    {
       "path": "./apps/whatsapp"
+    },
+    {
+      "path": "./apps/whop"
     },
     {
       "path": "./apps/wix"

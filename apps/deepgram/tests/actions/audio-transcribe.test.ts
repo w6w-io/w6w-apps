@@ -40,11 +40,11 @@ Deno.test("audio-transcribe: key terms and redaction are sent as repeated keys",
   const { ctx, calls } = mockCtx([transcript], { display });
   await action.execute!({
     url: "https://x/a.mp3",
-    keyterm: "Lineshaft, w6w",
+    keyterm: "Postgres, w6w",
     redact: "pii,pci",
   }, ctx);
   const q = new URL(calls[0].url).searchParams;
-  assertEquals(q.getAll("keyterm"), ["Lineshaft", "w6w"]);
+  assertEquals(q.getAll("keyterm"), ["Postgres", "w6w"]);
   assertEquals(q.getAll("redact"), ["pii", "pci"]);
 });
 

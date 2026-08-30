@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/chatwork",
+  "version": "0.1.0",
+  "description": "Chats, messages, tasks, files, invite links and contacts on Chatwork, Japan's business team chat platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.chatwork",
+    "displayName": "Chatwork",
+    "longDescription": "Chatwork is a business team chat platform, widely used in Japan, that bundles messaging, tasks and file sharing into every chat room. This app covers the full documented surface of the Chatwork API v2: list and manage chats (create, update, leave or delete), read and post messages (including marking them read/unread and editing or deleting your own), create and track tasks assigned within a chat, list and upload files, manage a chat's invite link, and read or respond to contact requests.\n\nA few behaviors are worth knowing before building a workflow on top of this app: an empty list answers HTTP 204 rather than an empty array (handled transparently by every list action here); the message-list action is a stateful per-connection cursor that returns only what's new since the last read unless you force a full fetch; and creating a task assigns it to every account listed, returning one task ID per assignee.\n\nAuthentication is a personal API token (issued from Chatwork's own Service Integrations settings, and subject to your organization administrator's approval). Health checks track the token's live rate-limit headroom; Chatwork publishes no machine-readable status page, which is declared rather than guessed at.",
+    "categories": [
+      "communication",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Chatwork"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.chatwork.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

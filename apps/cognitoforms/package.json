@@ -1,0 +1,34 @@
+{
+  "name": "@w6w-apps/cognitoforms",
+  "version": "0.1.0",
+  "description": "Read Cognito Forms' forms and schemas, and create, read, update and delete form entries via the Cognito Forms REST API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.cognitoforms",
+    "displayName": "Cognito Forms",
+    "longDescription": "Cognito Forms is an online form builder for data collection, workflow automation and payments. This app covers the day-to-day work of running a form once it's published: list the forms an integration can see, read a form's schema to learn what fields an entry accepts, then create, read, update and delete individual entries against that schema.\n\nBeyond entries, it covers the bulk-import lifecycle (upload a spreadsheet of entries and poll the import's status), reading a generated entry document or an uploaded file back out, uploading a new file for attachment to an entry, and toggling a form's public link availability window.\n\nA fit for routing new form submissions into another system, keeping a form's data in sync with a downstream store, bulk-loading historical records, or pausing a form's public link during a maintenance window — without needing the form-building capabilities that stay in Cognito Forms' own designer.",
+    "categories": [
+      "forms",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": {
+          "180x180": "./assets/icon.png"
+        },
+        "alt": "Cognito Forms"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.cognitoforms.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

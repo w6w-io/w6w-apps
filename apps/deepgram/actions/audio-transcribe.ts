@@ -110,7 +110,7 @@ const action: ActionDefinition = {
       label: "Key Terms",
       type: "string",
       default: "",
-      placeholder: "Lineshaft, w6w, Kubernetes",
+      placeholder: "w6w, Postgres, Kubernetes",
       hint: "Comma-separated product names and jargon the model would otherwise mishear. The " +
         "single highest-value option for domain audio.",
     },

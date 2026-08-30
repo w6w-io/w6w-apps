@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/unbounce",
+  "version": "0.1.0",
+  "description": "Manage Unbounce landing pages, leads and form submissions, and read account, sub-account and domain structure.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.unbounce",
+    "displayName": "Unbounce",
+    "longDescription": "Unbounce builds and hosts landing pages, pop-ups and sticky bars for conversion campaigns. This app covers the full read path of the Unbounce REST API (v0.4): the account hierarchy (accounts, sub-accounts/clients, custom domains, page groups), a page's own metadata and A/B test stats, and the leads a page's forms have collected — plus creating a lead programmatically (for a workflow that captures a submission somewhere else and needs it to show up in Unbounce) and requesting asynchronous deletion of one or more leads for privacy/compliance workflows.\n\nUnbounce's account model has three levels most integrations get wrong on the first try: an Account owns Sub-Accounts (Unbounce calls these \"Clients\"), and Sub-Accounts own Domains, Page Groups and Pages — so \"list every page\" depends on which level a Connection's credential can see, and this app exposes each level's own page list separately rather than assuming one global list is enough.\n\nHealth checks track Unbounce's own status page, weighted toward its own \"Partner API\" component rather than the page-level indicator, so a marketing-site incident doesn't report the API as down.",
+    "categories": [
+      "marketing",
+      "forms",
+      "analytics"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Unbounce"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.unbounce.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

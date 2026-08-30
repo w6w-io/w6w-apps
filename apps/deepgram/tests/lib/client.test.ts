@@ -73,9 +73,9 @@ Deno.test("client: an array query value becomes repeated keys", async () => {
   await new DeepgramClient(ctx).request("/v1/listen", {
     method: "POST",
     body: { url: "https://x/a.mp3" },
-    query: { keyterm: ["Lineshaft", "w6w"] },
+    query: { keyterm: ["Postgres", "w6w"] },
   });
-  assertEquals(new URL(calls[0].url).searchParams.getAll("keyterm"), ["Lineshaft", "w6w"]);
+  assertEquals(new URL(calls[0].url).searchParams.getAll("keyterm"), ["Postgres", "w6w"]);
 });
 
 Deno.test("client: a 204 answers undefined rather than failing to parse", async () => {
