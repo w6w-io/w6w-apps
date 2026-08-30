@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/teachable",
+  "version": "0.1.0",
+  "description": "Manage courses, students, enrollments, pricing plans and transactions on a Teachable school.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.teachable",
+    "displayName": "Teachable",
+    "longDescription": "Teachable is a platform for selling online courses and coaching. This app covers the Teachable Public API — the school-owner surface authenticated with a single API key, not the separate per-student OAuth surface (see the README for why that one is out of scope).\n\nLook up and list courses, their lecture curriculum, lectures, quizzes and quiz responses, and videos; read a student's progress through a course and mark a lecture complete on their behalf. Create, list, look up and update users, and enroll or unenroll a user in a course. Read the webhooks configured in the school admin and the delivery events they have fired — webhooks themselves are configured in the Teachable UI; the API is read-only for them. Read pricing plans and sales transactions for reporting and reconciliation.",
+    "categories": [
+      "commerce",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Teachable"
+      }
+    },
+    "network": {
+      "allow": [
+        "developers.teachable.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

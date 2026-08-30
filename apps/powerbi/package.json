@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/powerbi",
+  "version": "0.1.0",
+  "description": "List, refresh and export Power BI workspaces, reports and datasets through the Power BI REST API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.powerbi",
+    "displayName": "Microsoft Power BI",
+    "longDescription": "Microsoft Power BI's business-analytics REST API (`api.powerbi.com`) — a separate surface from Microsoft Graph, with its own Azure AD app registration and its own error contract. This app covers the four resource families every non-admin automation needs: workspaces (Power BI calls them 'groups' internally, but every endpoint and this app calls them workspaces), reports, datasets and dashboards.\n\nWorkspaces: list, create and delete a workspace, list its members and grant a member access. Reports: list and get report metadata, delete a report, and the asynchronous export flow — start an export to PDF/PPTX/PNG or (for paginated reports) XLSX/DOCX/CSV/XML/MHTML/accessible PDF, poll its status, then retrieve the finished file as base64. Datasets: list and get dataset metadata, trigger a refresh, read refresh history, and execute a single DAX query against a dataset's model. Dashboards: list dashboards and list a dashboard's tiles.\n\nEvery action accepts an optional workspace ID. Leave it empty and the call reaches 'My workspace' — Power BI's own convention of simply omitting the `/groups/{id}` path segment, not a separate set of endpoints — or set it to reach a shared workspace instead, exactly the same distinction this pack's `sharepoint` app draws between a site's default document library and a named one.\n\nAdmin-only operations (tenant-wide inventory, activity events, encryption keys) are out of scope: every one of them requires a Fabric/Power BI tenant-admin role, which is a different trust level from the workspace-level access this app's OAuth scopes request.",
+    "categories": [
+      "analytics",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Microsoft Power BI"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.powerbi.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
