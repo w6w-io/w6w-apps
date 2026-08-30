@@ -80,6 +80,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | cloudflare | devops | api-token | 8 |
 | cloudinary | storage, documents, developer-tools | basic | 21 |
 | coda | productivity, documents | api-token | 11 |
+| cognitoforms | forms, productivity | bearer-token | 12 |
 | companycam | project-management, documents, productivity | access-token, oauth2 | 62 |
 | confluence | documents, productivity | api-token, oauth2 | 22 |
 | connecteam | hr, productivity, calendar | api-key | 27 |
@@ -234,6 +235,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | qdrant | search, databases, ai | api-key | 19 |
 | quickbase | databases, productivity, project-management | user-token | 20 |
 | quickbooks | finance | oauth2 | 20 |
+| quo | communication, crm | api-key | 43 |
 | raindrop | productivity, search, storage | test-token, oauth2 | 39 |
 | readwise | productivity | api-token | 20 |
 | reddit | social-media | oauth2 | 8 |
@@ -250,6 +252,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | sentry | monitoring, developer-tools | auth-token, oauth2 | 21 |
 | servicem8 | crm | api-key | 18 |
 | servicenow | support, devops | basic, oauth2 | 9 |
+| sharepoint | documents, productivity | oauth2 | 16 |
 | shipstation | ecommerce | api-key | 18 |
 | shopify | commerce | access-token | 18 |
 | signnow | documents | custom | 16 |
@@ -289,11 +292,13 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | typeform | forms, productivity | personal-access-token, oauth2 | 10 |
 | typefully | social-media, marketing | api-key | 25 |
 | typesense | search, databases | api-key | 16 |
+| unbounce | marketing, forms, analytics | api-key, oauth2 | 24 |
 | upstash | databases | rest-token | 15 |
 | uptimerobot | monitoring | api-key | 8 |
 | vanta | legal, security, monitoring | client-credentials | 25 |
 | vercel | devops, developer-tools | access-token, oauth2 | 28 |
 | vimeo | video, social-media | access-token | 36 |
+| wave | finance | oauth2, full-access-token | 21 |
 | wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
 | whatconverts | marketing, analytics, crm | basic | 25 |

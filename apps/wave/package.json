@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/wave",
+  "version": "0.1.0",
+  "description": "Manage customers, products, invoices, estimates and money transactions in Wave Accounting over Wave's GraphQL API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.wave",
+    "displayName": "Wave",
+    "longDescription": "Wave Financial's free small-business accounting and invoicing platform, reached entirely through a single GraphQL endpoint — there is no REST surface at all. This app covers the spine a workflow author actually reaches for: customers (list, get, create, edit, delete), products/services (list, create), the chart of accounts (list, for picking the income/expense account a product posts to), invoices (list, get, create, email to a customer) and estimates (list, get, create, email to a customer), plus recording a money transaction (a bank/credit-card deposit or withdrawal, categorized against one or more accounts) the same way Wave's own transaction entry screen does. An escape-hatch action runs any GraphQL query or mutation directly, reaching the much larger schema (sales taxes, vendors, invoice payments, invoice reminders, estimate deposits and acceptance history) that the named actions don't model.\n\nGood for turning a completed job or booking into a Wave invoice automatically, keeping a Wave customer list in sync with a CRM, generating estimates from an external quoting tool, or logging externally-processed payments as Wave transactions for bookkeeping.",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Wave"
+      }
+    },
+    "network": {
+      "allow": [
+        "gql.waveapps.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
