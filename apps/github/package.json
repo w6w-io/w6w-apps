@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/github",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Manage GitHub issues, pull requests, releases, files, repositories and Actions workflows.",
   "license": "MIT",
   "author": {
