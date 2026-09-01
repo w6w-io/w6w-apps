@@ -119,6 +119,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | flodesk | marketing, email | api-key, oauth2 | 22 |
 | followupboss | crm | api-key | 26 |
 | formstack | forms, productivity | access-token | 9 |
+| freeagent | finance | oauth2 | 28 |
 | freshdesk | support | api-key | 13 |
 | freshservice | support, devops | api-key | 23 |
 | front | support, communication, productivity | api-token | 30 |
@@ -178,6 +179,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | linear | project-management, developer-tools | api-key, oauth2 | 11 |
 | linkedin | social-media, marketing | oauth2, oauth2-community-management | 6 |
 | linkedin-ads | marketing, analytics | oauth2, oauth2-audiences | 23 |
+| lokalise | developer-tools, cms | api-token | 31 |
 | looker | analytics, data-warehousing | api-credentials | 11 |
 | loops | email, marketing, communication | api-key | 21 |
 | mailcheck | email, marketing | api-key | 4 |
@@ -239,6 +241,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | quickbooks | finance | oauth2 | 20 |
 | quo | communication, crm | api-key | 43 |
 | raindrop | productivity, search, storage | test-token, oauth2 | 39 |
+| razorpay | commerce, finance | basic | 44 |
 | readwise | productivity | api-token | 20 |
 | reddit | social-media | oauth2 | 8 |
 | resend | email, communication | api-key | 24 |
@@ -275,6 +278,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | supabase | databases | api-key | 7 |
 | surveymonkey | forms, productivity | oauth2 | 12 |
 | systemeio | marketing | api-key | 41 |
+| tableau | analytics, productivity | personal-access-token | 15 |
 | tailscale | security, devops | api-key, oauth-client | 16 |
 | tally | forms, productivity | api-key | 38 |
 | teachable | commerce, productivity | api-key | 21 |
@@ -318,6 +322,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | xero | finance | oauth2 | 13 |
 | youtube | video, social-media | api-key, oauth2 | 16 |
 | zendesk | support, crm | api-token, oauth2 | 17 |
+| zendesk-sell | crm, marketing | oauth2 | 31 |
 | zoho | crm | oauth2 | 21 |
 | zohobooks | accounting | oauth2 (×8 DCs) | 22 |
 | zohodesk | support | oauth2 (×10 DCs) | 27 |
