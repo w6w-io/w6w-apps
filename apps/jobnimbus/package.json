@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/jobnimbus",
+  "version": "0.1.0",
+  "description": "Create and manage contacts, jobs, tasks and notes in JobNimbus, the field-service CRM built for roofing and exterior contractors.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.jobnimbus",
+    "displayName": "JobNimbus",
+    "longDescription": "JobNimbus is a field-service CRM built for roofing and other exterior/home-services contractors — contacts and jobs move through customer-configured workflows (Lead, Inspection, Approved, ...), with tasks, notes and file attachments hung off either one.\n\nThis app covers the core of JobNimbus's own \"Open API\": full read/write on Contacts and Jobs (get, list, create, update, and the soft-delete JobNimbus itself exposes as a status flip), plus creating and listing Tasks and Activities (notes) against either. Every JobNimbus record carries a `jnid` — the id every other action takes to address it — and every list read supports JobNimbus's own Elasticsearch-syntax `filter`, offset pagination, and sort.\n\nAuthentication is a single static API Key, scoped by an assignable JobNimbus \"Access Profile,\" the same key used by JobNimbus's own third-party integrations (BirdEye, CompanyCam, Zapier, ...). A health check tracks JobNimbus's own status page; JobNimbus publishes no rate-limit headers, so quota headroom is declared unavailable rather than guessed.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "JobNimbus"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.jobnimbus.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

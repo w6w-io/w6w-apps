@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/bubble",
+  "version": "0.1.0",
+  "description": "Read, write and trigger workflows against a Bubble app's own Data API and Workflow API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.bubble",
+    "displayName": "Bubble",
+    "longDescription": "Bubble is a no-code app builder, and this app talks to the two API surfaces a Bubble application itself exposes: the Data API (direct CRUD against whichever Data Types the builder has turned on) and the Workflow API (triggering the app's own named, server-side API Workflows).\n\nBecause every Bubble app is its own deployment with its own database schema, the shapes here stay generic — a Data Type name and a JSON object of fields, rather than fixed field lists — so this app works against any Bubble application, not one specific schema. Search, read, create, update, replace, delete and bulk-create cover the Data API's full surface; triggering an API Workflow by name covers the Workflow API, for anything the app builder has wired up beyond plain CRUD, from sending an email to running a multi-step process.\n\nLeft out on purpose: user-level authentication (logging a specific end-user in runs through a bespoke API Workflow every app builder designs differently, with no fixed endpoint to call generically) and bulk update/delete, which Bubble's Data API does not offer at all — only bulk create.",
+    "categories": [
+      "developer-tools",
+      "databases"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Bubble"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

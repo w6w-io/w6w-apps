@@ -97,6 +97,9 @@
       "path": "./apps/blandai"
     },
     {
+      "path": "./apps/bloomerang"
+    },
+    {
       "path": "./apps/bluesky"
     },
     {
@@ -107,6 +110,9 @@
     },
     {
       "path": "./apps/browseai"
+    },
+    {
+      "path": "./apps/bubble"
     },
     {
       "path": "./apps/buffer"
@@ -421,6 +427,9 @@
       "path": "./apps/highlevel"
     },
     {
+      "path": "./apps/holded"
+    },
+    {
       "path": "./apps/homeassistant"
     },
     {
@@ -449,6 +458,9 @@
     },
     {
       "path": "./apps/jobber"
+    },
+    {
+      "path": "./apps/jobnimbus"
     },
     {
       "path": "./apps/jotform"
@@ -736,6 +748,9 @@
       "path": "./apps/sendgrid"
     },
     {
+      "path": "./apps/sendy"
+    },
+    {
       "path": "./apps/sentry"
     },
     {
@@ -890,6 +905,9 @@
     },
     {
       "path": "./apps/vercel"
+    },
+    {
+      "path": "./apps/vero"
     },
     {
       "path": "./apps/videoask"

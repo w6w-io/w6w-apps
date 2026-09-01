@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/vero",
+  "version": "0.1.0",
+  "description": "Identify, track, tag, alias, delete, and subscribe/unsubscribe users via Vero's Track API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.vero",
+    "displayName": "Vero",
+    "longDescription": "Vero's Track API is the write side of customer data for its customer-engagement platform — creating and updating user profiles, recording events, editing tags, changing (aliasing) a user's identifier, deleting a user outright, and globally subscribing or unsubscribing a user from email. This app implements exactly that surface, the seven verbs that have been stable and unchanged since before 2016.\n\nVero exposes a second, separate REST surface — the Campaigns API — for managing broadcasts, journeys and preference-center topics. This app deliberately does not call it: it is a public preview that Vero grants access to only on request (a distinct API key most connections will not have), and its resource schemas (Broadcast, Journey, Topic, and their nested Message/Content children) are a different, much larger surface than the stable Track API this app targets. Noted here rather than silently dropped.\n\nA few operations carry consequences worth knowing: deleting a user is permanent and not recoverable, aliasing (reidentifying) a user retargets their id so a retry against the old id no longer resolves, and Vero automatically deduplicates identical Track Event calls (same auth token, event name, identity and data) within a five-minute window, so a host retry converges on the original event rather than double-firing it.",
+    "categories": [
+      "email",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Vero"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.getvero.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
