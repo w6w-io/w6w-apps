@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/replyio",
+  "version": "0.1.0",
+  "description": "Manage contacts, sequences, email accounts and reporting in Reply.io — sales engagement and multichannel outreach.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.replyio",
+    "displayName": "Reply.io",
+    "longDescription": "Reply.io is a sales engagement platform for multichannel outreach — email sequences, LinkedIn, and calls. This app covers the v3 REST API, the surface Reply's own docs say to use going forward (v1/v2 are documented as deprecated).\n\nIt manages contacts (create, update, delete, filter with structured rules), sequences — Reply's name for a multi-step outreach campaign (list, get, create, start, pause, enroll contacts, list enrolled contacts), email accounts (list, get), custom fields, and the team-wide email reporting overview.\n\nAuthentication is a Bearer API key. The credential-liveness probe is `GET /v3/whoami`, which Reply's own docs single out as needing no scope and returning only `{userId, username, teamId}` — never the key itself. Health also tracks Reply's own status page (`status.reply.io`), which sits behind a Cloudflare rule that blocks requests carrying no `User-Agent` header — including curl's default-stripped and bare `Mozilla/5.0` — so the probe sends an explicit one.",
+    "categories": [
+      "marketing",
+      "crm",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Reply.io"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.reply.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

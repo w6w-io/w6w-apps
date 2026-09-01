@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/luma",
+  "version": "0.1.0",
+  "description": "Manage events, guests and ticket types on a Luma calendar.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.luma",
+    "displayName": "Luma",
+    "longDescription": "Luma runs a calendar's events end to end from a workflow: create, update, cancel and read events; manage ticket types, including paid ones on a calendar with a connected Stripe account; add, invite, approve, decline, waitlist and re-ticket guests; and add or remove event hosts.\n\nEach connection is scoped to exactly one calendar, matching how Luma issues API keys — the calendar a workflow acts on is whichever calendar the connected key was generated for, with no separate calendar-id field to get wrong. Calendar-level actions cover the calendar's own settings, its admins, its contact list, and reviewing events submitted to it (list, look up, approve or reject a pending submission).\n\nA fit for syncing registrations into a CRM, automating check-in or waitlist promotion logic Luma's own dashboard doesn't offer, keeping a calendar's contact list in sync with an external list, or triggering follow-up workflows off guest status changes. This app covers events, guest/registration management, ticket types, hosts, calendar administration and contacts as documented in Luma's public OpenAPI 3.1 spec; it does not cover coupons, event/contact tags, webhooks, memberships, organizations or image uploads — none of those were verified against the live API for this build.",
+    "categories": [
+      "calendar",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Luma"
+      }
+    },
+    "network": {
+      "allow": [
+        "public-api.luma.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
