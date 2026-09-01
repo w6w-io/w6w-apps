@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/phantombuster",
+  "version": "0.1.0",
+  "description": "Launch and monitor PhantomBuster Phantoms (agents), read the containers and result data they produce, and check organization resource headroom.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.phantombuster",
+    "displayName": "PhantomBuster",
+    "longDescription": "PhantomBuster runs \"Phantoms\" — pre-built or custom browser-automation agents that scrape and act on sites like LinkedIn, Sales Navigator and Instagram — and gives a workflow the same three-beat path most PhantomBuster automations need: launch an agent, poll the container it creates, and read the output or result object that container produces.\n\nBeyond launching and monitoring agents, this app covers container introspection (list, fetch, output, result object), account-level visibility (organization profile and daily/monthly resource headroom), and a live view of every container currently running across the organization. Health checks track PhantomBuster's own status page alongside real, readable quota — daily and monthly execution time, mail credits, captcha credits, discovered-mail credits, AI credits and SERP credits — and the app deliberately narrows what an organization or agent read hands back, because PhantomBuster's own API returns several live credentials inside otherwise ordinary reads.",
+    "categories": [
+      "marketing",
+      "crm",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "PhantomBuster"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.phantombuster.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

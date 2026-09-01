@@ -107,6 +107,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | elevenlabs | ai | api-key | 22 |
 | emailoctopus | marketing, email | api-key | 25 |
 | eventbrite | commerce, calendar | personal-token, oauth2 | 10 |
+| exa | ai, search, developer-tools | api-key | 9 |
 | excel | spreadsheets, productivity | oauth2 | 16 |
 | facebook | social-media, marketing | oauth2, page-token | 14 |
 | facebook-conversions | marketing, analytics, social-media | conversions-token, oauth2 | 5 |
@@ -121,6 +122,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | formstack | forms, productivity | access-token | 9 |
 | freeagent | finance | oauth2 | 28 |
 | freshdesk | support | api-key | 13 |
+| freshsales | crm, sales, productivity | api-key | 20 |
 | freshservice | support, devops | api-key | 23 |
 | front | support, communication, productivity | api-token | 30 |
 | gcs | storage, devops | service-account | 16 |
@@ -199,6 +201,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | missive | communication, support, productivity | api-token | 42 |
 | mistral | ai | api-key | 4 |
 | mixpanel | analytics, marketing | service-account | 13 |
+| mollie | commerce, finance | api-key, oauth2 | 41 |
 | monday | project-management, productivity | api-token, oauth2 | 14 |
 | mongodb-atlas | databases, devops | service-account | 19 |
 | motion | productivity, project-management, calendar | api-key | 27 |
@@ -224,6 +227,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | paypal | commerce, finance | client-credentials | 13 |
 | pdfco | documents | api-key | 24 |
 | perplexity | ai | api-key | 5 |
+| phantombuster | automation, developer-tools, ai | api-key | 14 |
 | pinecone | ai, databases, search | api-key | 24 |
 | pinterest | social-media, marketing | oauth2 | 16 |
 | pipedrive | crm | api-token, oauth2 | 14 |
@@ -294,6 +298,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | todoist | productivity | api-token, oauth2 | 14 |
 | toggl | productivity | api-token | 10 |
 | trello | project-management, productivity | api-key | 27 |
+| trustpilot | marketing, reviews | api-key, client-credentials | 11 |
 | twilio | communication | api-key | 2 |
 | twitch | video, social-media, communication | app-access-token, user-access-token | 28 |
 | twitter | social-media | oauth2 | 8 |
