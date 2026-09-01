@@ -29,6 +29,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | airbyte | data-warehousing, devops | application | 12 |
 | aircall | communication, support, crm | basic | 38 |
 | airtable | spreadsheets, databases, productivity | personal-access-token, oauth2, api-key | 10 |
+| airtop | ai, developer-tools | api-key | 24 |
 | algolia | search, developer-tools | api-key | 22 |
 | amplitude | analytics, marketing | api-keys | 15 |
 | anthropic | ai | api-key | 14 |
@@ -87,6 +88,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | constantcontact | marketing, email | oauth2 | 22 |
 | contentful | cms | access-token | 10 |
 | copper | crm | api-key | 24 |
+| crisp | support, communication | basic | 12 |
 | customerio | marketing, email | basic | 7 |
 | databricks | data-warehousing | bearer-token | 8 |
 | datadog | monitoring, devops, developer-tools | api-key | 22 |
@@ -186,6 +188,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | lokalise | developer-tools, cms | api-token | 31 |
 | looker | analytics, data-warehousing | api-credentials | 11 |
 | loops | email, marketing, communication | api-key | 21 |
+| luma | calendar, commerce | api-key | 29 |
 | mailcheck | email, marketing | api-key | 4 |
 | mailchimp | marketing, communication | api-key, oauth2 | 15 |
 | mailerlite | marketing, email | api-key | 16 |
@@ -252,6 +255,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | razorpay | commerce, finance | basic | 44 |
 | readwise | productivity | api-token | 20 |
 | reddit | social-media | oauth2 | 8 |
+| replyio | marketing, crm, email | api-key | 18 |
 | resend | email, communication | api-key | 24 |
 | retellai | ai, communication | api-key | 9 |
 | ringcentral | communication, productivity | oauth2, jwt-bearer | 13 |
@@ -329,6 +333,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wrike | project-management, productivity | permanent-token | 29 |
 | wufoo | forms, productivity | api-key | 8 |
 | xero | finance | oauth2 | 13 |
+| youcanbookme | calendar | basic | 9 |
 | youtube | video, social-media | api-key, oauth2 | 16 |
 | zendesk | support, crm | api-token, oauth2 | 17 |
 | zendesk-sell | crm, marketing | oauth2 | 31 |
@@ -339,7 +344,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zohomail | communication, email | oauth2 (×8 DCs) | 16 |
 | zoom | video, communication | server-to-server, oauth2 | 14 |
 
-246 apps, 4238 actions.
+251 apps, 4330 actions.
 
 `upstash` and `supabase` are **not** raw Redis/Postgres — this pack's Apps run in a
 network-less sandbox that only reaches the network via `ctx.fetch` over HTTP(S) to a

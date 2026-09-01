@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.113.0",
+  "version": "0.114.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -20,6 +20,9 @@
     },
     {
       "path": "./apps/airtable"
+    },
+    {
+      "path": "./apps/airtop"
     },
     {
       "path": "./apps/algolia"
@@ -194,6 +197,9 @@
     },
     {
       "path": "./apps/copper"
+    },
+    {
+      "path": "./apps/crisp"
     },
     {
       "path": "./apps/customerio"
@@ -493,6 +499,9 @@
       "path": "./apps/loops"
     },
     {
+      "path": "./apps/luma"
+    },
+    {
       "path": "./apps/mailcheck"
     },
     {
@@ -692,6 +701,9 @@
     },
     {
       "path": "./apps/replicate"
+    },
+    {
+      "path": "./apps/replyio"
     },
     {
       "path": "./apps/resend"
@@ -923,6 +935,9 @@
     },
     {
       "path": "./apps/xero"
+    },
+    {
+      "path": "./apps/youcanbookme"
     },
     {
       "path": "./apps/youtube"

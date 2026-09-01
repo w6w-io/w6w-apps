@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/airtop",
+  "version": "0.1.1",
+  "description": "Drive real, cloud-hosted browsers with Airtop's AI browser automation: create sessions and windows, load and interact with pages, and extract structured data with natural-language prompts.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.airtop",
+    "displayName": "Airtop",
+    "longDescription": "Airtop runs real Chromium browser sessions in the cloud and drives them with an AI layer, so a workflow can automate sites that have no API: log in, click, type, scroll, upload files, and read back what's on the page — either verbatim or as an answer to a natural-language question.\n\nA session is the cloud browser itself; a window is one tab inside it. Every interaction (click, hover, type, scroll, screenshot, scrape, page query, paginated extraction, summarize, file input) targets a window and is described in plain language — \"the login button\", \"the search box in the top right\" — rather than a CSS selector, so it keeps working when a site's markup changes. Profiles persist cookies and local storage across sessions (e.g. to stay logged in), and the Files API moves a file in or out of a session's browser.\n\nThis app covers exactly the surface Airtop's own OpenAPI document (`api.airtop.ai/api/openapi.json`) marks as its stable, publicly documented API (`x-fern-audiences: public`). Airtop also exposes a newer `act` / `extract` / `find-one` / `find-many` / `navigate` / `wait-for-page` / `llm` interface under `/v2/sessions/.../windows/...`, and an `Agents` / `GTM Engineer` / `Knowledge Base` product surface under `/v2/agents`, `/v2/gtm-engineer`, `/v2/organizations/.../knowledge-base` and related paths — both are left out of this app and explained in the README, rather than guessed at.",
+    "categories": [
+      "ai",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Airtop"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Airtop"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.airtop.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/crisp",
+  "version": "0.1.0",
+  "description": "Manage conversations, messages, and contacts on Crisp — customer messaging and support.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.crisp",
+    "displayName": "Crisp",
+    "longDescription": "Crisp is a customer messaging and support platform — live chat widget, shared inbox, and contact (\"people\") CRM in one workspace.\n\nThis app covers the core loop a workflow needs: read and list conversations, create a new conversation session, send a chat reply or an internal note, update a conversation's state (pending/unresolved/resolved) or its visitor metadata (nickname, email, subject, segments), and manage contact profiles (list, get, create, update). It also resolves the connected workspace's own information, which doubles as the credential-liveness probe.\n\nCrisp's REST API is much broader than this — helpdesk articles, campaigns, plugin/widget management, buckets and media, call sessions, browsing-assist — none of which is implemented here; see README.md for exactly what was left out and why.",
+    "categories": [
+      "support",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Crisp"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.crisp.chat"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
