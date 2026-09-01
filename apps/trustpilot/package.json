@@ -1,0 +1,33 @@
+{
+  "name": "@w6w-apps/trustpilot",
+  "version": "0.1.0",
+  "description": "Read a Trustpilot Business Unit's profile, reviews and product-review scores, and send review invitations.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.trustpilot",
+    "displayName": "Trustpilot",
+    "longDescription": "Trustpilot is a customer-review platform organised around the Business Unit — the profile that hosts one website's ratings, reviews and responses. This app covers the two surfaces that are reachable with a straightforward, unattended credential: the Business Units API (company profile, categories, web links, and both the paginated and the cursor-paginated review feeds) and the Product Reviews API (per-SKU review summaries and lists), both of which need nothing but Trustpilot's own API key on every request. It also covers the Invitations API — sending a service or product review invitation by email — which needs a real OAuth access token; this app mints and renews that token itself from a Client ID and Client Secret via the client-credentials grant, so no browser sign-in is required.\n\nTwo hosts are in play: `api.trustpilot.com` for everything above, and `invitations-api.trustpilot.com` for the Invitations API specifically — mixing them up is the single most common way a Trustpilot integration breaks. A live status check tracks Trustpilot's own Atlassian Statuspage; Trustpilot publishes no rate-limit response headers, so quota headroom is a declared absence rather than a guess.",
+    "categories": [
+      "marketing",
+      "support",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.ico",
+        "alt": "Trustpilot"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.trustpilot.com",
+        "invitations-api.trustpilot.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

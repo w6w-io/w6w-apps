@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/exa",
+  "version": "0.1.0",
+  "description": "AI-native web search, content retrieval, and answers via Exa.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.exa",
+    "displayName": "Exa",
+    "longDescription": "Exa is a search engine built for AI: instead of ten blue links, it returns embeddings-ranked, LLM-summarized web results built for a workflow to consume directly. This app covers its core surface — Search (prompt-engineered web search with several latency/depth modes), Get Contents (crawled text/highlights/summaries for known URLs), Find Similar Links (semantic similarity search from a seed URL), and Answer (a direct, cited answer synthesized from web search) — plus a slice of the newer Websets API, which runs an ongoing entity search (companies, people, publications, ...) rather than one page of results: create, look up, list and delete a Webset, and list the items it has found.\n\nExa charges per call rather than by subscription, which shapes two choices here: the auth connection test and both health checks read GET /v0/teams/me (free account metadata) instead of a live search, and a dedicated health check declares the one thing the API genuinely does not expose — a queryable prepaid credit balance — as absent rather than guessing at it.",
+    "categories": [
+      "search",
+      "ai"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Exa"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.exa.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

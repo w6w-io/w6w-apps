@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/freshsales",
+  "version": "0.1.0",
+  "description": "Manage Freshsales Suite contacts, accounts and deals.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.freshsales",
+    "displayName": "Freshsales",
+    "longDescription": "Freshsales (Freshworks' CRM, marketed as \"Freshsales Suite\") covers the three objects a sales workflow moves between: contacts, accounts and deals can each be created, fetched, listed, updated and deleted, and a note can be logged against any of them to record what happened without a rep opening the CRM directly.\n\nListing is view-based rather than a flat scan — Freshsales has no plain \"list everything\" endpoint, so the list actions take a saved view id (a `view-get-many` action per resource fetches the account's own views, including the built-in \"All Contacts\"/\"All Accounts\"/\"All Deals\") and page through it.\n\nA fit for routing an external event — a form submission, a support escalation, a signup — into a new lead-like contact or deal, updating a deal as it moves through its pipeline, or syncing contact and account data between Freshsales and another system.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Freshsales"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.myfreshworks.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

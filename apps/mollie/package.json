@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/mollie",
+  "version": "0.1.0",
+  "description": "Accept payments, manage refunds, customers, mandates and subscriptions on Mollie, the European payment gateway.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.mollie",
+    "displayName": "Mollie",
+    "longDescription": "Mollie is a European payment gateway: accept payments over 30+ methods (iDEAL, cards, Bancontact, SEPA Direct Debit, PayPal, Klarna, and more) via Payments, hosted Payment Links, and recurring subscriptions billed against a saved Mandate, then track, refund and reconcile them.\n\nThis app covers that core payment-gateway surface — Payments, Refunds, Chargebacks, Methods, Payment Links, Customers, Mandates and Subscriptions — the path a workflow needs to accept a payment and later reconcile, refund, or bill a recurring charge against it. Monetary amounts are always `{currency, value}` objects with `value` an exact decimal STRING (`\"10.00\"`), never an integer of cents.\n\nMollie's Orders API (and its companion Shipments API) is deprecated by Mollie itself as of this writing — the vendor's own docs mark every `orders-api` operation `deprecated: true` and steer integrations at the Payments API's `lines` field instead — so this app does not implement it.\n\nThe wider Mollie Connect surface (OAuth-based platform/marketplace access on behalf of other Mollie merchants — Organizations, Clients, Client Links, Balance Transfers, Onboarding, Capabilities, Permissions) and Business operations (Balances, Settlements, Invoices, Payouts, Sales Invoices, Business Accounts, Terminals, Wallets, Delayed Routing, Unmatched Credit Transfers, Sessions/Checkout Sessions) are a different activation and a different account relationship, and are left out rather than half-covered.",
+    "categories": [
+      "commerce",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Mollie"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.mollie.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
