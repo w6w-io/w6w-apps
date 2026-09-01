@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/lokalise",
+  "version": "0.1.1",
+  "description": "Manage Lokalise projects, keys, translations, languages, files, contributors, tasks and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.lokalise",
+    "displayName": "Lokalise",
+    "longDescription": "Lokalise is a translation and localization management platform: strings live as keys with per-language translations, organized into projects, exported as files in the format each platform (iOS, Android, web, ...) expects.\n\nThis app covers the path a workflow actually needs around that: manage projects and their languages, create and update keys and translations, upload a source file for Lokalise to parse and queue for translation, and export a project's current translations as a downloadable bundle. Beyond the core content, it covers contributors (who can translate what), comments (in-context notes on a key), tasks (assigning translation work with a due date) and webhooks (reacting to a translation event instead of polling for it).\n\nA structural fact shapes every 'create' action here: Lokalise's create endpoints are bulk-only — even creating one key, language, contributor or comment means POSTing an array of one, and a 200 response can still carry a per-item 'errors' array for partial failure. Every bulk action in this app surfaces that array rather than assuming HTTP success means every item succeeded.",
+    "categories": [
+      "developer-tools",
+      "cms"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Lokalise"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Lokalise"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.lokalise.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

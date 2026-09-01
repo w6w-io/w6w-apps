@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/zendesk-sell",
+  "version": "0.1.1",
+  "description": "Manage contacts, leads, deals, notes and tasks in Zendesk Sell (formerly Base CRM), over the Sell API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zendesk-sell",
+    "displayName": "Zendesk Sell",
+    "longDescription": "Zendesk Sell — the CRM product built from the acquired Base CRM (getbase.com), now sold as part of Zendesk but running on its own, entirely separate API surface from Zendesk Support. This app covers Sell's core sales-pipeline objects: contacts (people and organizations), leads and their conversion into contacts/deals, deals, the notes and tasks attached to any of those three, and a read of the users and account behind a connection.\n\nThe Sell API is reached at api.getbase.com, not any zendesk.com host — the vendor's old developers.getbase.com reference now redirects into Zendesk's unified developer docs, but the wire endpoint itself never moved. Authentication is OAuth 2.0 (Authorization Code, the vendor's own recommended \"Multi-User Application\" flow), with read/write/profile scopes.\n\nHealth checks track Zendesk's own status dashboard — which does carry a dedicated Sales/Sell component (service id 63, slug \"sell\"), confirmed against its (undocumented) internal API rather than assumed from the page's name — plus the derived credential check. The vendor exposes no readable per-token rate-limit headroom, so that quota is declared unavailable rather than guessed.",
+    "categories": [
+      "crm",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zendesk Sell"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Zendesk Sell"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.getbase.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

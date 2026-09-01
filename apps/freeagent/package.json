@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/freeagent",
+  "version": "0.1.0",
+  "description": "Manage FreeAgent contacts, invoices, expenses, bank transactions, timeslips, projects and tasks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.freeagent",
+    "displayName": "FreeAgent",
+    "longDescription": "FreeAgent brings the core small-business accounting workflow into a workflow — contacts, invoices, expenses, bank transactions, time tracking (timeslips), projects and tasks. Contact and invoice actions cover the standard create-read-update loop, letting a workflow keep customer records current and generate invoices as a business process requires; invoices always start as Draft, so a dedicated action sends the invoice email once it's ready. Expense actions record claims against a user, bank transaction actions read transaction history for reconciliation, and project/task/timeslip actions cover logging and reporting billable time.\n\nFreeAgent references a related resource — the contact on an invoice, the task on a timeslip — by its full API URL rather than a bare id, so every action that names one takes a plain id and builds the URL FreeAgent expects internally. Create and update actions accept FreeAgent's own field names directly for anything beyond the few fields every call needs, so the full breadth of what FreeAgent's Company API supports on a contact or invoice is reachable without the action surface needing to enumerate every possible field.\n\nThis app deliberately leaves out credit notes, estimates, bills, capital assets, payroll, sales tax returns, attachments and the separate Accountancy Practice API (a different product for accountants managing multiple clients), focusing on the core contact, invoice, expense, bank transaction and time-tracking operations most workflows need first.",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "FreeAgent"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.freeagent.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

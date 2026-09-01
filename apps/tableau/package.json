@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/tableau",
+  "version": "0.1.0",
+  "description": "Manage Tableau Server or Tableau Cloud sites, projects, workbooks, views and data sources.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.tableau",
+    "displayName": "Tableau",
+    "longDescription": "Tableau is Salesforce's analytics and BI platform, reachable through one REST API that fronts two very different deployments: Tableau Cloud (a pod-hosted multi-tenant service, e.g. `10ax.online.tableau.com`) and Tableau Server (a customer's own install, at whatever host they gave it). This app treats the server address the way it treats a self-hosted app's URL — a connection field, not a fixed hostname — because there is no single Tableau host to allowlist.\n\nIt covers the surface a workflow actually touches day to day: listing and creating projects, listing, reading and deleting workbooks, reading the views inside them (site-wide or per workbook) and rendering a view to an image, listing and reading published data sources and kicking off an extract refresh without waiting for its schedule, and listing or looking up the users on a site.\n\nAuthentication is a Personal Access Token exchanged for a short-lived session — the token is signed in once to get a `X-Tableau-Auth` credential and a site id, and the app refreshes that session by signing in again rather than treating the PAT itself as a bearer credential. Publishing new workbooks, data source extracts and every admin-only surface (users, groups, schedules, permissions) are deliberately out of scope for a first version.",
+    "categories": [
+      "analytics",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Tableau"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
