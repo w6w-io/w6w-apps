@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/sendy",
+  "version": "0.1.0",
+  "description": "Manage subscribers and send campaigns on a self-hosted Sendy newsletter installation.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.sendy",
+    "displayName": "Sendy",
+    "longDescription": "Sendy is self-hosted newsletter software that sends through your own Amazon SES account. It has no vendor host of its own — every workflow talks to the operator's own installation — so this app covers Sendy's documented HTTP API exactly as published at sendy.co/api: adding, removing and deleting subscribers, reading a subscriber's status and a list's active count, listing lists and brands, and creating (optionally sending or scheduling) a campaign.\n\nBecause Sendy ships as software you run yourself, there is no vendor status to watch — the API's own error text is the only signal a workflow gets, and this app reads it literally rather than guessing from an HTTP status code.",
+    "categories": [
+      "email",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Sendy"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

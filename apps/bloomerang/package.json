@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/bloomerang",
+  "version": "0.1.0",
+  "description": "Manage Bloomerang nonprofit CRM constituents, donations, funds, notes and tasks via the Bloomerang REST API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.bloomerang",
+    "displayName": "Bloomerang",
+    "longDescription": "Bloomerang is a donor management / fundraising CRM built for small and mid-sized nonprofits, and this app covers its core objects through the Bloomerang REST API v2 — constituents (donors, households and organizations), donations and other transactions, funds, notes and tasks.\n\nIt searches and manages constituent records, records donations against a fund with the same Designation model the Bloomerang UI itself uses, looks up funds to resolve the ids a donation needs, and logs notes and tasks against a constituent's timeline.\n\nGood for teams that want to create or update donor records from an external signup form or event platform, log a donation processed elsewhere (this app never touches payment data — Bloomerang's private-key API is for server-to-server data sync, not for taking payment), or keep follow-up tasks and notes in sync with an outside tool.",
+    "categories": [
+      "crm",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Bloomerang"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.bloomerang.co"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
