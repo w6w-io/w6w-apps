@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.112.0",
+  "version": "0.113.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -235,6 +235,9 @@
       "path": "./apps/docusign"
     },
     {
+      "path": "./apps/drip"
+    },
+    {
       "path": "./apps/dropbox"
     },
     {
@@ -296,6 +299,9 @@
     },
     {
       "path": "./apps/freeagent"
+    },
+    {
+      "path": "./apps/freshbooks"
     },
     {
       "path": "./apps/freshdesk"
@@ -520,6 +526,9 @@
       "path": "./apps/meilisearch"
     },
     {
+      "path": "./apps/messagebird"
+    },
+    {
       "path": "./apps/metabase"
     },
     {
@@ -611,6 +620,9 @@
     },
     {
       "path": "./apps/pdfco"
+    },
+    {
+      "path": "./apps/pendo"
     },
     {
       "path": "./apps/perplexity"
@@ -923,6 +935,9 @@
     },
     {
       "path": "./apps/zoho"
+    },
+    {
+      "path": "./apps/zoho-invoice"
     },
     {
       "path": "./apps/zohobooks"

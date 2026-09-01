@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/freshbooks",
+  "version": "0.1.0",
+  "description": "Manage FreshBooks clients, invoices, expenses, time entries and projects.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.freshbooks",
+    "displayName": "FreshBooks",
+    "longDescription": "FreshBooks brings core accounting and invoicing data into a workflow — clients, invoices, expenses, logged time and projects. Client and invoice actions cover the standard create-read-update loop, and a dedicated Send Invoice action moves a draft invoice into FreshBooks' Sent state (or emails it directly), matching how FreshBooks itself gates an invoice from accounting reports and client visibility until it is sent. Expense and time entry actions let a workflow record costs and logged hours as they happen, and project actions expose the projects those expenses and time entries roll up to.\n\nFreshBooks spreads its REST surface across three API domains on one host: an `accounting` domain (clients, invoices, expenses) scoped to a legacy account id, and separate `timetracking`/`projects` domains scoped to a newer business id — neither id is on the OAuth token itself, so this app resolves and records both right after authorizing, the same way it would if FreshBooks exposed one shape instead of two. Create and update actions accept FreshBooks' own field names directly (via an `Additional fields` / `Fields` JSON escape hatch), so more of what FreshBooks' API supports on a resource is reachable without the action surface needing to enumerate every possible field.\n\nThis app deliberately leaves out estimates, credits, payments, taxes, bills, vendors, staff/team management, reports, webhooks and invoice attachments, focusing on the core client, invoice, expense, time-tracking and project operations most workflows need first.",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "FreshBooks"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.freshbooks.com",
+        "auth.freshbooks.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

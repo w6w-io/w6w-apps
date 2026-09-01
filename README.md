@@ -100,6 +100,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | discourse | communication, social-media | api-key | 26 |
 | documenso | legal, documents, productivity | api-key | 20 |
 | docusign | documents, legal, productivity | oauth2, oauth2-demo | 16 |
+| drip | marketing, email | api-key | 14 |
 | dropbox | storage | access-token, oauth2 | 12 |
 | dropbox-sign | legal, documents, productivity | api-key, oauth2 | 27 |
 | easypost | commerce, developer-tools | api-key | 19 |
@@ -121,6 +122,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | followupboss | crm | api-key | 26 |
 | formstack | forms, productivity | access-token | 9 |
 | freeagent | finance | oauth2 | 28 |
+| freshbooks | accounting, finance, productivity | oauth2 | 19 |
 | freshdesk | support | api-key | 13 |
 | freshsales | crm, sales, productivity | api-key | 20 |
 | freshservice | support, devops | api-key | 23 |
@@ -195,6 +197,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mattermost | communication, productivity | access-token | 13 |
 | mautic | marketing, email | client-credentials | 28 |
 | meilisearch | search, databases, developer-tools | api-key | 24 |
+| messagebird | communication, phone-sms | api-key | 7 |
 | metabase | analytics, databases | api-key | 17 |
 | microsoft-todo | productivity, project-management | oauth2 | 19 |
 | miro | productivity, project-management | oauth2 | 27 |
@@ -226,6 +229,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | particle | iot, devops | access-token | 13 |
 | paypal | commerce, finance | client-credentials | 13 |
 | pdfco | documents | api-key | 24 |
+| pendo | analytics, product-analytics | api-key | 11 |
 | perplexity | ai | api-key | 5 |
 | phantombuster | automation, developer-tools, ai | api-key | 14 |
 | pinecone | ai, databases, search | api-key | 24 |
@@ -329,6 +333,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zendesk | support, crm | api-token, oauth2 | 17 |
 | zendesk-sell | crm, marketing | oauth2 | 31 |
 | zoho | crm | oauth2 | 21 |
+| zoho-invoice | accounting, finance | oauth2 (×8 DCs) | 22 |
 | zohobooks | accounting | oauth2 (×8 DCs) | 22 |
 | zohodesk | support | oauth2 (×10 DCs) | 27 |
 | zohomail | communication, email | oauth2 (×8 DCs) | 16 |

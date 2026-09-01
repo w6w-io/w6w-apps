@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/messagebird",
+  "version": "0.1.0",
+  "description": "Send SMS, voice messages, and one-time verification codes, and look up phone numbers via MessageBird (now part of Bird).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.messagebird",
+    "displayName": "MessageBird",
+    "longDescription": "MessageBird — now part of Bird — sends SMS and text-to-speech voice messages, runs phone-number verification (OTP) flows, and looks up carrier/line-type data for a number, all through its classic REST API at rest.messagebird.com.\n\nSend SMS covers plain, binary, and flash message types with scheduling and delivery-report callbacks. Voice message send converts text to speech and places an outbound call reading it, with machine-answer handling and repeat count. The Verify actions cover both halves of an OTP flow: requesting a code (by SMS, TTS, or email) and checking the code a user typed back in. Lookup resolves a phone number to its country, carrier line type, and canonical formats without sending anything — useful for validating a number before spending on an SMS or voice send.\n\nMessageBird's brand and marketing now live under Bird (bird.com), and its status page moved to status.bird.com, but this classic REST API (rest.messagebird.com, AccessKey auth) remains the live, documented surface these actions use — this app does not call Bird's newer unified messaging API.",
+    "categories": [
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Bird (formerly MessageBird)"
+      }
+    },
+    "network": {
+      "allow": [
+        "rest.messagebird.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

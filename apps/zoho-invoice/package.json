@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/zoho-invoice",
+  "version": "0.1.0",
+  "description": "Create, send and manage contacts, items, invoices and estimates in Zoho Invoice, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-invoice",
+    "displayName": "Zoho Invoice",
+    "longDescription": "Zoho Invoice puts a business's invoicing records into a workflow — list, read, create, update and delete contacts and catalog items, manage invoices through their full lifecycle including marking one sent, voiding it or emailing it to a customer, and create and read estimates. Every action falls back to the organization the connection was authorized against, so a single-organization account needs nothing extra configured; listing organizations is how a workflow discovers the id for anything else.\n\nZoho hosts every organization in one of eight regional data centres, each with its own API host and, almost always, its own connection endpoint, so this app routes each region through its own dedicated connection rather than one that could silently send an EU organization's requests through the US region instead. Canada is the one region where that connection endpoint breaks the naming pattern the other seven follow, and this app points at the real endpoint rather than the one the pattern would suggest.\n\nRecurring invoices, retainer invoices, credit notes, customer payments, expenses, projects/time entries, bulk export and every jurisdiction-specific tax feature such as GST are deliberately left out as not core to workflow automation of an Invoice account; create and update calls take a generic set of fields for the same reason, since Zoho Invoice's own forms run to dozens of optional, region-specific attributes.",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Zoho Invoice"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.zohoapis.com",
+        "www.zohoapis.eu",
+        "www.zohoapis.in",
+        "www.zohoapis.com.au",
+        "www.zohoapis.jp",
+        "www.zohoapis.ca",
+        "www.zohoapis.com.cn",
+        "www.zohoapis.sa"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

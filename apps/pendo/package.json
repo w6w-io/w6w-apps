@@ -1,0 +1,40 @@
+{
+  "name": "@w6w-apps/pendo",
+  "version": "0.1.0",
+  "description": "Send Pendo track events, read visitor/account/page/feature/guide data, set metadata fields, run aggregation queries, and process GDPR/CCPA deletion requests.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pendo",
+    "displayName": "Pendo",
+    "longDescription": "Pendo is a product analytics and in-app guide platform, and this app covers the parts of its REST API that a workflow actually reaches for: sending track events, reading back visitor, account, page, feature and guide data, setting or reading a metadata field on a visitor or account, running Pendo's own Aggregation pipeline language for analytics queries, pulling a saved report's results, and filing a GDPR/CCPA bulk-deletion request.\n\nThe API is really two credentials on five regional deployments. The main Integration Key reads and (optionally) writes everything under `/api/v1`; a separate Track Event Shared Secret — a DIFFERENT value from the integration key — is required for the ingest endpoint on the `data.*.pendo.io` hosts. Getting them mixed up is the most common way a Pendo connection looks broken when it isn't, so this app keeps them as two explicit fields and injects the right one per host.",
+    "categories": [
+      "analytics"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Pendo"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.pendo.io",
+        "app.eu.pendo.io",
+        "us1.app.pendo.io",
+        "app.jpn.pendo.io",
+        "app.au.pendo.io",
+        "data.pendo.io",
+        "data.eu.pendo.io",
+        "us1.data.pendo.io",
+        "data.jpn.pendo.io",
+        "data.au.pendo.io",
+        "status.pendo.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
