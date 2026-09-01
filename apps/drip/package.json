@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/drip",
+  "version": "0.1.0",
+  "description": "Manage Drip subscribers, tags, events and email series campaigns.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.drip",
+    "displayName": "Drip",
+    "longDescription": "Drip is an email marketing platform built around subscribers, tags and custom events, and this app covers that core loop: creating or updating a subscriber, listing and fetching them, applying and removing tags to drive segmentation, and recording the custom events Drip's automations key off — 'Logged in', 'Started a trial', and the like.\n\nCampaigns (Drip calls its automations 'Email Series Campaigns') can be listed and fetched so a workflow can look up an active series before subscribing someone to it, and account, custom-field and event-action listings round out the picture for building forms and mappings without opening Drip's dashboard.\n\nA fit for syncing subscriber and tag data from a signup form or CRM, recording product events that trigger a Drip automation, or looking up campaign and account metadata as part of a larger workflow.",
+    "categories": [
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Drip"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.getdrip.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
