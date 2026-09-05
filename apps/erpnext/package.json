@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/erpnext",
+  "version": "0.1.0",
+  "description": "Read and write ERPNext documents — any DocType — over Frappe's generic REST API, plus the submit/cancel document lifecycle.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.erpnext",
+    "displayName": "ERPNext",
+    "longDescription": "ERPNext is an open-source, self-hosted ERP built on the Frappe framework, and Frappe does not expose per-business-object endpoints the way a SaaS CRM does — it exposes its own metadata layer, so every Customer, Sales Order, Item, Lead or Employee is a \"DocType\" reachable through one generic REST surface: `/api/resource/<doctype>`. This app wraps that surface rather than guessing at a fixed schema, because which DocTypes and fields exist depends entirely on which ERPNext modules and customizations a given install has turned on.\n\nIt covers the full document lifecycle any DocType shares: list with Frappe's own filter/field/sort/paging language, read one by name, create, update and delete. On top of that it adds ERPNext's submit/cancel workflow — the draft → submitted → cancelled state machine that Sales Orders, Purchase Orders, Sales Invoices and most transactional DocTypes use to move from an editable draft to a posted, accounting-relevant document — plus a record count and a whitelisted remote-method escape hatch for business logic no generic CRUD call reaches.\n\nGood for creating a Customer or Lead from an external form, submitting a Sales Order once a workflow's own approval step clears, keeping an Item catalog in sync with an outside pricing tool, or reaching any other DocType an installation exposes without waiting for a dedicated action to be written for it.",
+    "categories": [
+      "finance",
+      "crm",
+      "hr"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "ERPNext"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

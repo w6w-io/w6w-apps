@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/lemonsqueezy",
+  "version": "0.1.1",
+  "description": "Sell software and digital products through Lemon Squeezy — catalog, customers, orders and refunds, subscriptions, discounts, license keys, checkouts and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.lemonsqueezy",
+    "displayName": "Lemon Squeezy",
+    "longDescription": "Lemon Squeezy is a merchant of record for software and digital products — it sells on your behalf and handles payment collection, sales tax/VAT and invoicing worldwide. This app manages the resulting catalog and customer lifecycle: products, variants and prices; customers; orders, their invoices and refunds; subscriptions, including plan changes, pausing and cancelling; discount codes; license keys generated for licensed products; custom checkout links; and webhook subscriptions for event delivery.\n\nA cancelled subscription keeps running until its `ends_at` date even though its `status` flips immediately — a detail this app surfaces explicitly, since a workflow that treats cancellation as instant loss of access would be wrong. Orders cannot be created through this API (they are the result of a checkout being completed by a customer); this app reads and refunds them instead. License key activation/deactivation/validation uses a separate, unauthenticated License API meant for the licensed software itself to call, not the store owner's API key, and is out of scope here — see the README.",
+    "categories": [
+      "commerce",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Lemon Squeezy"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Lemon Squeezy"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.lemonsqueezy.com",
+        "127.0.0.1"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

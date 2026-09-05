@@ -60,6 +60,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | blandai | ai, communication | api-key | 19 |
 | bluesky | social-media, communication | app-password | 21 |
 | box | storage | oauth2 | 10 |
+| braze | marketing, communication | api-key | 22 |
 | brevo | marketing, email | api-key | 15 |
 | browseai | ai, developer-tools | api-key | 18 |
 | buffer | social-media, marketing | oauth2, api-key | 14 |
@@ -109,6 +110,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | discourse | communication, social-media | api-key | 26 |
 | documenso | legal, documents, productivity | api-key | 20 |
 | docusign | documents, legal, productivity | oauth2, oauth2-demo | 16 |
+| donorbox | commerce | basic | 7 |
 | drip | marketing, email | api-key | 14 |
 | dropbox | storage | access-token, oauth2 | 12 |
 | dropbox-sign | legal, documents, productivity | api-key, oauth2 | 27 |
@@ -118,6 +120,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | elastic | search | api-key, basic | 9 |
 | elevenlabs | ai | api-key | 22 |
 | emailoctopus | marketing, email | api-key | 25 |
+| erpnext | crm, commerce | api-key | 10 |
 | eventbrite | commerce, calendar | personal-token, oauth2 | 10 |
 | exa | ai, search, developer-tools | api-key | 9 |
 | excel | spreadsheets, productivity | oauth2 | 16 |
@@ -206,6 +209,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | launchdarkly | devops, developer-tools | api-key | 21 |
 | learnworlds | crm, commerce | client-credentials | 12 |
 | lemlist | marketing, email | api-key | 18 |
+| lemonsqueezy | commerce, finance | api-key | 36 |
 | lever | hr, productivity | api-key | 12 |
 | line | communication, marketing | channel-access-token | 17 |
 | linear | project-management, developer-tools | api-key, oauth2 | 11 |
@@ -222,6 +226,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mailgun | email, communication | api-key | 14 |
 | mailjet | email, marketing | basic | 17 |
 | mandrill | email, marketing | api-key | 17 |
+| manus | ai | api-key | 32 |
 | manychat | marketing, communication, social-media | api-token | 25 |
 | marketo | marketing, crm | client-credentials | 15 |
 | mastodon | social-media, communication | access-token | 18 |

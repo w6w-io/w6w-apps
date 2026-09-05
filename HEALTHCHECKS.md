@@ -21,11 +21,11 @@ for the rest it tested whatever happened to be first in `index.ts`.
 Reading the **Declared checks** column: `` `key` `` is a live probe, ~~`key`~~ is a
 declared *absence* (the vendor publishes nothing, stated as a positive fact rather than
 left as a gap), and "N derived" counts the `auth:*` checks projected from the app's auth
-methods. Sixty-four apps add a fourth question — **is this tenant's own host reachable?** —
+methods. Sixty-five apps add a fourth question — **is this tenant's own host reachable?** —
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **947 checks**: 372 live probes, 232 declared absences, and 345
+Across the pack that comes to **962 checks**: 380 live probes, 234 declared absences, and 350
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -69,6 +69,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [blandai](apps/blandai/README.md) | [Statuspage](https://status.bland.ai/) | yes | `GET /v1/me` | yes (pay-as-you-go call credit) | `service` · `quota` · 1 derived |
 | [bluesky](apps/bluesky/README.md) | none usable — status.bsky.app is an UptimeRobot page whose only JSON route is keyed by a token scraped from its own `pspApiPath` script, and whose monitors are per-PDS-instance | no | `GET /xrpc/com.atproto.server.getSession` | yes (real `ratelimit-*` headers; the ~10/day createSession limit is documented rather than probed, because probing consumes it) | ~~service~~ · `pds` · `quota` · 1 derived |
 | [box](apps/box/README.md) | [Statuspage](https://status.box.com/api/v2/summary.json) | yes | `GET /users/me` | no | `service` · ~~quota~~ · 1 derived |
+| [braze](apps/braze/README.md) | [Statuspage](https://status.braze.com/api/v2/summary.json) — components keyed by (cluster group, name), since every one of Braze's regional clusters repeats the same child component names | yes | `GET /content_blocks/list?limit=1` | no (declared unavailable) | `service` · ~~quota~~ · 1 derived |
 | [brevo](apps/brevo/README.md) | [Statuspage](https://status.brevo.com/api/v2/status.json) | yes | `GET /v3/account` | yes | `service` · `quota` · 1 derived |
 | [browseai](apps/browseai/README.md) | [Statuspage](https://browseai.statuspage.io/api/v2/summary.json) — page-level indicator, not worst-component | yes | `GET /v2/status` (signed) | no — only a `403 credits_limit_reached` refusal at the moment credits run out | `service` · `queue` · ~~quota~~ · 1 derived |
 | [buffer](apps/buffer/README.md) | [Statuspage](https://status.buffer.com/api/v2/summary.json) | yes | `{ account { id } }` (GraphQL) | yes | `service` · `quota` · 2 derived |
@@ -118,6 +119,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [discourse](apps/discourse/README.md) | [status.io](https://api.status.io/1.0/status/5e2141ce30dc5c04b3ac32fc) | yes | `GET /u/{username}.json` | no | `service` · ~~quota~~ · `site` · 1 derived |
 | [documenso](apps/documenso/README.md) | none — self-hostable, so the `instance` check reads the connection's own /api/health (database + signing certificate) | no | `GET /api/v2/envelope?perPage=1` | yes | `instance` · `quota` · 1 derived |
 | [docusign](apps/docusign/README.md) | [Statuspage](https://status.docusign.com/api/v2/summary.json) | yes | `GET /accounts/{accountId}` | yes | `service` · `quota` · 2 derived |
+| [donorbox](apps/donorbox/README.md) | [Statuspage](https://status.donorbox.org/api/v2/summary.json), grouped `Donorbox API` component (`Campaigns`/`Donations`/`Donors`/`Events`/`Plans`/`Tickets`) | yes | `GET /api/v1/campaigns?per_page=1` | yes — undocumented but real `x-ratelimit-*` headers, present on every response including a 401 | `service` · `quota` · 1 derived |
 | [drip](apps/drip/README.md) | [Statuspage](https://status.drip.com/api/v2/summary.json), component "REST and JavaScript APIs" | yes | `GET /v2/user` | yes | `service` · `quota` · 1 derived |
 | [dropbox](apps/dropbox/README.md) | [Statuspage](https://status.dropbox.com/api/v2/status.json) | yes | `POST /2/users/get_current_account` | no | `service` · ~~quota~~ · 2 derived |
 | [dropbox-sign](apps/dropbox-sign/README.md) | [Statuspage](https://status.hellosign.com/api/v2/components.json) (the signing components — NOT the group named "API", which is outbound callbacks) | yes | `GET /v3/account` | yes | `service` · `quota` · 2 derived |
@@ -127,6 +129,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [elastic](apps/elastic/README.md) | none published | no | `GET /_security/_authenticate` | no | ~~service~~ · ~~quota~~ · `site` · 2 derived |
 | [elevenlabs](apps/elevenlabs/README.md) | [Statuspage](https://status.elevenlabs.io/api/v2/summary.json) | yes | `GET /v1/user/subscription` | yes | `service` · `quota` · ~~request-rate~~ · 1 derived |
 | [emailoctopus](apps/emailoctopus/README.md) | [incident.io](https://status.emailoctopus.com/api/v2/status.json) | yes | `GET /lists` | yes | `service` · `api` · `quota` · 1 derived |
+| [erpnext](apps/erpnext/README.md) | none published — self-hosted, no vendor-wide status page | no | `GET /api/method/frappe.auth.get_logged_user` — unsigned; Frappe's fixed `PermissionError` (403) refusal proves a live Frappe site | no (declared unavailable) | ~~service~~ · `instance` · 1 derived |
 | [eventbrite](apps/eventbrite/README.md) | [page](https://status.eventbrite.com) | no | `GET /v3/users/me/` | yes | ~~service~~ · `quota` · 2 derived |
 | [exa](apps/exa/README.md) | [status.exa.ai](https://status.exa.ai/api/v2/components.json) (custom Vercel-hosted page) | yes | `GET /v0/teams/me` | no | `service` · `quota` · ~~credits~~ · 1 derived |
 | [excel](apps/excel/README.md) | none machine-readable | no | `GET /me/drive` | yes | ~~service~~ · `quota` · 1 derived |
@@ -215,6 +218,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [launchdarkly](apps/launchdarkly/README.md) | [Statuspage](https://status.launchdarkly.com/api/v2/components.json) (the management components; NOT the four named "API", which are SDK delivery) | yes | `GET /api/v2/projects?limit=1` | yes | `service` · `quota` · 1 derived |
 | [learnworlds](apps/learnworlds/README.md) | [Statuspage](https://status.learnworlds.com/api/v2/summary.json) | yes | `GET /admin/api/v2/users?items_per_page=1` | no — no rate-limit header documented or observed | `service` · ~~quota~~ · `school` · 1 derived |
 | [lemlist](apps/lemlist/README.md) | [Hyperping](https://status.lempire.com/status.json) | yes | `GET /team` | yes | `service` · `quota` · 1 derived |
+| [lemonsqueezy](apps/lemonsqueezy/README.md) | [Oh Dear](https://status.lemonsqueezy.com/rss) — a plain RSS feed, not Statuspage/Instatus-shaped (every path in that shape 404s) | yes | `GET /v1/users/me` | yes | `service` · `quota` · 1 derived |
 | [lever](apps/lever/README.md) | [Statuspage](https://status.lever.co/api/v2/summary.json) — 41 components across seven groups where EVERY NAME APPEARS TWICE, once per data centre, so a component is only identifiable as (GROUP, name); resolved through `group_id` for the data centre the connection names, weighting `Integration API & Webhooks` and reporting `Hire` separately since the API and the product fail independently | yes | `GET /users?limit=1`, plus a probe for CONFIDENTIAL access — which Lever grants only at key creation, and whose absence shortens every list silently | no — Lever documents a 429 without stating the budget or window and publishes no header; the real constraint is the OPAQUE pagination cursor, which cannot be parallelised | `service` · ~~quota~~ · 1 derived |
 | [line](apps/line/README.md) | [Statuspage](https://api.line-status.info/api/v2/summary.json), scoped to the Messaging API group only (Login/LIFF/Console share the page) | yes | `GET /v2/bot/info` | yes — combined send-quota + consumption reads | `service` · `quota` · 1 derived |
 | [linear](apps/linear/README.md) | [page](https://status.linear.app) | no | `POST /graphql  ·  { viewer { id } }` | yes | ~~service~~ · `quota` · 2 derived |
@@ -231,6 +235,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [mailgun](apps/mailgun/README.md) | [Statuspage](https://status.mailgun.com/api/v2/summary.json) | yes | `GET /v4/domains?limit=1` | yes | `service` · `quota` · 1 derived |
 | [mailjet](apps/mailjet/README.md) | [Statuspage](https://status.mailjet.com/api/v2/summary.json) | yes | `GET /v3/REST/contactslist?Limit=1` | no | `service` · ~~quota~~ · 1 derived |
 | [mandrill](apps/mandrill/README.md) | none published | no | `POST /users/ping.json` | yes | ~~service~~ · `quota` · 1 derived |
+| [manus](apps/manus/README.md) | [Statuspage](https://status.manus.im/api/v2/summary.json), tracks the `api.manus.im` and `manus computer` components (excludes the `manus.im` web app, which this app never touches) | yes | `GET /v2/usage.availableCredits` | yes — reports `down` at zero credits, since every task turn spends from that balance | `service` · `quota` · 1 derived |
 | [manychat](apps/manychat/README.md) | [Instatus](https://status.manychat.com/v2/components.json) | yes | `GET /fb/page/getInfo` | no | `service` · ~~quota~~ · 1 derived |
 | [marketo](apps/marketo/README.md) | none — `marketo.statuspage.io` answers 401 "page inactive" (unclaimed), `status.marketo.com`/`trust.marketo.com` don't complete a TLS handshake, and Adobe's trust page is generic | no | `GET /leads/describe.json` — a 200-with-`success:false` envelope is the failure signal, not the HTTP status | no (declared unavailable) | ~~service~~ · `instance` · ~~quota~~ · 1 derived |
 | [mastodon](apps/mastodon/README.md) | none — there is no vendor. Mastodon is software thousands of people run, joinmastodon.org does not operate the network, and per-instance status pages have no registry | no | `GET /api/v1/accounts/verify_credentials` | yes (real `x-ratelimit-*`; the reset is an ISO TIMESTAMP, not epoch seconds) | ~~service~~ · `instance` · `quota` · 1 derived |

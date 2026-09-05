@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.122.0",
+  "version": "0.123.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -116,6 +116,9 @@
     },
     {
       "path": "./apps/box"
+    },
+    {
+      "path": "./apps/braze"
     },
     {
       "path": "./apps/brevo"
@@ -268,6 +271,9 @@
       "path": "./apps/docusign"
     },
     {
+      "path": "./apps/donorbox"
+    },
+    {
       "path": "./apps/drip"
     },
     {
@@ -293,6 +299,9 @@
     },
     {
       "path": "./apps/emailoctopus"
+    },
+    {
+      "path": "./apps/erpnext"
     },
     {
       "path": "./apps/eventbrite"
@@ -565,6 +574,9 @@
       "path": "./apps/lemlist"
     },
     {
+      "path": "./apps/lemonsqueezy"
+    },
+    {
       "path": "./apps/lever"
     },
     {
@@ -611,6 +623,9 @@
     },
     {
       "path": "./apps/mandrill"
+    },
+    {
+      "path": "./apps/manus"
     },
     {
       "path": "./apps/manychat"
