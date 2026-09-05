@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.116.0",
+  "version": "0.117.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -236,6 +236,9 @@
     },
     {
       "path": "./apps/deepl"
+    },
+    {
+      "path": "./apps/devin"
     },
     {
       "path": "./apps/dialpad"
@@ -478,6 +481,9 @@
       "path": "./apps/jira"
     },
     {
+      "path": "./apps/jira-data-center"
+    },
+    {
       "path": "./apps/jobber"
     },
     {
@@ -517,6 +523,9 @@
       "path": "./apps/lever"
     },
     {
+      "path": "./apps/line"
+    },
+    {
       "path": "./apps/linear"
     },
     {
@@ -524,6 +533,9 @@
     },
     {
       "path": "./apps/linkedin-ads"
+    },
+    {
+      "path": "./apps/linkedin-conversions"
     },
     {
       "path": "./apps/lokalise"
@@ -974,6 +986,9 @@
     },
     {
       "path": "./apps/whop"
+    },
+    {
+      "path": "./apps/wise"
     },
     {
       "path": "./apps/wix"

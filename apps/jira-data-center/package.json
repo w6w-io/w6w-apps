@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/jira-data-center",
+  "version": "0.1.0",
+  "description": "Create, search and transition issues on a self-hosted Jira Data Center or Jira Server instance.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.jira-data-center",
+    "displayName": "Jira Data Center",
+    "longDescription": "Jira Data Center is Atlassian's self-hosted, clustered deployment of Jira — a genuinely different product from Jira Cloud (the sibling `jira` app in this pack), reachable at whatever domain a customer's IT team gave it rather than a fixed `*.atlassian.net` host. This app treats that instance address the way it treats any self-hosted app's URL — a connection field, not something a manifest can allowlist.\n\nIt covers the same day-to-day loop as the Cloud app — creating, searching, updating, transitioning and deleting issues; adding, listing and deleting comments; listing and reading projects; looking up and searching users — adapted to the classic v2 REST API Data Center actually serves: plain wiki-markup strings instead of Atlassian Document Format for descriptions and comment bodies, and usernames instead of Jira Cloud's opaque account ids for assigning issues and identifying people.\n\nAuthentication is a Personal Access Token sent as a bearer credential — Atlassian's own recommended method alongside OAuth 2.0, which this version skips because it requires registering an application link inside each target instance's admin console before a single Connection can be made. A username/password Basic method is included as a fallback for instances where PAT creation is disabled. Boards and sprints (the separate agile API), attachments, issue links, worklogs and every admin-only surface are out of scope for a first version.",
+    "categories": [
+      "project-management",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Jira Data Center"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

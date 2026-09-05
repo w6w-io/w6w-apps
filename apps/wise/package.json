@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/wise",
+  "version": "0.1.1",
+  "description": "Send cross-border transfers with Wise: quotes, recipients, transfers, and multi-currency balances.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.wise",
+    "displayName": "Wise",
+    "longDescription": "Wise (formerly TransferWise) moves money across borders at close to the real exchange rate. This app covers the path most Wise automations need: create a quote for a currency pair, attach or create a recipient account, turn the quote into a transfer, fund it from a multi-currency balance, and track its status through to completion.\n\nBeyond the send-money path it also surfaces profile management, live and historical exchange rates, the full currency list, and balance/statement reads for reconciliation.\n\nWise's Personal API Token is documented as a business-account feature with a closed, stated scope (quotes, recipients, transfers, tracking) that does not fully match what its own API reference declares per endpoint — this app documents that gap rather than guessing past it. Two write actions (funding a transfer, reading a balance statement) are Strong Customer Authentication (SCA) protected outside a short list of countries, and are documented as such.",
+    "categories": [
+      "finance",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Wise"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Wise"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.wise.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

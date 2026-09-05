@@ -99,6 +99,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | deel | hr, finance | api-token | 25 |
 | deepgram | ai, video, developer-tools | api-key | 19 |
 | deepl | ai | api-key | 8 |
+| devin | developer-tools, ai | api-key | 12 |
 | dialpad | communication, support | api-key | 35 |
 | digitalocean | devops, storage | token | 15 |
 | discord | communication | bot-token, oauth2 | 19 |
@@ -178,6 +179,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | jenkins | devops | basic | 6 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
+| jira-data-center | project-management, developer-tools | personal-access-token, basic | 15 |
 | jobber | calendar, crm, finance | oauth2 | 28 |
 | jotform | forms, productivity | api-key | 14 |
 | jumpcloud | security, devops, hr | api-key | 31 |
@@ -190,9 +192,11 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | launchdarkly | devops, developer-tools | api-key | 21 |
 | lemlist | marketing, email | api-key | 18 |
 | lever | hr, productivity | api-key | 12 |
+| line | communication, marketing | channel-access-token | 17 |
 | linear | project-management, developer-tools | api-key, oauth2 | 11 |
 | linkedin | social-media, marketing | oauth2, oauth2-community-management | 6 |
 | linkedin-ads | marketing, analytics | oauth2, oauth2-audiences | 23 |
+| linkedin-conversions | marketing, analytics | oauth2 | 7 |
 | lokalise | developer-tools, cms | api-token | 31 |
 | looker | analytics, data-warehousing | api-credentials | 11 |
 | loops | email, marketing, communication | api-key | 21 |
@@ -340,6 +344,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | whatconverts | marketing, analytics, crm | basic | 25 |
 | whatsapp | communication | access-token | 9 |
 | whop | commerce, finance | api-key | 35 |
+| wise | finance, commerce | api-token | 19 |
 | wix | cms, crm, commerce | api-key | 24 |
 | woocommerce | commerce | api-key | 13 |
 | wordpress | cms | basic, oauth2 | 15 |
