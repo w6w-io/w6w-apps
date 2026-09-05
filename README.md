@@ -91,6 +91,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | contentful | cms | access-token | 10 |
 | copper | crm | api-key | 24 |
 | crisp | support, communication | basic | 12 |
+| cursor | developer-tools, ai, finance | basic | 24 |
 | customerio | marketing, email | basic | 7 |
 | databricks | data-warehousing | bearer-token | 8 |
 | datadog | monitoring, devops, developer-tools | api-key | 22 |
@@ -108,6 +109,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | dropbox | storage | access-token, oauth2 | 12 |
 | dropbox-sign | legal, documents, productivity | api-key, oauth2 | 27 |
 | easypost | commerce, developer-tools | api-key | 19 |
+| ebay | commerce | custom | 4 |
 | elastic | search | api-key, basic | 9 |
 | elevenlabs | ai | api-key | 22 |
 | emailoctopus | marketing, email | api-key | 25 |
@@ -159,6 +161,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | gravityforms | forms, productivity | basic | 12 |
 | greenhouse | hr | oauth-client-credentials, api-key | 24 |
 | grist | spreadsheets, databases, productivity | api-key, oauth2 | 15 |
+| groq | ai | bearer | 16 |
 | guru | productivity, search, ai | basic | 16 |
 | gusto | hr, finance, productivity | oauth2, oauth2-demo | 23 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
@@ -226,6 +229,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | omnisend | marketing, email | api-key | 7 |
 | oncehub | scheduling | api-key | 30 |
 | onedrive | documents, storage | oauth2 | 18 |
+| onenote | productivity, documents | oauth2 | 15 |
 | onepassword | security, developer-tools | connect-token, events-token | 14 |
 | onesimpleapi | developer-tools | api-key | 7 |
 | onfleet | commerce, productivity | api-key | 32 |
@@ -301,6 +305,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | tableau | analytics, productivity | personal-access-token | 15 |
 | tailscale | security, devops | api-key, oauth-client | 16 |
 | tally | forms, productivity | api-key | 38 |
+| tapfiliate | marketing, crm | api-key | 46 |
 | teachable | commerce, productivity | api-key | 21 |
 | teamleader | crm | oauth2 | 15 |
 | teams | communication | oauth2 | 16 |
