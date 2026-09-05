@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/invoiceninja",
+  "version": "0.1.1",
+  "description": "Manage Invoice Ninja clients, invoices, quotes, payments, products, tasks and expenses.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.invoiceninja",
+    "displayName": "Invoice Ninja",
+    "longDescription": "Invoice Ninja is a source-available invoicing and billing platform. This app covers the day-to-day billing lifecycle: creating, updating, fetching, listing and deleting clients, invoices, quotes, payments, products, tasks and expenses.\n\nInvoices can be created with typed line items, listed and filtered, updated, deleted, and sent by email or marked paid without a person opening Invoice Ninja directly. Quotes carry the same lifecycle plus the two moves that make a quote a quote — approving it and converting it into an invoice. Payments can be recorded against one or more invoices and refunded. Clients, products, tasks and expenses round out the resources a workflow needs to keep records in sync with the rest of a billing stack.\n\nInvoice Ninja is both a hosted cloud service (invoicing.co) and a self-hosted, source-available application — this app connects to whichever instance URL a Connection supplies, exactly like it would for any self-hosted install.\n\nA fit for turning a paid order, a signed contract, or a completed job into an invoice or quote, recording a payment that arrived through another channel, or keeping a workflow's own records of clients and billable time in step with Invoice Ninja.",
+    "categories": [
+      "finance",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Invoice Ninja"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Invoice Ninja"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/sender",
+  "version": "0.1.0",
+  "description": "Send campaigns, manage subscribers, groups, segments and custom events on Sender (sender.net).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.sender",
+    "displayName": "Sender",
+    "longDescription": "Sender (sender.net) is an email (and SMS) marketing platform. This app covers the parts of its REST API v2 (`api.sender.net/v2`) confirmed against the vendor's own published documentation at api.sender.net: subscribers (create, read, update, delete, group membership, phone removal, event history), groups, segments (read-only — the API exposes no segment-creation endpoint), custom fields, custom events (for triggering automations from outside data), campaigns (create, send, schedule, copy, cancel, delete, pre-send error checks), and account webhooks (a paid-plan feature).\n\nTransactional campaigns, workflow management and the statistics endpoints are documented by the vendor but not implemented in this first pass — see the README for what was deliberately left out and why.\n\nSender's docs host (api.sender.net) answers HTTP 200 with its own homepage for ANY unrecognized path rather than a 404, so every endpoint here was verified against the sitemap's actual documentation page and its worked request/response example, never against path liveness.",
+    "categories": [
+      "marketing",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Sender"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.sender.net"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

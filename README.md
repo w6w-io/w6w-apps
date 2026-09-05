@@ -26,6 +26,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 |-----|------------|------|--------:|
 | activecampaign | marketing, crm | api-key | 13 |
 | acuityscheduling | calendar | basic, oauth2 | 9 |
+| affinity | crm | bearer-token | 39 |
 | airbyte | data-warehousing, devops | application | 12 |
 | aircall | communication, support, crm | basic | 38 |
 | airtable | spreadsheets, databases, productivity | personal-access-token, oauth2, api-key | 10 |
@@ -134,6 +135,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | freshsales | crm, sales, productivity | api-key | 20 |
 | freshservice | support, devops | api-key | 23 |
 | front | support, communication, productivity | api-token | 30 |
+| gamma | ai, productivity | api-key | 20 |
 | gcs | storage, devops | service-account | 16 |
 | gemini | ai | api-key | 6 |
 | gerrit | version-control, developer-tools | http-password | 11 |
@@ -166,6 +168,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | guru | productivity, search, ai | basic | 16 |
 | gusto | hr, finance, productivity | oauth2, oauth2-demo | 23 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
+| hedy | ai, productivity | api-key | 4 |
 | helpscout | support | oauth2 | 13 |
 | heygen | ai | api-key | 18 |
 | highlevel | crm, marketing | oauth2 | 18 |
@@ -177,6 +180,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | insightly | crm | api-key | 20 |
 | instantly | marketing, email, crm | api-key | 38 |
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
+| invoiceninja | commerce, finance | api-token | 40 |
 | jenkins | devops | basic | 6 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
 | jira-data-center | project-management, developer-tools | personal-access-token, basic | 15 |
@@ -281,6 +285,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | sanity | cms, databases, developer-tools | token | 11 |
 | segment | analytics | write-key | 6 |
 | sendblue | communication | api-key | 47 |
+| sender | email, marketing | bearer-token | 39 |
 | sendgrid | email, communication | sendgrid-api | 10 |
 | sentry | monitoring, developer-tools | auth-token, oauth2 | 21 |
 | servicem8 | crm | api-key | 18 |

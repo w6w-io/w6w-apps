@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/gamma",
+  "version": "0.1.0",
+  "description": "Generate presentations, documents, webpages, and social posts with Gamma's AI, and manage the results.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.gamma",
+    "displayName": "Gamma",
+    "longDescription": "Gamma turns a topic or an existing document into a polished presentation, document, webpage, or social post using AI. This app covers the Gamma Public API end to end: kick off a generation from raw text or a multi-page outline, or adapt an existing Gamma as a template; poll for the result (view URL, export URL, and credit usage); and generate a standalone on-brand image the same way.\n\nBeyond generation, it covers the management surface a workflow needs to operate on what it created — searching gammas and templates, reading metadata and comment threads, archiving, exporting to PDF/PPTX/PNG, and deleting — plus doc-level, per-card, and per-viewer engagement analytics for a finished Gamma.\n\nA health check tracks Gamma's own status page (status.gamma.app), and the credential probe (List Themes) needs no more permission than an ordinary workspace member has, so a scoped-down key still reports healthy.",
+    "categories": [
+      "ai",
+      "productivity",
+      "documents"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Gamma"
+      }
+    },
+    "network": {
+      "allow": [
+        "public-api.gamma.app"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
