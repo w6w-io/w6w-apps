@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/ontraport",
+  "version": "0.1.0",
+  "description": "Manage contacts, tasks, tags, campaigns, sequences and orders in Ontraport's CRM and marketing automation platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.ontraport",
+    "displayName": "Ontraport",
+    "longDescription": "Ontraport is a CRM and marketing automation platform built around one generic \"Object\" model: every record — a contact, a task, a tag, an order — is an instance of a numbered object type (a contact is object type 0, a task is object type 1, and so on), and the API exposes both a generic `/objects` family that takes that number as a parameter and dedicated per-object endpoints (`/Contact`, `/Contacts`, `/Task`, `/Tags`, …) that don't.\n\nThis app covers the core CRM path over the dedicated endpoints: full CRUD on contacts, plus merge-by-email; reading and life-cycle-managing tasks (Ontraport's own permission table refuses task creation and deletion through the API entirely — only read, update, assign, cancel, complete and reschedule exist); full CRUD on tags plus tagging/untagging any object by name; read access to campaigns (Ontraport's automations) and sequences; and read (plus delete, where documented) access to orders, transactions and purchases.\n\nEvery path, parameter and object-type number here was verified against Ontraport's own API reference at api.ontraport.com/doc, cross-checked with live probes against api.ontraport.com and the vendor's Statuspage instance.",
+    "categories": [
+      "crm",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Ontraport"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.ontraport.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

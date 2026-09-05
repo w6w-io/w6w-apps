@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.118.0",
+  "version": "0.119.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -415,6 +415,9 @@
       "path": "./apps/googlechat"
     },
     {
+      "path": "./apps/googlesearchconsole"
+    },
+    {
       "path": "./apps/gorgias"
     },
     {
@@ -440,6 +443,9 @@
     },
     {
       "path": "./apps/gusto"
+    },
+    {
+      "path": "./apps/hackernews"
     },
     {
       "path": "./apps/harvest"
@@ -668,6 +674,9 @@
     },
     {
       "path": "./apps/onfleet"
+    },
+    {
+      "path": "./apps/ontraport"
     },
     {
       "path": "./apps/openai"
@@ -1015,6 +1024,9 @@
       "path": "./apps/wordpress"
     },
     {
+      "path": "./apps/workable"
+    },
+    {
       "path": "./apps/workos"
     },
     {
@@ -1058,6 +1070,9 @@
     },
     {
       "path": "./apps/zoom"
+    },
+    {
+      "path": "./apps/zuora"
     }
   ]
 }
