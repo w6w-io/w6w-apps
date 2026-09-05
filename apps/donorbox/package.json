@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/donorbox",
+  "version": "0.1.0",
+  "description": "List campaigns, donations, recurring plans, donors, events, tickets and purchases on Donorbox, the nonprofit fundraising platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.donorbox",
+    "displayName": "Donorbox",
+    "longDescription": "Donorbox is an online donation and fundraising platform built for nonprofits: campaigns (donation pages and peer-to-peer drives), the one-time and recurring donations they collect, donor records, and ticketed events with the tickets and purchases they sell. This app covers Donorbox's full documented API v1 surface: list campaigns, donations, recurring plans, donors, events, tickets and event ticket purchases, each with the vendor's own filters (donor identity, campaign, date range, donation amount, payment status), ordering and pagination.\n\nThe API is read-only end to end — Donorbox's own reference documents no create, update or delete endpoint for any of these resources, only GET. Authentication is HTTP Basic: the organization's login email as the username, and a paid API key (Donorbox charges $17/month for API access, separate from the platform subscription) as the password.\n\nTwo things worth knowing before scripting against this API directly: a list response is a bare JSON array with no `{\"data\": [...]}` envelope and no pagination metadata beyond the page you asked for, and every response — even an unauthenticated one — carries live rate-limit headers the vendor's own docs never mention.",
+    "categories": [
+      "commerce",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Donorbox"
+      }
+    },
+    "network": {
+      "allow": [
+        "donorbox.org"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
