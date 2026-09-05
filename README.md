@@ -191,6 +191,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | jenkins | devops | basic | 6 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
 | jira-data-center | project-management, developer-tools | personal-access-token, basic | 15 |
+| jira-service-management | support, project-management | api-token, oauth2 | 17 |
 | jobber | calendar, crm, finance | oauth2 | 28 |
 | jotform | forms, productivity | api-key | 14 |
 | jumpcloud | security, devops, hr | api-key | 31 |
@@ -381,15 +382,19 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zendesk | support, crm | api-token, oauth2 | 17 |
 | zendesk-sell | crm, marketing | oauth2 | 31 |
 | zoho | crm | oauth2 | 21 |
+| zoho-bookings | scheduling, calendar | oauth2 (×8 DCs) | 9 |
+| zoho-calendar | calendar | oauth2 (×8 DCs) | 13 |
 | zoho-campaigns | marketing, email | oauth2 (×8 DCs) | 24 |
 | zoho-invoice | accounting, finance | oauth2 (×8 DCs) | 22 |
+| zoho-recruit | hr, crm | oauth2 (×10 DCs) | 22 |
+| zoho-sheet | productivity, spreadsheets | oauth2 (×7 DCs) | 10 |
 | zohobooks | accounting | oauth2 (×8 DCs) | 22 |
 | zohodesk | support | oauth2 (×10 DCs) | 27 |
 | zohomail | communication, email | oauth2 (×8 DCs) | 16 |
 | zoom | video, communication | server-to-server, oauth2 | 14 |
 | zuora | finance | client-credentials | 14 |
 
-369 apps, 7038 actions.
+374 apps, 7109 actions.
 
 `upstash` and `supabase` are **not** raw Redis/Postgres — this pack's Apps run in a
 network-less sandbox that only reaches the network via `ctx.fetch` over HTTP(S) to a

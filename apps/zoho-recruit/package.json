@@ -1,0 +1,39 @@
+{
+  "name": "@w6w-apps/zoho-recruit",
+  "version": "0.1.0",
+  "description": "Create, read, update, search and change the pipeline status of Candidates, Job Openings and Clients in Zoho Recruit, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-recruit",
+    "displayName": "Zoho Recruit",
+    "longDescription": "Zoho Recruit is an applicant tracking system, and this app reads and writes the core records a hiring pipeline runs on: create, read, update, delete and search Candidates, Job Openings and Clients, move a Candidate (or a Job Opening) through its pipeline stage with a dedicated status-change call, and attach Notes to any record. Every list/search action ships without a forced field list, since Zoho Recruit's own Get Records API treats `fields` as optional — unlike Zoho CRM's identically-shaped endpoint, which requires it.\n\nZoho hosts every Recruit account in one of ten regional data centres, each with its own API host and (almost always) its own OAuth host, so this app routes each region through its own dedicated connection rather than one that could silently send a EU account's requests through the US region instead.\n\nScoped to Zoho Recruit specifically, not Zoho's wider suite of business apps (CRM, Books, Desk, Mail and the rest) — each of those is a separate app in this pack. Bulk read/write jobs (a separate asynchronous surface), file/attachment upload (multipart), and blueprint/approval-process actions are deliberately left out as not core CRUD-and-status workflow automation.",
+    "categories": [
+      "hr"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Recruit"
+      }
+    },
+    "network": {
+      "allow": [
+        "recruit.zoho.com",
+        "recruit.zoho.eu",
+        "recruit.zoho.in",
+        "recruit.zoho.com.au",
+        "recruit.zoho.jp",
+        "recruit.zoho.com.cn",
+        "recruit.zoho.sa",
+        "recruit.zohocloud.ca",
+        "recruit.zoho.sg",
+        "recruit.zoho.ae"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/zoho-sheet",
+  "version": "0.1.0",
+  "description": "Read and write Zoho Sheet workbooks, worksheets, rows and ranges.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-sheet",
+    "displayName": "Zoho Sheet",
+    "longDescription": "Zoho Sheet puts an online spreadsheet into a workflow — list and create workbooks, list, create and delete the worksheets inside them, and read or write the rows and ranges those worksheets hold. Appending JSON rows after a worksheet's last used row is the common sync case; writing a CSV block at a given cell and clearing a range's content cover the rest of routine read/write automation, and a used-area lookup lets a workflow size a range or find the next free row without reading a worksheet's content first.\n\nZoho hosts every account in one of seven regional data centres (there is no Canadian Zoho Sheet API host), each with its own connection endpoint, so this app routes each region through its own dedicated connection rather than one that could silently send a request to the wrong region's host.\n\nTabular \"Data Store\" table operations, pivot tables, charts, conditional formatting, mail-merge, named ranges/data-validation, and workbook sharing/versioning/publish/upload/download are deliberately left out as either a different mental model from plain spreadsheet CRUD or large enough to warrant their own action set later.",
+    "categories": [
+      "spreadsheets",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Sheet"
+      }
+    },
+    "network": {
+      "allow": [
+        "sheet.zoho.com",
+        "sheet.zoho.eu",
+        "sheet.zoho.in",
+        "sheet.zoho.com.au",
+        "sheet.zoho.jp",
+        "sheet.zoho.com.cn",
+        "sheet.zoho.sa"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
