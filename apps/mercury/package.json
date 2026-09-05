@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/mercury",
+  "version": "0.1.1",
+  "description": "Manage Mercury business banking accounts, cards, recipients, invoices and money movement.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.mercury",
+    "displayName": "Mercury",
+    "longDescription": "Mercury is a business banking platform. This app covers the read and write surface a workflow needs across a Mercury organization's accounts: listing accounts and pulling statements, reading and annotating transactions, sending money to a saved recipient or transferring between an organization's own accounts, managing recipients and expense categories, issuing and controlling virtual debit/credit cards (freeze, unfreeze, cancel), and the accounts-receivable side — customers and invoices. Organization and user reads, plus webhook management for reacting to events instead of polling, round it out.\n\nMercury's own API reference documents 74 paths; the two money-movement writes this app exposes (Send Money, Create Internal Transfer) are real and can move real funds — both require an idempotency key and are flagged non-idempotent by default risk, not by vendor guarantee. Several resources are deliberately left out of a first pass — see the README's 'Deliberately not covered' section, especially Mercury's own approval-request endpoints as a safer alternative to a direct send.",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Mercury"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Mercury"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.mercury.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

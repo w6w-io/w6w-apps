@@ -168,6 +168,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | googlechat | communication | oauth2 | 18 |
 | googlesearchconsole | marketing, analytics | oauth2 | 10 |
 | gorgias | support | basic | 22 |
+| goto-webinar | video, communication | oauth2 | 13 |
 | grafana | monitoring | service-account-token | 8 |
 | grain | ai | api-key | 19 |
 | gravityforms | forms, productivity | basic | 12 |
@@ -178,6 +179,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | gusto | hr, finance, productivity | oauth2, oauth2-demo | 23 |
 | hackernews | social-media, developer-tools | none | 10 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
+| heartbeat | communication, social-media | bearer-token | 54 |
 | hedy | ai, productivity | api-key | 4 |
 | helpscout | support | oauth2 | 13 |
 | heygen | ai | api-key | 18 |
@@ -233,6 +235,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mattermost | communication, productivity | access-token | 13 |
 | mautic | marketing, email | client-credentials | 28 |
 | meilisearch | search, databases, developer-tools | api-key | 24 |
+| mercury | finance | bearer-token | 30 |
 | messagebird | communication, phone-sms | api-key | 7 |
 | metabase | analytics, databases | api-key | 17 |
 | microsoft-todo | productivity, project-management | oauth2 | 19 |
@@ -294,6 +297,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | raindrop | productivity, search, storage | test-token, oauth2 | 39 |
 | razorpay | commerce, finance | basic | 44 |
 | readwise | productivity | api-token | 20 |
+| recruitee | hr | bearer-token | 17 |
 | reddit | social-media | oauth2 | 8 |
 | replyio | marketing, crm, email | api-key | 18 |
 | resend | email, communication | api-key | 24 |
@@ -353,6 +357,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | toggl | productivity | api-token | 10 |
 | trello | project-management, productivity | api-key | 27 |
 | trustpilot | marketing, reviews | api-key, client-credentials | 11 |
+| tumblr | social-media, cms | oauth2 | 23 |
 | twilio | communication | api-key | 2 |
 | twitch | video, social-media, communication | app-access-token, user-access-token | 28 |
 | twitter | social-media | oauth2 | 8 |

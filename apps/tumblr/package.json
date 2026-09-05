@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/tumblr",
+  "version": "0.1.0",
+  "description": "Read and post to Tumblr blogs, manage likes and follows, and check a user's dashboard, over the Tumblr API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.tumblr",
+    "displayName": "Tumblr",
+    "longDescription": "Tumblr is a blogging and social-networking platform built around Blogs and Posts. This app covers a blog's public surface (info, avatar, likes, following/followers) and, once connected, its private surfaces too: published, queued, draft and submission posts; creating, fetching, editing and deleting a post in the Neue Post Format (NPF); and a post's notes (likes, reblogs, replies).\n\nIt also covers the connected user's own account: profile and blog list, per-feature rate-limit headroom, the dashboard feed, liked posts, followed blogs, and the four one-shot actions (follow, unfollow, like, unlike) that make a workflow act like a Tumblr user rather than just read one.\n\nAuthorization is OAuth 2.0 — Tumblr's newer, now-recommended protocol, alongside the OAuth 1.0a it has supported since launch (see the README for why OAuth 2.0 was chosen and where the two auth levels the API actually documents, 'API key' and 'OAuth', line up with it). Health checks track Automattic's own shared status page, which names Tumblr's API, Dashboard and Sites as three of its ~30 monitored components.",
+    "categories": [
+      "social-media",
+      "cms"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Tumblr"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.tumblr.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
