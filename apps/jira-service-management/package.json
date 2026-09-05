@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/jira-service-management",
+  "version": "0.1.0",
+  "description": "Manage Jira Service Management service desks, request types, customer requests, queues, SLAs and organizations.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.jira-service-management",
+    "displayName": "Jira Service Management",
+    "longDescription": "Jira Service Management (formerly Jira Service Desk) is Atlassian's ITSM / service-desk product, hosted on the same per-tenant `*.atlassian.net` Jira Cloud site as Jira Software but served by its own REST surface — `/rest/servicedeskapi` — with its own resources: service desks, request types, customer requests, queues, SLAs and organizations. It is a distinct product surface from the sibling `jira` app's issue-tracking API, not a re-wrap of it.\n\nThis app covers the customer-request lifecycle end to end: creating a request against a request type's declared fields, reading and searching requests, listing the transitions available from a request's current status and executing one, adding or listing comments (public or internal), and adding or listing participants. Service desks and their request types are listed and read directly, queues can be listed and their queued issues read, SLA countdowns are readable per request, and organizations round out the surface for grouping customers.\n\nAuthentication mirrors the sibling `jira` app's two Atlassian Cloud methods — Basic auth with an account email + API token against the site's own host, or OAuth 2.0 (3LO) against Atlassian's `api.atlassian.com` gateway, which resolves a `cloudId` after the token is issued. A request's rich-text fields (description, comment bodies) are plain strings by default here — unlike Jira Software's own v3 API, which requires Atlassian Document Format — and only become ADF when a caller opts in per-request.\n\nOut of scope for this first version: attachments (multipart upload, which the sandbox's `ctx.fetch` is not suited for), approvals, the knowledge base, and customer/organization membership management (all of which need either multipart or additional experimental-API opt-in headers this app deliberately does not add without a documented, stable contract).",
+    "categories": [
+      "support",
+      "project-management"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Jira Service Management"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.atlassian.net",
+        "api.atlassian.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

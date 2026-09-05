@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.121.0",
+  "version": "0.122.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -515,6 +515,9 @@
     },
     {
       "path": "./apps/jira-data-center"
+    },
+    {
+      "path": "./apps/jira-service-management"
     },
     {
       "path": "./apps/jobber"
@@ -1099,10 +1102,22 @@
       "path": "./apps/zoho"
     },
     {
+      "path": "./apps/zoho-bookings"
+    },
+    {
+      "path": "./apps/zoho-calendar"
+    },
+    {
       "path": "./apps/zoho-campaigns"
     },
     {
       "path": "./apps/zoho-invoice"
+    },
+    {
+      "path": "./apps/zoho-recruit"
+    },
+    {
+      "path": "./apps/zoho-sheet"
     },
     {
       "path": "./apps/zohobooks"

@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/zoho-calendar",
+  "version": "0.1.0",
+  "description": "Create, read, update and delete calendars and events in Zoho Calendar, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-calendar",
+    "displayName": "Zoho Calendar",
+    "longDescription": "Zoho Calendar puts a user's schedule into a workflow — list, read, create, update and delete calendars; list, read, create, update and delete events (including recurring ones via RRULE or the structured repeat object); search event titles within a calendar; read a group's RSVP status for an event; and check a user's free/busy availability across all their calendars.\n\nZoho hosts every account in one of eight regional data centres, each with its own API host and its own OAuth (accounts) host, so this app routes each region through its own dedicated connection rather than one that could silently send an EU user's requests through the US region instead. Canada is the one region where BOTH of those hosts break the naming pattern the other seven follow, and this app points at the real hosts rather than the ones the pattern would suggest.\n\nUpdating an event replaces the entire event resource rather than patching it — this app requires the event's current etag (from Get Event) on every update/delete and documents the replace-not-patch behavior loudly, since Zoho itself does. File attachments, moving an event between calendars, and adding a live Zoho Meeting conference link are deliberately left out: the first needs multipart upload, the second a non-standard HTTP verb, and the third a separate OAuth scope this app does not request, all outside this app's JSON-only, single-scope action set.",
+    "categories": [
+      "calendar",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Calendar"
+      }
+    },
+    "network": {
+      "allow": [
+        "calendar.zoho.com",
+        "calendar.zoho.eu",
+        "calendar.zoho.in",
+        "calendar.zoho.com.au",
+        "calendar.zoho.jp",
+        "calendar.zohocloud.ca",
+        "calendar.zoho.com.cn",
+        "calendar.zoho.sa"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
