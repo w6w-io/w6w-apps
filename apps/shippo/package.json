@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/shippo",
+  "version": "0.1.0",
+  "description": "Rate a parcel across every carrier, buy the label, track it to the door, and validate addresses before a bad one costs a return.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.shippo",
+    "displayName": "Shippo",
+    "longDescription": "Shippo rates a parcel across every carrier account on the connection, buys the label, tracks it to the door, and validates an address before a bad one turns into a costly return. Rating and buying are deliberately separate steps: creating a shipment only asks Shippo's connected carriers for a price and issues nothing, while purchasing a label is what actually moves money and produces a tracking number — so a workflow that only wants a quote never risks buying one by accident.\n\nTracking status is read for what it actually means rather than taken at face value: an unscanned parcel reads as pre-transit or unknown rather than lost, and the two statuses that need a human's attention — returned to sender and carrier failure — are distinct values rather than blended into everything else. Address validation runs as its own cheap step ahead of purchase, returning Shippo's corrected version of an address so a mismatch is caught before a label is printed rather than after a parcel comes back.\n\nBeyond shipping, this app can also refund an unused label, register or read tracking for a number bought outside Shippo, and list the carrier accounts connected to the account. Registering new carrier accounts, orders, batches, manifests and webhook management are left out, since those are dashboard-level or platform-account decisions rather than steps in an automation.",
+    "categories": [
+      "commerce",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Shippo"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Shippo"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.goshippo.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
