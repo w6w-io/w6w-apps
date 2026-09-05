@@ -1,0 +1,35 @@
+{
+  "name": "@w6w-apps/hedy",
+  "version": "0.1.0",
+  "description": "Read meeting sessions and AI-extracted highlights from Hedy.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.hedy",
+    "displayName": "Hedy",
+    "longDescription": "Hedy is an AI meeting-notes and highlights product: it joins or records a meeting, then produces a transcript, a recap, structured meeting minutes, and a set of AI-extracted \"highlights\" — the individual quotes and moments the model judged worth surfacing, each with its own cleaned quote, AI insight, and timestamp.\n\nThis app covers the read side of that data: listing and reading meeting Sessions (transcript, recap, meeting minutes, structured conversation history) and listing and reading Highlights (the quote-level moments extracted from a session), so a workflow can pull a completed meeting's output into whatever comes next — a CRM note, a summary digest, a search index.\n\nHedy's own OpenAPI document also declares a Webhooks tag, but publishes no paths under it — nothing here was guessed to fill that gap.",
+    "categories": [
+      "ai",
+      "productivity",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": {
+          "96x96": "./assets/icon.png"
+        },
+        "alt": "Hedy"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.hedy.bot"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

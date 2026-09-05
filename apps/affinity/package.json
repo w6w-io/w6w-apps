@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/affinity",
+  "version": "0.1.0",
+  "description": "Manage lists, people, organizations, opportunities, notes, and webhooks in Affinity's relationship-intelligence CRM.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.affinity",
+    "displayName": "Affinity",
+    "longDescription": "Affinity is a relationship-intelligence CRM built around three top-level objects — Persons, Organizations, and Opportunities — plus the Lists (spreadsheet-like views) and Fields (columns) that organize them. This app covers that core: read and search all three entity types, manage list membership through List Entries, read and write custom Field Values (including the Ranked Dropdown fields Affinity uses for pipeline stages), and attach Notes to any entity.\n\nIt also covers the automation surface a workflow needs: Webhook subscriptions so a workflow can react to Affinity events instead of polling, and health checks against Affinity's own status page and its per-minute/per-month rate limit accounting.\n\nAffinity documents two ways to present the same API key — HTTP Basic (key as password, no username) or a Bearer token — for one API generation (v1); this app uses the Bearer form. It does not cover Interactions, Reminders, Entity Files, or Field Value Changes, all of which are documented by the vendor but left for a follow-up.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": { "48x48": "./assets/icon.png" },
+        "alt": "Affinity"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.affinity.co"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
