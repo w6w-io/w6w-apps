@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.124.0",
+  "version": "0.125.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -226,6 +226,9 @@
       "path": "./apps/crisp"
     },
     {
+      "path": "./apps/crunchbase"
+    },
+    {
       "path": "./apps/cursor"
     },
     {
@@ -400,6 +403,9 @@
       "path": "./apps/gmail"
     },
     {
+      "path": "./apps/google-admin"
+    },
+    {
       "path": "./apps/google-ads"
     },
     {
@@ -542,6 +548,9 @@
     },
     {
       "path": "./apps/jotform"
+    },
+    {
+      "path": "./apps/judgeme"
     },
     {
       "path": "./apps/jumpcloud"
@@ -988,6 +997,9 @@
       "path": "./apps/telegram"
     },
     {
+      "path": "./apps/telnyx"
+    },
+    {
       "path": "./apps/terraform"
     },
     {
@@ -1007,6 +1019,9 @@
     },
     {
       "path": "./apps/tidycal"
+    },
+    {
+      "path": "./apps/tiktok-lead-generation"
     },
     {
       "path": "./apps/tldv"

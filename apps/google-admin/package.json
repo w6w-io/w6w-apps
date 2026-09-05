@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/google-admin",
+  "version": "0.1.0",
+  "description": "Manage Google Workspace users, groups and organizational units via the Admin SDK Directory API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.google-admin",
+    "displayName": "Google Workspace Admin",
+    "longDescription": "Google Workspace Admin provisions and manages a Workspace domain's directory from a workflow — creating, updating and deleting users; creating, updating and deleting groups and their memberships; and organizing users into organizational units.\n\nEvery operation requires either a Google Workspace super admin's OAuth consent, or a service account authorized for Domain-Wide Delegation and impersonating an admin user — the Admin SDK Directory API has no lower-privilege mode. Group membership is managed as a first-class concern: members can be added, removed and listed independently of editing the group itself, which matters for workflows that sync membership from an external source of truth (an HR system, a ticket) rather than managing groups by hand.\n\nA fit for automating employee onboarding/offboarding (create the account, add it to the right groups, place it in the right org unit) or keeping group rosters in sync with an external roster.",
+    "categories": [
+      "security",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Google Workspace Admin"
+      }
+    },
+    "network": {
+      "allow": [
+        "admin.googleapis.com",
+        "www.googleapis.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

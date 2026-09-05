@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/tiktok-lead-generation",
+  "version": "0.1.0",
+  "description": "Read Instant Form and direct-message leads from TikTok's Business API — the Lead Generation surface of the Marketing API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.tiktok-lead-generation",
+    "displayName": "TikTok Lead Generation",
+    "longDescription": "TikTok Lead Generation reads the leads collected through TikTok's Instant Form ads and direct-message lead ads, via the Lead Generation surface of TikTok's Business (Marketing) API — distinct from the general TikTok Ads/Marketing API surface (campaign, ad group and ad management), which this app deliberately does not cover.\n\nThe app exposes only what could be independently confirmed as real, live endpoints on `business-api.tiktok.com`: fetching a single Instant Form or direct-message lead, reading the field schema of a form, fetching a lead captured through an organic TikTok Page, and bulk-downloading a Page's leads. TikTok's own documentation portal renders every endpoint page client-side from an internal, non-public API, so the exact request/response field names beyond the universal `advertiser_id` / `filtering` / `page` / `page_size` convention used across the whole Marketing API could not be fetched — see the README for exactly what was verified, how, and what was deliberately left out rather than guessed.",
+    "categories": [
+      "marketing",
+      "social-media"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "TikTok"
+      }
+    },
+    "network": {
+      "allow": [
+        "business-api.tiktok.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

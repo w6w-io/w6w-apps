@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/telnyx",
+  "version": "0.1.0",
+  "description": "Send SMS/MMS, place and control voice calls, and look up phone numbers via Telnyx.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.telnyx",
+    "displayName": "Telnyx",
+    "longDescription": "Telnyx is a programmable voice, messaging and numbers platform, and this app covers the core of each: send an SMS or MMS and look one up by ID, place an outbound Call Control call and hang it up, look up a phone number's carrier or caller-name data, and list the numbers on the account.\n\nTwo things about the surface are worth knowing before using it. Sending a message only queues it — the response's per-recipient status is `queued`/`sending`, not `delivered` — so a workflow that needs the final outcome should read `get-message` again or listen on a webhook. Placing a call needs a Call Control Application created once in the Telnyx portal (its ID is the `connectionId` this app asks for); the call itself is asynchronous, returning a `call_control_id` before the destination has answered, with that answer arriving later as a webhook this app does not wait for.\n\nTelnyx's much larger surface — Call Control's ~40 in-call actions (gather, playback, recording, SIP transfer, AI assistants), WhatsApp/RCS messaging, number ordering/porting, and the Fax, Video and Wireless products — is deliberately out of scope; see the README for the full list of what this app does not cover.",
+    "categories": [
+      "communication",
+      "devops"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Telnyx"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.telnyx.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

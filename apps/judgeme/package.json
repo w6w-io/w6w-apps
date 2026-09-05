@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/judgeme",
+  "version": "0.1.0",
+  "description": "Collect, moderate and reply to Judge.me product reviews, and manage reviewers, shop settings and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.judgeme",
+    "displayName": "Judge.me",
+    "longDescription": "Judge.me is an ecommerce product-reviews platform used mainly by Shopify, WooCommerce and BigCommerce stores. This app covers the review lifecycle a workflow needs: list, fetch, count and create reviews, and publish or hide (curate) them once they're in. It also manages the reviewer record behind each review — looked up by Judge.me's internal id, the store platform's external id, or email — and can submit the data requests Judge.me's own GDPR/CCPA tooling expects.\n\nBeyond reviews themselves, it covers the surfaces a store operator manages alongside them: public and private replies (the latter emails the reviewer without publishing anything), the shop's own Judge.me-held profile and settings, and webhooks for reacting to review events instead of polling.\n\nJudge.me's storefront widgets (the HTML fragments a theme embeds directly on product pages) are a display concern, not a workflow operation, and are deliberately out of scope here — as is the separate paid Checkout Comments add-on. Judge.me's own OpenAPI document also documents a second, OAuth2-based credential, but never publishes the token endpoint it would need — this app authenticates with an API key instead, which is the credential Judge.me's own document fully specifies.",
+    "categories": [
+      "commerce",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.jpg",
+        "alt": "Judge.me"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.judge.me"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
