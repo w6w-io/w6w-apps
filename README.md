@@ -187,12 +187,14 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | heygen | ai | api-key | 18 |
 | highlevel | crm, marketing | oauth2 | 18 |
 | homeassistant | iot, productivity | token | 19 |
+| hotmart | commerce, finance | client-credentials | 17 |
 | housecallpro | crm, calendar, finance | api-key, oauth2 | 39 |
 | hubspot | crm, marketing | private-app-token, oauth2, api-key | 42 |
 | huggingface | ai, developer-tools | token | 14 |
 | hunter | email, marketing, crm | api-key | 20 |
 | insightly | crm | api-key | 20 |
 | instantly | marketing, email, crm | api-key | 38 |
+| instapaper | productivity | xauth | 17 |
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | invoiceninja | commerce, finance | api-token | 40 |
 | jenkins | devops | basic | 6 |
@@ -213,6 +215,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | kommo | crm | long-lived-token | 12 |
 | kustomer | support, crm | api-key | 23 |
 | launchdarkly | devops, developer-tools | api-key | 21 |
+| lawmatics | legal, crm | oauth2 | 11 |
 | learnworlds | crm, commerce | client-credentials | 12 |
 | lemlist | marketing, email | api-key | 18 |
 | lemonsqueezy | commerce, finance | api-key | 36 |
@@ -239,6 +242,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mattermost | communication, productivity | access-token | 13 |
 | mautic | marketing, email | client-credentials | 28 |
 | meilisearch | search, databases, developer-tools | api-key | 24 |
+| meistertask | project-management, productivity | personal-access-token, oauth2 | 34 |
 | mercury | finance | bearer-token | 30 |
 | messagebird | communication, phone-sms | api-key | 7 |
 | metabase | analytics, databases | api-key | 17 |
@@ -269,6 +273,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | ontraport | crm, marketing | api-key | 31 |
 | openai | ai, developer-tools | api-key | 13 |
 | openrouter | ai | api-key | 6 |
+| opusclip | video, ai, social-media | api-key | 21 |
 | outlook | communication, email, calendar | oauth2 | 18 |
 | paddle | commerce, finance | api-key | 21 |
 | pagerduty | monitoring, devops | api-token, oauth2 | 14 |

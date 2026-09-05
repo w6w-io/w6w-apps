@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/hotmart",
+  "version": "0.1.0",
+  "description": "Sell and manage online courses and digital products through Hotmart: sales, subscriptions, products, coupons and profile.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.hotmart",
+    "displayName": "Hotmart",
+    "longDescription": "Hotmart is a digital-products and online-course platform used by creators to sell ebooks, video courses, memberships and other digital goods, and to manage the affiliates, co-producers and subscribers around them.\n\nThis app covers the day-to-day of running that business from a workflow: reading sales history, summaries, participant and commission breakdowns and price detail for a transaction; issuing a refund or regenerating a boleto (bank payment slip); listing subscribers and the subscription summary Hotmart uses for recovery and retention, then cancelling, reactivating or moving a subscriber's billing day; listing a creator's products; and creating, listing or deleting the percentage-off coupons Hotmart's checkout applies at the offer level. It also reads the authenticated producer's own profile.\n\nEvery endpoint here was verified against Hotmart's own developer documentation (developers.hotmart.com) and against live, unauthenticated probes of the API host — not inferred from a sibling integration or Hotmart's marketing pages.",
+    "categories": [
+      "commerce",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Hotmart"
+      }
+    },
+    "network": {
+      "allow": [
+        "developers.hotmart.com",
+        "api-sec-vlc.hotmart.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

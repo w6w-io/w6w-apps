@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/lawmatics",
+  "version": "0.1.0",
+  "description": "Manage Matters, Contacts, Tasks, Notes and Events in Lawmatics — legal-industry CRM and intake automation.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.lawmatics",
+    "displayName": "Lawmatics",
+    "longDescription": "Lawmatics is a CRM and intake-automation platform built for law firms — tracking a lead from first contact through Matter, alongside the Contacts, Tasks, Notes and calendar Events that make up a firm's day-to-day case work.\n\nThis app covers the core of that workflow: create and look up Contacts and Matters (Lawmatics calls the latter a \"Prospect\" on the wire), and attach Tasks, Notes and Events to any of them. Every write composes with any record type — a Note or Task can attach to a Matter, Contact, Company or Client alike — so a workflow doesn't need a different action per resource it's annotating.\n\nGood for automating intake from a web form or another system straight into a new Matter, following up with a Task or reminder Event the moment a lead comes in, or keeping Lawmatics' record of a client relationship in sync with wherever else it's tracked.",
+    "categories": [
+      "legal",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Lawmatics"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.lawmatics.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
