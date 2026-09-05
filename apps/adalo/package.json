@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/adalo",
+  "version": "0.1.0",
+  "description": "Read and write records in an Adalo app's Collections via the Adalo Collections API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.adalo",
+    "displayName": "Adalo",
+    "longDescription": "Adalo is a no-code app builder whose apps each carry their own built-in database, organized into Collections (roughly: tables) of Records (rows). This app talks to the Collections API that every Adalo app on the Team or Business plan exposes at a fixed host — listing, reading, creating, updating and deleting records inside a named Collection.\n\nBecause every Adalo app defines its own Collections and fields, the shapes here stay generic: a Collection ID and a JSON object of field slug → value, rather than a fixed field list, so this app works against any Adalo application without per-schema code. Adalo does not publish an endpoint that enumerates an app's Collections or their field schemas — those are only visible from the app's own generated API Documentation panel in the Adalo builder (Collection menu → API Documentation) — so a workflow author copies the App ID, Collection ID and API key from there once and supplies the Collection ID on every action.\n\nLeft out on purpose: listing Collections (no such endpoint exists) and the separate Notifications API (a differently-shaped, non-collection endpoint for pushing a notification to one user, out of scope for this Collections-focused app).",
+    "categories": [
+      "developer-tools",
+      "databases"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Adalo"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.adalo.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

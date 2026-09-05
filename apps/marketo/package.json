@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/marketo",
+  "version": "0.1.0",
+  "description": "Manage Marketo leads, static lists, companies and smart campaigns.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.marketo",
+    "displayName": "Marketo",
+    "longDescription": "Marketo Engage is Adobe's marketing automation platform, and this app puts the daily loop of running one — leads, static lists, companies and smart campaigns — behind a workflow, whichever pod your subscription happens to run on.\n\nLead management is the core of it: get a lead by ID, find leads by any field, create or update a lead by whatever key your instance dedupes on, delete leads, and describe the full field schema (standard and custom) before building a field map. List membership rounds it out with add, remove, list-members and is-member actions against a static list, and company create/update/find mirrors the lead sync shape for the account records leads roll up into.\n\nSmart Campaigns get the two actions a workflow actually needs day to day: request a trigger campaign to push specific leads through its flow, and schedule a batch campaign to run — plus reading a campaign's own metadata by ID or by browsing. Building or editing a campaign's trigger/filter/flow graph itself stays out of scope, the same way this pack keeps Mautic's campaign builder and Gitea's admin surfaces out.\n\nDeleting a lead is here as well, deliberately made harder to trigger by accident than everything else, gated behind an explicit confirmation the same way this pack gates every other irreversible delete.",
+    "categories": [
+      "marketing",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Marketo"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

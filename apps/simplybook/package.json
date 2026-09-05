@@ -1,0 +1,42 @@
+{
+  "name": "@w6w-apps/simplybook",
+  "version": "0.1.0",
+  "description": "Manage SimplyBook.me bookings, clients, services, providers and locations.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.simplybook",
+    "displayName": "SimplyBook.me",
+    "longDescription": "SimplyBook.me is an online booking system for service businesses — salons, clinics, consultants, fitness studios — that turns a public booking page into a filled calendar. This app brings the Admin REST API (v2) into a workflow: create, look up, cancel, approve and decline bookings; check open slots before offering a time; and read back the services, providers (staff/units), locations and clients behind a booking.\n\nA common pattern is triggering a workflow off an external event — a form submission, a CRM stage change, a support request — and creating the booking directly, or checking availability before recommending a time elsewhere. Booking writes go through the same `AdminBookingBuildEntity` shape the SimplyBook.me admin panel itself uses, so a booking made here shows up exactly like one made by staff.\n\nThis app covers the booking lifecycle and the read-only catalog data around it; it does not touch invoicing, payments, memberships, packages or promotions, which stay specific to each company's billing setup.",
+    "categories": [
+      "calendar"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "SimplyBook.me"
+      }
+    },
+    "network": {
+      "allow": [
+        "user-api-v2.simplybook.me",
+        "user-api-v2.simplybook.it",
+        "user-api-v2.simplybook.asia",
+        "user-api-v2.simplybook.vip",
+        "user-api-v2.simplybook.cc",
+        "user-api-v2.simplybook.us",
+        "user-api-v2.simplybook.pro",
+        "user-api-v2.enterpriseappointments.com",
+        "user-api-v2.simplybook.webnode.page",
+        "user-api-v2.servicebookings.net",
+        "user-api-v2.booking.names.uk",
+        "user-api-v2.booking.lcn.uk",
+        "user-api-v2.booking.register365.ie"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

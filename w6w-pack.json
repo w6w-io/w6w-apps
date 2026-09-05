@@ -4,13 +4,16 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.120.0",
+  "version": "0.121.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
     },
     {
       "path": "./apps/acuityscheduling"
+    },
+    {
+      "path": "./apps/adalo"
     },
     {
       "path": "./apps/affinity"
@@ -272,6 +275,9 @@
     },
     {
       "path": "./apps/dropbox-sign"
+    },
+    {
+      "path": "./apps/dust"
     },
     {
       "path": "./apps/easypost"
@@ -607,6 +613,9 @@
       "path": "./apps/manychat"
     },
     {
+      "path": "./apps/marketo"
+    },
+    {
       "path": "./apps/mastodon"
     },
     {
@@ -868,6 +877,9 @@
       "path": "./apps/signnow"
     },
     {
+      "path": "./apps/simplybook"
+    },
+    {
       "path": "./apps/slack"
     },
     {
@@ -1022,6 +1034,9 @@
     },
     {
       "path": "./apps/vimeo"
+    },
+    {
+      "path": "./apps/wati"
     },
     {
       "path": "./apps/wave"

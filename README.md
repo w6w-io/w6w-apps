@@ -26,6 +26,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 |-----|------------|------|--------:|
 | activecampaign | marketing, crm | api-key | 13 |
 | acuityscheduling | calendar | basic, oauth2 | 9 |
+| adalo | developer-tools, databases | api-key | 5 |
 | affinity | crm | bearer-token | 39 |
 | agencyzoom | crm, project-management | custom | 23 |
 | airbyte | data-warehousing, devops | application | 12 |
@@ -111,6 +112,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | drip | marketing, email | api-key | 14 |
 | dropbox | storage | access-token, oauth2 | 12 |
 | dropbox-sign | legal, documents, productivity | api-key, oauth2 | 27 |
+| dust | ai, productivity | api-key | 11 |
 | easypost | commerce, developer-tools | api-key | 19 |
 | ebay | commerce | custom | 4 |
 | elastic | search | api-key, basic | 9 |
@@ -220,6 +222,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mailjet | email, marketing | basic | 17 |
 | mandrill | email, marketing | api-key | 17 |
 | manychat | marketing, communication, social-media | api-token | 25 |
+| marketo | marketing, crm | client-credentials | 15 |
 | mastodon | social-media, communication | access-token | 18 |
 | mattermost | communication, productivity | access-token | 13 |
 | mautic | marketing, email | client-credentials | 28 |
@@ -305,6 +308,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | shipstation | ecommerce | api-key | 18 |
 | shopify | commerce | access-token | 18 |
 | signnow | documents | custom | 16 |
+| simplybook | calendar | login | 14 |
 | slack | communication | access-token, oauth2 | 47 |
 | smartsheet | spreadsheets, productivity | access-token | 16 |
 | snowflake | data-warehousing | key-pair | 5 |
@@ -356,6 +360,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | vercel | devops, developer-tools | access-token, oauth2 | 28 |
 | videoask | forms, video | oauth2 | 38 |
 | vimeo | video, social-media | access-token | 36 |
+| wati | communication, support | api-token | 12 |
 | wave | finance | oauth2, full-access-token | 21 |
 | wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
