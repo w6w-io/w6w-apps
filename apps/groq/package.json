@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/groq",
+  "version": "0.1.0",
+  "description": "Fast LLM inference, speech and batch processing via Groq's OpenAI-compatible API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.groq",
+    "displayName": "Groq",
+    "longDescription": "Groq runs open-weight models (Llama, Qwen, GPT-OSS, Kimi, Whisper, and its own Compound agentic models) on purpose-built LPU hardware, exposed through an OpenAI-compatible surface under `/openai/v1` rather than OpenAI's own `/v1` — the appeal is inference speed and cost, not a different model catalog.\n\nChat completions cover the core case, including Groq-specific controls with no OpenAI equivalent: a `service_tier` latency/availability trade-off (`flex` fails fast instead of queueing), per-model reasoning-effort and reasoning-format controls for the reasoning models, and Compound-model web search / custom tool configuration. A handful of OpenAI-shaped chat parameters (`frequency_penalty`, `logprobs`, `logit_bias`, and anything beyond `n=1`) are accepted but documented as having no effect on any current model, so this app leaves them out rather than exposing dead controls.\n\nWhisper covers audio transcription and translation, with a Groq-specific convenience OpenAI's own endpoint lacks: either a base64 file OR a plain URL (including a data URL) can be sent in the same request. Text-to-speech, the Batch API (chat-completions requests only, processed over a 24h-7d window against a purpose-built `batch` file upload — Groq's Files API exists only to feed batches, unlike OpenAI's multi-purpose one), and the newer, intentionally stateless Responses (beta) endpoint round out the surface. Embeddings, reranking and fine-tuning appear in Groq's raw API schema but have no documentation page as of writing and are left out entirely rather than guessed at.\n\nA fit for any workflow step that wants an LLM call — especially one where response latency matters more than picking a specific frontier model.",
+    "categories": [
+      "ai"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Groq"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.groq.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

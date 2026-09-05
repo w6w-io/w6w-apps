@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/ebay",
+  "version": "0.1.0",
+  "description": "Search and read live eBay listings through the Buy Browse API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.ebay",
+    "displayName": "eBay",
+    "longDescription": "eBay covers the Buy Browse API — the public-listing surface of eBay's REST platform, which lives on api.ebay.com alongside every other eBay REST API (Sell, Buy, Commerce). A keyword or category search returns a page of item summaries with price, condition, seller and shipping data; a single item (by its RESTful item ID, its legacy numeric ID, or as one variation in a multi-variation listing group) can be read in full.\n\nAuthentication is app-level rather than tied to any individual buyer or seller: eBay's client-credentials grant mints an Application access token from a registered app's Client ID and Secret, so this app works in scheduled and unattended runs with no browser sign-in step. That token authorizes only eBay's public-data scope — it cannot see or touch any seller's own inventory, orders or account, which is a different, user-consented part of eBay's API surface this app does not cover.\n\nA quota check reads eBay's own Analytics API for real call-count headroom against the Browse API's rate limit, using the same application token.",
+    "categories": [
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "eBay"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.ebay.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

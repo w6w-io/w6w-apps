@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/onenote",
+  "version": "0.1.1",
+  "description": "Read and manage Microsoft OneNote notebooks, sections, section groups and pages through the Microsoft Graph OneNote API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.onenote",
+    "displayName": "Microsoft OneNote",
+    "longDescription": "Microsoft OneNote organizes notes into notebooks, sections, section groups and pages, and this app reaches all four through the Microsoft Graph OneNote API. Unlike this pack's sibling SharePoint and Excel apps, the OneNote API is documented for BOTH a work-or-school account and a personal Microsoft account — the overview states it gives access to notebooks 'in a personal or organization account' and every one of its permission tables carries a non-empty personal-account row — so this app's OAuth flow uses the `common` tenant segment rather than `organizations`, the same choice the sibling `onedrive` app makes for the same reason.\n\nIt covers the four resources the reference documents, addressable at the signed-in user, another user who shared with them, a Microsoft 365 group, or a SharePoint site: Notebooks — list, get and create (notebooks are read-only past creation; the reference documents no rename or delete). Sections and Section Groups — list (either under a specific parent or flat across the whole location), get and create; both are likewise create-only, with no rename or delete of their own. Pages — list, get metadata, get HTML content, create from an HTML document, apply a batch of insert/append/prepend/replace commands to a page's HTML, and delete.\n\nTwo things worth knowing before using it. First, a page's HTML content travels as the request body itself (`Content-Type: text/html`), not wrapped in JSON, both reading and writing — and a page's title comes from the `<title>` element inside that HTML, not a separate field. Second, this app accepts HTML text only: the multipart form for embedding binary images/files directly in a page is out of scope, because a w6w Action's sandboxed `ctx.fetch` carries its body to the host as text, and bytes above U+007F do not survive that crossing intact (the same limitation the sibling `sharepoint` app's Upload File action documents). A remote `<img src=\"https://...\">` still works when CREATING a page; Microsoft's own guide says plainly that an UPDATE cannot use a `www` link for an image at all, regardless of app.",
+    "categories": [
+      "productivity",
+      "documents"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Microsoft OneNote"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Microsoft OneNote"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "graph.microsoft.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

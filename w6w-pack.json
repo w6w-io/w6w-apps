@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.115.0",
+  "version": "0.116.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -214,6 +214,9 @@
       "path": "./apps/crisp"
     },
     {
+      "path": "./apps/cursor"
+    },
+    {
       "path": "./apps/customerio"
     },
     {
@@ -263,6 +266,9 @@
     },
     {
       "path": "./apps/easypost"
+    },
+    {
+      "path": "./apps/ebay"
     },
     {
       "path": "./apps/elastic"
@@ -416,6 +422,9 @@
     },
     {
       "path": "./apps/grist"
+    },
+    {
+      "path": "./apps/groq"
     },
     {
       "path": "./apps/guru"
@@ -623,6 +632,9 @@
     },
     {
       "path": "./apps/onedrive"
+    },
+    {
+      "path": "./apps/onenote"
     },
     {
       "path": "./apps/onepassword"
@@ -854,6 +866,9 @@
     },
     {
       "path": "./apps/tally"
+    },
+    {
+      "path": "./apps/tapfiliate"
     },
     {
       "path": "./apps/teachable"
