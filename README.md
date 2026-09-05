@@ -27,6 +27,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | activecampaign | marketing, crm | api-key | 13 |
 | acuityscheduling | calendar | basic, oauth2 | 9 |
 | affinity | crm | bearer-token | 39 |
+| agencyzoom | crm, project-management | custom | 23 |
 | airbyte | data-warehousing, devops | application | 12 |
 | aircall | communication, support, crm | basic | 38 |
 | airtable | spreadsheets, databases, productivity | personal-access-token, oauth2, api-key | 10 |
@@ -128,6 +129,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | fivetran | data-warehousing, devops, analytics | api-key | 20 |
 | flodesk | marketing, email | api-key, oauth2 | 22 |
 | followupboss | crm | api-key | 26 |
+| formidableforms | forms, productivity | basic | 15 |
 | formstack | forms, productivity | access-token | 9 |
 | freeagent | finance | oauth2 | 28 |
 | freshbooks | accounting, finance, productivity | oauth2 | 19 |
@@ -144,6 +146,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | gitea | version-control, developer-tools, devops | token | 26 |
 | github | version-control, developer-tools | access-token, oauth2 | 24 |
 | gitlab | developer-tools, version-control | access-token, oauth2 | 16 |
+| givebutter | crm, commerce, communication | api-key | 43 |
 | gmail | communication, email | oauth2, service-account | 25 |
 | google-ads | marketing, analytics | oauth2 | 14 |
 | google-analytics | analytics, marketing | oauth2 | 23 |
@@ -189,13 +192,16 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | jobber | calendar, crm, finance | oauth2 | 28 |
 | jotform | forms, productivity | api-key | 14 |
 | jumpcloud | security, devops, hr | api-key | 31 |
+| justcall | communication, crm | api-key | 21 |
 | kajabi | commerce, crm, marketing | client-credentials | 49 |
 | keap | crm, marketing, email | oauth2, access-key | 36 |
+| kintone | productivity, databases | api-token | 12 |
 | kit | marketing, email | api-key | 18 |
 | klaviyo | marketing, email | api-key | 23 |
 | kommo | crm | long-lived-token | 12 |
 | kustomer | support, crm | api-key | 23 |
 | launchdarkly | devops, developer-tools | api-key | 21 |
+| learnworlds | crm, commerce | client-credentials | 12 |
 | lemlist | marketing, email | api-key | 18 |
 | lever | hr, productivity | api-key | 12 |
 | line | communication, marketing | channel-access-token | 17 |
@@ -241,6 +247,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | onedrive | documents, storage | oauth2 | 18 |
 | onenote | productivity, documents | oauth2 | 15 |
 | onepassword | security, developer-tools | connect-token, events-token | 14 |
+| onesignal | communication, marketing | api-key | 19 |
 | onesimpleapi | developer-tools | api-key | 7 |
 | onfleet | commerce, productivity | api-key | 32 |
 | ontraport | crm, marketing | api-key | 31 |
@@ -262,6 +269,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pipedrive | crm | api-token, oauth2 | 14 |
 | pipefy | productivity, project-management | client-credentials, personal-access-token | 29 |
 | plaid | finance, databases | client-secret, client-secret-sandbox | 14 |
+| planningcenter | crm, calendar, finance | personal-access-token | 6 |
 | podio | project-management, databases, productivity | app-auth, oauth2 | 29 |
 | postbin | developer-tools | none | 5 |
 | posthog | analytics | personal-api-key | 8 |
@@ -324,8 +332,10 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | teamwork | project-management, productivity | api-key | 17 |
 | telegram | communication | bot-token | 21 |
 | terraform | devops, developer-tools | token | 20 |
+| textmagic | communication, marketing | basic | 25 |
 | thinkific | commerce, crm | api-key | 20 |
 | thrivecart | commerce, marketing | api-token | 33 |
+| tickettailor | commerce | api-key | 41 |
 | ticktick | productivity, project-management | oauth2 | 23 |
 | tidycal | calendar, productivity | personal-token, oauth2 | 18 |
 | tldv | ai, productivity, video | api-key | 5 |
@@ -374,7 +384,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zoom | video, communication | server-to-server, oauth2 | 14 |
 | zuora | finance | client-credentials | 14 |
 
-251 apps, 4330 actions.
+369 apps, 7038 actions.
 
 `upstash` and `supabase` are **not** raw Redis/Postgres — this pack's Apps run in a
 network-less sandbox that only reaches the network via `ctx.fetch` over HTTP(S) to a

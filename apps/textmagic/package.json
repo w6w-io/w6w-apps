@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/textmagic",
+  "version": "0.1.0",
+  "description": "Send and schedule text messages, and manage contacts, lists, templates and two-way conversations, via the TextMagic REST API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.textmagic",
+    "displayName": "TextMagic",
+    "longDescription": "TextMagic is a bulk SMS and business texting platform: send one-off or scheduled text messages, manage contacts and contact lists, save reusable message templates, and track two-way conversations ('chats') with recipients — all over TextMagic's REST API v2.\n\nThis app covers the core messaging lifecycle: sending and scheduling messages (including recurring sends via iCal RRULE), reading delivery status, managing contacts and the lists that group them for targeting, creating message templates with merge fields, and reading chat history and scheduled-message state.\n\nHealth checks track TextMagic's own status page — weighted on the SMS API Gateway and outbound-sending components this app actually depends on — alongside the account's pre-paid balance, since sending stops outright at zero rather than degrading.",
+    "categories": [
+      "communication",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "TextMagic"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "TextMagic"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "rest.textmagic.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

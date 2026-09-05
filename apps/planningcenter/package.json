@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/planningcenter",
+  "version": "0.1.0",
+  "description": "Manage People, Giving, Calendar and Check-Ins records in Planning Center, the church/ministry management suite.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.planningcenter",
+    "displayName": "Planning Center",
+    "longDescription": "Planning Center is the suite of church and ministry management products — People, Services, Calendar, Giving, Check-Ins, Groups, Publishing and Registrations — sharing one directory of people and one credential per organization. This app connects a workflow to that shared directory over Planning Center's own JSON-API-conformant REST surface.\n\nPeople actions search, read and create profiles in the church directory — the record every other Planning Center product hangs off of. Giving actions list donations with their date, amount and payment status, for reconciliation or reporting workflows. Calendar actions list scheduled event occurrences with real start/end times, not just the recurring event definitions they belong to. Check-Ins actions list attendance records for a service or event, without surfacing the emergency-contact and medical-notes fields the same records can carry for children's check-in.\n\nA single Personal Access Token (a Client ID + Secret pair from a Planning Center Developer Account) authenticates across every product a user has access to — there is no per-product scope to configure separately.",
+    "categories": [
+      "crm",
+      "calendar",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Planning Center"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.planningcenteronline.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

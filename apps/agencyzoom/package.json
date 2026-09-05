@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/agencyzoom",
+  "version": "0.1.0",
+  "description": "Manage leads, customers, policies, tasks and pipelines in AgencyZoom, the insurance agency management CRM.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.agencyzoom",
+    "displayName": "AgencyZoom",
+    "longDescription": "AgencyZoom is a CRM built specifically for insurance agencies: leads move through sales pipelines, sold leads become customers, customers hold policies, and tasks (calls, emails, meetings, to-dos) drive the day-to-day follow-up.\n\nThis app covers that core loop — search and create leads, move a lead through its pipeline stage or mark it sold, look up and create customers and their policies, and manage tasks — plus the reference lookups (pipelines and stages, lead sources, carriers, employees, CSRs) a workflow needs to fill in the IDs those writes require.\n\nEvery path, verb and field here was verified against AgencyZoom's own published OpenAPI 3.0 document (`app.agencyzoom.com/openapi/agencyzoom.yaml`) plus live probes against `api.agencyzoom.com`. AgencyZoom authenticates like a human user logging into the product — a username and password exchanged once for a JWT — rather than an API key, so see `auth/login.ts` for what that means for a workflow connection.",
+    "categories": [
+      "crm",
+      "project-management"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": { "32x32": "./assets/icon.png" },
+        "alt": "AgencyZoom"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.agencyzoom.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

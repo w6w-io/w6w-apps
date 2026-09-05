@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.119.0",
+  "version": "0.120.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -14,6 +14,9 @@
     },
     {
       "path": "./apps/affinity"
+    },
+    {
+      "path": "./apps/agencyzoom"
     },
     {
       "path": "./apps/airbyte"
@@ -331,6 +334,9 @@
       "path": "./apps/freeagent"
     },
     {
+      "path": "./apps/formidableforms"
+    },
+    {
       "path": "./apps/freshbooks"
     },
     {
@@ -371,6 +377,9 @@
     },
     {
       "path": "./apps/gitlab"
+    },
+    {
+      "path": "./apps/givebutter"
     },
     {
       "path": "./apps/gmail"
@@ -514,10 +523,16 @@
       "path": "./apps/jumpcloud"
     },
     {
+      "path": "./apps/justcall"
+    },
+    {
       "path": "./apps/kajabi"
     },
     {
       "path": "./apps/keap"
+    },
+    {
+      "path": "./apps/kintone"
     },
     {
       "path": "./apps/kit"
@@ -533,6 +548,9 @@
     },
     {
       "path": "./apps/launchdarkly"
+    },
+    {
+      "path": "./apps/learnworlds"
     },
     {
       "path": "./apps/lemlist"
@@ -670,6 +688,9 @@
       "path": "./apps/onepassword"
     },
     {
+      "path": "./apps/onesignal"
+    },
+    {
       "path": "./apps/onesimpleapi"
     },
     {
@@ -731,6 +752,9 @@
     },
     {
       "path": "./apps/plaid"
+    },
+    {
+      "path": "./apps/planningcenter"
     },
     {
       "path": "./apps/podio"
@@ -925,10 +949,16 @@
       "path": "./apps/terraform"
     },
     {
+      "path": "./apps/textmagic"
+    },
+    {
       "path": "./apps/thinkific"
     },
     {
       "path": "./apps/thrivecart"
+    },
+    {
+      "path": "./apps/tickettailor"
     },
     {
       "path": "./apps/ticktick"

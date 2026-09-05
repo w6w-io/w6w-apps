@@ -1,0 +1,34 @@
+{
+  "name": "@w6w-apps/learnworlds",
+  "version": "0.1.0",
+  "description": "Manage LearnWorlds courses, users, enrollments, tags and payments for your online school.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.learnworlds",
+    "displayName": "LearnWorlds",
+    "longDescription": "LearnWorlds is a per-school online course platform — each customer runs their own branded school on its own subdomain or custom domain — and this app puts the daily loop of running one behind a workflow: courses, users, enrollments, tags and payments.\n\nCourse catalog reads (list courses, get a course, get its sections and learning units) cover the read side. User management is the core of the write side: create and update users, and attach or detach tags to segment them for automations and reporting. Enrollment actions let a workflow list, add, or remove a user's access to a course, bundle or subscription — the same action LearnWorlds' own admin console performs when an instructor manually grants or revokes access. Payment history rounds it out, for reconciling a purchase against the enrollment or automation it should have triggered.\n\nAuthentication is OAuth2 client credentials, minted per school from Settings → Developers → API — available on the Learning Center and High Volume & Corporate plans. Health checks track LearnWorlds' own status page alongside a live reachability probe of this connection's specific school domain, since a suspended plan or a renamed subdomain is a different problem from a vendor-wide outage.\n\nDeliberately out of scope for this first pass: course/bundle/subscription-plan creation beyond reading the catalog, promotions and coupons, affiliates, certificates, community spaces and posts, user groups and roles, seats, and webhooks — each is its own surface in LearnWorlds' API, left for a future pass.",
+    "categories": [
+      "crm",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": {
+          "180x180": "./assets/icon.png"
+        },
+        "alt": "LearnWorlds"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
