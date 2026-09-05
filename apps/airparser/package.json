@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/airparser",
+  "version": "0.1.0",
+  "description": "Parse emails and documents (PDF, DOCX, images, and more) into structured JSON with Airparser's AI extraction.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.airparser",
+    "displayName": "Airparser",
+    "longDescription": "Airparser parses emails and documents — PDF, DOCX, XLSX, CSV, HTML, images and more — into structured JSON using an AI extraction schema you define once per inbox. This app covers the whole documented lifecycle: upload a document synchronously and get the parsed JSON back in the same call, or upload asynchronously and fetch the result once background parsing finishes; read a single parsed document or its extended details; list an inbox's documents with date, status and search filters; and manage inboxes and their extraction schemas, including cloning a schema from one inbox to another.\n\nIf an inbox has no extraction schema yet, Airparser generates one automatically from the first document you upload — there is nothing to configure before the first parse.\n\nA health check tracks Airparser's own status page; Airparser publishes no account-level credit or rate-limit endpoint, so quota headroom is declared unavailable rather than guessed.",
+    "categories": [
+      "ai",
+      "documents"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Airparser"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.airparser.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

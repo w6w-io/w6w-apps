@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/littlegreenlight",
+  "version": "0.1.0",
+  "description": "Search, read and log constituents, gifts, notes, appeals, campaigns, funds and groups in Little Green Light, the nonprofit CRM.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.littlegreenlight",
+    "displayName": "Little Green Light",
+    "longDescription": "Little Green Light (LGL) is a web-based CRM built for small and mid-size nonprofits to track constituents (donors, volunteers, members), gifts, notes, appeals, campaigns, funds and groups. This app covers LGL's documented REST API v1: searching and reading constituents, listing and logging gifts and notes against a constituent record, and reading appeals, campaigns, funds and groups.\n\nEvery path, parameter and model in this app was verified on 2026-09-05 against LGL's own machine-readable API reference — the Swagger 1.2 JSON served at `https://api.littlegreenlight.com/api-docs/json/api-docs.json` plus its 33 per-resource sub-documents — and against live probes of `api.littlegreenlight.com`.\n\nThree things worth knowing before scripting against this API directly:\n\n1. **Authentication is a plain Bearer token, not the HTTP Basic the server's own `WWW-Authenticate` header implies for a request with no `Authorization` header at all.** A garbage or expired token gets a second, more specific challenge instead — `WWW-Authenticate: Bearer realm=\"Rack::OAuth2 Protected Resources\"` with a structured `{\"error\":\"invalid_token\",...}` JSON body — which is the one this app's `test` hook actually classifies on.\n2. **Search filters are an array of embedded `key=value` strings** (`q[]=name=brady`, repeatable for multiple constraints), not a single free-text query parameter — copying a plain search term into `q` silently returns nothing.\n3. **Every list response shares one envelope** — `{ api_version, items_count, total_items, limit, offset, next_item, next_link, item_type, items: [...] }` — across every one of the 33 documented resources, so pagination is uniform even though there is no separate 'pagination' section in the reference.\n\nSee README.md for the full per-action detail, what was verified against the spec, and what was deliberately left out.",
+    "categories": [
+      "crm",
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Little Green Light"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.littlegreenlight.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -31,6 +31,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | agencyzoom | crm, project-management | custom | 23 |
 | airbyte | data-warehousing, devops | application | 12 |
 | aircall | communication, support, crm | basic | 38 |
+| airparser | ai, documents | api-key | 11 |
 | airtable | spreadsheets, databases, productivity | personal-access-token, oauth2, api-key | 10 |
 | airtop | ai, developer-tools | api-key | 24 |
 | algolia | search, developer-tools | api-key | 22 |
@@ -104,6 +105,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | deel | hr, finance | api-token | 25 |
 | deepgram | ai, video, developer-tools | api-key | 19 |
 | deepl | ai | api-key | 8 |
+| deepseek | ai | bearer-token | 4 |
 | devin | developer-tools, ai | api-key | 12 |
 | dialpad | communication, support | api-key | 35 |
 | digitalocean | devops, storage | token | 15 |
@@ -225,6 +227,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | linkedin | social-media, marketing | oauth2, oauth2-community-management | 6 |
 | linkedin-ads | marketing, analytics | oauth2, oauth2-audiences | 23 |
 | linkedin-conversions | marketing, analytics | oauth2 | 7 |
+| littlegreenlight | crm, finance | bearer-token | 12 |
 | lokalise | developer-tools, cms | api-token | 31 |
 | looker | analytics, data-warehousing | api-credentials | 11 |
 | loops | email, marketing, communication | api-key | 21 |
@@ -330,6 +333,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | shipstation | ecommerce | api-key | 18 |
 | shopify | commerce | access-token | 18 |
 | signnow | documents | custom | 16 |
+| signrequest | legal, documents, productivity | api-key | 26 |
 | simplybook | calendar | login | 14 |
 | slack | communication | access-token, oauth2 | 47 |
 | smartsheet | spreadsheets, productivity | access-token | 16 |
@@ -406,6 +410,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | youtube | video, social-media | api-key, oauth2 | 16 |
 | zendesk | support, crm | api-token, oauth2 | 17 |
 | zendesk-sell | crm, marketing | oauth2 | 31 |
+| zerobounce | email, marketing | api-key | 4 |
 | zoho | crm | oauth2 | 21 |
 | zoho-bookings | scheduling, calendar | oauth2 (×8 DCs) | 9 |
 | zoho-calendar | calendar | oauth2 (×8 DCs) | 13 |
