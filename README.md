@@ -209,6 +209,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | kintone | productivity, databases | api-token | 12 |
 | kit | marketing, email | api-key | 18 |
 | klaviyo | marketing, email | api-key | 23 |
+| knack | databases, productivity | application-key | 5 |
 | kommo | crm | long-lived-token | 12 |
 | kustomer | support, crm | api-key | 23 |
 | launchdarkly | devops, developer-tools | api-key | 21 |
@@ -300,10 +301,12 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | raindrop | productivity, search, storage | test-token, oauth2 | 39 |
 | razorpay | commerce, finance | basic | 44 |
 | readwise | productivity | api-token | 20 |
+| recharge | commerce, finance | api-token | 29 |
 | recruitee | hr | bearer-token | 17 |
 | reddit | social-media | oauth2 | 8 |
 | replyio | marketing, crm, email | api-key | 18 |
 | resend | email, communication | api-key | 24 |
+| respondio | support, crm, communication | api-token | 28 |
 | retellai | ai, communication | api-key | 9 |
 | ringcentral | communication, productivity | oauth2, jwt-bearer | 13 |
 | s3 | storage | aws-iam | 9 |
@@ -318,6 +321,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | servicem8 | crm | api-key | 18 |
 | servicenow | support, devops | basic, oauth2 | 9 |
 | sharepoint | documents, productivity | oauth2 | 16 |
+| shippo | commerce, developer-tools | api-key | 14 |
 | shipstation | ecommerce | api-key | 18 |
 | shopify | commerce | access-token | 18 |
 | signnow | documents | custom | 16 |
@@ -380,6 +384,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wave | finance | oauth2, full-access-token | 21 |
 | wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
+| webinarjam | video, marketing | api-key | 5 |
 | whatconverts | marketing, analytics, crm | basic | 25 |
 | whatsapp | communication | access-token | 9 |
 | whop | commerce, finance | api-key | 35 |

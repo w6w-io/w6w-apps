@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/respondio",
+  "version": "0.1.0",
+  "description": "Manage contacts, conversations, and messages across WhatsApp, SMS, and other channels via the respond.io Developer API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.respondio",
+    "displayName": "respond.io",
+    "longDescription": "respond.io unifies WhatsApp, SMS, Messenger, Instagram, email and other channels into one contact-and-conversation inbox. This app covers the respond.io Developer API v2's five areas: Contacts (create/read/update/delete, upsert, merge, tag, list with field/tag/lifecycle filters), Conversations (assign, open/close), Messaging (send any of the six documented message shapes — text, attachment, WhatsApp template, email, quick reply, custom payload — and read message history), Comments (internal notes on a contact), and Space (workspace users, custom fields, closing notes, channels, WhatsApp templates, and tags).\n\nThere is no OAuth surface for third-party apps: a personal API access token, minted per-workspace under Settings > Integrations > Developer API, is the entire authentication story.",
+    "categories": [
+      "support",
+      "crm",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "respond.io"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.respond.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

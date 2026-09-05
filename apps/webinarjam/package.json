@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/webinarjam",
+  "version": "0.1.0",
+  "description": "Read webinars, register attendees, list registrants and unsubscribe leads across WebinarJam (live) and EverWebinar (automated replay).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.webinarjam",
+    "displayName": "WebinarJam / EverWebinar",
+    "longDescription": "WebinarJam runs live webinars and EverWebinar runs their automated, on-a-schedule replays — the same vendor, the same account-wide API key, and (per the vendor's own developer docs) an identical five-endpoint surface reachable at two path prefixes on one host. This app covers both from a single connection: list the webinars published in an account, read one webinar's schedules/presenters/registration links, register an attendee (including a webinar's own custom registration fields, passed through by their configured label), list registrants and attendees with the vendor's attendance/purchase/date-range filters, and unsubscribe a lead from further notifications.\n\nEvery action takes a `product` selector (`webinarjam` or `everwebinar`) rather than being duplicated per product, because the vendor's docs state the two share one API key and one field shape — only the path prefix differs.\n\nAPI access itself is gated: WebinarJam requires manually applying for API access (Profile > API, ~2 business days, paid plans only) before any key exists, so there is no self-serve credential to connect with immediately after installing this app.",
+    "categories": [
+      "video",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "WebinarJam"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.webinarjam.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
