@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/workable",
+  "version": "0.1.0",
+  "description": "Manage Workable jobs, candidates, pipeline stages, members and webhook subscriptions.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.workable",
+    "displayName": "Workable",
+    "longDescription": "Workable is an applicant tracking system, and this app covers the recruiting loop over its own SPI v3 API: listing and reading jobs and the pipeline stages configured on them, listing, reading, creating and updating candidates, moving a candidate to another stage or disqualifying them, reading a candidate's activity stream, listing account members and disqualification reasons, and managing webhook subscriptions.\n\nWorkable has no single API host — every account gets its own subdomain (`https://<subdomain>.workable.com/spi/v3/...`) — so the subdomain is collected once at connect time as a Connection field, the same posture this pack already uses for Zendesk and Gorgias, rather than a fixed hostname in the manifest.\n\nGood for routing an external event — a careers-page submission, a referral, an assessment result — into a new Workable candidate, moving candidates between pipeline stages based on a signal from another system, syncing pipeline state elsewhere, or reacting to a candidate or employee event via a registered webhook instead of polling.\n\nOut of scope for this first version: the HR/Employee endpoints (employees, time off, time tracking, performance reviews, onboarding), requisitions and offers, and the Job Board/Assessment/Video-Interview/Background-Check partner surfaces — each is its own API area this app does not touch.",
+    "categories": [
+      "hr"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Workable"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.workable.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

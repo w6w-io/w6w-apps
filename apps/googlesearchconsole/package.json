@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/googlesearchconsole",
+  "version": "0.1.0",
+  "description": "Manage Search Console sites and sitemaps, run Search Analytics queries, and inspect a URL's index status.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.googlesearchconsole",
+    "displayName": "Google Search Console",
+    "longDescription": "Google Search Console is where a site owner sees how Google Search treats their site — what it indexes, what ranks, what breaks. This app runs the same operations the Search Console UI does, so they can be scripted or scheduled instead of clicked through.\n\nManage the property list itself: list every site the connected account can see, look up one site's permission level, add a new site (a `sc-domain:` domain property or a URL-prefix property), or remove one. Inspect and maintain sitemaps: list what has been submitted for a site (or read the entries inside a sitemap index), fetch one sitemap's processing status and error/warning counts, submit a new sitemap, or delete one. Run a Search Analytics query — clicks, impressions, CTR and position, grouped by date, query, page, country or device, with dimension filters and paging — the same data behind the Performance report. Run a URL Inspection to see whether a specific URL is indexed, which canonical Google chose, whether robots.txt or a noindex rule blocks it, and when it was last crawled.\n\nGood for auditing sitemap health after a migration, watching a URL's indexing status until it clears, pulling ranking data into a dashboard on a schedule, or provisioning a new property as part of a site-launch workflow — all without opening search.google.com/search-console.",
+    "categories": [
+      "marketing",
+      "analytics"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Google Search Console"
+      }
+    },
+    "network": {
+      "allow": [
+        "searchconsole.googleapis.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

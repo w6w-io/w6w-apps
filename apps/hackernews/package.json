@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/hackernews",
+  "version": "0.1.0",
+  "description": "Read Hacker News stories, comments, users, and story-id lists from the official public v0 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.hackernews",
+    "displayName": "Hacker News",
+    "longDescription": "Hacker News publishes its live data through a public, read-only v0 API (Firebase-backed): every story, comment, job, poll, and poll option is an \"item\" addressable by its integer id, and user profiles are addressable by username. This app covers the whole read surface the API documents: fetching one item or user, walking the current top/new/best/Ask HN/Show HN/job story-id lists, reading the current max item id (for walking the id space backward), and reading the changefeed of recently updated items and profiles.\n\nThe API needs no credential of any kind and documents no rate limit, so every action here runs unsigned. A missing or bogus id still answers HTTP 200 with a JSON `null` body rather than a 404 — every action that reads a single item or user passes that `null` straight through instead of treating it as an error, since the vendor itself does not.",
+    "categories": [
+      "social-media",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Hacker News"
+      }
+    },
+    "network": {
+      "allow": [
+        "hacker-news.firebaseio.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@w6w-apps/zuora",
+  "version": "0.1.0",
+  "description": "Manage customer accounts, subscriptions, invoices, payments and orders in Zuora, across every Zuora region and cloud.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zuora",
+    "displayName": "Zuora",
+    "longDescription": "Zuora is a subscription billing and monetization platform. This app puts the core billing objects into a workflow: list, read, create and update customer accounts; list, read and create subscriptions; list and read invoices and payments; and create and read orders for anything beyond a single subscription's lifecycle.\n\nZuora runs each tenant in one of ten hosts spanning three regions (US, EU, APAC) and, for the US, two clouds, plus developer/central and API sandboxes per region — this app's Auth method routes every request through the tenant's own host rather than assuming one region, because a credential minted against one Zuora data centre is unknown to any other.\n\nEvery list action goes through Zuora's Object Query API rather than the older per-resource endpoints, because Object Query is the one part of the v1 API with a real, generic list operation (cursor pagination, `field.OP:value` filters) that isn't gated behind an optional feature like Invoice Settlement or the legacy Order Metrics add-on.\n\nDeliberately left out: standalone invoice creation/posting, payment creation/refunds/transfers, credit and debit memos, bill runs, usage/mediation, and every order-action type beyond creating a brand-new subscription — all real, documented Zuora endpoints, left out because covering them accurately would mean re-deriving a large fraction of Zuora's object model rather than a scoped, verifiable action set. `order-create`'s `subscriptions` field is deliberately raw JSON rather than a typed form for the same reason — see that action's own documentation for exactly what it accepts.",
+    "categories": [
+      "finance"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zuora"
+      }
+    },
+    "network": {
+      "allow": [
+        "rest.zuora.com",
+        "rest.na.zuora.com",
+        "rest.eu.zuora.com",
+        "rest.ap.zuora.com",
+        "rest.apisandbox.zuora.com",
+        "rest.sandbox.na.zuora.com",
+        "rest.sandbox.eu.zuora.com",
+        "rest.test.zuora.com",
+        "rest.test.eu.zuora.com",
+        "rest.test.ap.zuora.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

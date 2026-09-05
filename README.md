@@ -158,6 +158,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | google-slides | documents, productivity | oauth2, service-account | 17 |
 | google-tasks | productivity, project-management | oauth2 | 13 |
 | googlechat | communication | oauth2 | 18 |
+| googlesearchconsole | marketing, analytics | oauth2 | 10 |
 | gorgias | support | basic | 22 |
 | grafana | monitoring | service-account-token | 8 |
 | grain | ai | api-key | 19 |
@@ -167,6 +168,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | groq | ai | bearer | 16 |
 | guru | productivity, search, ai | basic | 16 |
 | gusto | hr, finance, productivity | oauth2, oauth2-demo | 23 |
+| hackernews | social-media, developer-tools | none | 10 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
 | hedy | ai, productivity | api-key | 4 |
 | helpscout | support | oauth2 | 13 |
@@ -241,6 +243,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | onepassword | security, developer-tools | connect-token, events-token | 14 |
 | onesimpleapi | developer-tools | api-key | 7 |
 | onfleet | commerce, productivity | api-key | 32 |
+| ontraport | crm, marketing | api-key | 31 |
 | openai | ai, developer-tools | api-key | 13 |
 | openrouter | ai | api-key | 6 |
 | outlook | communication, email, calendar | oauth2 | 18 |
@@ -353,6 +356,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wix | cms, crm, commerce | api-key | 24 |
 | woocommerce | commerce | api-key | 13 |
 | wordpress | cms | basic, oauth2 | 15 |
+| workable | hr | access-token | 15 |
 | workos | security, developer-tools | api-key | 23 |
 | wrike | project-management, productivity | permanent-token | 29 |
 | wufoo | forms, productivity | api-key | 8 |
@@ -368,6 +372,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zohodesk | support | oauth2 (×10 DCs) | 27 |
 | zohomail | communication, email | oauth2 (×8 DCs) | 16 |
 | zoom | video, communication | server-to-server, oauth2 | 14 |
+| zuora | finance | client-credentials | 14 |
 
 251 apps, 4330 actions.
 
