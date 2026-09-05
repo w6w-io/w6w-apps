@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/dust",
+  "version": "0.1.0",
+  "description": "List agents, run conversations, and search knowledge on Dust — the AI agent platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.dust",
+    "displayName": "Dust",
+    "longDescription": "Dust is a workspace platform for building and running AI agents on your company's own knowledge and tools. This app covers the agent/conversation surface a workflow needs: list, get and search agent configurations; create a conversation with an initial message (optionally mentioning an agent, and optionally waiting for its first answer); post follow-up messages into an existing conversation; cancel an in-progress generation; and attach inline text to a conversation as a content fragment for extra context.\n\nIt also covers read access to the workspace's spaces (projects) and data sources, including semantic search over one data source's documents — the same retrieval an agent's own Search tool uses, callable directly from a workflow.\n\nA Dust workspace lives in exactly one of two regions (US or EU), each with its own API host and its own key — this app's connection form collects that alongside the API key and workspace id, and its health check separates a genuine outage from a region mismatch, which otherwise look identical.",
+    "categories": [
+      "ai",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Dust"
+      }
+    },
+    "network": {
+      "allow": [
+        "dust.tt",
+        "eu.dust.tt"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

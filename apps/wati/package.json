@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/wati",
+  "version": "0.1.0",
+  "description": "Send WhatsApp template and session messages, manage contacts, and read conversations through Wati's WhatsApp Business API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.wati",
+    "displayName": "Wati",
+    "longDescription": "Wati is a WhatsApp Team Inbox and Business API platform: a shared inbox for human agents plus a REST API for sending template and session messages, managing contacts, and reading conversation history. Like `kintone`, `mautic` and `tableau` in this pack, every Wati customer runs their own tenant — the API is reached at a per-tenant host and path (e.g. `https://live-mt-server.wati.io/<tenantId>`) copied from the customer's own Wati account, so the tenant's own API endpoint is a connection field rather than a fixed host.\n\nThis app covers Wati's recommended API V3 surface (`/api/ext/v3/...`, the version Wati's own docs tell new integrations to use over the legacy V1/V2 paths): sending a free-form session text or file message into an active 24-hour conversation, sending an approved WhatsApp template message to one or more recipients, contact CRUD (list, get, create, bulk-update custom fields, delete) plus a contact count, reading a conversation's message history, listing approved message templates, and reading the tenant's own credit balance.\n\nEvery path, verb and field here was verified 2026-09-05 against the OpenAPI 3.0.4 document Wati's own ReadMe-hosted API reference (`docs.wati.io`) embeds per-endpoint (`info.title: \"WhatsApp chat API\"`, `info.version: \"v3\"`), not a third-party integration directory. See the README for what was deliberately left out (interactive/list/product messages, broadcasts, calls, WhatsApp groups, chatbots, sales analytics, segments, posts/comments) and the vendor quirks that shaped the design.",
+    "categories": [
+      "communication",
+      "support"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Wati"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
