@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/opusclip",
+  "version": "0.1.0",
+  "description": "Turn long-form video into short, AI-clipped highlights, and publish or schedule them to connected social accounts.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.opusclip",
+    "displayName": "OpusClip",
+    "longDescription": "OpusClip turns a long-form video into short, vertical, AI-curated clips: submit a video URL, choose a curation model (talking-head-tuned ClipBasic or prompt-driven ClipAnything) and it returns ready-to-post clips with captions, an optional AI-generated headline, and a brand template applied.\n\nThis app covers the OpusClip Clip API end to end — creating and sharing projects, reading back the clips a project produced, brand templates, and export links for a single clip or a whole collection — plus content-safety censor jobs, AI thumbnail generation, and a project's trimmed source-video transcript.\n\nIt also covers social distribution: list connected social accounts, generate platform-tuned captions for a clip, publish a clip immediately or schedule it for later, and cancel a pending schedule.\n\nHealth checks track OpusClip's own status page. There is no live, pre-emptive read of remaining monthly API quota — the vendor only reports the cap by refusing a request with it already hit — so that check is declared unavailable rather than guessed at.",
+    "categories": [
+      "video",
+      "ai",
+      "social-media"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "OpusClip"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.opus.pro"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

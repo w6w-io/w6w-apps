@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/instapaper",
+  "version": "0.1.1",
+  "description": "Save, organize and read articles with Instapaper — bookmarks, folders and highlights over its OAuth 1.0a xAuth API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.instapaper",
+    "displayName": "Instapaper",
+    "longDescription": "Instapaper is a read-it-later service: save an article's URL and read a clean, distraction-free text version of it later, across devices. This app covers Instapaper's Full API (`instapaper.com/developers`, its older but still-live and unchanged REST surface, verified against two live snapshots seven months apart) — the complete documented method set for bookmarks (list, add, delete, star/unstar, archive/unarchive, move, update reading progress, get the processed text view), folders (list, add, delete, reorder) and highlights (list, create, delete).\n\nAuthentication is Instapaper's xAuth: a server-to-server exchange of the user's Instapaper username/password for a long-lived OAuth 1.0a access token, signed with an app-level consumer key/secret Instapaper issues after a manual review. Every request after that is signed with OAuth 1.0a (HMAC-SHA1) — there is no bearer token or API key. Instapaper documents no token expiry and no refresh endpoint, so the exchanged token is used as-is; the account password is not retained.\n\nInstapaper publishes no vendor status page (status.instapaper.com does not resolve; instapaper.statuspage.io is an unclaimed decoy) — the health check states that absence explicitly, and the derived credential check (`account/verify_credentials`) is the working signal for \"is this connection live\".",
+    "categories": [
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Instapaper"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Instapaper"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "www.instapaper.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
