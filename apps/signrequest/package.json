@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/signrequest",
+  "version": "0.1.0",
+  "description": "Create documents and send them out for signature via SignRequest, track and cancel SignRequests, download signed PDFs, work from templates, and subscribe webhooks to document/signer events.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.signrequest",
+    "displayName": "SignRequest",
+    "longDescription": "SignRequest is a straightforward e-signature service: upload or reference a document, describe who needs to sign it and how, and it handles sending the request, tracking who has viewed/signed/declined, and returning the signed PDF plus a signing log. This app covers that full lifecycle against SignRequest's REST API.\n\nA document can be created from a publicly reachable URL, from base64-encoded content, or by copying one of the account's own templates, and then sent for signature either as two calls (create the document, then send a SignRequest against it) or in one call via SignRequest's own quick-create endpoint. Once sent, a SignRequest can be cancelled, resent as a reminder, or forwarded from one signer to another, and attachments can be required from or supplied to signers before it goes out. Documents, SignRequests, templates and team members can all be listed and read back, including a free-text search across an account's documents. Webhook subscriptions let a workflow react to document and signer events (sent, viewed, signed, declined, and more) instead of polling, and the event and audit-event logs are both readable directly.\n\nEvery document a SignRequest here sends already exists in the account, or is created fresh from a URL or inline content within this same app — SignRequest offers no way to hand it a file uploaded through a different channel, since the sandbox this app's Actions run in cannot smuggle raw multipart bytes across the worker boundary. Team creation and membership administration are left to SignRequest's own interface.",
+    "categories": [
+      "legal",
+      "documents",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "SignRequest"
+      }
+    },
+    "network": {
+      "allow": [
+        "signrequest.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

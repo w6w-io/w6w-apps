@@ -1,0 +1,33 @@
+{
+  "name": "@w6w-apps/zerobounce",
+  "version": "0.1.0",
+  "description": "Validate email addresses in real time or in batch, and check credit balance and API usage, via the ZeroBounce v2 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zerobounce",
+    "displayName": "ZeroBounce",
+    "longDescription": "ZeroBounce validates email addresses in real time — checking a single address synchronously (or several at once, in one batch call) and returning a deliverability status (valid, invalid, catch-all, unknown, spamtrap, abuse, do_not_mail) plus trust signals like domain age, MX records, free/disposable/role-based detection, and best-effort name/gender/geolocation hints.\n\nBeyond validation, this app covers account visibility: current credit balance and a date-ranged usage report broken down by result status, so a workflow can check headroom before a bulk run.\n\nA fit for gating a signup flow on a real-looking address, cleaning a list before a send, or filtering risky addresses (spam traps, disposables, role-based mailboxes) out of a marketing list before they cost deliverability.\n\nZeroBounce's Email Finder, Domain Search, A.I. Scoring, Activity Data and List Evaluator products, and the CSV-file bulk-upload flow (Send File / File Status / Get File / Delete File on a separate bulkapi.zerobounce.net host), are deliberately out of scope for this app — see the README.",
+    "categories": [
+      "email",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "ZeroBounce"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.zerobounce.net",
+        "api-us.zerobounce.net",
+        "api-eu.zerobounce.net"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

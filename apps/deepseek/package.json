@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/deepseek",
+  "version": "0.1.0",
+  "description": "Chat completions, FIM code completion, model listing and account balance via the DeepSeek API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.deepseek",
+    "displayName": "DeepSeek",
+    "longDescription": "DeepSeek runs chat completions from a workflow against an OpenAI-Chat-Completions-shaped endpoint, with two DeepSeek-specific controls layered on top: a `thinking` switch (its reasoning models default to thinking mode ON, unlike OpenAI's opt-in `reasoning_effort`) and a `reasoningEffort` knob (low/high/max) that shapes how much chain-of-thought the model spends before answering. The reply carries the final `content` and, in thinking mode, a separate `reasoning_content` field — the model's visible chain-of-thought — so a workflow can log or discard it independently of the answer.\n\nA Beta FIM (Fill-In-the-Middle) completion action covers code-completion-shaped prompts (a prefix and, optionally, a suffix) against a base model — the same request shape editor/IDE integrations use, exposed here as a workflow step rather than requiring a full chat-formatted prompt. Models can be listed to keep a workflow's model choice current: DeepSeek has renamed its model line before, and the API's own `/models` endpoint is the only source that will not go stale. Account balance can be read directly, so a workflow can check headroom before a batch of calls rather than discovering a 402 mid-run.\n\nA fit for adding an LLM step to a workflow — especially one that wants visibility into the model's reasoning process, or a lower-cost alternative to a frontier chat model for summarizing, classifying or drafting code.",
+    "categories": [
+      "ai"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "DeepSeek"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.deepseek.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
