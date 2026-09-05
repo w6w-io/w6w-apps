@@ -95,6 +95,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | contentful | cms | access-token | 10 |
 | copper | crm | api-key | 24 |
 | crisp | support, communication | basic | 12 |
+| crunchbase | crm, analytics | api-key | 7 |
 | cursor | developer-tools, ai, finance | basic | 24 |
 | customerio | marketing, email | basic | 7 |
 | databricks | data-warehousing | bearer-token | 8 |
@@ -153,6 +154,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | gitlab | developer-tools, version-control | access-token, oauth2 | 16 |
 | givebutter | crm, commerce, communication | api-key | 43 |
 | gmail | communication, email | oauth2, service-account | 25 |
+| google-admin | security, productivity | oauth2, service-account | 18 |
 | google-ads | marketing, analytics | oauth2 | 14 |
 | google-analytics | analytics, marketing | oauth2 | 23 |
 | google-business-profile | marketing, productivity | oauth2 | 15 |
@@ -199,6 +201,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | jira-service-management | support, project-management | api-token, oauth2 | 17 |
 | jobber | calendar, crm, finance | oauth2 | 28 |
 | jotform | forms, productivity | api-key | 14 |
+| judgeme | commerce, marketing | api-key | 16 |
 | jumpcloud | security, devops, hr | api-key | 31 |
 | justcall | communication, crm | api-key | 21 |
 | kajabi | commerce, crm, marketing | client-credentials | 49 |
@@ -345,6 +348,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | teams | communication | oauth2 | 16 |
 | teamwork | project-management, productivity | api-key | 17 |
 | telegram | communication | bot-token | 21 |
+| telnyx | communication, devops | api-key | 6 |
 | terraform | devops, developer-tools | token | 20 |
 | textmagic | communication, marketing | basic | 25 |
 | thinkific | commerce, crm | api-key | 20 |
@@ -352,6 +356,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | tickettailor | commerce | api-key | 41 |
 | ticktick | productivity, project-management | oauth2 | 23 |
 | tidycal | calendar, productivity | personal-token, oauth2 | 18 |
+| tiktok-lead-generation | marketing, social-media | access-token | 4 |
 | tldv | ai, productivity, video | api-key | 5 |
 | todoist | productivity | api-token, oauth2 | 14 |
 | toggl | productivity | api-token | 10 |

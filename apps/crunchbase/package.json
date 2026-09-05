@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/crunchbase",
+  "version": "0.1.0",
+  "description": "Look up companies, people and funding rounds from Crunchbase's private-market dataset.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.crunchbase",
+    "displayName": "Crunchbase",
+    "longDescription": "Crunchbase licenses its private-market dataset — company profiles, funding history, investors and people — through a single read-only REST API, and this app puts that data into a workflow: autocomplete to resolve a fuzzy name into the exact entity a search or lookup needs, structured search across organizations, people and funding rounds with the same predicate/operator query language the Crunchbase UI itself uses, and direct entity lookups by UUID or permalink for enriching a record once you already know which one you want.\n\nThe API is licensed in tiers — Basic, Advanced and Enterprise — and higher tiers unlock more fields and endpoints on the same key; this app calls the same v4 surface regardless, so what actually comes back depends on the connected key's package. Search bodies model Crunchbase's own field_ids/query/order/predicate shape directly rather than flattening it into a fixed form, because the field and operator vocabulary is too large (93 organization fields, 20 operators) to model any other way without losing what makes the API useful.\n\nEvery write in this API is a no-op: Crunchbase's REST API is read-only, so every action here is a read, a search, or an autocomplete.",
+    "categories": [
+      "crm",
+      "analytics"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Crunchbase"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.crunchbase.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
