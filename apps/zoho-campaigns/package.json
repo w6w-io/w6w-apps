@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/zoho-campaigns",
+  "version": "0.1.0",
+  "description": "Manage mailing lists, contacts and campaigns in Zoho Campaigns, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-campaigns",
+    "displayName": "Zoho Campaigns",
+    "longDescription": "Zoho Campaigns puts a business's email marketing into a workflow — create and manage mailing lists, add or remove contacts (subscribe, unsubscribe, move to Do-Not-Mail), read and create custom contact fields, inspect a list's segments, and create, list, send, schedule, clone and delete campaigns. There is no organization/account concept to configure: every call acts on the one Zoho Campaigns account the connection authorized.\n\nZoho hosts every account in one of eight regional data centres, each with its own Campaigns API host and its own OAuth accounts host, so this app routes each region through its own dedicated connection rather than one that could silently send a EU account's requests through the US region instead. Canada is the one region where BOTH hosts break the naming pattern the other seven follow, and this app points at the real hosts rather than the ones the pattern would suggest.\n\nCoupon management (Shopify-specific), merge tags and topic management are deliberately left out — the first is platform/jurisdiction-specific in ways this app does not attempt to model generically, and the vendor's own documentation for the other two is too inconsistent (a merge-tags parameter table missing a parameter its own sample URL uses; a topic-management page with no parameter tables or sample requests at all) to implement correctly.",
+    "categories": [
+      "marketing",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Campaigns"
+      }
+    },
+    "network": {
+      "allow": [
+        "campaigns.zoho.com",
+        "campaigns.zoho.eu",
+        "campaigns.zoho.in",
+        "campaigns.zoho.com.au",
+        "campaigns.zoho.jp",
+        "campaigns.zohocloud.ca",
+        "campaigns.zoho.com.cn",
+        "campaigns.zoho.sa"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

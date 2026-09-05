@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/pdfmonkey",
+  "version": "0.1.0",
+  "description": "Generate PDFs and images from PDFMonkey templates.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pdfmonkey",
+    "displayName": "PDFMonkey",
+    "longDescription": "PDFMonkey turns a template designed in its Dashboard or visual Builder into PDFs (or images) generated on demand from JSON data, and this app is the generation half of that loop: create a document from a template and payload, poll or wait synchronously for the rendered file, then fetch, list, update or delete it. Beyond generation, it can look up templates and their published/draft settings, and list the PDF engines an account can render with, so a workflow can confirm a template still exists or pick an engine without opening the dashboard.\n\nGeneration is asynchronous by default (create, then poll or use a webhook), with a synchronous convenience endpoint that waits up to 6 minutes in a single request for low-volume or interactive use. Every generated document is available as a lightweight DocumentCard (recommended for status/download checks) or a full Document (adds payload and generation logs) — this app exposes both so a workflow only pays for the heavier read when it actually needs the payload back.",
+    "categories": [
+      "documents",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "PDFMonkey"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.pdfmonkey.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

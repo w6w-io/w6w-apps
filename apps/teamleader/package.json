@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/teamleader",
+  "version": "0.1.0",
+  "description": "Manage contacts, companies, deals and users in Teamleader Focus, the Belgian CRM / invoicing / project-management SaaS.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.teamleader",
+    "displayName": "Teamleader Focus",
+    "longDescription": "Teamleader Focus is a Belgian CRM, invoicing and project-management SaaS. This app covers its core CRM surface over the vendor's HTTP RPC API (`api.focus.teamleader.eu`): full CRUD on contacts and companies, creating and updating deals, and listing the account's users — the identifiers deals, tasks and responsible-user fields elsewhere in the API all reference.\n\nTeamleader's API is action-based RPC rather than REST — every call, including reads, is a POST to a `<resource>.<action>` path (`contacts.list`, `deals.create`, `companies.update`) — and its update endpoints replace array collections (emails, telephones, addresses, tags) wholesale rather than merging them, both called out where they matter in each action's own documentation.\n\nAuthentication is OAuth 2.0 only; Teamleader publishes no API-key alternative for third-party integrations, and scopes are fixed once per integration at registration on the Teamleader Marketplace rather than requested per connection.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Teamleader"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.focus.teamleader.eu"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -41,6 +41,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | assemblyai | ai, developer-tools | api-token | 11 |
 | attio | crm | api-key | 29 |
 | auth0 | security, developer-tools | client-credentials | 18 |
+| aweber | email, marketing | oauth2 | 33 |
 | azure-blob | storage, devops | shared-key | 14 |
 | azuredevops | version-control, devops, project-management | pat | 19 |
 | balena | iot, devops | api-key | 16 |
@@ -64,6 +65,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | callrail | marketing, communication, analytics | api-token | 26 |
 | campaignmonitor | email, marketing | api-key, oauth2 | 42 |
 | canny | project-management, support | api-key | 39 |
+| canva | productivity, documents | oauth2 | 29 |
 | chargebee | commerce, finance | api-key | 17 |
 | chatbase | ai, support, communication | api-key | 35 |
 | chatwork | communication, productivity | api-token | 32 |
@@ -157,6 +159,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | gravityforms | forms, productivity | basic | 12 |
 | greenhouse | hr | oauth-client-credentials, api-key | 24 |
 | grist | spreadsheets, databases, productivity | api-key, oauth2 | 15 |
+| guru | productivity, search, ai | basic | 16 |
 | gusto | hr, finance, productivity | oauth2, oauth2-demo | 23 |
 | harvest | productivity | personal-access-token, oauth2 | 11 |
 | helpscout | support | oauth2 | 13 |
@@ -167,6 +170,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | hubspot | crm, marketing | private-app-token, oauth2, api-key | 42 |
 | huggingface | ai, developer-tools | token | 14 |
 | hunter | email, marketing, crm | api-key | 20 |
+| insightly | crm | api-key | 20 |
 | instantly | marketing, email, crm | api-key | 38 |
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | jenkins | devops | basic | 6 |
@@ -178,6 +182,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | keap | crm, marketing, email | oauth2, access-key | 36 |
 | kit | marketing, email | api-key | 18 |
 | klaviyo | marketing, email | api-key | 23 |
+| kommo | crm | long-lived-token | 12 |
 | kustomer | support, crm | api-key | 23 |
 | launchdarkly | devops, developer-tools | api-key | 21 |
 | lemlist | marketing, email | api-key | 18 |
@@ -218,6 +223,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
 | odoo | crm, commerce | api-key | 21 |
 | okta | security | api-token | 11 |
+| omnisend | marketing, email | api-key | 7 |
 | oncehub | scheduling | api-key | 30 |
 | onedrive | documents, storage | oauth2 | 18 |
 | onepassword | security, developer-tools | connect-token, events-token | 14 |
@@ -232,12 +238,14 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | particle | iot, devops | access-token | 13 |
 | paypal | commerce, finance | client-credentials | 13 |
 | pdfco | documents | api-key | 24 |
+| pdfmonkey | documents, developer-tools | bearer-token | 13 |
 | pendo | analytics, product-analytics | api-key | 11 |
 | perplexity | ai | api-key | 5 |
 | phantombuster | automation, developer-tools, ai | api-key | 14 |
 | pinecone | ai, databases, search | api-key | 24 |
 | pinterest | social-media, marketing | oauth2 | 16 |
 | pipedrive | crm | api-token, oauth2 | 14 |
+| pipefy | productivity, project-management | client-credentials, personal-access-token | 29 |
 | plaid | finance, databases | client-secret, client-secret-sandbox | 14 |
 | podio | project-management, databases, productivity | app-auth, oauth2 | 29 |
 | postbin | developer-tools | none | 5 |
@@ -294,6 +302,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | tailscale | security, devops | api-key, oauth-client | 16 |
 | tally | forms, productivity | api-key | 38 |
 | teachable | commerce, productivity | api-key | 21 |
+| teamleader | crm | oauth2 | 15 |
 | teams | communication | oauth2 | 16 |
 | teamwork | project-management, productivity | api-key | 17 |
 | telegram | communication | bot-token | 21 |
@@ -338,6 +347,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zendesk | support, crm | api-token, oauth2 | 17 |
 | zendesk-sell | crm, marketing | oauth2 | 31 |
 | zoho | crm | oauth2 | 21 |
+| zoho-campaigns | marketing, email | oauth2 (×8 DCs) | 24 |
 | zoho-invoice | accounting, finance | oauth2 (×8 DCs) | 22 |
 | zohobooks | accounting | oauth2 (×8 DCs) | 22 |
 | zohodesk | support | oauth2 (×10 DCs) | 27 |

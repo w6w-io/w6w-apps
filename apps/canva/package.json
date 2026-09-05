@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/canva",
+  "version": "0.1.0",
+  "description": "Create and manage Canva designs, folders, assets and brand templates over the Canva Connect API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.canva",
+    "displayName": "Canva",
+    "longDescription": "Canva Connect is the OAuth-gated REST API behind Canva's design platform. This app covers its genuinely headless-callable core: create and list designs, read a design's pages/export-formats/autofill dataset, manage Projects folders and their contents, upload and manage image/video assets, run the asynchronous export and autofill jobs (and poll them to completion), and list/read brand templates.\n\nCanva scopes access tightly per action — every action here declares the exact scope it needs, and several endpoints (asset upload, design export, design autofill) are asynchronous: a `create-*` action starts a job and a paired `get-*` action polls it, mirroring the vendor's own documented workflow rather than blocking on completion.\n\nDeliberately left out: Comments, Analytics, Design imports, Merges, Resizes and Webhooks. Comments/Analytics/Merges/Resizes are all straightforward extensions of the same job/REST shapes used here, just not verified against live traffic for this first pass; Design imports duplicates the asset-upload job shape for a different resource; Webhooks need a receiving endpoint this host doesn't expose per-app. See the README for exactly what was verified and why each of these was left out rather than guessed at.",
+    "categories": [
+      "productivity",
+      "documents"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Canva"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.canva.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
