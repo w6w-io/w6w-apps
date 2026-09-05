@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/zoho-bookings",
+  "version": "0.1.0",
+  "description": "List workspaces, services and staff, check availability, and book, get, update, reschedule and cancel appointments in Zoho Bookings, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-bookings",
+    "displayName": "Zoho Bookings",
+    "longDescription": "Zoho Bookings runs a business's appointment scheduling — workspaces (locations), services, staff and the appointments customers book against them. This app covers Zoho's documented v1 API end to end: list workspaces/services/staff, fetch open slots for a service, book an appointment, look one up, update its status (complete, cancel or mark no-show), reschedule it to a different time or staff, and add a new staff member.\n\nZoho hosts every account in one of eight regional data centres, each with its own API host, so this app routes each region through its own dedicated connection rather than one that could silently send a EU account's requests through the US region instead. Canada is the one region where the OAuth host breaks the naming pattern the other seven follow, and this app points at the real host rather than the one the pattern would suggest.\n\nZoho Bookings' v1 API is a small, single-scope surface — one OAuth scope covers every documented call, and there is no separate customer list, recurring-appointment, payment, or resource-management endpoint published, so none of those are attempted here.",
+    "categories": [
+      "calendar"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Bookings"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.zohoapis.com",
+        "www.zohoapis.eu",
+        "www.zohoapis.in",
+        "www.zohoapis.com.au",
+        "www.zohoapis.jp",
+        "www.zohoapis.ca",
+        "www.zohoapis.com.cn",
+        "www.zohoapis.sa"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
