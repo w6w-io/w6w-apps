@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/formidableforms",
+  "version": "0.1.0",
+  "description": "Manage forms, entries and Views on a self-hosted Formidable Forms site via its WordPress REST API v3.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.formidableforms",
+    "displayName": "Formidable Forms",
+    "longDescription": "Formidable Forms is a WordPress plugin for building forms, directories, dashboards and calculators, and this app talks to a site's own Formidable REST API v3: read and manage forms, list their fields, search and manage entries, pull field statistics, and list the styles and Views the site has defined.\n\nBecause every call goes to the customer's own WordPress install rather than a shared vendor host, this app connects per site rather than per account, with a WordPress Application Password standing in for a login. Creating or updating an entry writes the database row directly through Formidable's own entry-saving code, but unlike a real visitor filling in the form, it does not run field validation, spam checks or fire the form's own notifications — the right choice for imports and back-fills that shouldn't refire a customer email.\n\nDeleting a form or an entry is here as well, deliberately gated behind an explicit confirmation, because a self-hosted instance has no trash to recover from either. Form-authoring surfaces this app deliberately stays out of: building a form's field graph, style CSS internals, form actions (notifications/webhooks), Applications, and View layouts are all left to the WordPress admin, since none of them have a documented request/response shape solid enough to automate without guessing.",
+    "categories": [
+      "forms",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Formidable Forms"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

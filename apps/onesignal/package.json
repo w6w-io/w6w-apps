@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/onesignal",
+  "version": "0.1.0",
+  "description": "Send push, email, and SMS messages, manage Users, Subscriptions, and Segments, and track custom events via the OneSignal REST API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.onesignal",
+    "displayName": "OneSignal",
+    "longDescription": "OneSignal is a customer messaging and engagement platform: push notifications (mobile and web), email, SMS, and in-app messages, targeted at Users, Subscriptions, or Segments and orchestrated through Journeys.\n\nThis app covers the app-scoped REST surface a backend integration needs: sending a message on any channel (push, email, SMS) with segment, alias, subscription-id, or property-filter targeting; estimating a send's audience before it goes out; reading, listing, and cancelling messages; creating, reading, updating, and deleting Users and their Subscriptions; creating, listing, and deleting Segments; and recording custom events that drive Journeys and segmentation.\n\nAuthentication is the App API key OneSignal introduced in November 2024 (`os_v2_app_...`), scoped to one App ID — the legacy REST API key and User Auth key still work but their management UI is gone and no new ones can be created, so this app is built against the current key only. Health checks track OneSignal's own status page alongside the credential's liveness; OneSignal exposes no readable API rate-limit headroom, which is declared rather than guessed at.",
+    "categories": [
+      "communication",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "OneSignal"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.onesignal.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

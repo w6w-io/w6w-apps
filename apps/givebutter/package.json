@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/givebutter",
+  "version": "0.1.0",
+  "description": "Manage Givebutter campaigns, contacts, transactions, funds, households and webhooks — the nonprofit fundraising and donor-CRM platform.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.givebutter",
+    "displayName": "Givebutter",
+    "longDescription": "Givebutter is a nonprofit fundraising platform: campaigns (donation pages, peer-to-peer, ticketed events), the transactions and recurring plans they collect, and the contacts (donor CRM) and households behind them. This app covers that core surface end to end — full CRUD on campaigns, contacts (including tag management), funds and webhooks; creating and updating transactions for offline/manual gift entry; and read access to the resources the API exposes read-only: payouts, pledges, recurring plans, tickets and outbound messages.\n\nGivebutter's own API reference disagrees with the API's actual wire behavior in two ways this app works around rather than repeats: every documented error response is shown as a flat `{\"message\": ...}` object, but a live 401 actually answers `{\"error\": {\"message\": \"Unauthorized\"}}` — this app's error formatter reads both shapes. And the Rate Limits page states 500 requests/minute, but every live response measured during development carried `x-ratelimit-limit: 200` — the quota health check reports the header, not the doc.\n\nOne more thing worth knowing before scripting against resource paths directly: `{campaign}` and `{fund}` path parameters accept only the numeric id. A slug or any other non-numeric value in that position doesn't reach the API layer at all — it falls through to Givebutter's public marketing site, which answers its own branded 404 HTML page instead of a JSON error. This app's actions always take the numeric id.",
+    "categories": [
+      "crm",
+      "commerce",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Givebutter"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.givebutter.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

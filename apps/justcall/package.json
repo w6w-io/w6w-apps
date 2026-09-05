@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/justcall",
+  "version": "0.1.1",
+  "description": "Read and manage JustCall calls, texts, contacts, phone numbers, users and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.justcall",
+    "displayName": "JustCall",
+    "longDescription": "JustCall is a cloud phone system and SMS/calling platform: phone numbers, agents, calls and text messages in one account. This app covers the core of a JustCall-driven workflow — read and update calls, send and read SMS, manage contacts (including DND/DNM/blacklist status), read phone numbers and their capabilities, look up and update user availability, and manage webhook subscriptions.\n\nThe API answers most reads with a paginated envelope (`status`, `data`, `count`, `next_page_link`) and a few writes with a bare `{status}` or a single-item `data` array rather than a single object — every action here follows the shape JustCall's own OpenAPI document declares for that specific endpoint, not a single assumed shape for the whole app.\n\nHealth is tracked against JustCall's own Statuspage, which names a genuine `Developer APIs` component distinct from the dashboard and calling infrastructure, plus the account's own hourly and per-minute rate-limit headroom read from the documented `X-Rate-Limit-*` response headers.",
+    "categories": [
+      "communication",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "JustCall"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "JustCall"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.justcall.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

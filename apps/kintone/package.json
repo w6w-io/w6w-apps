@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/kintone",
+  "version": "0.1.0",
+  "description": "Read, write and search records in a Kintone app, plus comments, files and form metadata, via each customer's own Kintone REST API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.kintone",
+    "displayName": "Kintone",
+    "longDescription": "Kintone (Cybozu) is a no-code database/app builder: every customer runs their own tenant at `https://<subdomain>.cybozu.com` or `https://<subdomain>.kintone.com`, and every Kintone \"App\" inside that tenant is its own record schema the customer designs, not a fixed shape this integration can assume. So, like `bubble`, `mautic` and `tableau` in this pack, the tenant's own URL is a connection field and the field-value shapes are passed through as the raw objects Kintone's REST API documents (`{\"FieldCode\": {\"value\": ...}}`), rather than guessed at.\n\nThis app covers the REST API surface that a per-App API Token can reach: single and bulk record create/read/update/delete, a query-string search over a Kintone App's records, comments, file upload/download, and the two read-only App metadata calls (general info, form fields) documented as API-Token-authenticated. Left out on purpose: listing every App in the tenant and anything about Kintone's own Users/Groups/Spaces admin surface, because those require Password, Session or OAuth 2.0 authentication — a Kintone API Token is deliberately scoped to one App and cannot reach them (verified against Kintone's own Authentication reference; see the README).",
+    "categories": [
+      "productivity",
+      "databases"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Kintone"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
