@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/insightly",
+  "version": "0.1.0",
+  "description": "Manage Insightly contacts, organisations, opportunities and leads.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.insightly",
+    "displayName": "Insightly",
+    "longDescription": "Insightly is a CRM built around four core objects — Contacts, Organisations, Opportunities and Leads — and this app puts full create/read/update/delete on each of them behind a workflow.\n\nContacts and Organisations are the address book: create and edit either one, look a record up by ID, list or filter the collection by any field, and delete a record when it is no longer wanted. Opportunities carry a deal through Insightly's pipeline — name, stage, bid amount and currency, forecast and actual close dates, the responsible user — and Leads carry a prospect before it becomes a Contact, with its own source and status.\n\nEvery list action doubles as a search: leave the filter empty for a plain paginated listing, or set a field name and value to use Insightly's field-level Search endpoint instead — including a search by custom field, and a filter on when a record was last updated.\n\nInsightly is multi-tenant across regional \"pods\" (na1, eu1, ...) rather than one shared host, so the pod is part of the Connection, alongside the per-user API key found in the Insightly web app's own User Settings.\n\nOut of scope for now: file attachments, tags, links between records, projects, tasks, custom objects, and the pipeline/stage/pricebook administrative endpoints — all real Insightly API surfaces, left out to keep this app to the four objects a CRM workflow touches most.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Insightly"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.insightly.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

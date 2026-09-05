@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/omnisend",
+  "version": "0.1.0",
+  "description": "Omnisend contacts, tagging, and customer events for ecommerce email/SMS marketing automation.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.omnisend",
+    "displayName": "Omnisend",
+    "longDescription": "Omnisend manages the ecommerce marketing lifecycle from a workflow — creating and updating contacts, tagging them individually or in bulk by ID, email, phone, or segment, and sending the customer events (recommended events like \"placed order\", or free-form custom events) that trigger Omnisend's own automations, segments, and reporting.\n\nA fit for syncing storefront data (contacts, orders) into Omnisend as it happens, or triggering an Omnisend automation from an external condition detected elsewhere in a workflow.",
+    "categories": [
+      "marketing",
+      "email"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Omnisend"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.omnisend.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

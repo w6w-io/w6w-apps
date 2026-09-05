@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/guru",
+  "version": "0.1.0",
+  "description": "Search, read and manage Guru cards, collections and folders — the AI-powered knowledge base.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.guru",
+    "displayName": "Guru",
+    "longDescription": "Guru is an AI-powered knowledge management platform organized around Cards (individual pieces of verified knowledge), Collections (top-level knowledge bases, usually one per team) and Folders (Guru's UI calls these \"Boards\" — the groupings of related Cards within a Collection).\n\nThis app covers that core surface headlessly: search Cards by keyword, read a Card's full content and metadata, create and update Cards (including their verification state), and manage Collections and Folders. It also surfaces team membership, useful for looking up a verifier or owner before assigning one.\n\nGuru's Trust Score / verification workflow — Cards are marked TRUSTED, STALE or NEEDS_VERIFICATION and carry a verifier who is responsible for keeping them accurate — is a first-class part of the model here: the verify action and the verification fields on every Card action are not an afterthought bolted on top of a generic CMS shape.\n\nGuru's newer AI Agent / Knowledge Agent / Chat surface (agents, skills, quality runs, MCP configuration) is a separate and much larger subsystem and is deliberately out of scope for this app; see the README.",
+    "categories": [
+      "productivity",
+      "search",
+      "ai"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Guru"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.getguru.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

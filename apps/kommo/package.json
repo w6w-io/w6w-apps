@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/kommo",
+  "version": "0.1.0",
+  "description": "Manage Kommo leads, contacts and companies — the messenger-based sales CRM formerly known as amoCRM.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.kommo",
+    "displayName": "Kommo",
+    "longDescription": "Kommo (rebranded from amoCRM in 2024) is a messenger-based sales CRM built around leads moving through a pipeline. This app puts the daily loop of running that pipeline behind a workflow: create and update leads, contacts and companies, and read them back by id or by a filtered, paginated list.\n\nEvery account gets its own address — `<subdomain>.kommo.com`, or `<subdomain>.amocrm.com` for accounts that predate the rebrand and never moved — so the account address is a connection field rather than a fixed host, the same posture this pack already uses for Zendesk.\n\nAuthentication is a Long-Lived Token, generated once from Settings -> API in the target account (Kommo's own docs recommend it specifically for a private, single-account integration like a workflow, over the OAuth2 authorization-code flow that exists for public marketplace integrations). It carries the creating admin's own rights, needs no redirect URL and no refresh cycle, and can be scoped to an expiry between 1 day and 5 years at generation time.\n\nDeliberately out of scope: deleting a lead, contact or company (the v4 API documents no delete endpoint for any of the three — removal only happens from Kommo's own UI, to trash, which the API cannot reach either), the pipeline/stage/custom-field administration surface, tasks, notes, tags administration, the Chats API, the Salesbot builder, and the catalogs/lists feature. Each is its own surface, and none of it is the record CRUD a workflow touches day to day.",
+    "categories": [
+      "crm",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Kommo"
+      }
+    },
+    "network": {
+      "allow": [
+        "*.kommo.com",
+        "*.amocrm.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

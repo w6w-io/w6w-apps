@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/aweber",
+  "version": "0.1.0",
+  "description": "Manage AWeber email lists, subscribers and broadcasts — add and update subscribers, read and schedule broadcast newsletters, and manage tags and custom fields.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.aweber",
+    "displayName": "AWeber",
+    "longDescription": "AWeber is an email marketing and newsletter platform built around Lists, Subscribers and Broadcasts. This app covers the API's full v1 surface for those three resources: reading and finding lists, adding, finding, updating, moving and removing subscribers (by ID or by email), tracking e-commerce purchases against a subscriber, and creating, updating, scheduling, cancelling and reading the open/click stats of broadcast newsletters. It also covers list-scoped Tags, Custom Fields and Segments, and the account-level resources every call is scoped under.\n\nAuthorization is OAuth 2.0 (AWeber's older OAuth 1.0a is still accepted by the API but is not implemented here — see the README). Health checks track AWeber's own status page alongside the credential's own liveness.",
+    "categories": [
+      "email",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "AWeber"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.aweber.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

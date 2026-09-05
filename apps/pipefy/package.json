@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/pipefy",
+  "version": "0.1.0",
+  "description": "Manage pipes, cards, phases and database tables in Pipefy over Pipefy's GraphQL API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.pipefy",
+    "displayName": "Pipefy",
+    "longDescription": "Pipefy's no-code process automation platform, reached entirely through a single GraphQL endpoint — there is no REST surface at all. This app covers the spine a workflow author actually reaches for: organizations (list, get), pipes (list, get, create, update, delete), phases (list, get, create, update, delete), cards (list, get, find by field value, create, update, update a single field, move to a different phase, delete), and Database Tables (list, get, plus records: list, get, create, update, delete). An escape-hatch action runs any GraphQL query or mutation directly, reaching the much larger schema (labels, pipe members, table members, reports, webhooks, AI automations) that the named actions don't model.\n\nGood for creating a card whenever a form is submitted elsewhere, syncing a Pipefy Database Table with an external system of record, moving a card through approval phases from an external trigger, or pulling pipe/card data into a report.",
+    "categories": [
+      "project-management",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Pipefy"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.pipefy.com",
+        "app.pipefy.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
