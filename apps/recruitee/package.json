@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/recruitee",
+  "version": "0.1.0",
+  "description": "Manage candidates, job offers, notes, tasks and pipeline placements in Recruitee, an applicant tracking system.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.recruitee",
+    "displayName": "Recruitee",
+    "longDescription": "Recruitee is an applicant tracking system (ATS): job offers (postings), the candidates applying to them, and the hiring pipeline that moves a candidate from applied to hired.\n\nThis app covers candidates (list, get, create, update, delete), job offers (list, get, create), departments, notes and tasks on a candidate, tags, and the pipeline itself — reading an offer's placements grouped by stage and moving a placement to a different stage.\n\nRecruitee's own published API reference (apidocs.recruitee.com) is generated directly from its internal request-spec suite and documents its ENTIRE web application — including admin, billing, GDPR and referral-portal surfaces that require a signed-in browser session, not a personal API token. Only the subset independently confirmed live over `Authorization: Bearer <token>` (the `www-authenticate: Bearer` challenge measured directly against api.recruitee.com) is implemented here; see the README for what that excludes and why.\n\nRecruitee's parent company rebranded to Tellent in 2024, but the product itself, its API host (api.recruitee.com) and its API reference are still published under the Recruitee name today — see the README for what was checked before keeping this name.",
+    "categories": [
+      "hr"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Recruitee"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.recruitee.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

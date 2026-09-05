@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/goto-webinar",
+  "version": "0.1.0",
+  "description": "Schedule and manage GoTo Webinar webinars, registrants, panelists and attendance.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.goto-webinar",
+    "displayName": "GoTo Webinar",
+    "longDescription": "GoTo Webinar runs the webinar itself — scheduling sessions, accepting registrations, inviting panelists and reporting who actually showed up — and this app brings that lifecycle into a workflow.\n\nCreate single-session or multi-session (series) webinars, update or cancel them, and register attendees directly rather than routing them through a separate signup form. Panelists can be invited by email, and once a session has run, registrant, session and attendance data can be read back to drive follow-up automation — a CRM sync for no-shows, a follow-up email for attendees, or a report merging registration against actual join time.\n\nA common pattern is triggering a workflow off an external event — a course enrollment, a CRM stage change, a landing-page form — and registering the person for the right webinar session directly, or reading attendance back afterward to decide who gets which follow-up.\n\nThis app covers the everyday webinar/registrant/panelist/attendance lifecycle over GoTo's own OAuth 2.0 provider; it does not cover webhooks, user subscriptions, co-organizers, audio settings or recording assets, which are documented but left for a follow-up pass.",
+    "categories": [
+      "video",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "GoTo"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.getgo.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

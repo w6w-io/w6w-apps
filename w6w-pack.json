@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.123.0",
+  "version": "0.124.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -445,6 +445,9 @@
       "path": "./apps/gorgias"
     },
     {
+      "path": "./apps/goto-webinar"
+    },
+    {
       "path": "./apps/grafana"
     },
     {
@@ -473,6 +476,9 @@
     },
     {
       "path": "./apps/harvest"
+    },
+    {
+      "path": "./apps/heartbeat"
     },
     {
       "path": "./apps/hedy"
@@ -644,6 +650,9 @@
     },
     {
       "path": "./apps/meilisearch"
+    },
+    {
+      "path": "./apps/mercury"
     },
     {
       "path": "./apps/messagebird"
@@ -829,6 +838,9 @@
       "path": "./apps/readwise"
     },
     {
+      "path": "./apps/recruitee"
+    },
+    {
       "path": "./apps/reddit"
     },
     {
@@ -1010,6 +1022,9 @@
     },
     {
       "path": "./apps/trustpilot"
+    },
+    {
+      "path": "./apps/tumblr"
     },
     {
       "path": "./apps/twilio"

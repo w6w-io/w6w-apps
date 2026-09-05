@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/heartbeat",
+  "version": "0.1.0",
+  "description": "Manage a Heartbeat community — members, groups, channels, threads, events, courses and documents.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.heartbeat",
+    "displayName": "Heartbeat",
+    "longDescription": "Heartbeat (heartbeat.chat) is a community platform: members, groups, discussion channels, live/voice channels, events, direct messages, courses and a document wiki, all inside one paid community. This app covers the full surface of Heartbeat's own public REST API, verified directly against the vendor's OpenAPI 3.0 document embedded in its ReadMe-hosted reference (fetched 2026-09-05, info.version 1.0.0) plus live probes against api.heartbeat.chat and status.heartbeat.chat.\n\nMembership: list, get, create, update, delete and reactivate users; look a user up by email; invitations and pending-user seats; roles; groups and group membership. Structure: channel categories, post/chat/voice channels. Content: threads, comments, direct chats and direct messages, chat-channel messages, events (including recurring instances and attendance), webhooks for reacting to community activity, courses and lessons, native videos, and the document wiki.\n\nEvery text field Heartbeat accepts (thread/comment/message bodies) is a restricted HTML subset — <p>, <a>, <b>, <h1>-<h3>, <ul>, <li>, <br> — not Markdown; anything else is silently stripped, and this app's params say so rather than let that surprise a workflow author.",
+    "categories": [
+      "communication",
+      "social-media"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Heartbeat"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.heartbeat.chat"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

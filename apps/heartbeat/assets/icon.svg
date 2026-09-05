@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Heartbeat"><title>Heartbeat</title><svg fill="none" x="4" y="4" width="92" height="92" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" overflow="visible"><g clip-path="url(#clip0_421_11)">
+<rect width="32" height="32" rx="8.125" fill="white"/>
+<circle cx="10.5449" cy="27.2188" r="28.6563" fill="#F91E87" fill-opacity="0.8"/>
+<circle cx="7.8125" cy="9.5625" r="16.6875" fill="#FFBA54" fill-opacity="0.5"/>
+<circle cx="7.8125" cy="9.5625" r="10.125" fill="#FFBA54"/>
+<circle cx="25.0625" cy="29.0625" r="15" fill="#FD8467" fill-opacity="0.5"/>
+<circle cx="24.1562" cy="22.9062" r="10.7188" fill="#FD8467"/>
+<circle cx="6.08716" cy="30.7122" r="11.7122" fill="#F91E87"/>
+<foreignObject x="-12.5" y="-12.5" width="57" height="57"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(6.25px);clip-path:url(#bgblur_1_421_11_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="12.5" width="32" height="32" fill="white" fill-opacity="0.01"/>
+<path d="M14.5859 25.125C14.5859 25.125 18.4145 22.9848 21.0604 21.401C24.706 19.2137 25.6716 16.8595 25.9439 15.0274C26.2161 13.1954 25.6078 9.71542 21.6517 9.15469C19.7204 8.88074 17.8572 9.129 16.547 11.1965C15.8238 8.83793 14.101 8.08886 12.1697 7.81491C8.21359 7.25417 6.70345 10.4602 6.44822 12.2837C6.19299 14.1072 6.478 16.6369 9.38342 19.7359C11.4806 22.0046 14.5859 25.125 14.5859 25.125Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="bgblur_1_421_11_clip_path" transform="translate(12.5 12.5)"><rect width="32" height="32"/>
+</clipPath><clipPath id="clip0_421_11">
+<rect width="32" height="32" rx="8.125" fill="white"/>
+</clipPath>
+</defs></svg></svg>
