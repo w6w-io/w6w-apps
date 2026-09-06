@@ -25,7 +25,7 @@ methods. Sixty-six apps add a fourth question — **is this tenant's own host re
 as a `kind: "dependency"` check, because "the site is gone" and "the token expired" are
 different problems with different fixes.
 
-Across the pack that comes to **1,039 checks**: 409 live probes, 254 declared absences, and 378
+Across the pack that comes to **1,054 checks**: 415 live probes, 258 declared absences, and 383
 `auth:*` checks derived for free from existing `test` hooks.
 
 Per-app detail, including why each probe was chosen over the obvious alternatives and how
@@ -148,6 +148,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [fireflies](apps/fireflies/README.md) | none reachable (dangling Freshstatus CNAME) | no | `POST /graphql` `{ user { user_id name email } }` | no | `api` · ~~service~~ · ~~quota~~ · 1 derived |
 | [fivetran](apps/fivetran/README.md) | [Statuspage-shaped](https://status.fivetran.com/api/v2/status.json) — only status.json exists; components and incidents both 404 | yes | `GET /v1/account/info` | yes (`X-Rate-Limit` headers) | `service` · `quota` · `connections` · 1 derived |
 | [flodesk](apps/flodesk/README.md) | none machine-readable | no | `GET /segments/colors` | yes | ~~service~~ · `quota` · 2 derived |
+| [folk](apps/folk/README.md) | [Instatus](https://folk.instatus.com/components.json) — verified via the "folk rest API" component, distinct from the unclaimed `status.folk.app` | yes | `GET /network/{id}/check-access` | no — no rate-limit/quota concept documented | ~~quota~~ · `service` · 1 derived |
 | [followupboss](apps/followupboss/README.md) | [Statuspage](https://followupboss.statuspage.io/api/v2/summary.json) | yes | `GET /identity` | yes | `service` · `quota` · 1 derived |
 | [formstack](apps/formstack/README.md) | [Statuspage](https://www.intellistackstatus.com/api/v2/summary.json) | yes | `GET /forms?pageSize=1` | no | `service` · ~~quota~~ · 1 derived |
 | [freeagent](apps/freeagent/README.md) | [Statuspage](https://status.freeagent.com/api/v2/summary.json), component `API` | yes | `GET /v2/users/me` | no | `service` · ~~quota~~ · 1 derived |
@@ -279,6 +280,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [newrelic](apps/newrelic/README.md) | [Statuspage](https://status.newrelic.com/api/v2/summary.json) — 115 components, each suffixed with its data centre (`APM : US`, `Alerts : Europe`); only the affected ones are reported and the regions named, since an incident in another region is not one for this account | yes | `{ actor { user { name email } } }` | no | `service` · `reporting` · ~~quota~~ · 1 derived |
 | [nocodb](apps/nocodb/README.md) | none machine-readable — status.nocodb.com serves an HTML uptime page and `/api/v2/summary.json`, `/api/v1/monitors` and `/badge` all 404; it would also speak only for app.nocodb.com, while NocoDB is self-hosted more often than not | no | `GET /api/v1/health` — UNAUTHENTICATED, so an outage cannot hide behind a revoked token, and it reports the process UPTIME: a repeatedly small one is a container crash-looping, a pattern no single check would show | YES — measured `x-ratelimit-limit: 60` / `x-ratelimit-remaining` on every response, a real and current number, and small enough that one workflow can spend it; the probe costs one of the 60 | ~~service~~ · `instance` · `quota` · 1 derived |
 | [notion](apps/notion/README.md) | [page](https://status.notion.so) | no | `GET /v1/users/me` | no | ~~service~~ · ~~quota~~ · 2 derived |
+| [nutshell](apps/nutshell/README.md) | [Statuspage](https://status.nutshell.com/api/v2/status.json) — reads only the "Nutshell application" component | yes | `getUpdateTimes` (JSON-RPC) | no — no rate-limit header of any kind on the wire | `service` · ~~quota~~ · 1 derived |
 | [odoo](apps/odoo/README.md) | none machine-readable | no | `common.authenticate` (JSON-RPC) | no | ~~service~~ · ~~quota~~ · `instance` · 1 derived |
 | [okta](apps/okta/README.md) | [page](https://status.okta.com) | no | `GET /api/v1/users?limit=1` | yes | ~~service~~ · `quota` · 1 derived |
 | [omnisend](apps/omnisend/README.md) | [Statuspage](https://status.omnisend.com/api/v2/summary.json) | yes | `GET /brands/current` | no (both unauthenticated and fake-key probes returned no rate-limit header; limits are per-brand, not per-connection) | `service` · ~~quota~~ · 1 derived |
@@ -304,6 +306,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [pdfmonkey](apps/pdfmonkey/README.md) | declared unavailable — `status.pdfmonkey.io` is real (updown.io) but exposes no RSS/Atom/JSON at any conventional path | no | `GET /document_cards` | no (only exposed via an endpoint that risks echoing the credential) | ~~service~~ · ~~quota~~ · 1 derived |
 | [pendo](apps/pendo/README.md) | [Statuspage](https://status.pendo.io/api/v2/summary.json) | yes | `GET /api/v1/token/verify` | no | `service` · ~~quota~~ · 1 derived |
 | [perplexity](apps/perplexity/README.md) | [Instatus](https://status.perplexity.com/v2/components.json) | yes | `GET /v1/models` | no | `service` · ~~quota~~ · 1 derived |
+| [personio](apps/personio/README.md) | [Statuspage](https://status.personio.de) — scoped to the "Public API" component | yes | `POST /v1/auth` (mints/caches a 24h token) | no — no rate-limit header, only prose-documented fixed limits | `service` · ~~quota~~ · 1 derived |
 | [phantombuster](apps/phantombuster/README.md) | [Statuspage](https://status.phantombuster.com/api/v2/summary.json) | yes | `GET /orgs/fetch-resources` | yes | `service` · `quota` · ~~request-rate~~ · 1 derived |
 | [pinecone](apps/pinecone/README.md) | [Statuspage](https://status.pinecone.io/api/v2/components.json) (the global components decide; the per-region grid is reported but capped at degraded, since an app-scoped check cannot know which region an index is in) | yes | `GET /indexes` | no | `service` · `indexes` · ~~quota~~ · 1 derived |
 | [pinterest](apps/pinterest/README.md) | [Statuspage](https://www.pintereststatus.com/) — 41 components spanning the consumer site, Ads Manager and the developer API; filtered to the 8-component "The Pinterest API" group rather than the page-level indicator | yes | derived `auth:oauth2` | no | `service` · ~~quota~~ · 1 derived |
@@ -342,6 +345,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [sendblue](apps/sendblue/README.md) | none published — `sendblue.statuspage.io` is the unclaimed decoy, `status.sendblue.com` is real but has no machine-readable feed | no | `GET /api/v2/contacts/count` | no — 429 refusal only, no `X-RateLimit-*` header on any response | ~~service~~ · ~~quota~~ · `lines` · 1 derived |
 | [sender](apps/sender/README.md) | none published — `status.sender.net` doesn't resolve, `sender.statuspage.io` is an unclaimed redirect, `sender.freshstatus.io` is a 200-with-404-payload SPA decoy | no | `GET /v2/groups?limit=1` | no — rate-limit headers are documented only under the 429 section, unconfirmed on 2xx responses | ~~service~~ · ~~quota~~ · 1 derived |
 | [sendgrid](apps/sendgrid/README.md) | [Statuspage](https://sendgrid.statuspage.io/api/v2/status.json) | yes | `GET /v3/scopes` | yes | `service` · `quota` · 1 derived |
+| [sendpulse](apps/sendpulse/README.md) | [Instatus](https://status.sendpulse.com/) — reads the Atom feed oldest-first (inverse of the Statuspage convention) | yes | `GET /balance` | yes | `service` · `quota` · 1 derived |
 | [sentry](apps/sentry/README.md) | [Statuspage](https://status.sentry.io/api/v2/summary.json) | yes | `GET /organizations/{slug}/?detailed=0` | yes | `service` · `quota` · `site` · 2 derived |
 | [servicem8](apps/servicem8/README.md) | none published — `servicem8.statuspage.io` is unclaimed, `servicem8.freshstatus.io` is a generic 404 catch page | no | `GET /vendor.json` | no | ~~service~~ · `api` · 1 derived |
 | [servicenow](apps/servicenow/README.md) | none published | no | `GET /api/now/table/sys_user_role?sysparm_limit=1` | no | ~~service~~ · ~~quota~~ · `instance` · 2 derived |
@@ -403,6 +407,7 @@ each check is annotated, is in `apps/<app>/README.md`. This table is the index.
 | [upstash](apps/upstash/README.md) | [Statuspage](https://status.upstash.com/api/v2/summary.json) | yes | `GET /ping` | no | `service` · `host` · 1 derived |
 | [uptimerobot](apps/uptimerobot/README.md) | none published | no | `POST /getAccountDetails` | yes | ~~service~~ · `quota` · 1 derived |
 | [vanta](apps/vanta/README.md) | [Statuspage](https://status.vanta.com/api/v2/components.json) — an integrations outage is capped at degraded, since the API keeps answering with stale evidence | yes | `GET /v1/frameworks?pageSize=1` | no | `service` · ~~quota~~ · `tenant` · 1 derived |
+| [vapi](apps/vapi/README.md) | [Better Stack](https://status.vapi.ai/index.json) — verified via `company_name: "Vapi"`, not the unclaimed `vapi.statuspage.io` decoy | yes | `GET /assistant?limit=1` | no — no billing/usage endpoint exists | `service` · ~~quota~~ · 1 derived |
 | [vercel](apps/vercel/README.md) | [Statuspage](https://www.vercel-status.com/api/v2/summary.json) | yes | `GET /v2/user` | yes | `service` · `quota` · 2 derived |
 | [videoask](apps/videoask/README.md) | [Statuspage](https://status.videoask.com/api/v2/summary.json), `page.name: "VideoAsk"`, linked from the vendor's own 404 page | yes | `GET /me` | no (no rate-limit headers on any response, confirmed live and against the vendor's own Postman collection) | `service` · ~~request-rate~~ · 1 derived |
 | [vimeo](apps/vimeo/README.md) | [Statuspage](https://www.vimeostatus.com/api/v2/status.json) | yes | `GET /me?fields=uri,name` | yes | `service` · `quota` · 1 derived |

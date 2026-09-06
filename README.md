@@ -139,6 +139,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | fireflies | ai, productivity, video | api-key | 25 |
 | fivetran | data-warehousing, devops, analytics | api-key | 20 |
 | flodesk | marketing, email | api-key, oauth2 | 22 |
+| folk | crm | api-key | 12 |
 | followupboss | crm | api-key | 26 |
 | formidableforms | forms, productivity | basic | 15 |
 | formstack | forms, productivity | access-token | 9 |
@@ -270,6 +271,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | newrelic | monitoring, analytics, devops | user-key | 17 |
 | nocodb | spreadsheets, databases | api-token | 13 |
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
+| nutshell | crm | basic | 13 |
 | odoo | crm, commerce | api-key | 21 |
 | okta | security | api-token | 11 |
 | omnisend | marketing, email | api-key | 7 |
@@ -295,6 +297,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pdfmonkey | documents, developer-tools | bearer-token | 13 |
 | pendo | analytics, product-analytics | api-key | 11 |
 | perplexity | ai | api-key | 5 |
+| personio | hr | client-credentials | 16 |
 | phantombuster | automation, developer-tools, ai | api-key | 14 |
 | pinecone | ai, databases, search | api-key | 24 |
 | pinterest | social-media, marketing | oauth2 | 16 |
@@ -333,6 +336,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | sendblue | communication | api-key | 47 |
 | sender | email, marketing | bearer-token | 39 |
 | sendgrid | email, communication | sendgrid-api | 10 |
+| sendpulse | marketing, crm | client-credentials | 18 |
 | sentry | monitoring, developer-tools | auth-token, oauth2 | 21 |
 | servicem8 | crm | api-key | 18 |
 | servicenow | support, devops | basic, oauth2 | 9 |
@@ -394,6 +398,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | upstash | databases | rest-token | 15 |
 | uptimerobot | monitoring | api-key | 8 |
 | vanta | legal, security, monitoring | client-credentials | 25 |
+| vapi | ai, communication | private-key | 18 |
 | vercel | devops, developer-tools | access-token, oauth2 | 28 |
 | videoask | forms, video | oauth2 | 38 |
 | vimeo | video, social-media | access-token | 36 |

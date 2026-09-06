@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/nutshell",
+  "version": "0.1.0",
+  "description": "Read and write Nutshell CRM leads, accounts (companies) and contacts (people), and log notes, over Nutshell's JSON-RPC API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.nutshell",
+    "displayName": "Nutshell",
+    "longDescription": "Nutshell is a sales CRM built around Leads, Accounts (companies) and Contacts (people), reached entirely through a single JSON-RPC endpoint rather than REST resource URLs. This app covers the lifecycle a workflow actually needs on each: create, read, find/search, and update, plus logging a note against any of the three (or against a scheduled activity).\n\nEvery write follows Nutshell's own optimistic-concurrency model — updating a record requires the `rev` you last read it at, and Nutshell refuses a stale write rather than silently overwriting a concurrent change, so the update actions surface that `rev` requirement directly rather than hiding it.\n\nGood for creating a Lead when a deal is qualified elsewhere, syncing company and contact records with an outside directory, searching for a Lead or Account by name before creating a duplicate, or dropping an activity note onto a record from another tool.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": { "270x270": "./assets/icon.png" },
+        "alt": "Nutshell"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.nutshell.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
