@@ -60,6 +60,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | bitly | marketing, analytics | access-token | 8 |
 | blandai | ai, communication | api-key | 19 |
 | bluesky | social-media, communication | app-password | 21 |
+| booqable | crm, commerce | access-token | 26 |
 | box | storage | oauth2 | 10 |
 | braze | marketing, communication | api-key | 22 |
 | brevo | marketing, email | api-key | 15 |
@@ -155,6 +156,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | github | version-control, developer-tools | access-token, oauth2 | 24 |
 | gitlab | developer-tools, version-control | access-token, oauth2 | 16 |
 | givebutter | crm, commerce, communication | api-key | 43 |
+| glide | databases, developer-tools, productivity | api-token | 14 |
 | gmail | communication, email | oauth2, service-account | 25 |
 | google-admin | security, productivity | oauth2, service-account | 18 |
 | google-ads | marketing, analytics | oauth2 | 14 |
@@ -242,6 +244,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | manychat | marketing, communication, social-media | api-token | 25 |
 | marketo | marketing, crm | client-credentials | 15 |
 | mastodon | social-media, communication | access-token | 18 |
+| matrix | communication | access-token, password | 14 |
 | mattermost | communication, productivity | access-token | 13 |
 | mautic | marketing, email | client-credentials | 28 |
 | meilisearch | search, databases, developer-tools | api-key | 24 |
@@ -393,6 +396,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wave | finance | oauth2, full-access-token | 21 |
 | wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
+| webinargeek | video, communication | api-key | 14 |
 | webinarjam | video, marketing | api-key | 5 |
 | whatconverts | marketing, analytics, crm | basic | 25 |
 | whatsapp | communication | access-token | 9 |
@@ -406,6 +410,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wrike | project-management, productivity | permanent-token | 29 |
 | wufoo | forms, productivity | api-key | 8 |
 | xero | finance | oauth2 | 13 |
+| yelp-leads | marketing, crm | oauth2 | 7 |
 | youcanbookme | calendar | basic | 9 |
 | youtube | video, social-media | api-key, oauth2 | 16 |
 | zendesk | support, crm | api-token, oauth2 | 17 |

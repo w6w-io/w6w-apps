@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/webinargeek",
+  "version": "0.1.0",
+  "description": "Manage WebinarGeek webinars, broadcasts, subscribers and payments.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.webinargeek",
+    "displayName": "WebinarGeek",
+    "longDescription": "WebinarGeek runs the webinar itself — a webinar's episodes, the individual broadcasts (live sessions or the always-on on-demand playback) they schedule, and the subscribers who register for one — and this app brings that lifecycle into a workflow over WebinarGeek's own REST API v2.\n\nList and read webinars and their broadcasts, schedule a new broadcast for an existing episode, and subscribe or unsubscribe an end-user directly rather than routing them through the hosted registration page — one broadcast at a time, or a whole webinar series in one call. Once a broadcast has run, subscription, payment, chat-message and Q&A data can be read back to drive follow-up automation: a CRM sync for no-shows, a follow-up email for attendees who watched the replay, or an export of who paid for a ticketed webinar.\n\nA common pattern is triggering a workflow off an external event — a course enrollment, a CRM stage change, a landing-page form — and subscribing the person to the right webinar directly, or reading subscriptions/payments back afterward to decide who gets which follow-up.\n\nThis app covers the everyday webinar/broadcast/subscription/payment/message/question lifecycle documented in WebinarGeek's v2 API; it does not cover webinar or episode creation/editing, team members, or any part of the deprecated v1 API, which are either undocumented for v2 or left for a follow-up pass.",
+    "categories": [
+      "video",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "WebinarGeek"
+      }
+    },
+    "network": {
+      "allow": [
+        "app.webinargeek.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
