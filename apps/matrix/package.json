@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/matrix",
+  "version": "0.1.1",
+  "description": "Send and read messages, manage rooms and membership, and manage your profile on any Matrix homeserver.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.matrix",
+    "displayName": "Matrix",
+    "longDescription": "Matrix is an open standard for decentralised, federated real-time communication, and this app puts the daily loop of a Matrix account — sending and reading messages, creating and managing rooms, and inviting, kicking, banning and unbanning members — behind a workflow, against whichever homeserver an account happens to live on (matrix.org, an organisation's own server, or any other public homeserver).\n\nMessaging covers the core of it: post a message (plain text or HTML) into a room, page through a room's message history, and list the rooms and members a connection can see. Room lifecycle actions create a room with the usual presets (private, trusted-private, public), join it by id or alias, leave it, and invite, kick, ban and unban members with an optional reason. A small profile surface reads any user's display name and avatar and lets a connection update its own.\n\nAuthentication is either a long-lived access token pasted from a client's own settings, or a username and password exchanged for one at connect time — both end up as the same bearer credential, verified with Matrix's own account/whoami endpoint. End-to-end encryption is a deliberate scope cut: Matrix's E2EE model keys messages to a specific device's Olm/Megolm session state, which has nowhere to live in a stateless, replayable action model, so every action here talks to rooms that are not end-to-end encrypted. Federation administration, device/cross-signing key management, VoIP and the full sync/timeline API are likewise out of scope for a first version.",
+    "categories": [
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Matrix"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Matrix"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/glide",
+  "version": "0.1.1",
+  "description": "Read and write rows in Glide Big Tables, manage table schema, and stage large datasets with stashing over the Glide API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.glide",
+    "displayName": "Glide",
+    "longDescription": "Glide is a no-code app builder, and this app covers the one thing its public API actually exposes: Big Tables — Glide's large-capacity cloud data type — over the classic Glide API at api.glideapps.com.\n\nThat surface is table row CRUD (list, get, add, update, delete), table lifecycle (create and overwrite, with schema inference or an explicit column schema), version-aware writes via ETag/If-Match to avoid clobbering concurrent edits, stashing for datasets too large to send inline (up to 15 MB per request), asynchronous job polling for table writes that Glide defers, and the file-upload handshake that hands back a public URL for a Glide app.\n\nGlide's API is deliberately narrow: it only ever sees Big Tables, never the spreadsheet-backed tables most Glide apps are built on, and every write it can make is bounded by the same schema-conformance rules the Data Editor enforces. Nothing here reaches into app configuration, layouts, users, or billing — none of that is exposed by the vendor.",
+    "categories": [
+      "databases",
+      "developer-tools",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Glide"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Glide"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.glideapps.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

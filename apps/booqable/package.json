@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/booqable",
+  "version": "0.1.0",
+  "description": "Manage Booqable rental orders, customers, products and stock.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.booqable",
+    "displayName": "Booqable",
+    "longDescription": "Booqable is rental and equipment management software. This app covers the rental lifecycle from a workflow — creating, updating and fetching orders, transitioning an order through Booqable's draft/reserved/started/stopped/archived status machine, and searching or archiving customers, products and orders.\n\nCustomers can be created, updated, fetched, listed, searched and archived, so a workflow can look up or create the renter behind a booking. Products (the rentable catalog items) can be created, updated, fetched, listed and searched, and archived when discontinued. Stock items — the individually tracked or bulk-counted physical units behind a product — and plannings — the reservations that tie an order's line items to a date range — can be listed and fetched to check what is actually booked or in stock.\n\nA fit for routing an external booking request into a new Booqable order, moving an order through its rental lifecycle as a workflow progresses (reserve it, start it, stop it), or syncing customer and inventory data between Booqable and the rest of a rental business's stack.",
+    "categories": [
+      "crm",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Booqable"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Booqable"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "*.booqable.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
