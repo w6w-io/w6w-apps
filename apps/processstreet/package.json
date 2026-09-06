@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/processstreet",
+  "version": "0.1.0",
+  "description": "Start and manage Process Street workflow runs (checklists), their tasks and form fields, via the Process Street Public API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.processstreet",
+    "displayName": "Process Street",
+    "longDescription": "Process Street turns a reusable checklist/workflow definition (a Workflow, sometimes called a template or playbook) into trackable running instances (Workflow Runs, what Process Street itself still calls 'checklists' in its UI). This app covers that model over the Process Street Public API v1.1: listing and reading Workflow blueprints, starting new Workflow Runs from one, listing/searching/reading/deleting runs, listing and completing the tasks within a run, and reading or setting the form field values a run collects.\n\nGood for kicking off an onboarding or audit checklist from an external trigger, checking off tasks as work happens elsewhere, pulling a run's collected form data into another system, or looking up what's currently assigned to a given teammate across every workflow.",
+    "categories": [
+      "productivity",
+      "project-management"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Process Street"
+      }
+    },
+    "network": {
+      "allow": [
+        "public-api.process.st"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

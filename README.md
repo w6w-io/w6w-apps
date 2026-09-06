@@ -58,6 +58,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | bigquery | data-warehousing, databases | oauth2 | 18 |
 | bitbucket | developer-tools | basic, access-token | 12 |
 | bitly | marketing, analytics | access-token | 8 |
+| bitrix24 | crm, productivity | webhook | 15 |
 | blandai | ai, communication | api-key | 19 |
 | bluesky | social-media, communication | app-password | 21 |
 | booqable | crm, commerce | access-token | 26 |
@@ -205,6 +206,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | invoiceninja | commerce, finance | api-token | 40 |
 | jenkins | devops | basic | 6 |
+| jibble | productivity, hr | client-credentials | 25 |
 | jinaai | ai, developer-tools | bearer-token | 15 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
 | jira-data-center | project-management, developer-tools | personal-access-token, basic | 15 |
@@ -234,6 +236,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | linkedin-ads | marketing, analytics | oauth2, oauth2-audiences | 23 |
 | linkedin-conversions | marketing, analytics | oauth2 | 7 |
 | littlegreenlight | crm, finance | bearer-token | 12 |
+| livestorm | video, communication | api-key | 40 |
 | lokalise | developer-tools, cms | api-token | 31 |
 | looker | analytics, data-warehousing | api-credentials | 11 |
 | loops | email, marketing, communication | api-key | 21 |
@@ -263,6 +266,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mixpanel | analytics, marketing | service-account | 13 |
 | mollie | commerce, finance | api-key, oauth2 | 41 |
 | monday | project-management, productivity | api-token, oauth2 | 14 |
+| moneybird | finance, accounting | personal-token, oauth2 | 11 |
 | mongodb-atlas | databases, devops | service-account | 19 |
 | motion | productivity, project-management, calendar | api-key | 27 |
 | mux | video, developer-tools, analytics | basic | 14 |
@@ -310,6 +314,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | posthog | analytics | personal-api-key | 8 |
 | postmark | email, communication | api-key | 13 |
 | powerbi | analytics | oauth2 | 18 |
+| processstreet | productivity, project-management | api-key | 15 |
 | productboard | project-management, productivity, support | api-token | 41 |
 | pushbullet | communication, productivity | access-token | 24 |
 | pushover | communication, monitoring | app-token | 4 |

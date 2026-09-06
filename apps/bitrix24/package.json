@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/bitrix24",
+  "version": "0.1.0",
+  "description": "Manage Bitrix24 CRM leads, contacts and deals via a portal's own inbound webhook.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.bitrix24",
+    "displayName": "Bitrix24",
+    "longDescription": "Bitrix24 is a CRM and collaboration suite, sold both as shared SaaS and as fully self-hosted on-premise software — every customer's install is its own 'portal' with its own address and database. This app covers the core CRM loop against that portal's own REST API: create, read, search, update and delete leads, contacts and deals, authenticated with a portal-generated inbound webhook rather than a full OAuth2 app registration.\n\nLeads, contacts and deals each get the same five operations, using Bitrix24's classic per-entity methods (crm.lead.*, crm.contact.*, crm.deal.*) rather than the newer universal crm.item.* family the vendor now steers new integrations toward — the classic methods remain fully documented and give each entity its own typed, curated field set rather than one generic shape keyed by entityTypeId. An 'Additional Fields' escape hatch on every write action reaches any field not curated explicitly, including a portal's own custom UF_CRM_* fields.\n\nLeft out on purpose: OAuth2 (the webhook reaches the same surface with one generated URL and no per-portal app registration), and everything outside leads/contacts/deals — companies, products, activities, timeline and the rest of Bitrix24's REST surface.",
+    "categories": [
+      "crm",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Bitrix24"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
