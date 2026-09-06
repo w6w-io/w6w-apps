@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/feedly",
+  "version": "0.1.0",
+  "description": "Read team AI Feeds, folders and boards, search across them, and manage Feedly's enterprise webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.feedly",
+    "displayName": "Feedly",
+    "longDescription": "Feedly's current public API is entirely the Feedly for Threat Intelligence (Enterprise) surface — every endpoint in this app lives under that product, and a self-service API token is only issued to Enterprise accounts (an admin generates it from https://feedly.com/i/team/api). There is no OAuth2 dance to build against: once an Enterprise team has a token, every call is a plain `Authorization: Bearer` header against api.feedly.com, so this app is a straightforward bearer-token integration — the gate is commercial (who can get a token), not technical (what the token can do).\n\nWithin that surface, this app covers the general content-reading and team-collaboration actions rather than the security-analyst-specific ones (CVE/threat-actor/malware insight cards, the Vulnerability/Cyberattacks/TTP Agents, entity lookups, Ask AI): collecting and searching articles across a team's AI Feeds, folders and boards, reading one or many articles' full enriched metadata, adding annotations, managing team boards and webhooks, and listing an enterprise account's folders, AI Feeds and users.",
+    "categories": [
+      "productivity",
+      "security"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Feedly"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.feedly.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

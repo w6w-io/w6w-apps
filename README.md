@@ -72,6 +72,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | campaignmonitor | email, marketing | api-key, oauth2 | 42 |
 | canny | project-management, support | api-key | 39 |
 | canva | productivity, documents | oauth2 | 29 |
+| capsulecrm | crm | personal-access-token | 19 |
 | chargebee | commerce, finance | api-key | 17 |
 | chatbase | ai, support, communication | api-key | 35 |
 | chatwork | communication, productivity | api-token | 32 |
@@ -132,6 +133,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | facebook-conversions | marketing, analytics, social-media | conversions-token, oauth2 | 5 |
 | facebook-lead-ads | marketing, social-media | oauth2, page-token | 2 |
 | fathom | ai, productivity, video | api-key | 11 |
+| feedly | productivity, security | bearer-token | 14 |
 | figma | productivity, developer-tools | personal-access-token, oauth2 | 10 |
 | fillout | forms, productivity | api-key | 8 |
 | fireflies | ai, productivity, video | api-key | 25 |
@@ -202,6 +204,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | invoiceninja | commerce, finance | api-token | 40 |
 | jenkins | devops | basic | 6 |
+| jinaai | ai, developer-tools | bearer-token | 15 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
 | jira-data-center | project-management, developer-tools | personal-access-token, basic | 15 |
 | jira-service-management | support, project-management | api-token, oauth2 | 17 |
@@ -263,6 +266,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | motion | productivity, project-management, calendar | api-key | 27 |
 | mux | video, developer-tools, analytics | basic | 14 |
 | netlify | devops | personal-access-token | 10 |
+| neverbounce | email, marketing | api-key | 10 |
 | newrelic | monitoring, analytics, devops | user-key | 17 |
 | nocodb | spreadsheets, databases | api-token | 13 |
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
@@ -285,6 +289,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pagerduty | monitoring, devops | api-token, oauth2 | 14 |
 | pandadoc | documents, legal, productivity | api-key | 16 |
 | particle | iot, devops | access-token | 13 |
+| patreon | commerce, crm | creator-access-token, oauth2 | 11 |
 | paypal | commerce, finance | client-credentials | 13 |
 | pdfco | documents | api-key | 24 |
 | pdfmonkey | documents, developer-tools | bearer-token | 13 |

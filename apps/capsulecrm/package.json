@@ -1,0 +1,30 @@
+{
+  "name": "@w6w-apps/capsulecrm",
+  "version": "0.1.0",
+  "description": "Manage Capsule CRM parties (people and organisations), opportunities, tasks and account metadata via the Capsule API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.capsulecrm",
+    "displayName": "Capsule CRM",
+    "longDescription": "Capsule is a simple, straightforward CRM built around a single core idea: a Party (a person or organisation) with everything else — opportunities, tasks, cases — hung off it. This app covers that model over the Capsule API v2: creating, finding, updating and deleting parties; running opportunities through a sales pipeline (which requires resolving a pipeline's milestone ids first); and creating and updating tasks linked to a party or opportunity.\n\nGood for syncing contacts and companies from a signup or lead-capture form, keeping a deal's pipeline stage and value current from an external system, creating follow-up tasks from another tool's events, or looking up a party by a free-text search before deciding whether to create a duplicate.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Capsule CRM"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.capsulecrm.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
