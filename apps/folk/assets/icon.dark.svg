@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="144" height="144"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <circle cx="72" cy="72" r="58" stroke="#ffffff" fill="none" stroke-width="8"></circle>
+  <path d="M71 109h2c19.5 0 35.5-15 36-35a2 2 0 0 0-2-2H37a2 2 0 0 0-2 2c.5 20 16.5 35 36 35Z" fill="#ffffff"></path>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: invert(100%); } }
+</style></svg>

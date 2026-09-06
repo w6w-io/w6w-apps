@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/folk",
+  "version": "0.1.1",
+  "description": "Manage folk CRM groups, people and companies via the folk External API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.folk",
+    "displayName": "folk",
+    "longDescription": "folk is a CRM built around Groups — contact lists of People and Companies, each carrying its own set of custom fields. This app covers the vendor's public 'External API' in full: listing a network's groups and creating/updating/finding people and companies within one, reading a group's available custom fields, listing the folk teammates on a network, and checking that a key can reach a given network.\n\nGood for syncing leads or portfolio contacts into a folk group from a form or another CRM, keeping a company record current as deal data changes elsewhere, or looking a contact up by name/email before deciding whether to create a duplicate.",
+    "categories": [
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "folk"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "folk"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.folk.app"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

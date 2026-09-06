@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/sendpulse",
+  "version": "0.1.0",
+  "description": "Manage SendPulse CRM deals and contacts, and send bulk email campaigns.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.sendpulse",
+    "displayName": "SendPulse",
+    "longDescription": "SendPulse is a multi-product marketing platform (bulk email, SMS, chatbots, a CRM, and the Automation 360 flow builder) unified behind one account and one OAuth2 client-credentials grant. This app covers two of its modules: the CRM (pipelines, deals and contacts) and Bulk Email (mailing lists, campaigns, senders and account balance).\n\nA deal is created against a pipeline and step, a contact is created bare and then given an email or phone number through its own follow-up call, and a campaign is created against a mailing list with its HTML body base64-encoded, matching exactly what SendPulse's own REST API requires end to end.\n\nAuthentication is app-level, minted from a REST API user's ID and secret via SendPulse's client-credentials grant — the same shape suited to scheduled and unattended workflow runs, with no browser sign-in step involved.",
+    "categories": [
+      "marketing",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "SendPulse"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.sendpulse.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
