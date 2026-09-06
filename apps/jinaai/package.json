@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/jinaai",
+  "version": "0.1.0",
+  "description": "Generate embeddings, rerank and classify text with Jina AI's Search Foundation API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.jinaai",
+    "displayName": "Jina AI",
+    "longDescription": "Jina AI's Search Foundation API is the embedding/reranking/classification backbone behind a lot of retrieval-augmented and search-driven LLM applications: dense text and multimodal embeddings (`jina-embeddings-v3`/`v4`/`v5`, CLIP, ColBERT multi-vector, code-specialized models), a cross-encoder reranker for refining search results, zero-shot and few-shot text/image classification against trainable classifiers, an experimental vision-language chat completion endpoint, and an asynchronous batch embeddings pipeline for bulk JSONL jobs too large for a single request.\n\nThis app covers the full `api.jina.ai` Search Foundation surface documented in Jina's own OpenAPI 3.1 specification — embeddings, reranking, classification, classifier training/management, model discovery, batch embedding jobs, and the (vendor-labelled experimental) chat completions endpoint. It deliberately does NOT cover Jina's separate Reader (`r.jina.ai`), Search (`s.jina.ai`) or DeepSearch products, which are different hosts with their own, undocumented-here, API shapes.\n\nHealth checks track Jina's own Statuspage (scoped to the Embedding Models and Reranker Models components this app actually calls) plus a lightweight, no-token-cost credential probe.",
+    "categories": [
+      "ai",
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Jina AI"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.jina.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

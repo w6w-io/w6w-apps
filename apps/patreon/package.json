@@ -1,0 +1,37 @@
+{
+  "name": "@w6w-apps/patreon",
+  "version": "0.1.1",
+  "description": "Manage Patreon campaigns, members, posts, and webhooks via the Patreon API v2.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.patreon",
+    "displayName": "Patreon",
+    "longDescription": "Patreon is a membership platform creators use to run a recurring-revenue business around their audience: tiers, patrons (members), posts and livestreams, all attached to one or more campaigns.\n\nThis app reads a campaign's own data — its tiers and goals, the members currently pledging or following it, and the posts published to it — and looks up a single member or post by id when a workflow already has one from elsewhere (a webhook delivery, a prior list call). It also manages the webhooks Patreon can push events through (new/updated/deleted members, pledge changes, post publish/update/delete), so a workflow can react to patron activity in near real time instead of polling.\n\nTwo connection paths are supported: OAuth for a multi-creator integrator building a public product, and a Creator's Access Token for a workflow that only ever needs to manage the one campaign that minted it — no OAuth Client registration or browser redirect required.",
+    "categories": [
+      "commerce",
+      "crm"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Patreon"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Patreon"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "www.patreon.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
