@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.131.0",
+  "version": "0.132.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -107,6 +107,9 @@
     },
     {
       "path": "./apps/bitly"
+    },
+    {
+      "path": "./apps/bitrix24"
     },
     {
       "path": "./apps/blandai"
@@ -559,6 +562,9 @@
       "path": "./apps/jenkins"
     },
     {
+      "path": "./apps/jibble"
+    },
+    {
       "path": "./apps/jinaai"
     },
     {
@@ -649,6 +655,9 @@
       "path": "./apps/littlegreenlight"
     },
     {
+      "path": "./apps/livestorm"
+    },
+    {
       "path": "./apps/lokalise"
     },
     {
@@ -734,6 +743,9 @@
     },
     {
       "path": "./apps/monday"
+    },
+    {
+      "path": "./apps/moneybird"
     },
     {
       "path": "./apps/mongodb-atlas"
@@ -875,6 +887,9 @@
     },
     {
       "path": "./apps/powerbi"
+    },
+    {
+      "path": "./apps/processstreet"
     },
     {
       "path": "./apps/productboard"

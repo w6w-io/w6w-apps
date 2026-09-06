@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/moneybird",
+  "version": "0.1.0",
+  "description": "Manage contacts and sales invoices in Moneybird, the Dutch online accounting service.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.moneybird",
+    "displayName": "Moneybird",
+    "longDescription": "Moneybird is a Dutch online accounting and invoicing service used by freelancers and small businesses across the Netherlands and Belgium. Every request goes to one fixed host (moneybird.com) but is scoped to one of the credential's administrations — the bookkeeping entity id that shows up in Moneybird's own web app URL — so a Connection resolves and remembers the first accessible administration at connect time, the same one-Connection-one-tenant model this pack already uses for Xero and Jira.\n\nThis app covers the two resources most integrations need first: contacts (customers and suppliers) and sales invoices, including the line items, sending an invoice by email or Peppol, and registering a payment against it via Moneybird's current (non-deprecated) payments endpoint. A read action for the account's own list of administrations is included so a workflow can discover or confirm which bookkeeping entity a token reaches before addressing it explicitly.",
+    "categories": [
+      "finance",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Moneybird"
+      }
+    },
+    "network": {
+      "allow": [
+        "moneybird.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
