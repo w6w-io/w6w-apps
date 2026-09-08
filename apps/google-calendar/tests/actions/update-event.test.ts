@@ -82,6 +82,15 @@ Deno.test("update-event: useDefaultReminders=false sends the overrides", async (
   });
 });
 
+Deno.test("update-event: reminders param renders as a group/repeat list, not a scalar or JSON stopgap", () => {
+  const reminders = action.params?.find((p) => p.key === "reminders");
+  assertEquals(reminders?.type, "group");
+  assertEquals(reminders?.repeat, true);
+  assertEquals(reminders?.children?.map((c) => c.key), ["method", "minutes"]);
+  assertEquals(reminders?.children?.find((c) => c.key === "method")?.type, "select");
+  assertEquals(reminders?.children?.find((c) => c.key === "minutes")?.type, "number");
+});
+
 Deno.test("update-event: useDefaultReminders=false with no reminders sends undefined overrides", async () => {
   const { ctx, calls } = mockCtx([{ body: {} }]);
   await action.execute!({

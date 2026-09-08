@@ -68,6 +68,15 @@ Deno.test("create-event: fans out attendees and passes recurrence + reminders", 
   });
 });
 
+Deno.test("create-event: reminders param renders as a group/repeat list, not a scalar or JSON stopgap", () => {
+  const reminders = action.params?.find((p) => p.key === "reminders");
+  assertEquals(reminders?.type, "group");
+  assertEquals(reminders?.repeat, true);
+  assertEquals(reminders?.children?.map((c) => c.key), ["method", "minutes"]);
+  assertEquals(reminders?.children?.find((c) => c.key === "method")?.type, "select");
+  assertEquals(reminders?.children?.find((c) => c.key === "minutes")?.type, "number");
+});
+
 Deno.test("create-event: useDefaultReminders=false with no reminders sends undefined overrides", async () => {
   const { ctx, calls } = mockCtx([{ body: { id: "e" } }]);
   await action.execute!({
