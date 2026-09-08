@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/gitlab",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Manage GitLab projects, issues, merge requests, files and releases on GitLab.com or a self-managed instance.",
   "license": "MIT",
   "author": {
