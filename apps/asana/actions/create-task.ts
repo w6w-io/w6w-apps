@@ -11,6 +11,11 @@ interface Input {
   liked?: boolean;
   notes?: string;
   projects?: string[];
+  custom_fields?: Record<string, unknown>;
+  followers?: string[];
+  html_notes?: string;
+  start_on?: string;
+  due_at?: string;
 }
 
 const createTask: ActionDefinition<Input> = {
@@ -39,6 +44,26 @@ const createTask: ActionDefinition<Input> = {
     { key: "liked", label: "Liked", type: "boolean" },
     { key: "notes", label: "Notes", type: "text" },
     { key: "projects", label: "Project IDs", type: "string", repeat: true },
+    {
+      key: "custom_fields",
+      label: "Custom Fields",
+      type: "json",
+      hint: 'Map of custom field gid to value, e.g. { "1231": "some value" }.',
+    },
+    { key: "followers", label: "Followers", type: "string", repeat: true, hint: "User gids." },
+    {
+      key: "html_notes",
+      label: "HTML Notes",
+      type: "text",
+      hint: "Takes precedence over plain Notes when both are set.",
+    },
+    { key: "start_on", label: "Start On", type: "date" },
+    {
+      key: "due_at",
+      label: "Due At",
+      type: "datetime",
+      hint: "Mutually exclusive with the date-only Due On.",
+    },
   ],
 
   execute(input, ctx) {

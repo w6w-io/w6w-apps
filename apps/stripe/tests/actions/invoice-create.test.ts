@@ -19,3 +19,18 @@ Deno.test("invoice-create: the due-days field only shows for manual collection",
   const days = action.params?.find((p) => p.key === "daysUntilDue");
   assertEquals(days?.showIf, { field: "collectionMethod", eq: "send_invoice" });
 });
+
+Deno.test("invoice-create: dueDate forwards as due_date, gated the same as daysUntilDue", () => {
+  const dueDate = action.params?.find((p) => p.key === "dueDate");
+  assertEquals(dueDate?.showIf, { field: "collectionMethod", eq: "send_invoice" });
+});
+
+Deno.test("invoice-create: dueDate value forwards to the outbound form", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "in_1" } }]);
+  await action.execute(
+    { customerId: "cus_1", collectionMethod: "send_invoice", dueDate: 1735689600 },
+    ctx,
+  );
+  const body = new URLSearchParams(calls[0].body!);
+  assertEquals(body.get("due_date"), "1735689600");
+});
