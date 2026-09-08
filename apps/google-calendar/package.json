@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/google-calendar",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Read and manage Google Calendar events: check availability, create, update, and delete calendar events.",
   "license": "MIT",
   "author": {

@@ -21,6 +21,9 @@ interface Input {
   recurrence?: string[];
   useDefaultReminders?: boolean;
   reminders?: Array<{ method: "email" | "popup"; minutes: number }>;
+  attachments?: Array<
+    { fileUrl: string; title?: string; mimeType?: string; iconLink?: string; fileId?: string }
+  >;
   sendUpdates?: "all" | "externalOnly" | "none";
   maxAttendees?: number;
 }
@@ -40,6 +43,9 @@ interface EventPatch {
   guestsCanSeeOtherGuests?: boolean;
   recurrence?: string[];
   reminders?: { useDefault: boolean; overrides?: Array<{ method: string; minutes: number }> };
+  attachments?: Array<
+    { fileUrl: string; title?: string; mimeType?: string; iconLink?: string; fileId?: string }
+  >;
 }
 
 /**
@@ -91,6 +97,33 @@ const updateEvent: ActionDefinition<Input> = {
     { key: "guestsCanSeeOtherGuests", label: "Guests can see other guests", type: "boolean" },
     { key: "recurrence", label: "Recurrence (RRULE lines)", type: "string", repeat: true },
     { key: "useDefaultReminders", label: "Use default reminders", type: "boolean" },
+    {
+      key: "reminders",
+      label: "Reminder overrides",
+      type: "group",
+      repeat: true,
+      hint: 'Used when "Use default reminders" is off.',
+      children: [
+        {
+          key: "method",
+          label: "Method",
+          type: "select",
+          options: [
+            { value: "email", label: "Email" },
+            { value: "popup", label: "Popup" },
+          ],
+          required: true,
+        },
+        { key: "minutes", label: "Minutes before", type: "number", required: true },
+      ],
+    },
+    {
+      key: "attachments",
+      label: "Attachments",
+      type: "json",
+      hint:
+        'Array of { "fileUrl", "title"?, "mimeType"?, "iconLink"?, "fileId"? } (Google Drive files).',
+    },
     { key: "maxAttendees", label: "Max attendees", type: "number" },
     {
       key: "sendUpdates",
@@ -138,6 +171,7 @@ const updateEvent: ActionDefinition<Input> = {
     } else if (input.useDefaultReminders === true) {
       body.reminders = { useDefault: true };
     }
+    if (input.attachments?.length) body.attachments = input.attachments;
 
     return client.request(
       `/calendars/${encodeCalendarId(input.calendarId)}/events/${input.eventId}`,
@@ -147,6 +181,7 @@ const updateEvent: ActionDefinition<Input> = {
         query: {
           sendUpdates: input.sendUpdates,
           maxAttendees: input.maxAttendees,
+          supportsAttachments: input.attachments?.length ? true : undefined,
         },
       },
     );
