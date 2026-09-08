@@ -26,6 +26,13 @@ Deno.test("create-task: drops empty projects array and undefined fields", async 
   assert(!("projects" in sent.data));
 });
 
+Deno.test("create-task: new params are keyed exactly as Asana spells the field (the wholesale forward relies on it)", () => {
+  const declared = new Set(action.params?.map((p) => p.key));
+  for (const k of ["custom_fields", "followers", "html_notes", "start_on", "due_at"]) {
+    assert(declared.has(k), `expected a param declared with key "${k}"`);
+  }
+});
+
 Deno.test("create-task: forwards custom_fields/followers/html_notes/start_on/due_at verbatim", async () => {
   const { ctx, calls } = mockCtx([{ body: { data: {} } }]);
   await action.execute({

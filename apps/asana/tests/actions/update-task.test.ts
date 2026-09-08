@@ -18,6 +18,13 @@ Deno.test("update-task: omits id from the body", async () => {
   assert(!("id" in sent.data));
 });
 
+Deno.test("update-task: new params are keyed exactly as Asana spells the field (the wholesale forward relies on it)", () => {
+  const declared = new Set(action.params?.map((p) => p.key));
+  for (const k of ["custom_fields", "followers", "html_notes", "start_on", "due_at"]) {
+    assert(declared.has(k), `expected a param declared with key "${k}"`);
+  }
+});
+
 Deno.test("update-task: forwards custom_fields/followers/html_notes/start_on/due_at verbatim", async () => {
   const { ctx, calls } = mockCtx([{ body: { data: {} } }]);
   await action.execute({
