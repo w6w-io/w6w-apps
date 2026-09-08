@@ -45,6 +45,47 @@ Deno.test("index: every param has a key and a label", () => {
   }
 });
 
+/**
+ * INVERTED relative to mailgun/pagerduty/posthog's own copy of this guard
+ * (T2.2.1, D-7): `ParamsForm` now renders a `type: "group"` with a non-empty
+ * `children` as a nested form (T1.1.1), so the remaining unreachable shape is
+ * a group with MISSING or EMPTY `children`, which still falls back to the
+ * JSON editor. companycam's own `address` and `primaryContact` groups
+ * (`project-create`, `project-update`) are legitimate groups and must pass
+ * this guard, not fail it.
+ */
+Deno.test('index: no `type: "group"` param is missing or has empty `children`', () => {
+  const childless: string[] = [];
+  const walk = (actionKey: string, list: unknown) => {
+    for (const entry of (list ?? []) as Array<Record<string, unknown>>) {
+      if (
+        entry?.type === "group" && !(Array.isArray(entry.children) && entry.children.length > 0)
+      ) {
+        childless.push(`${actionKey}.${String(entry.key)}`);
+      }
+      walk(actionKey, entry?.children);
+    }
+  };
+  for (const a of app.actions) walk(a.key, a.params);
+  assertEquals(childless, []);
+});
+
+Deno.test("index: the childless-group guard actually flags a childless group", () => {
+  const childless: string[] = [];
+  const walk = (actionKey: string, list: unknown) => {
+    for (const entry of (list ?? []) as Array<Record<string, unknown>>) {
+      if (
+        entry?.type === "group" && !(Array.isArray(entry.children) && entry.children.length > 0)
+      ) {
+        childless.push(`${actionKey}.${String(entry.key)}`);
+      }
+      walk(actionKey, entry?.children);
+    }
+  };
+  walk("synthetic", [{ key: "bad", type: "group" }]);
+  assertEquals(childless, ["synthetic.bad"]);
+});
+
 Deno.test("index: every perform action states idempotency explicitly", () => {
   for (const a of app.actions.filter((a) => a.type === "perform")) {
     assertEquals(typeof a.idempotent, "boolean", `${a.key}: idempotent not declared`);

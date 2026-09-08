@@ -1,0 +1,27 @@
+{
+  "name": "@w6w-apps/fixture-param-unread",
+  "version": "0.1.0",
+  "description": "Fixture app pinning `param/unread`'s liveness — a genuinely unread param, and one whose action registers no source at the conventional path (T2.2.1).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.fixture-param-unread",
+    "displayName": "Fixture: Param Unread",
+    "categories": [
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Fixture: Param Unread"
+      }
+    },
+    "network": {
+      "allow": []
+    },
+    "entry": "./index.ts"
+  }
+}
