@@ -27,3 +27,21 @@ Deno.test("task-create: POSTs to /list/{id}/task with mapped body", async () => 
   assertEquals(body.due_date, Date.parse("2026-08-01T00:00:00.000Z"));
   assertEquals(result, { id: "t1", name: "Do it" });
 });
+
+Deno.test("task-create: forwards custom_fields", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "t1", name: "Do it" } }]);
+  await action.execute!({
+    listId: "123",
+    name: "Do it",
+    customFields: [{ id: "abc-123", value: "Gold" }],
+  }, ctx);
+  const body = JSON.parse(calls[0].body!);
+  assertEquals(body.custom_fields, [{ id: "abc-123", value: "Gold" }]);
+});
+
+Deno.test("task-create: omits custom_fields when unset", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "t1", name: "Do it" } }]);
+  await action.execute!({ listId: "123", name: "Do it" }, ctx);
+  const body = JSON.parse(calls[0].body!);
+  assertEquals("custom_fields" in body, false);
+});

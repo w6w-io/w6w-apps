@@ -12,6 +12,7 @@ interface Input {
   parent?: string;
   addAssignees?: number[];
   removeAssignees?: number[];
+  customFields?: unknown[];
 }
 
 function epochMs(v: string | undefined): number | undefined {
@@ -58,6 +59,12 @@ const taskUpdate: ActionDefinition<Input> = {
       type: "json",
       hint: "Array of numeric user IDs to remove.",
     },
+    {
+      key: "customFields",
+      label: "Custom fields",
+      type: "json",
+      hint: 'Array of `{id, value}`, e.g. `[{"id": "abc-123", "value": "Gold"}]`.',
+    },
   ],
   output: [
     { key: "id", type: "string", label: "Task ID" },
@@ -81,6 +88,7 @@ const taskUpdate: ActionDefinition<Input> = {
           start_date: epochMs(input.startDate),
           parent: input.parent,
           assignees,
+          custom_fields: input.customFields,
         },
       },
     );

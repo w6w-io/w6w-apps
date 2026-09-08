@@ -27,3 +27,20 @@ Deno.test("task-update: omits assignees when none supplied", async () => {
   const body = JSON.parse(calls[0].body!);
   assertEquals("assignees" in body, false);
 });
+
+Deno.test("task-update: forwards custom_fields", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "t1" } }]);
+  await action.execute!({
+    taskId: "t1",
+    customFields: [{ id: "abc-123", value: "Gold" }],
+  }, ctx);
+  const body = JSON.parse(calls[0].body!);
+  assertEquals(body.custom_fields, [{ id: "abc-123", value: "Gold" }]);
+});
+
+Deno.test("task-update: omits custom_fields when unset", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "t1" } }]);
+  await action.execute!({ taskId: "t1", name: "x" }, ctx);
+  const body = JSON.parse(calls[0].body!);
+  assertEquals("custom_fields" in body, false);
+});

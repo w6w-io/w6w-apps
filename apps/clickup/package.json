@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/clickup",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tasks, lists, folders, comments, and time tracking via the ClickUp API.",
   "license": "MIT",
   "author": {

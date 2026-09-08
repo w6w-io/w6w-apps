@@ -1,5 +1,5 @@
 import type { ActionDefinition } from "@w6w/types";
-import { GitLabClient, projectPath, unset } from "../lib/client.ts";
+import { csv, GitLabClient, projectPath, unset } from "../lib/client.ts";
 import { mergeRequestOutput, projectId } from "../lib/params.ts";
 
 interface Input {
@@ -9,6 +9,11 @@ interface Input {
   title: string;
   description?: string;
   removeSourceBranch?: boolean;
+  assigneeIds?: string;
+  reviewerIds?: string;
+  labels?: string;
+  milestoneId?: number;
+  squash?: boolean;
 }
 
 const mergeRequestCreate: ActionDefinition<Input> = {
@@ -49,6 +54,25 @@ const mergeRequestCreate: ActionDefinition<Input> = {
       label: "Remove source branch on merge",
       type: "boolean",
     },
+    {
+      key: "assigneeIds",
+      label: "Assignee IDs",
+      type: "string",
+      hint: "Comma-separated numeric user IDs.",
+    },
+    {
+      key: "reviewerIds",
+      label: "Reviewer IDs",
+      type: "string",
+      hint: "Comma-separated numeric user IDs.",
+    },
+    { key: "labels", label: "Labels", type: "string", hint: "Comma-separated label names." },
+    { key: "milestoneId", label: "Milestone ID", type: "number" },
+    {
+      key: "squash",
+      label: "Squash commits on merge",
+      type: "boolean",
+    },
   ],
   output: mergeRequestOutput,
 
@@ -63,6 +87,12 @@ const mergeRequestCreate: ActionDefinition<Input> = {
           title: input.title,
           description: unset(input.description),
           remove_source_branch: input.removeSourceBranch,
+          assignee_ids: csv(input.assigneeIds)?.map(Number),
+          reviewer_ids: csv(input.reviewerIds)?.map(Number),
+          // GitLab wants labels as a comma-separated string, not an array.
+          labels: csv(input.labels)?.join(","),
+          milestone_id: input.milestoneId,
+          squash: input.squash,
         },
       },
     );
