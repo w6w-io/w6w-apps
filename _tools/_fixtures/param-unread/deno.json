@@ -1,0 +1,7 @@
+{
+  "name": "@w6w-apps/fixture-param-unread",
+  "exports": "./index.ts",
+  "imports": {
+    "@w6w/types": "../../../../core/packages/types/mod.ts"
+  }
+}

@@ -9,6 +9,9 @@ interface Input {
   labels?: string;
   assigneeIds?: string;
   dueDate?: string;
+  milestoneId?: number;
+  confidential?: boolean;
+  weight?: number;
 }
 
 const issueCreate: ActionDefinition<Input> = {
@@ -38,6 +41,19 @@ const issueCreate: ActionDefinition<Input> = {
       hint: "Comma-separated numeric user IDs.",
     },
     { key: "dueDate", label: "Due date", type: "string", hint: "ISO date, e.g. 2026-08-01." },
+    { key: "milestoneId", label: "Milestone ID", type: "number" },
+    {
+      key: "confidential",
+      label: "Confidential",
+      type: "boolean",
+      hint: "Visible only to project members.",
+    },
+    {
+      key: "weight",
+      label: "Weight",
+      type: "number",
+      hint: "Issue weight. Premium/Ultimate only — rejected by GitLab Free.",
+    },
   ],
   output: issueOutput,
 
@@ -51,6 +67,9 @@ const issueCreate: ActionDefinition<Input> = {
         labels: csv(input.labels)?.join(","),
         assignee_ids: csv(input.assigneeIds)?.map(Number),
         due_date: unset(input.dueDate),
+        milestone_id: input.milestoneId,
+        confidential: input.confidential,
+        weight: input.weight,
       },
     });
   },

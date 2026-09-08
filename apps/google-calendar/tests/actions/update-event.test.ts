@@ -82,6 +82,51 @@ Deno.test("update-event: useDefaultReminders=false sends the overrides", async (
   });
 });
 
+Deno.test("update-event: reminders param renders as a group/repeat list, not a scalar or JSON stopgap", () => {
+  const reminders = action.params?.find((p) => p.key === "reminders");
+  assertEquals(reminders?.type, "group");
+  assertEquals(reminders?.repeat, true);
+  assertEquals(reminders?.children?.map((c) => c.key), ["method", "minutes"]);
+  assertEquals(reminders?.children?.find((c) => c.key === "method")?.type, "select");
+  assertEquals(reminders?.children?.find((c) => c.key === "minutes")?.type, "number");
+});
+
+Deno.test("update-event: useDefaultReminders=false with no reminders sends undefined overrides", async () => {
+  const { ctx, calls } = mockCtx([{ body: {} }]);
+  await action.execute!({
+    calendarId: "primary",
+    eventId: "evt-1",
+    useDefaultReminders: false,
+  }, ctx);
+  const body = JSON.parse(calls[0].body ?? "{}");
+  assertEquals(body.reminders.useDefault, false);
+  assertEquals(body.reminders.overrides, undefined);
+});
+
+Deno.test("update-event: attachments map into body and flip supportsAttachments query", async () => {
+  const { ctx, calls } = mockCtx([{ body: {} }]);
+  await action.execute!({
+    calendarId: "primary",
+    eventId: "evt-1",
+    attachments: [{ fileUrl: "https://drive.google.com/file/d/abc", title: "Agenda" }],
+  }, ctx);
+  const body = JSON.parse(calls[0].body ?? "{}");
+  assertEquals(body.attachments, [
+    { fileUrl: "https://drive.google.com/file/d/abc", title: "Agenda" },
+  ]);
+  assertEquals(new URL(calls[0].url).searchParams.get("supportsAttachments"), "true");
+});
+
+Deno.test("update-event: no attachments omits supportsAttachments query", async () => {
+  const { ctx, calls } = mockCtx([{ body: {} }]);
+  await action.execute!({
+    calendarId: "primary",
+    eventId: "evt-1",
+    summary: "x",
+  }, ctx);
+  assertEquals(new URL(calls[0].url).searchParams.get("supportsAttachments"), null);
+});
+
 Deno.test("update-event: encodes email calendar IDs", async () => {
   const { ctx, calls } = mockCtx([{ body: {} }]);
   await action.execute!({

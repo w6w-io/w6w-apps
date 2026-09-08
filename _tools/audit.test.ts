@@ -211,3 +211,182 @@ Deno.test("_tools/deno.json's `@w6w/runtime` mapping resolves to the real `hostA
   assertEquals(hostAllowed(["*.zendesk.com"], "zendesk.com"), false);
   assertEquals(hostAllowed(["*"], "anything.example"), true);
 });
+
+/**
+ * T2.2.1 — three new pack-wide checks: `param/unread` (warn), and the two
+ * structural, error-severity checks `param/group-childless` and
+ * `param/n8n-vocabulary`. Fixtures live under `_tools/_fixtures/`, reached by
+ * the same `../_tools/_fixtures/…` escape hatch as the fixtures above.
+ */
+const PARAM_UNREAD_FIXTURE = "../_tools/_fixtures/param-unread";
+const PARAM_READ_VIA_HELPER_FIXTURE =
+  "../_tools/_fixtures/param-read-via-helper";
+const GROUP_CHILDLESS_FIXTURE = "../_tools/_fixtures/group-childless";
+const N8N_VOCABULARY_FIXTURE = "../_tools/_fixtures/n8n-vocabulary";
+
+function checksOf(issues: Issue[], check: string): Issue[] {
+  return issues.filter((i) => i.check === check);
+}
+
+// --- param/group-childless ---------------------------------------------
+
+Deno.test("param/group-childless: flags a `group` with no `children`, at error severity, naming the action", async () => {
+  const { report } = await runAudit(GROUP_CHILDLESS_FIXTURE);
+  const issues = issuesFor(report, GROUP_CHILDLESS_FIXTURE);
+  const childless = checksOf(issues, "param/group-childless");
+  assertEquals(
+    childless.length,
+    1,
+    `expected exactly one param/group-childless issue, got ${
+      JSON.stringify(issues)
+    }`,
+  );
+  assertEquals(childless[0].severity, "error");
+  assert(
+    childless[0].path.startsWith("actions/create-thing#"),
+    `expected the issue to name the action, not the comment quoting \`type: "group"\`, got: ${
+      childless[0].path
+    }`,
+  );
+});
+
+Deno.test('param/group-childless: a comment quoting `type: "group"` in prose does not double-count it (M3 — structural, not a text grep)', async () => {
+  // The fixture's `create-thing.ts` carries a comment quoting the literal
+  // string `type: "group"`. A text grep over the file would find TWO
+  // occurrences (the comment and the real declaration); the structural check
+  // walks the parsed `params` array and must find exactly one.
+  const src = await Deno.readTextFile(
+    new URL(`${GROUP_CHILDLESS_FIXTURE}/actions/create-thing.ts`, TOOLS_DIR),
+  );
+  const grepCount = (src.match(/type:\s*"group"/g) ?? []).length;
+  assert(
+    grepCount >= 2,
+    `fixture no longer quotes 'type: "group"' in prose — test is vacuous`,
+  );
+
+  const { report } = await runAudit(GROUP_CHILDLESS_FIXTURE);
+  const issues = issuesFor(report, GROUP_CHILDLESS_FIXTURE);
+  assertEquals(checksOf(issues, "param/group-childless").length, 1);
+});
+
+Deno.test("param/group-childless: a legitimate group with non-empty children is never flagged", async () => {
+  const { report } = await runAudit(GROUP_CHILDLESS_FIXTURE);
+  const issues = issuesFor(report, GROUP_CHILDLESS_FIXTURE);
+  const childless = checksOf(issues, "param/group-childless");
+  assert(
+    !childless.some((i) => i.path.startsWith("actions/create-thing-ok#")),
+    "flagged the legitimate `address` group on create-thing-ok",
+  );
+});
+
+// --- param/n8n-vocabulary ------------------------------------------------
+
+Deno.test("param/n8n-vocabulary: flags a param's own hint, at error severity, naming the param — never a code comment (M7)", async () => {
+  const { report } = await runAudit(N8N_VOCABULARY_FIXTURE);
+  const issues = issuesFor(report, N8N_VOCABULARY_FIXTURE);
+  const vocab = checksOf(issues, "param/n8n-vocabulary");
+  assertEquals(
+    vocab.length,
+    1,
+    `expected exactly one param/n8n-vocabulary issue — a code comment must not also trip it, got ${
+      JSON.stringify(issues)
+    }`,
+  );
+  assertEquals(vocab[0].severity, "error");
+  assertEquals(vocab[0].path, "actions/upload-thing#file");
+  assert(
+    /binary property/i.test(vocab[0].message) && /hint/.test(vocab[0].message),
+    `expected the message to name the \`hint\` field and the phrase, got: ${
+      vocab[0].message
+    }`,
+  );
+});
+
+Deno.test("param/n8n-vocabulary: the denylist does not fire on `additionalFields` (M8) — jira audits clean", async () => {
+  const { report } = await runAudit("jira");
+  const issues = issuesFor(report, "jira");
+  assertEquals(
+    checksOf(issues, "param/n8n-vocabulary").length,
+    0,
+    `expected zero param/n8n-vocabulary issues on jira, got ${
+      JSON.stringify(checksOf(issues, "param/n8n-vocabulary"))
+    }`,
+  );
+});
+
+// --- param/unread ---------------------------------------------------------
+
+Deno.test("param/unread: flags a genuinely unread param, at warn severity", async () => {
+  const { report } = await runAudit(PARAM_UNREAD_FIXTURE);
+  const issues = issuesFor(report, PARAM_UNREAD_FIXTURE);
+  const unread = checksOf(issues, "param/unread");
+  assertEquals(
+    unread.length,
+    1,
+    `expected exactly one param/unread issue, got ${JSON.stringify(issues)}`,
+  );
+  assertEquals(unread[0].severity, "warn");
+  assertEquals(unread[0].path, "actions/do-thing.ts#unused");
+});
+
+Deno.test("param/unread: never fires at error severity — a residual false positive can't turn the pack-wide audit red (M10)", async () => {
+  const { report } = await runAudit(PARAM_UNREAD_FIXTURE);
+  const issues = issuesFor(report, PARAM_UNREAD_FIXTURE);
+  for (const i of checksOf(issues, "param/unread")) {
+    assertEquals(
+      i.severity,
+      "warn",
+      `param/unread issue at ${i.path} is not warn-severity`,
+    );
+  }
+});
+
+Deno.test("param/unread: an action registered with no `actions/<key>.ts` on disk is skipped, never flagged, never crashes (M6)", async () => {
+  const { code, report } = await runAudit(PARAM_UNREAD_FIXTURE);
+  const issues = issuesFor(report, PARAM_UNREAD_FIXTURE);
+  const unread = checksOf(issues, "param/unread");
+  assert(
+    !unread.some((i) => i.path.startsWith("actions/no-source")),
+    `expected no param/unread issue naming the source-less action, got ${
+      JSON.stringify(unread)
+    }`,
+  );
+  // The auditor still runs to completion and reports (exit 1 is expected —
+  // the fixture's real `param/unread` warn doesn't affect exit code, but the
+  // `manifest/icon-theme`/other error-severity checks might; what matters is
+  // that it did not crash importing or scanning `no-source`).
+  assertEquals(typeof code, "number");
+});
+
+Deno.test("param/unread: the three documented exemption shapes, plus a same-file helper's own reads, all yield zero (M4/M5)", async () => {
+  const { report } = await runAudit(PARAM_READ_VIA_HELPER_FIXTURE);
+  const issues = issuesFor(report, PARAM_READ_VIA_HELPER_FIXTURE);
+  assertEquals(
+    checksOf(issues, "param/unread").length,
+    0,
+    `expected zero param/unread issues, got ${
+      JSON.stringify(checksOf(issues, "param/unread"))
+    }`,
+  );
+});
+
+Deno.test("param/unread: the real pack's strongest wholesale-forward cases yield zero — asana's T1.3.2 params included (M4)", async () => {
+  const { report } = await runAudit(
+    "hubspot",
+    "mailjet",
+    "asana",
+    "fireflies",
+    "netlify",
+  );
+  for (const app of ["hubspot", "mailjet", "asana", "fireflies", "netlify"]) {
+    const issues = issuesFor(report, app);
+    const unread = checksOf(issues, "param/unread");
+    assertEquals(
+      unread.length,
+      0,
+      `expected zero param/unread issues on ${app}, got ${
+        JSON.stringify(unread)
+      }`,
+    );
+  }
+});

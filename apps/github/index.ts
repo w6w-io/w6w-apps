@@ -37,6 +37,7 @@ import fileCreateOrUpdate from "./actions/file-create-or-update.ts";
 import fileDelete from "./actions/file-delete.ts";
 import pullRequestGet from "./actions/pull-request-get.ts";
 import pullRequestGetMany from "./actions/pull-request-get-many.ts";
+import pullRequestCreate from "./actions/pull-request-create.ts";
 import pullRequestMerge from "./actions/pull-request-merge.ts";
 import pullRequestCreateReview from "./actions/pull-request-create-review.ts";
 import workflowDispatch from "./actions/workflow-dispatch.ts";
@@ -72,6 +73,7 @@ export default {
     // pull request
     pullRequestGet,
     pullRequestGetMany,
+    pullRequestCreate,
     pullRequestMerge,
     pullRequestCreateReview,
     // workflow

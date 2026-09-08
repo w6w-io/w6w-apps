@@ -68,6 +68,53 @@ Deno.test("create-event: fans out attendees and passes recurrence + reminders", 
   });
 });
 
+Deno.test("create-event: reminders param renders as a group/repeat list, not a scalar or JSON stopgap", () => {
+  const reminders = action.params?.find((p) => p.key === "reminders");
+  assertEquals(reminders?.type, "group");
+  assertEquals(reminders?.repeat, true);
+  assertEquals(reminders?.children?.map((c) => c.key), ["method", "minutes"]);
+  assertEquals(reminders?.children?.find((c) => c.key === "method")?.type, "select");
+  assertEquals(reminders?.children?.find((c) => c.key === "minutes")?.type, "number");
+});
+
+Deno.test("create-event: useDefaultReminders=false with no reminders sends undefined overrides", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "e" } }]);
+  await action.execute!({
+    calendarId: "primary",
+    start: "2026-07-01T09:00:00Z",
+    end: "2026-07-01T10:00:00Z",
+    useDefaultReminders: false,
+  }, ctx);
+  const body = JSON.parse(calls[0].body ?? "{}");
+  assertEquals(body.reminders.useDefault, false);
+  assertEquals(body.reminders.overrides, undefined);
+});
+
+Deno.test("create-event: attachments map into body and flip supportsAttachments query", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "e" } }]);
+  await action.execute!({
+    calendarId: "primary",
+    start: "2026-07-01T09:00:00Z",
+    end: "2026-07-01T10:00:00Z",
+    attachments: [{ fileUrl: "https://drive.google.com/file/d/abc", title: "Agenda" }],
+  }, ctx);
+  const body = JSON.parse(calls[0].body ?? "{}");
+  assertEquals(body.attachments, [
+    { fileUrl: "https://drive.google.com/file/d/abc", title: "Agenda" },
+  ]);
+  assertEquals(new URL(calls[0].url).searchParams.get("supportsAttachments"), "true");
+});
+
+Deno.test("create-event: no attachments omits supportsAttachments query", async () => {
+  const { ctx, calls } = mockCtx([{ body: { id: "e" } }]);
+  await action.execute!({
+    calendarId: "primary",
+    start: "2026-07-01T09:00:00Z",
+    end: "2026-07-01T10:00:00Z",
+  }, ctx);
+  assertEquals(new URL(calls[0].url).searchParams.get("supportsAttachments"), null);
+});
+
 Deno.test("create-event: conferenceSolution sets conferenceData and flips version query", async () => {
   const { ctx, calls } = mockCtx([{ body: { id: "e" } }]);
   await action.execute!({

@@ -15,7 +15,11 @@
   "fmt": {
     "exclude": [
       "_fixtures/entry-import-broken/assets",
-      "_fixtures/network-allow-wildcard-apex/assets"
+      "_fixtures/network-allow-wildcard-apex/assets",
+      "_fixtures/param-unread/assets",
+      "_fixtures/param-read-via-helper/assets",
+      "_fixtures/group-childless/assets",
+      "_fixtures/n8n-vocabulary/assets"
     ]
   }
 }

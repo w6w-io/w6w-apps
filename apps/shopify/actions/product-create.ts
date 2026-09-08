@@ -9,6 +9,11 @@ interface Input {
   status?: string;
   tags?: string;
   variants?: unknown;
+  images?: unknown;
+  handle?: string;
+  published?: boolean;
+  publishedScope?: string;
+  metafields?: unknown;
 }
 
 const productCreate: ActionDefinition<Input> = {
@@ -54,6 +59,36 @@ const productCreate: ActionDefinition<Input> = {
       type: "json",
       hint: 'Array of variants, e.g. [{ "option1": "Small", "price": "9.99", "sku": "S-1" }].',
     },
+    {
+      key: "images",
+      label: "Images",
+      type: "json",
+      hint: 'Array of images, e.g. [{ "src": "https://…/mug.jpg" }].',
+    },
+    { key: "handle", label: "Handle", type: "string", hint: "The storefront URL slug." },
+    {
+      key: "published",
+      label: "Published",
+      type: "boolean",
+      hint: "Shopify has no `published` flag at API 2024-07 — this maps to `published_at`. " +
+        "On sets it to now; off sends `null` (unpublished), never the literal `false`. " +
+        "Leave unset to not touch it.",
+    },
+    {
+      key: "publishedScope",
+      label: "Published scope",
+      type: "select",
+      options: [
+        { value: "web", label: "Web (storefront)" },
+        { value: "global", label: "Global (storefront + sales channels)" },
+      ],
+    },
+    {
+      key: "metafields",
+      label: "Metafields",
+      type: "json",
+      hint: 'Array of { "key", "value", "type", "namespace" }.',
+    },
   ],
   output: [
     { key: "product.id", type: "number", label: "Product ID" },
@@ -74,6 +109,13 @@ const productCreate: ActionDefinition<Input> = {
           status: unset(input.status),
           tags: unset(input.tags),
           variants: input.variants,
+          images: input.images,
+          handle: unset(input.handle),
+          published_at: input.published === undefined
+            ? undefined
+            : (input.published ? new Date().toISOString() : null),
+          published_scope: unset(input.publishedScope),
+          metafields: input.metafields,
         },
       },
     });

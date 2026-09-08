@@ -54,6 +54,46 @@ Deno.test("index: health checks are keyed service and quota", () => {
   assertEquals(app.healthChecks?.map((h) => h.key), ["service", "quota"]);
 });
 
+/**
+ * INVERTED relative to mailgun/pagerduty/posthog's own copy of this guard
+ * (T2.2.1, D-7): `ParamsForm` now renders a `type: "group"` with a non-empty
+ * `children` as a nested form (T1.1.1), so the remaining unreachable shape is
+ * a group with MISSING or EMPTY `children`, which still falls back to the
+ * JSON editor. facebook-conversions' own group on `send-event` is a
+ * legitimate group and must pass this guard, not fail it.
+ */
+Deno.test('index: no `type: "group"` param is missing or has empty `children`', () => {
+  const childless: string[] = [];
+  const walk = (actionKey: string, list: unknown) => {
+    for (const entry of (list ?? []) as Array<Record<string, unknown>>) {
+      if (
+        entry?.type === "group" && !(Array.isArray(entry.children) && entry.children.length > 0)
+      ) {
+        childless.push(`${actionKey}.${String(entry.key)}`);
+      }
+      walk(actionKey, entry?.children);
+    }
+  };
+  for (const a of app.actions) walk(a.key, a.params);
+  assertEquals(childless, []);
+});
+
+Deno.test("index: the childless-group guard actually flags a childless group", () => {
+  const childless: string[] = [];
+  const walk = (actionKey: string, list: unknown) => {
+    for (const entry of (list ?? []) as Array<Record<string, unknown>>) {
+      if (
+        entry?.type === "group" && !(Array.isArray(entry.children) && entry.children.length > 0)
+      ) {
+        childless.push(`${actionKey}.${String(entry.key)}`);
+      }
+      walk(actionKey, entry?.children);
+    }
+  };
+  walk("synthetic", [{ key: "bad", type: "group" }]);
+  assertEquals(childless, ["synthetic.bad"]);
+});
+
 Deno.test("index: every write action offers the hashing control", () => {
   for (const action of app.actions.filter((a) => a.type === "perform")) {
     const hashing = action.params?.find((p) => p.key === "hashing");
