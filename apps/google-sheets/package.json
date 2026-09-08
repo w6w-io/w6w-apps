@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/google-sheets",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Read and write Google Sheets: manage spreadsheets, sheets, rows and cells.",
   "license": "MIT",
   "author": {

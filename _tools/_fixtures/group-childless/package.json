@@ -1,0 +1,27 @@
+{
+  "name": "@w6w-apps/fixture-group-childless",
+  "version": "0.1.0",
+  "description": "Fixture app pinning `param/group-childless` as a structural check, immune to a comment quoting `type: \"group\"` in prose (T2.2.1, M3).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.fixture-group-childless",
+    "displayName": "Fixture: Group Childless",
+    "categories": [
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Fixture: Group Childless"
+      }
+    },
+    "network": {
+      "allow": []
+    },
+    "entry": "./index.ts"
+  }
+}
