@@ -58,8 +58,10 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | bigquery | data-warehousing, databases | oauth2 | 18 |
 | bitbucket | developer-tools | basic, access-token | 12 |
 | bitly | marketing, analytics | access-token | 8 |
+| bitrix24 | crm, productivity | webhook | 15 |
 | blandai | ai, communication | api-key | 19 |
 | bluesky | social-media, communication | app-password | 21 |
+| booqable | crm, commerce | access-token | 26 |
 | box | storage | oauth2 | 10 |
 | braze | marketing, communication | api-key | 22 |
 | brevo | marketing, email | api-key | 15 |
@@ -71,6 +73,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | campaignmonitor | email, marketing | api-key, oauth2 | 42 |
 | canny | project-management, support | api-key | 39 |
 | canva | productivity, documents | oauth2 | 29 |
+| capsulecrm | crm | personal-access-token | 19 |
 | chargebee | commerce, finance | api-key | 17 |
 | chatbase | ai, support, communication | api-key | 35 |
 | chatwork | communication, productivity | api-token | 32 |
@@ -131,11 +134,13 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | facebook-conversions | marketing, analytics, social-media | conversions-token, oauth2 | 5 |
 | facebook-lead-ads | marketing, social-media | oauth2, page-token | 2 |
 | fathom | ai, productivity, video | api-key | 11 |
+| feedly | productivity, security | bearer-token | 14 |
 | figma | productivity, developer-tools | personal-access-token, oauth2 | 10 |
 | fillout | forms, productivity | api-key | 8 |
 | fireflies | ai, productivity, video | api-key | 25 |
 | fivetran | data-warehousing, devops, analytics | api-key | 20 |
 | flodesk | marketing, email | api-key, oauth2 | 22 |
+| folk | crm | api-key | 12 |
 | followupboss | crm | api-key | 26 |
 | formidableforms | forms, productivity | basic | 15 |
 | formstack | forms, productivity | access-token | 9 |
@@ -155,6 +160,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | github | version-control, developer-tools | access-token, oauth2 | 24 |
 | gitlab | developer-tools, version-control | access-token, oauth2 | 16 |
 | givebutter | crm, commerce, communication | api-key | 43 |
+| glide | databases, developer-tools, productivity | api-token | 14 |
 | gmail | communication, email | oauth2, service-account | 25 |
 | google-admin | security, productivity | oauth2, service-account | 18 |
 | google-ads | marketing, analytics | oauth2 | 14 |
@@ -200,6 +206,8 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | intercom | support, communication, crm | access-token, oauth2 | 14 |
 | invoiceninja | commerce, finance | api-token | 40 |
 | jenkins | devops | basic | 6 |
+| jibble | productivity, hr | client-credentials | 25 |
+| jinaai | ai, developer-tools | bearer-token | 15 |
 | jira | project-management, developer-tools | api-token, oauth2 | 15 |
 | jira-data-center | project-management, developer-tools | personal-access-token, basic | 15 |
 | jira-service-management | support, project-management | api-token, oauth2 | 17 |
@@ -228,6 +236,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | linkedin-ads | marketing, analytics | oauth2, oauth2-audiences | 23 |
 | linkedin-conversions | marketing, analytics | oauth2 | 7 |
 | littlegreenlight | crm, finance | bearer-token | 12 |
+| livestorm | video, communication | api-key | 40 |
 | lokalise | developer-tools, cms | api-token | 31 |
 | looker | analytics, data-warehousing | api-credentials | 11 |
 | loops | email, marketing, communication | api-key | 21 |
@@ -242,6 +251,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | manychat | marketing, communication, social-media | api-token | 25 |
 | marketo | marketing, crm | client-credentials | 15 |
 | mastodon | social-media, communication | access-token | 18 |
+| matrix | communication | access-token, password | 14 |
 | mattermost | communication, productivity | access-token | 13 |
 | mautic | marketing, email | client-credentials | 28 |
 | meilisearch | search, databases, developer-tools | api-key | 24 |
@@ -256,13 +266,16 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | mixpanel | analytics, marketing | service-account | 13 |
 | mollie | commerce, finance | api-key, oauth2 | 41 |
 | monday | project-management, productivity | api-token, oauth2 | 14 |
+| moneybird | finance, accounting | personal-token, oauth2 | 11 |
 | mongodb-atlas | databases, devops | service-account | 19 |
 | motion | productivity, project-management, calendar | api-key | 27 |
 | mux | video, developer-tools, analytics | basic | 14 |
 | netlify | devops | personal-access-token | 10 |
+| neverbounce | email, marketing | api-key | 10 |
 | newrelic | monitoring, analytics, devops | user-key | 17 |
 | nocodb | spreadsheets, databases | api-token | 13 |
 | notion | productivity, documents | internal-secret, oauth2 | 17 |
+| nutshell | crm | basic | 13 |
 | odoo | crm, commerce | api-key | 21 |
 | okta | security | api-token | 11 |
 | omnisend | marketing, email | api-key | 7 |
@@ -282,11 +295,13 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pagerduty | monitoring, devops | api-token, oauth2 | 14 |
 | pandadoc | documents, legal, productivity | api-key | 16 |
 | particle | iot, devops | access-token | 13 |
+| patreon | commerce, crm | creator-access-token, oauth2 | 11 |
 | paypal | commerce, finance | client-credentials | 13 |
 | pdfco | documents | api-key | 24 |
 | pdfmonkey | documents, developer-tools | bearer-token | 13 |
 | pendo | analytics, product-analytics | api-key | 11 |
 | perplexity | ai | api-key | 5 |
+| personio | hr | client-credentials | 16 |
 | phantombuster | automation, developer-tools, ai | api-key | 14 |
 | pinecone | ai, databases, search | api-key | 24 |
 | pinterest | social-media, marketing | oauth2 | 16 |
@@ -299,6 +314,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | posthog | analytics | personal-api-key | 8 |
 | postmark | email, communication | api-key | 13 |
 | powerbi | analytics | oauth2 | 18 |
+| processstreet | productivity, project-management | api-key | 15 |
 | productboard | project-management, productivity, support | api-token | 41 |
 | pushbullet | communication, productivity | access-token | 24 |
 | pushover | communication, monitoring | app-token | 4 |
@@ -325,6 +341,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | sendblue | communication | api-key | 47 |
 | sender | email, marketing | bearer-token | 39 |
 | sendgrid | email, communication | sendgrid-api | 10 |
+| sendpulse | marketing, crm | client-credentials | 18 |
 | sentry | monitoring, developer-tools | auth-token, oauth2 | 21 |
 | servicem8 | crm | api-key | 18 |
 | servicenow | support, devops | basic, oauth2 | 9 |
@@ -386,6 +403,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | upstash | databases | rest-token | 15 |
 | uptimerobot | monitoring | api-key | 8 |
 | vanta | legal, security, monitoring | client-credentials | 25 |
+| vapi | ai, communication | private-key | 18 |
 | vercel | devops, developer-tools | access-token, oauth2 | 28 |
 | videoask | forms, video | oauth2 | 38 |
 | vimeo | video, social-media | access-token | 36 |
@@ -393,6 +411,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wave | finance | oauth2, full-access-token | 21 |
 | wealthbox | crm | api-key | 21 |
 | webflow | cms | api-token, oauth2 | 14 |
+| webinargeek | video, communication | api-key | 14 |
 | webinarjam | video, marketing | api-key | 5 |
 | whatconverts | marketing, analytics, crm | basic | 25 |
 | whatsapp | communication | access-token | 9 |
@@ -406,6 +425,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | wrike | project-management, productivity | permanent-token | 29 |
 | wufoo | forms, productivity | api-key | 8 |
 | xero | finance | oauth2 | 13 |
+| yelp-leads | marketing, crm | oauth2 | 7 |
 | youcanbookme | calendar | basic | 9 |
 | youtube | video, social-media | api-key, oauth2 | 16 |
 | zendesk | support, crm | api-token, oauth2 | 17 |

@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.128.0",
+  "version": "0.132.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -109,6 +109,9 @@
       "path": "./apps/bitly"
     },
     {
+      "path": "./apps/bitrix24"
+    },
+    {
       "path": "./apps/blandai"
     },
     {
@@ -116,6 +119,9 @@
     },
     {
       "path": "./apps/bluesky"
+    },
+    {
+      "path": "./apps/booqable"
     },
     {
       "path": "./apps/box"
@@ -152,6 +158,9 @@
     },
     {
       "path": "./apps/canva"
+    },
+    {
+      "path": "./apps/capsulecrm"
     },
     {
       "path": "./apps/chargebee"
@@ -334,6 +343,9 @@
       "path": "./apps/fathom"
     },
     {
+      "path": "./apps/feedly"
+    },
+    {
       "path": "./apps/figma"
     },
     {
@@ -347,6 +359,9 @@
     },
     {
       "path": "./apps/flodesk"
+    },
+    {
+      "path": "./apps/folk"
     },
     {
       "path": "./apps/followupboss"
@@ -404,6 +419,9 @@
     },
     {
       "path": "./apps/givebutter"
+    },
+    {
+      "path": "./apps/glide"
     },
     {
       "path": "./apps/gmail"
@@ -544,6 +562,12 @@
       "path": "./apps/jenkins"
     },
     {
+      "path": "./apps/jibble"
+    },
+    {
+      "path": "./apps/jinaai"
+    },
+    {
       "path": "./apps/jira"
     },
     {
@@ -631,6 +655,9 @@
       "path": "./apps/littlegreenlight"
     },
     {
+      "path": "./apps/livestorm"
+    },
+    {
       "path": "./apps/lokalise"
     },
     {
@@ -671,6 +698,9 @@
     },
     {
       "path": "./apps/mastodon"
+    },
+    {
+      "path": "./apps/matrix"
     },
     {
       "path": "./apps/mattermost"
@@ -715,6 +745,9 @@
       "path": "./apps/monday"
     },
     {
+      "path": "./apps/moneybird"
+    },
+    {
       "path": "./apps/mongodb-atlas"
     },
     {
@@ -727,6 +760,9 @@
       "path": "./apps/netlify"
     },
     {
+      "path": "./apps/neverbounce"
+    },
+    {
       "path": "./apps/newrelic"
     },
     {
@@ -734,6 +770,9 @@
     },
     {
       "path": "./apps/notion"
+    },
+    {
+      "path": "./apps/nutshell"
     },
     {
       "path": "./apps/odoo"
@@ -793,6 +832,9 @@
       "path": "./apps/particle"
     },
     {
+      "path": "./apps/patreon"
+    },
+    {
       "path": "./apps/paypal"
     },
     {
@@ -806,6 +848,9 @@
     },
     {
       "path": "./apps/perplexity"
+    },
+    {
+      "path": "./apps/personio"
     },
     {
       "path": "./apps/phantombuster"
@@ -842,6 +887,9 @@
     },
     {
       "path": "./apps/powerbi"
+    },
+    {
+      "path": "./apps/processstreet"
     },
     {
       "path": "./apps/productboard"
@@ -923,6 +971,9 @@
     },
     {
       "path": "./apps/sendgrid"
+    },
+    {
+      "path": "./apps/sendpulse"
     },
     {
       "path": "./apps/sendy"
@@ -1111,6 +1162,9 @@
       "path": "./apps/vanta"
     },
     {
+      "path": "./apps/vapi"
+    },
+    {
       "path": "./apps/vercel"
     },
     {
@@ -1133,6 +1187,9 @@
     },
     {
       "path": "./apps/webflow"
+    },
+    {
+      "path": "./apps/webinargeek"
     },
     {
       "path": "./apps/webinarjam"
@@ -1172,6 +1229,9 @@
     },
     {
       "path": "./apps/xero"
+    },
+    {
+      "path": "./apps/yelp-leads"
     },
     {
       "path": "./apps/youcanbookme"

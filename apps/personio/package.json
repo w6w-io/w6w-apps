@@ -1,0 +1,36 @@
+{
+  "name": "@w6w-apps/personio",
+  "version": "0.1.1",
+  "description": "Manage employees, absences and documents, and read custom reports, through Personio's HR platform API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.personio",
+    "displayName": "Personio",
+    "longDescription": "Personio is an HR and talent management platform for SMBs and mid-market companies. This app covers its Personnel Data API: reading and writing employee records (including the attribute schema a given credential is allowed to see), reading absence balances, listing and creating day-unit time-offs and reading hourly absence periods, uploading documents to an employee's profile, and reading the custom reports built in Personio's Reports Builder.\n\nAuthentication mints its own bearer token from a Client ID and Client Secret via a POST to Personio's /v1/auth endpoint — despite Personio's own naming this is NOT a standard OAuth2 client_credentials grant (no grant_type, no Basic-auth header, a JSON body instead), and the resulting token is stable for 24 hours rather than single-use. A live health check tracks Personio's own Statuspage, scoped to its 'Public API' component specifically; Personio publishes no rate-limit response headers on any endpoint, so quota headroom is a declared absence rather than a guess.\n\nOut of scope for this pass: Attendances and Projects (the v1 endpoints are deprecated with no documented v2 replacement in Personio's own OpenAPI sources), and the Recruiting API (a separate static token, a required company-id header, and no safe read-only probe to test it with).",
+    "categories": [
+      "hr"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Personio"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Personio"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.personio.de"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

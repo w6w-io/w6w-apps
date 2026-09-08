@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/vapi",
+  "version": "0.1.0",
+  "description": "Place and manage voice AI phone calls, and read the assistant, phone number, squad, tool and file catalogs behind them, on Vapi.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.vapi",
+    "displayName": "Vapi",
+    "longDescription": "Vapi is voice-AI infrastructure: assistants (a transcriber + LLM + voice pipeline) are configured once in the Vapi dashboard or API, then driven over phone or web calls. The unit this app moves around is the call — created against an existing Assistant, Squad or Workflow, plus the catalogs (assistants, phone numbers, squads, tools, files) a workflow needs to pick from before placing one.\n\nThis app deliberately does not create or update Assistants, Squads or Tools: each is a deeply nested, polymorphic configuration object (a transcriber, a model, a voice provider, a compliance plan, and — for Tools — one of twelve unrelated shapes from a plain webhook to a Bash sandbox), the kind of object meant to be authored once in the dashboard and then referenced by id, not re-typed into a workflow form. What the app does cover in full is the operational surface: start a call against any of those, list and inspect calls, rename or delete a call's stored data, and read every catalog by id.\n\nHealth checks track Vapi's own status page (a genuine Better Stack page at status.vapi.ai, not the Statuspage-shaped decoy at vapi.statuspage.io) alongside the derived credential-liveness check; there is no documented usage/quota endpoint or rate-limit header on this API, so quota is declared unavailable rather than guessed.",
+    "categories": [
+      "ai",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Vapi"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.vapi.ai"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

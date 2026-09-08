@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/livestorm",
+  "version": "0.1.0",
+  "description": "Create and manage Livestorm events, sessions, registrants and webhooks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.livestorm",
+    "displayName": "Livestorm",
+    "longDescription": "Livestorm runs the webinar or virtual event itself — scheduling it, accepting registrations, running the live session, and recording who actually showed up — and this app brings that lifecycle into a workflow.\n\nCreate and manage events (the reusable webinar/meeting definition) and the sessions (individual live occurrences) under them, register or remove participants directly rather than routing them through a separate signup form, bulk-register a whole list at once via an async job, and read chat messages, Q&A questions and recordings back after a session runs. Webhooks let a workflow react to registration, attendance and session-lifecycle events instead of polling for them.\n\nA common pattern is triggering a workflow off an external event — a course enrollment, a CRM stage change, a landing-page form — and registering the person for the right session directly with People Attributes carried over from that source, or reading attendance back afterward to decide who gets which follow-up.\n\nThis app covers the everyday event/session/people/job/webhook lifecycle over Livestorm's private API token; it does not cover the OAuth2 app-install flow (a browser-based third-party-integration flow, not a headless server-to-server credential).",
+    "categories": [
+      "video",
+      "communication"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Livestorm"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.livestorm.co"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

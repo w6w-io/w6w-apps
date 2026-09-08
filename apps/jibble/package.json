@@ -1,0 +1,34 @@
+{
+  "name": "@w6w-apps/jibble",
+  "version": "0.1.0",
+  "description": "Track time, manage people and run attendance reports against the Jibble time-tracking API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.jibble",
+    "displayName": "Jibble",
+    "longDescription": "Jibble is a time-tracking and attendance platform built around clocking in and out, either from the mobile/web apps or a shared kiosk. This app covers the workflow-relevant slice of its OData-flavoured REST API: reading and maintaining the organization's people, locations, activities, projects, clients and groups; clocking a person in or out, listing and correcting raw time entries, and reading someone's latest clock state; time-off requests end to end (list, create, approve/reject/cancel) plus leave balances; and the attendance side — daily timesheets and the cross-team tracked-time report.\n\nEvery list action exposes Jibble's own OData query parameters ($select, $filter, $expand, $orderby, $top, $skip, $count) directly, because that is the only way to ask this API for less than everything — there is no separate simplified query surface.\n\nAuthentication is a single OAuth2 client-credentials grant scoped to the whole organization (Jibble issues one API-wide scope, `api1` — there is no per-endpoint scoping to navigate). Kiosks, schedules, screenshots, payroll pay-periods, calendars/holidays and webhooks are part of the vendor's API but are not covered here; see the README for exactly what's in and out.",
+    "categories": [
+      "productivity",
+      "hr"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Jibble"
+      }
+    },
+    "network": {
+      "allow": [
+        "identity.prod.jibble.io",
+        "workspace.prod.jibble.io",
+        "time-tracking.prod.jibble.io",
+        "time-attendance.prod.jibble.io"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

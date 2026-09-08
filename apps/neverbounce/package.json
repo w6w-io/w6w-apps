@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/neverbounce",
+  "version": "0.1.0",
+  "description": "Verify email addresses one at a time or in bulk jobs, and check credit balance, via the NeverBounce v4.2 API.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.neverbounce",
+    "displayName": "NeverBounce",
+    "longDescription": "NeverBounce verifies email addresses — checking a single address synchronously, or running a bulk job against thousands of rows supplied directly or fetched from a remote CSV URL. A single-check result reports one of valid, invalid, disposable, catchall, or unknown, plus diagnostic flags (DNS/MX presence, SMTP connectability, role-account and free-email detection) and an optional address breakdown.\n\nBulk verification is a four-step lifecycle this app exposes as separate actions so a workflow can pause between them (or react to a callback instead of polling): create a job, parse it, start it, then poll its status or read paginated per-row results — or download the whole thing as a CSV. Jobs and their results can also be searched and deleted.\n\nBeyond verification, this app covers account visibility: a credit-balance and job-count read, surfaced both as a standalone action and as this app's quota health check.\n\nA fit for gating a signup flow on a real-looking address, cleaning a list before a bulk send, or scoring an existing list's quality before importing it into a CRM or ESP.\n\nNeverBounce's client-side JS verification widget and its `/poe/confirm` server-side confirmation endpoint are deliberately out of scope — see the README.",
+    "categories": [
+      "email",
+      "marketing"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "sizes": { "32x32": "./assets/icon.png" },
+        "alt": "NeverBounce"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.neverbounce.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}
