@@ -1,0 +1,27 @@
+{
+  "name": "@w6w-apps/fixture-n8n-vocabulary",
+  "version": "0.1.0",
+  "description": "Fixture app pinning `param/n8n-vocabulary` against a param's own text, immune to a code comment or a provenance attribution using the same phrase (T2.2.1, M7).",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.fixture-n8n-vocabulary",
+    "displayName": "Fixture: N8n Vocabulary",
+    "categories": [
+      "developer-tools"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Fixture: N8n Vocabulary"
+      }
+    },
+    "network": {
+      "allow": []
+    },
+    "entry": "./index.ts"
+  }
+}

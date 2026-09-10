@@ -6,6 +6,7 @@ interface Input {
   customerId: string;
   collectionMethod?: string;
   daysUntilDue?: number;
+  dueDate?: number;
   description?: string;
   autoAdvance?: boolean;
   metadata?: unknown;
@@ -50,6 +51,13 @@ const invoiceCreate: ActionDefinition<Input> = {
       validation: { min: 0, integer: true },
       hint: "Required when the collection method is Send invoice.",
     },
+    {
+      key: "dueDate",
+      label: "Due date",
+      type: "number",
+      showIf: { field: "collectionMethod", eq: "send_invoice" },
+      hint: "Unix timestamp. Mutually exclusive with Days until due.",
+    },
     { key: "description", label: "Description", type: "text", config: { multiline: true } },
     {
       key: "autoAdvance",
@@ -72,6 +80,7 @@ const invoiceCreate: ActionDefinition<Input> = {
         customer: input.customerId,
         collection_method: unset(input.collectionMethod),
         days_until_due: input.daysUntilDue,
+        due_date: input.dueDate,
         description: unset(input.description),
         auto_advance: input.autoAdvance,
         metadata: metadata(input.metadata),

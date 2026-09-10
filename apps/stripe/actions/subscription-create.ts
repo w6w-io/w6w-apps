@@ -7,7 +7,12 @@ interface Input {
   priceId: string;
   quantity?: number;
   trialPeriodDays?: number;
+  trialEnd?: string;
   collectionMethod?: string;
+  coupon?: string;
+  promotionCode?: string;
+  defaultPaymentMethod?: string;
+  prorationBehavior?: string;
   metadata?: unknown;
 }
 
@@ -47,6 +52,12 @@ const subscriptionCreate: ActionDefinition<Input> = {
       hint: "Free trial before the first charge.",
     },
     {
+      key: "trialEnd",
+      label: "Trial end",
+      type: "string",
+      hint: 'Unix timestamp, or the literal "now" to end the trial immediately.',
+    },
+    {
       key: "collectionMethod",
       label: "Collection",
       type: "select",
@@ -54,6 +65,36 @@ const subscriptionCreate: ActionDefinition<Input> = {
       options: [
         { value: "charge_automatically", label: "Charge automatically" },
         { value: "send_invoice", label: "Send invoice" },
+      ],
+    },
+    {
+      key: "coupon",
+      label: "Coupon",
+      type: "string",
+      placeholder: "coupon_id",
+      hint: "Deprecated by Stripe in favor of Promotion Code below, but still accepted.",
+    },
+    {
+      key: "promotionCode",
+      label: "Promotion code",
+      type: "string",
+      placeholder: "promo_…",
+      hint: "Applied as `discounts: [{ promotion_code }]`, Stripe's current path.",
+    },
+    {
+      key: "defaultPaymentMethod",
+      label: "Default payment method",
+      type: "string",
+      placeholder: "pm_…",
+    },
+    {
+      key: "prorationBehavior",
+      label: "Proration behavior",
+      type: "select",
+      options: [
+        { value: "create_prorations", label: "Create prorations" },
+        { value: "none", label: "None" },
+        { value: "always_invoice", label: "Always invoice" },
       ],
     },
     metadataParam,
@@ -66,12 +107,18 @@ const subscriptionCreate: ActionDefinition<Input> = {
   ],
 
   execute(input, ctx) {
+    const discounts = input.promotionCode ? [{ promotion_code: input.promotionCode }] : undefined;
     return new StripeClient(ctx).request("/subscriptions", {
       form: {
         customer: input.customerId,
         items: [{ price: input.priceId, quantity: input.quantity }],
         trial_period_days: input.trialPeriodDays,
+        trial_end: unset(input.trialEnd),
         collection_method: unset(input.collectionMethod),
+        coupon: unset(input.coupon),
+        discounts,
+        default_payment_method: unset(input.defaultPaymentMethod),
+        proration_behavior: unset(input.prorationBehavior),
         metadata: metadata(input.metadata),
       },
     });

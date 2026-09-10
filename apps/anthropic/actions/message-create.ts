@@ -18,6 +18,7 @@ interface Input {
   tools?: unknown[];
   tool_choice?: unknown;
   metadata?: Record<string, unknown>;
+  thinking?: { type: "enabled"; budget_tokens: number } | { type: "disabled" };
   /** Must be false — streaming isn't modelled here; the action returns the full response. */
   stream?: boolean;
 }
@@ -71,6 +72,14 @@ const messageCreate: ActionDefinition<Input> = {
     { key: "tool_choice", label: "Tool choice", type: "json" },
     { key: "metadata", label: "Metadata", type: "json" },
     {
+      key: "thinking",
+      label: "Extended thinking",
+      type: "json",
+      hint: '`{ "type": "enabled", "budget_tokens": number }` or `{ "type": "disabled" }`. ' +
+        "While enabled, Anthropic rejects `top_p`, `top_k` and a non-default `temperature` — " +
+        "the request 400s if any of those are also set.",
+    },
+    {
       key: "stream",
       label: "Stream",
       type: "boolean",
@@ -99,6 +108,7 @@ const messageCreate: ActionDefinition<Input> = {
     if (input.tools !== undefined) body.tools = input.tools;
     if (input.tool_choice !== undefined) body.tool_choice = input.tool_choice;
     if (input.metadata !== undefined) body.metadata = input.metadata;
+    if (input.thinking !== undefined) body.thinking = input.thinking;
 
     return client.request("/v1/messages", { method: "POST", body });
   },

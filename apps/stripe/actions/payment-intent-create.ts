@@ -11,6 +11,8 @@ interface Input {
   receiptEmail?: string;
   captureMethod?: string;
   confirm?: boolean;
+  setupFutureUsage?: string;
+  statementDescriptor?: string;
   metadata?: unknown;
 }
 
@@ -57,6 +59,22 @@ const paymentIntentCreate: ActionDefinition<Input> = {
       type: "boolean",
       hint: "Attempt the payment right away. Needs a payment method.",
     },
+    {
+      key: "setupFutureUsage",
+      label: "Setup future usage",
+      type: "select",
+      options: [
+        { value: "on_session", label: "On session" },
+        { value: "off_session", label: "Off session" },
+      ],
+      hint: "Save the payment method for a future payment.",
+    },
+    {
+      key: "statementDescriptor",
+      label: "Statement descriptor",
+      type: "string",
+      hint: "Up to 22 characters, shown on the customer's statement.",
+    },
     metadataParam,
   ],
   output: [
@@ -78,6 +96,8 @@ const paymentIntentCreate: ActionDefinition<Input> = {
         receipt_email: unset(input.receiptEmail),
         capture_method: unset(input.captureMethod),
         confirm: input.confirm,
+        setup_future_usage: unset(input.setupFutureUsage),
+        statement_descriptor: unset(input.statementDescriptor),
         metadata: metadata(input.metadata),
       },
     });

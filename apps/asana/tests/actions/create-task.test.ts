@@ -25,3 +25,33 @@ Deno.test("create-task: drops empty projects array and undefined fields", async 
   const sent = JSON.parse(calls[0].body!);
   assert(!("projects" in sent.data));
 });
+
+Deno.test("create-task: new params are keyed exactly as Asana spells the field (the wholesale forward relies on it)", () => {
+  const declared = new Set(action.params?.map((p) => p.key));
+  for (const k of ["custom_fields", "followers", "html_notes", "start_on", "due_at"]) {
+    assert(declared.has(k), `expected a param declared with key "${k}"`);
+  }
+});
+
+Deno.test("create-task: forwards custom_fields/followers/html_notes/start_on/due_at verbatim", async () => {
+  const { ctx, calls } = mockCtx([{ body: { data: {} } }]);
+  await action.execute({
+    workspace: "ws-1",
+    name: "hello",
+    custom_fields: { "1231": "some value" },
+    followers: ["u-1", "u-2"],
+    html_notes: "<body>hi</body>",
+    start_on: "2026-07-01",
+    due_at: "2026-07-02T10:00:00.000Z",
+  }, ctx);
+  const sent = JSON.parse(calls[0].body!);
+  assertEquals(
+    Object.keys(sent.data).sort(),
+    ["custom_fields", "due_at", "followers", "html_notes", "name", "start_on", "workspace"],
+  );
+  assertEquals(sent.data.custom_fields, { "1231": "some value" });
+  assertEquals(sent.data.followers, ["u-1", "u-2"]);
+  assertEquals(sent.data.html_notes, "<body>hi</body>");
+  assertEquals(sent.data.start_on, "2026-07-01");
+  assertEquals(sent.data.due_at, "2026-07-02T10:00:00.000Z");
+});

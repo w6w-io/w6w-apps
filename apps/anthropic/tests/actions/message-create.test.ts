@@ -53,6 +53,26 @@ Deno.test("message-create: forwards optional params using snake_case names", asy
   assertEquals(body.metadata, { user_id: "u1" });
 });
 
+Deno.test("message-create: forwards the thinking block", async () => {
+  const { ctx, calls } = mockCtx([{ body: {} }]);
+  await action.execute!(
+    {
+      model: "claude-opus-4-1-20250805",
+      messages: [{ role: "user", content: "hi" }],
+      max_tokens: 128,
+      thinking: { type: "enabled", budget_tokens: 2048 },
+    },
+    ctx,
+  );
+  const body = JSON.parse(calls[0].body!);
+  assertEquals(body.thinking, { type: "enabled", budget_tokens: 2048 });
+});
+
+Deno.test("message-create: the thinking param documents the top_p/top_k/temperature conflict", () => {
+  const hint = action.params?.find((p) => p.key === "thinking")?.hint ?? "";
+  assertEquals(/top_p/.test(hint) && /top_k/.test(hint) && /temperature/.test(hint), true);
+});
+
 Deno.test("message-create: omits optional params when undefined", async () => {
   const { ctx, calls } = mockCtx([{ body: {} }]);
   await action.execute!(
@@ -68,6 +88,8 @@ Deno.test("message-create: omits optional params when undefined", async () => {
   assertEquals("temperature" in body, false);
   assertEquals("stop_sequences" in body, false);
   assertEquals("tools" in body, false);
+  assertEquals("thinking" in body, false);
+  assertEquals(Object.keys(body).sort(), ["max_tokens", "messages", "model"]);
 });
 
 Deno.test("message-create: rejects stream: true", () => {

@@ -31,6 +31,22 @@ Deno.test("payment-intent-create: maps the camelCase params onto Stripe's names"
   assertEquals(body.get("confirm"), "true");
 });
 
+Deno.test("payment-intent-create: forwards setupFutureUsage and statementDescriptor", async () => {
+  const { ctx, calls } = mockCtx([{ body: {} }]);
+  await action.execute(
+    {
+      amount: 500,
+      currency: "usd",
+      setupFutureUsage: "off_session",
+      statementDescriptor: "ACME ORDER",
+    },
+    ctx,
+  );
+  const body = new URLSearchParams(calls[0].body!);
+  assertEquals(body.get("setup_future_usage"), "off_session");
+  assertEquals(body.get("statement_descriptor"), "ACME ORDER");
+});
+
 Deno.test("payment-intent-create: the amount hint spells out the smallest-unit rule", () => {
   const amount = action.params?.find((p) => p.key === "amount");
   assert(amount?.hint?.includes("1000 = $10.00"));

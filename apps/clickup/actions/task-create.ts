@@ -13,6 +13,7 @@ interface Input {
   startDate?: string;
   parent?: string;
   notifyAll?: boolean;
+  customFields?: unknown[];
 }
 
 /** ISO/date string -> epoch milliseconds, which is what ClickUp's `*_date` fields want. */
@@ -56,6 +57,12 @@ const taskCreate: ActionDefinition<Input> = {
     { key: "startDate", label: "Start date", type: "datetime" },
     { key: "parent", label: "Parent task ID", type: "string", hint: "Create as a subtask." },
     { key: "notifyAll", label: "Notify all assignees", type: "boolean" },
+    {
+      key: "customFields",
+      label: "Custom fields",
+      type: "json",
+      hint: 'Array of `{id, value}`, e.g. `[{"id": "abc-123", "value": "Gold"}]`.',
+    },
   ],
   output: [
     { key: "id", type: "string", label: "Task ID" },
@@ -79,6 +86,7 @@ const taskCreate: ActionDefinition<Input> = {
           start_date: epochMs(input.startDate),
           parent: input.parent,
           notify_all: input.notifyAll,
+          custom_fields: input.customFields,
         },
       },
     );

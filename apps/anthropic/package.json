@@ -1,6 +1,6 @@
 {
   "name": "@w6w-apps/anthropic",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Call Anthropic's REST API — Claude messages, token counting, batches, files.",
   "license": "MIT",
   "author": {

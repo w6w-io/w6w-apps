@@ -101,7 +101,7 @@ Deno.test("interfaces: every required param of the bound action is covered", () 
 });
 
 Deno.test("interfaces: the rest of the app export is unchanged", () => {
-  assertEquals(app.actions.length, 25);
+  assertEquals(app.actions.length, 26);
   assertEquals(app.auth.length, 2);
   assertEquals(app.healthChecks.length, 2);
 });

@@ -28,6 +28,10 @@ const spreadsheetCreate: ActionDefinition<Input> = {
       type: "group",
       repeat: true,
       hint: "Initial sheet tabs to create alongside the spreadsheet.",
+      children: [
+        { key: "title", label: "Title", type: "string", required: true },
+        { key: "hidden", label: "Hidden", type: "boolean" },
+      ],
     },
     { key: "locale", label: "Locale", type: "string", placeholder: "en_US" },
     {
