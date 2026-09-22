@@ -1,0 +1,39 @@
+{
+  "name": "@w6w-apps/zoho-inventory",
+  "version": "0.1.0",
+  "description": "Track stock, contacts, catalog items, warehouses and sales orders in Zoho Inventory, across every Zoho data centre.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.zoho-inventory",
+    "displayName": "Zoho Inventory",
+    "longDescription": "Zoho Inventory keeps a business's stock, catalog and order book in one place, and this app puts that into a workflow \u2014 list, read, create, update and delete contacts and catalog items, list the warehouses stock is tracked across, and manage sales orders through their full lifecycle. Every action falls back to the organization the connection was authorized against, so a single-organization account needs nothing extra configured; listing organizations is how a workflow discovers the id for anything else.\n\nZoho hosts every organization in one of eight regional data centres, each with its own API host and, almost always, its own connection endpoint, so this app routes each region through its own dedicated connection rather than one that could silently send an EU organization's requests through the US region instead. Canada is the one region where that connection endpoint breaks the naming pattern the other seven follow, and this app points at the real endpoint rather than the one the pattern would suggest.\n\nWarehouses are the feature this app adds over an accounting-only integration: Zoho Inventory tracks stock per location, so listing locations is how a workflow finds out where a quantity actually sits. Purchases, bills, transfer orders, assemblies, shipments, packages, inventory adjustments and every jurisdiction-specific tax feature such as GST or CFDI are deliberately left out as not core to workflow automation of an Inventory account; create and update calls take a generic set of fields for the same reason, since Zoho's own forms run to dozens of optional, region-specific attributes.",
+    "categories": [
+      "finance",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Zoho Inventory"
+      }
+    },
+    "network": {
+      "allow": [
+        "www.zohoapis.com",
+        "www.zohoapis.eu",
+        "www.zohoapis.in",
+        "www.zohoapis.com.au",
+        "www.zohoapis.jp",
+        "www.zohoapis.ca",
+        "www.zohoapis.com.cn",
+        "www.zohoapis.sa",
+        "us.zohostatus.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

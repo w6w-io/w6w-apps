@@ -1,0 +1,32 @@
+{
+  "name": "@w6w-apps/deputy",
+  "version": "0.1.0",
+  "description": "Manage Deputy employees, timesheets, leave, areas and locations.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.deputy",
+    "displayName": "Deputy",
+    "longDescription": "Deputy is workforce management software — rostering, time and attendance, and the employee records underneath both — and this app puts the daily loop of it behind a workflow: clock an employee on or off, write and read worked time, and keep employee records in step with whatever system pays or provisions them.\n\nTimesheets are the centre of it. A workflow can start and end a shift against an area, write a timesheet from Unix timestamps (creating one, or updating a specific record), and then read the results back either directly or through a filtered, sorted, joined QUERY that pages past Deputy's 500-record response cap — the documented way to pull a date range out of an install whose timesheet table is far larger than that. Employees round it out with the full loop, from creating and updating a record to listing, filtering and inspecting the fields a given install actually exposes, since custom fields are real columns here.\n\nEverything else is the context those records point at: the areas (Deputy's OperationalUnit) a shift is worked in, the locations (Deputy's Company resource) they belong to, and the leave requests sitting against an employee. A permanent token keeps the connection simple: the whole app is built for one install at a time, using the same credential Deputy recommends for an internal system connection, and the health checks separate \"this install is reachable\" from \"this credential is live\" and from Deputy's own regional platform status.",
+    "categories": [
+      "hr",
+      "calendar",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Deputy"
+      }
+    },
+    "network": {
+      "allow": [
+        "*"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

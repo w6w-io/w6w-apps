@@ -1,0 +1,38 @@
+{
+  "name": "@w6w-apps/hubstaff",
+  "version": "0.1.1",
+  "description": "Read the organizations, projects, members, teams, clients, tasks, activities and timesheets that make up a Hubstaff organization, and write back time entries and tasks.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.hubstaff",
+    "displayName": "Hubstaff",
+    "longDescription": "Hubstaff is time tracking and workforce management: members track hours against projects and tasks, those hours roll up into timesheets, and organizations review, approve and invoice them.\n\nThis app covers the read surface a time-tracking integration needs — organizations, users, projects, members, teams, clients, tasks, activities and timesheets, each listed one cursor page at a time — and the three writes the API v2 actually offers for them: creating a manual time entry, creating a task, and moving a timesheet through its approval states.\n\nAuthentication is an Organization access token (hsoat_…), a long-lived org-wide secret an admin creates in the Hubstaff app and assigns to a member. There is no browser flow and no token exchange, so the whole credential story is one `Authorization: Bearer` header. Health checks cover Hubstaff's own status page (the API & Mobile component that speaks for api.hubstaff.com) and the organization's rate-limit headroom.",
+    "categories": [
+      "project-management",
+      "hr",
+      "productivity"
+    ],
+    "appearance": {
+      "icon": {
+        "svg": "./assets/icon.svg",
+        "alt": "Hubstaff"
+      },
+      "darkMode": {
+        "icon": {
+          "svg": "./assets/icon.dark.svg",
+          "alt": "Hubstaff"
+        }
+      }
+    },
+    "network": {
+      "allow": [
+        "api.hubstaff.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

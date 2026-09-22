@@ -1,0 +1,31 @@
+{
+  "name": "@w6w-apps/brex",
+  "version": "0.1.0",
+  "description": "Manage Brex users, locations, departments, titles, cards, legal entities and company over the Brex Team API v1.0.",
+  "license": "MIT",
+  "author": {
+    "name": "w6w"
+  },
+  "private": true,
+  "w6w": {
+    "id": "io.w6w.brex",
+    "displayName": "Brex",
+    "longDescription": "Brex is a corporate card and spend-management platform, and its Team API is the directory and card surface every spend workflow starts from: who the employees are, which departments, locations and titles they report into, which legal entity employs them, and which cards they hold.\n\nThis app covers that surface end to end. Users can be listed with the API's full filter set (status, department, location, title, cost centre, legal entity, custom fields), invited, read back, and updated — including suspending and unsuspending one by status. Departments, locations and titles are the three-level directory the users hang off, each listable, creatable and readable. Cards can be listed per user and read back, their spend controls updated (limit, refresh window, reason, lock-after date and the merchant allow/deny lists), and locked, unlocked or terminated as state transitions, with the reason Brex requires and the card owner's notification left to Brex.\n\nAuthentication is a single Brex user token, minted in the dashboard under Settings > Developer > Create Token and sent as `Authorization: Bearer <token>`. The API also documents a partner OAuth2 flow for ISVs running a consent screen across many customer accounts; that flow needs a registered OAuth application and a live per-customer authorization step, so this app ships the static token only — the same narrowing this pack made for Base44 and Devin.\n\nHealth checks read Brex's own status page, anchored on the `Partner API` component that answers api.brex.com rather than the page-wide roll-up (Brex's dashboard, mobile and travel incidents are different products). Brex publishes no rate-limit response header of any kind, so quota headroom is declared absent rather than invented.",
+    "categories": [
+      "finance",
+      "commerce"
+    ],
+    "appearance": {
+      "icon": {
+        "url": "./assets/icon.png",
+        "alt": "Brex"
+      }
+    },
+    "network": {
+      "allow": [
+        "api.brex.com"
+      ]
+    },
+    "entry": "./index.ts"
+  }
+}

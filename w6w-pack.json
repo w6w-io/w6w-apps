@@ -4,7 +4,7 @@
   "name": "w6w-official",
   "displayName": "w6w Official Apps",
   "description": "First-party integrations shipped with w6w. Register the whole pack in one call via the registry's registerPack, or install a single app by pointing at its subdirectory.",
-  "version": "0.143.0",
+  "version": "0.144.0",
   "apps": [
     {
       "path": "./apps/activecampaign"
@@ -143,6 +143,9 @@
     },
     {
       "path": "./apps/brevo"
+    },
+    {
+      "path": "./apps/brex"
     },
     {
       "path": "./apps/browseai"
@@ -287,6 +290,9 @@
     },
     {
       "path": "./apps/deepseek"
+    },
+    {
+      "path": "./apps/deputy"
     },
     {
       "path": "./apps/devin"
@@ -590,6 +596,9 @@
     },
     {
       "path": "./apps/hubspot"
+    },
+    {
+      "path": "./apps/hubstaff"
     },
     {
       "path": "./apps/huggingface"
@@ -986,6 +995,9 @@
     },
     {
       "path": "./apps/qdrant"
+    },
+    {
+      "path": "./apps/qualtrics"
     },
     {
       "path": "./apps/quickbase"
@@ -1388,6 +1400,9 @@
     },
     {
       "path": "./apps/zoho-campaigns"
+    },
+    {
+      "path": "./apps/zoho-inventory"
     },
     {
       "path": "./apps/zoho-invoice"

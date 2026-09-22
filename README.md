@@ -69,6 +69,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | box | storage | oauth2 | 10 |
 | braze | marketing, communication | api-key | 22 |
 | brevo | marketing, email | api-key | 15 |
+| brex | finance, accounting | api-token | 23 |
 | browseai | ai, developer-tools | api-key | 18 |
 | buffer | social-media, marketing | oauth2, api-key | 14 |
 | cal | calendar | api-key | 8 |
@@ -116,6 +117,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | deepgram | ai, video, developer-tools | api-key | 19 |
 | deepl | ai | api-key | 8 |
 | deepseek | ai | bearer-token | 4 |
+| deputy | hr, scheduling | permanent-token | 18 |
 | devin | developer-tools, ai | api-key | 12 |
 | dialpad | communication, support | api-key | 35 |
 | digitalocean | devops, storage | token | 15 |
@@ -216,6 +218,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | hotmart | commerce, finance | client-credentials | 17 |
 | housecallpro | crm, calendar, finance | api-key, oauth2 | 39 |
 | hubspot | crm, marketing | private-app-token, oauth2, api-key | 42 |
+| hubstaff | productivity, hr | organization-access-token | 19 |
 | huggingface | ai, developer-tools | token | 14 |
 | hunter | email, marketing, crm | api-key | 20 |
 | insightly | crm | api-key | 20 |
@@ -346,6 +349,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | pushbullet | communication, productivity | access-token | 24 |
 | pushover | communication, monitoring | app-token | 4 |
 | qdrant | search, databases, ai | api-key | 19 |
+| qualtrics | forms, analytics | api-token | 15 |
 | quickbase | databases, productivity, project-management | user-token | 20 |
 | quickbooks | finance | oauth2 | 20 |
 | quo | communication, crm | api-key | 43 |
@@ -477,6 +481,7 @@ field), `index.ts` (default export of `AppDefinition`), `actions/`, `auth/`,
 | zoho-bookings | scheduling, calendar | oauth2 (×8 DCs) | 9 |
 | zoho-calendar | calendar | oauth2 (×8 DCs) | 13 |
 | zoho-campaigns | marketing, email | oauth2 (×8 DCs) | 24 |
+| zoho-inventory | commerce, accounting | oauth2 (×8 DCs) | 17 |
 | zoho-invoice | accounting, finance | oauth2 (×8 DCs) | 22 |
 | zoho-recruit | hr, crm | oauth2 (×10 DCs) | 22 |
 | zoho-sheet | productivity, spreadsheets | oauth2 (×7 DCs) | 10 |
