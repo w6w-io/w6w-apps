@@ -1,0 +1,61 @@
+name: CI
+
+# Every check lives in scripts/verify.sh, which the pre-push hook (w6w-io/w6w
+# .githooks/pre-push) also runs. It tests and builds only the apps a change touches (all of
+# them when a shared file changes), building with the same pinned w6w-core that
+# `Reload apps` uses after merge — so a PR that is green here publishes cleanly.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    # apps/postgres's golden-path runtime test logs in to a real PostgreSQL 16 server (the
+    # devcontainer's `postgres` service locally); this is that server for CI.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: w6w-apps
+          fetch-depth: 0
+      # Full history: verify.sh checks out the SHA reload-apps.yml pins as a worktree.
+      - uses: actions/checkout@v6
+        with:
+          repository: w6w-io/w6w-core
+          path: core
+          fetch-depth: 0
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Install the pack's shared tooling
+        working-directory: w6w-apps
+        run: npm ci --no-audit --no-fund
+      - name: Verify
+        working-directory: w6w-apps
+        env:
+          VERIFY_BASE: ${{ github.event.pull_request.base.sha || 'HEAD~1' }}
+          W6W_TEST_PG_HOST: 127.0.0.1
+        run: bash scripts/verify.sh

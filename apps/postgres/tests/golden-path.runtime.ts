@@ -49,7 +49,11 @@ import {
 import { type Connection, type ConnectionTarget, type HealthReport, redact } from "@w6w/types";
 
 const APP_DIR = new URL("../", import.meta.url).pathname;
-const HOST = "postgres";
+// The devcontainer's `postgres` compose service by default. Apps CI has no such name, so it runs a
+// Postgres 16 service container and points this at it with an IP literal
+// (W6W_TEST_PG_HOST=127.0.0.1) — `checkTarget` takes a literal without DNS, and `allowPrivate`
+// below admits loopback the same way it admits the compose network's RFC 1918 address.
+const HOST = Deno.env.get("W6W_TEST_PG_HOST") || "postgres";
 const PORT = 5432;
 const DATABASE = "postgres";
 
