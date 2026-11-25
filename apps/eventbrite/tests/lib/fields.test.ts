@@ -1,5 +1,5 @@
 import { test } from "node:test";
-import { assertEquals, assertRejects } from "../_assert.ts";
+import { assertEquals } from "../_assert.ts";
 import { mockCtx } from "../_helpers.ts";
 import { resolveEventbriteFields } from "../../lib/fields.ts";
 
@@ -120,7 +120,7 @@ test("organizerId: org-scoped 1000 cap", async () => {
   assertEquals(out.fields.organizerId?.options?.length, 1000);
 });
 
-test("organizerId: no org value -> all orgs with description", async () => {
+test("organizerId: no organization picker on the form -> all orgs with description", async () => {
   const noMore = { has_more_items: false };
   const { ctx, calls } = mockCtx([
     {
@@ -132,7 +132,7 @@ test("organizerId: no org value -> all orgs with description", async () => {
     { body: { organizers: [{ id: "a", name: "A" }], pagination: noMore } },
     { body: { organizers: [{ id: "b", name: "B" }], pagination: noMore } },
   ]);
-  const out = await resolveEventbriteFields(input(["organizerId"], { organizationId: "" }), ctx);
+  const out = await resolveEventbriteFields(input(["organizerId"], {}), ctx);
   assertEquals(calls.map((c) => c.url), [
     `${B}/users/me/organizations/`,
     `${B}/organizations/1/organizers/`,
@@ -142,6 +142,46 @@ test("organizerId: no org value -> all orgs with description", async () => {
     { value: "a", label: "A", description: "One" },
     { value: "b", label: "B", description: "Two" },
   ]);
+});
+
+test("organization picker blank, several orgs: lists wait for the choice; orgs still listed", async () => {
+  const noMore = { has_more_items: false };
+  const { ctx, calls } = mockCtx([
+    {
+      body: {
+        organizations: [{ id: "1", name: "One" }, { id: "2", name: "Two" }],
+        pagination: noMore,
+      },
+    },
+  ]);
+  const out = await resolveEventbriteFields(
+    input(["organizationId", "eventId", "organizerId"], { organizationId: "" }),
+    ctx,
+  );
+  // One organizations fetch; no walk of every organization's events or organizers.
+  assertEquals(calls.map((c) => c.url), [`${B}/users/me/organizations/`]);
+  assertEquals(out.fields.organizationId?.options, [
+    { value: "1", label: "One" },
+    { value: "2", label: "Two" },
+  ]);
+  assertEquals(out.fields.eventId?.options, []);
+  assertEquals(typeof out.fields.eventId?.error, "string");
+  assertEquals(out.fields.organizerId?.options, []);
+});
+
+test("organization picker blank, one org: its events, unlabelled", async () => {
+  const noMore = { has_more_items: false };
+  const { ctx, calls } = mockCtx([
+    { body: { organizations: [{ id: "1", name: "One" }], pagination: noMore } },
+    { body: { events: [{ id: "e1", name: { text: "Gala" } }], pagination: noMore } },
+  ]);
+  const out = await resolveEventbriteFields(
+    input(["organizationId", "eventId"], { organizationId: "" }),
+    ctx,
+  );
+  assertEquals(calls.length, 2);
+  assertEquals(out.fields.organizationId?.options, [{ value: "1", label: "One" }]);
+  assertEquals(out.fields.eventId?.options, [{ value: "e1", label: "Gala" }]);
 });
 
 test("organizerId: unresolved organizationId -> nothing", async () => {
@@ -175,9 +215,11 @@ test("both requested, org-scoped: orgs then scoped organizers", async () => {
   assertEquals(Object.keys(out.fields).sort(), ["organizationId", "organizerId"]);
 });
 
-test("4xx rejects", async () => {
+test("4xx: the field carries the error; the hook does not reject", async () => {
   const { ctx } = mockCtx([{ status: 401, body: { error: "x" } }]);
-  await assertRejects(async () => await resolveEventbriteFields(input(["organizationId"]), ctx));
+  const out = await resolveEventbriteFields(input(["organizationId"]), ctx);
+  assertEquals(out.fields.organizationId?.options, undefined);
+  assertEquals(typeof out.fields.organizationId?.error, "string");
 });
 
 const dyn = { source: "resolveFields" };

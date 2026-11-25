@@ -82,71 +82,132 @@ function eventOption(e: EventRow, orgName?: string): Option {
  * Shared `resolveFields` hook for the Eventbrite actions and triggers that take an organization,
  * organizer or event: one picker per id, each still accepting a typed or mapped value.
  */
-export const resolveEventbriteFields: ResolveFieldsHook = async (input, ctx) => {
-  const fields: Record<string, { options: Option[] }> = {};
+/**
+ * Per-field budget, under the host's 10 s cap on the whole hook: a slow list returns its own field
+ * error instead of timing out the call and losing every other field (the organization picker
+ * stayed on "Loading…" while the events of every organization were still being walked).
+ */
+const FIELD_BUDGET_MS = 7_000;
 
-  // One `/users/me/organizations/` fetch serves both `organizationId` and an organization `scopeId`.
+class FieldTimeout extends Error {}
+
+async function withinBudget<T>(work: Promise<T>): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(() => reject(new FieldTimeout()), FIELD_BUDGET_MS);
+  });
+  try {
+    return await Promise.race([work, timeout]);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+const CHOOSE_ORG = "Choose an organization to list its records.";
+
+/**
+ * Shared `resolveFields` hook for the Eventbrite actions and triggers that take an organization,
+ * organizer or event: one picker per id, each still accepting a typed or mapped value. Each field
+ * resolves on its own, so the organization list shows even when another list fails or is slow.
+ */
+export const resolveEventbriteFields: ResolveFieldsHook = async (input, ctx) => {
+  const fields: Record<string, { options?: Option[]; error?: string }> = {};
+
+  // One `/users/me/organizations/` fetch serves `organizationId`, an organization `scopeId`, and
+  // the "which organization" fallback of the event and organizer lists.
   let orgs: Promise<Named[]> | undefined;
   const orgsOnce = () => (orgs ??= listOrgs(ctx));
   const orgOptions = async () =>
     (await orgsOnce()).map((o) => ({ value: o.id, label: o.name ?? o.id }));
 
-  if (input.fields.includes("organizationId")) {
-    fields.organizationId = { options: await orgOptions() };
-  }
+  // The form offers an organization picker (a trigger, an org-scoped action): a list of events or
+  // organizers waits for that choice rather than walking every organization the account has.
+  const hasOrgField = input.fields.includes("organizationId") ||
+    Object.hasOwn(input.form, "organizationId");
+  const chosenOrg = typeof input.form.organizationId === "string" &&
+      input.form.organizationId !== ""
+    ? input.form.organizationId
+    : undefined;
 
-  // Events of the form's organization; with no organization chosen (or no organization field at
-  // all), the events of every organization the account belongs to, each labelled with its org.
-  const eventOptions = async (orgId: unknown): Promise<Option[]> => {
-    if (typeof orgId === "string" && orgId !== "") {
-      return (await listEvents(ctx, orgId)).map((e) => eventOption(e));
-    }
-    const options: Option[] = [];
-    for (const org of await orgsOnce()) {
-      if (options.length >= MAX_OPTIONS) break;
-      for (const e of await listEvents(ctx, org.id)) {
-        options.push(eventOption(e, org.name ?? org.id));
-      }
-    }
-    return options.slice(0, MAX_OPTIONS);
+  /**
+   * Organizations whose records a list covers: the chosen one; with none chosen, the account's
+   * only organization, or (no organization picker on the form) every organization. `null` means
+   * the user has to pick an organization first.
+   */
+  const scopeOrgs = async (): Promise<Named[] | null> => {
+    if (chosenOrg) return [{ id: chosenOrg }];
+    const all = await orgsOnce();
+    if (all.length <= 1 || !hasOrgField) return all;
+    return null;
   };
 
-  if (input.fields.includes("scopeId") && !input.unresolved.includes("scope")) {
-    fields.scopeId = {
-      options: input.form.scope === "organization"
-        ? await orgOptions()
-        : input.form.scope === "event"
-        ? await eventOptions(input.form.organizationId)
-        : [],
-    };
-  }
+  const eventOptions = async (): Promise<Option[] | null> => {
+    const scope = await scopeOrgs();
+    if (scope === null) return null;
+    const label = scope.length > 1;
+    const lists = await Promise.all(scope.map((o) => listEvents(ctx, o.id)));
+    return lists
+      .flatMap((events, i) =>
+        events.map((e) => eventOption(e, label ? scope[i].name ?? scope[i].id : undefined))
+      )
+      .slice(0, MAX_OPTIONS);
+  };
 
-  if (input.fields.includes("eventId") && !input.unresolved.includes("organizationId")) {
-    fields.eventId = { options: await eventOptions(input.form.organizationId) };
-  }
+  const organizerOptions = async (): Promise<Option[] | null> => {
+    const scope = await scopeOrgs();
+    if (scope === null) return null;
+    const label = scope.length > 1;
+    const lists = await Promise.all(scope.map((o) => listOrganizers(ctx, o.id)));
+    return lists
+      .flatMap((organizers, i) =>
+        organizers.map((o) => ({
+          value: o.id,
+          label: o.name ?? o.id,
+          ...(label ? { description: scope[i].name ?? scope[i].id } : {}),
+        }))
+      )
+      .slice(0, MAX_OPTIONS);
+  };
 
-  if (input.fields.includes("organizerId") && !input.unresolved.includes("organizationId")) {
-    const orgId = input.form.organizationId;
-    let options: Option[];
-    if (typeof orgId === "string" && orgId !== "") {
-      const organizers = await listOrganizers(ctx, orgId);
-      options = organizers.map((o) => ({ value: o.id, label: o.name ?? o.id }));
-    } else {
-      options = [];
-      for (const org of await orgsOnce()) {
-        if (options.length >= MAX_OPTIONS) break;
-        for (const o of await listOrganizers(ctx, org.id)) {
-          options.push({
-            value: o.id,
-            label: o.name ?? o.id,
-            description: org.name ?? org.id,
-          });
-        }
-      }
-      options = options.slice(0, MAX_OPTIONS);
+  const resolve = async (key: string, work: () => Promise<Option[] | null>) => {
+    try {
+      const options = await withinBudget(work());
+      fields[key] = options === null ? { options: [], error: CHOOSE_ORG } : { options };
+    } catch (err) {
+      fields[key] = {
+        error: err instanceof FieldTimeout
+          ? "Eventbrite took too long to list these. Type or map an id instead."
+          : err instanceof Error
+          ? err.message
+          : String(err),
+      };
     }
-    fields.organizerId = { options };
+  };
+
+  const jobs: Promise<void>[] = [];
+  if (input.fields.includes("organizationId")) {
+    jobs.push(resolve("organizationId", orgOptions));
   }
+  if (input.fields.includes("scopeId") && !input.unresolved.includes("scope")) {
+    jobs.push(
+      resolve(
+        "scopeId",
+        async () =>
+          input.form.scope === "organization"
+            ? await orgOptions()
+            : input.form.scope === "event"
+            ? await eventOptions()
+            : [],
+      ),
+    );
+  }
+  if (input.fields.includes("eventId") && !input.unresolved.includes("organizationId")) {
+    jobs.push(resolve("eventId", eventOptions));
+  }
+  if (input.fields.includes("organizerId") && !input.unresolved.includes("organizationId")) {
+    jobs.push(resolve("organizerId", organizerOptions));
+  }
+  await Promise.all(jobs);
 
   return { fields };
 };
